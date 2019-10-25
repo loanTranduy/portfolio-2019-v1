@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+} from 'react-router-dom'
+import {Navbar} from './components/Navbar';
+import {createLoadable} from './utils/loadable'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const LoadableLandingScreen = createLoadable(
+    () =>
+        import(/* webpackChunkName: "LandingScreen" */ './screens/LandingScreen'),
+    'LandingScreen'
+)
+
+const LoadableAboutScreen = createLoadable(
+    () =>
+        import(/* webpackChunkName: "LandingScreen" */ './screens/AboutScreen'),
+    'AboutScreen'
+)
+
+export class App extends React.Component {
+    render() {
+        return (
+            <Router>
+                <div>
+                    <Navbar/>
+                    <Switch>
+                        <Route path="/about">
+                            <LoadableLandingScreen />
+                        </Route>
+                        <Route path="/">
+                            <LoadableAboutScreen />
+                        </Route>
+                    </Switch>
+                </div>
+            </Router>
+        )
+    }
 }
-
-export default App;
