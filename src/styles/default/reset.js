@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
       width: auto;
       background-size: cover;
       margin: 0;
-      //background: $grey10;
+      background: #F6F8FF;
     }
     
     button {

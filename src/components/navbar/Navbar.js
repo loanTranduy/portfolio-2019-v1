@@ -1,92 +1,68 @@
 import React from 'react'
 import styled from 'styled-components';
-import {fontSize} from '../../styles/default/Mixins';
-import {media} from '../../styles/default/Mediaqueries';
 import {colors} from '../../styles/default/Colors';
-import PropTypes from 'prop-types'
-import {NavMobileLinkList} from './NavMobileLinkList';
-import {NavMainLink} from '../../constants/navLinksMock';
+import Link from 'react-router-dom/es/Link';
+import logo from '../../assets/images/logo-v1.svg'
+import {NavbarMobile} from './NavbarMobile';
 
-
-const Container = styled.div`
-    background: black;
-    ${fontSize(14)};
-    a{
-      color: white;
-    }
-    `;
-
-const Toggle = styled.div`
-  height: 60px;
-  width: 60px;
-  cursor: pointer;
-  position: relative;
-  float: left;
-    ${media.md`
-    display: none;
-`};
-`
-
-export const Bar = styled.span`
+export const Content = styled.div`
   background: ${colors.white};
-  height: 3px;
-  width: 26px;
-  display: block;
-  border-radius: 1.5px;
   position: absolute;
-  transform-origin: center;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all .3s ease;
-  &:nth-child(1) {
-    top: calc(50% - 9.5px);
-    transform: ${props =>
-    props.isActive
-        ? 'translate(-50%, 8px) rotate(45deg)'
-        : 'translate(-50%, Opx) rotate(0deg)'};
-  }
-  &:nth-child(2) {
-    top: calc(50% - 1.5px);
-    opacity: ${props => (props.isActive ? '0' : '1')};
-  }
-  &:nth-child(3) {
-    top: calc(50% + 6.5px);
-    transform: ${props =>
-    props.isActive
-        ? 'translate(-50%, -8px) rotate(-45deg)'
-        : 'translate(-50%, 0px) rotate(0deg)'};
-  }
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 900;
+  transition: all 0.29s ease;
+  left: ${props => (props.isActive ? 'calc(100% - 60px)' : '0')};
 `
 
-const NavMobile = styled.nav`
-background: red;
-list-style-type: none;
+//Logo
+export const Brand = styled(Link)`
+  display: inline-block;
+  padding: 15px;
 `
 
+export const LogoCube = styled.img`
+  display: inline-block;
+`
 
 export class Navbar extends React.Component {
+    state = {
+        slideMenuOpened: false,
+    }
 
-    static propTypes = {
-        slideMenuOpened: PropTypes.bool,
-        toggleSlideMenu: PropTypes.func,
+    toggleSlideMenu = () => {
+        this.setState({
+            slideMenuOpened: !this.state.slideMenuOpened,
+        })
+    }
+
+
+    closeSlideMenu = () => {
+        if (this.state.slideMenuOpened === true) {
+            this.toggleSlideMenu();
+        }
     }
 
     render() {
-        const {slideMenuOpened, toggleSlideMenu} = this.props;
+        const {slideMenuOpened} = this.state;
+        const {
+            toggleSlideMenu,
+        } = this
         return (
-            <Container>
-                {/*Burger*/}
-                <Toggle onClick={toggleSlideMenu}>
-                    <Bar isActive={slideMenuOpened} />
-                    <Bar isActive={slideMenuOpened} />
-                    <Bar isActive={slideMenuOpened} />
-                </Toggle>
-                <NavMobile>
-                    <ul>
-                        <NavMobileLinkList navMainLinks={Object.values(NavMainLink)}/>
-                    </ul>
-                </NavMobile>
-            </Container>
+            <Content>
+                {/*Logo*/}
+                <Brand to="/">
+                    <LogoCube src={logo} />
+                </Brand>
+
+                {/*Burger + Mobile Nav*/}
+                <NavbarMobile
+                    closeSlideMenu={this.closeSlideMenu}
+                    toggleSlideMenu={toggleSlideMenu}
+                    slideMenuOpened={slideMenuOpened}
+                />
+            </Content>
         )
     }
 }

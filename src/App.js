@@ -28,7 +28,9 @@ const LoadableLandingScreen = createLoadable(
     'LandingScreen',
 )
 
+
 export class App extends React.Component {
+
     render() {
         return (
             <React.Fragment>
