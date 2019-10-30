@@ -1,18 +1,37 @@
 import React from 'react'
-import {Container} from './LandingScreen';
 import styled from 'styled-components';
 import {colors} from '../styles/default/Colors';
+import {FrontEndScreen} from './FrontEndScreen';
+import {WebDesignScreen} from './WebDesignScreen';
+import {GraphicDesignScreen} from './GraphicDesignScreen';
+import {Container} from '../components/SharedStyle';
 
-const ContainerAbout = styled(Container)`
+const Content = styled(Container)`
   background: ${colors.grey20};
+  color: ${colors.black};
+  padding-top: 50px;
+  
+  div:nth-child(1){
+  background: red;
+  }
+  div:nth-child(2){
+  background: blue;
+  }
+    div:nth-child(3){
+  background: green;
+  }
 `
 
 export class WorkScreen extends React.Component {
     render() {
+        const{navbarHeight, strokeHeight,sideNavbarHeight} = this.props;
         return (
-            <ContainerAbout>
-                <h1>work page</h1>
-            </ContainerAbout>
+            <Content navbarHeight={navbarHeight} strokeHeight={strokeHeight} sideNavbarHeight={sideNavbarHeight}>
+                <h1>All my projects</h1>
+                <FrontEndScreen/>
+                <WebDesignScreen/>
+                <GraphicDesignScreen/>
+            </Content>
         )
     }
 }

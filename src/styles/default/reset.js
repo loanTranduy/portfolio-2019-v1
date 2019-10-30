@@ -1,36 +1,39 @@
 import { createGlobalStyle } from 'styled-components'
+import {fontFamilies as FontFamilies} from './Font';
+import {backgroundColors, linkColors, textColors} from './Colors';
+import {media} from './Mediaqueries';
 
 export const GlobalStyle = createGlobalStyle`
     body,
     html {
-      width: auto;
-      background-size: cover;
       margin: 0;
-      background: #F6F8FF;
-    }
-    
-    button {
-      cursor: pointer;
-      &:focus {
-        outline: none;
-      }
-    }
-    
-    
-    html {
+      box-sizing: border-box;
       position: relative;
-      min-height: 100%;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
     
-    body {
-      //font-family: $rb-rg;
-      //font-size: 16px;
-      //color: $grey100;
-      //background: $white;
-      //padding-bottom: 0;
-      //height: 100%;
+    body{
+        font-family: ${FontFamilies.mtRegular};
+        font-size: 16px;
+        color: ${textColors.primary};
+        background: ${backgroundColors.primary};
+        
+        //Stroke
+        &:after, &:before{
+            width: ${props => (props.strokeSize)}px;
+            z-index: 9999;
+            position: fixed;
+            content: '';
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: ${backgroundColors.stroke};
+        }
+        &:before{
+            left: 0;
+            right: auto;
+        };
     }
     
     p,
@@ -49,14 +52,25 @@ export const GlobalStyle = createGlobalStyle`
     li {
       list-style-type: none;
     }
-    button {
-      border: none;
-    }
     
     a {
+    color:${linkColors.regular};
     text-decoration: none;
+    ${media.sm`
       &:hover {
+        color: ${linkColors.hover};
         text-decoration: none;
+      }
+    `}
+      &:active{
+      color:${linkColors.active};
+      }
+    }
+    
+    button {
+      cursor: pointer;
+      &:focus {
+        outline: none;
       }
     }
     

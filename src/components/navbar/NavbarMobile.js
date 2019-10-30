@@ -5,11 +5,15 @@ import {colors} from '../../styles/default/Colors';
 import PropTypes from 'prop-types'
 import {NavMobileLinkList} from './NavMobileLinkList';
 import {NavMainLink} from '../../constants/navLinksMock';
+import {fontSize} from '../../styles/default/Mixins';
 
 //Burger Button
 const Toggle = styled.div`
-  height: 60px;
-  width: 60px;
+  height: 32px;
+  width: 32px;
+  margin: 16px;
+  border: 4px solid black;
+  border-radius: 100%;
   cursor: pointer;
   position: relative;
   float: right;
@@ -21,19 +25,21 @@ const Toggle = styled.div`
 export const Bar = styled.span`
   background: ${colors.black};
   height: 3px;
-  width: 26px;
+  width: 18px;
   display: block;
-  border-radius: 1.5px;
   position: absolute;
   transform-origin: center;
   left: 50%;
   transform: translateX(-50%);
   transition: all .3s ease;
   &:nth-child(1) {
-    top: calc(50% - 9.5px);
+    top: ${props => props.isActive ? 
+    'calc(50% - 11px)'
+    : 'calc(50% - 7px)'
+    };
     transform: ${props =>
     props.isActive
-        ? 'translate(-50%, 8px) rotate(45deg)'
+        ? 'translate(-50%, 10px) rotate(45deg)'
         : 'translate(-50%, Opx) rotate(0deg)'};
   }
   &:nth-child(2) {
@@ -41,7 +47,16 @@ export const Bar = styled.span`
     opacity: ${props => (props.isActive ? '0' : '1')};
   }
   &:nth-child(3) {
-    top: calc(50% + 6.5px);
+  right:${props =>
+    props.isActive ? "auto" : "3px"};
+  left: ${props =>
+    props.isActive ? "50%" : "auto"};
+  width: ${props =>
+    props.isActive ? 18 : 9}px};
+  top: ${props => props.isActive ?
+    'calc(50% + 7px)'
+    : 'calc(50% + 4.5px)'
+    };
     transform: ${props =>
     props.isActive
         ? 'translate(-50%, -8px) rotate(-45deg)'
@@ -60,10 +75,17 @@ const NavMobile = styled.nav`
     height: ${props => (props.isActive ? '100vh' : 0)};
     overflow: hidden;
     transition: height .6s;
-    z-index: 9998;
+    z-index: 2;
     text-align: center;
-    //padding: 56px; 
-    $fontSize(15);
+    ${fontSize(20)};
+    ${media.md`
+        height: auto;
+        position: initial;
+        display: inline-block;
+        ul{
+         display: flex;
+        }
+    `}
 `
 
 

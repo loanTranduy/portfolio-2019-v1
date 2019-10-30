@@ -1,6 +1,7 @@
 export const colors = {
     white: '#FFFFFF',
     whiteOpacity: 'rgba(255,255,255,0.4)',
+    grey: '#F6F8FF',
     grey10: '#F3F4F4',
     grey20: '#DFE1E0',
     grey30: '#CBCECD',
@@ -47,39 +48,29 @@ export const colors = {
     blueFacebookOpaque: 'rgba(12, 88, 202, .1)',
 }
 
+export const textColors = {
+    primary: colors.black,
+    secondary: colors.white,
+    active: colors.teal,
+};
+
+export const linkColors = {
+    regular: colors.black,
+    hover: colors.teal,
+    active: colors.teal,
+};
+
+export const backgroundColors = {
+    primary: colors.grey,
+    secondary: colors.black,
+    navbar: colors.white,
+    stroke: colors.black,
+};
+
+
 export const gradientColors = {
     blue: 'linear-gradient(-50deg, #188DF2 0%, #00CCBE 100%)',
 }
-
-export const monthTextColors = [
-    colors.blue10,
-    colors.teal,
-    colors.orange,
-    colors.darkyellow,
-    colors.green,
-    colors.red,
-    colors.purple,
-    colors.pink,
-    colors.orange,
-    colors.lightBlue,
-    colors.blueFacebook,
-    colors.orange,
-]
-
-export const monthBackgroundColors = [
-    colors.blueOpaque,
-    colors.tealOpaque,
-    colors.orangeOpaque,
-    colors.greenYellowOpaque,
-    colors.greenOpaque,
-    colors.redOpaque,
-    colors.purpleOpaque,
-    colors.pinkOpaque,
-    colors.tealOpaque,
-    colors.lightBlueOpaque,
-    colors.blueFacebookOpaque,
-    colors.orangeOpaque,
-]
 
 export const buttonColors = {
     blue: {
