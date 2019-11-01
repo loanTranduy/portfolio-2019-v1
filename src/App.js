@@ -8,8 +8,9 @@ import {Navbar} from './components/navbar/Navbar';
 import {createLoadable} from './utils/loadable'
 import {GlobalStyle} from './styles/default/reset';
 import {Sidebar} from './components/sidebar/Sidebar';
-import {Stroke} from './components/SharedStyle';
+import {Stroke, StrokeTop} from './components/SharedStyle';
 import Normalize from 'react-normalize';
+import {injectFonts} from './styles/default/Font';
 
 const LoadableWebDesignScreen = createLoadable(
     () => import(/* webpackChunkName: "WebDesignScreen" */ './screens/WebDesignScreen'),
@@ -52,9 +53,7 @@ export class App extends React.Component {
         this.state = {
             mainNavbarHeight: 0,
             strokeSize: 10,
-            result: 0,
-            windowWidth: 0,
-            windowHeight: 0,
+            sideNavbarHeight: 0,
         };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
@@ -87,55 +86,73 @@ export class App extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <injectFonts/>
                 <Normalize/>
-            <GlobalStyle
-                strokeSize={this.state.strokeSize}
-            />
-            <Router>
-                <Stroke size={this.state.strokeSize}>
-                    <Navbar
-                        parentCallback = {this.callbackFunction}
-                        position={this.state.strokeSize}
-                    />
-                    <Sidebar
-                        parentCallback = {this.sideCallbackFunction}
-                        position={this.state.strokeSize}
-                    />
-                    <Switch>
-                        <Route exact path="/" render={() =>
-                            <LoadableLandingScreen
-                                navbarHeight={this.state.mainNavbarHeight}
-                                strokeHeight={this.state.strokeSize}
-                                sideNavbarHeight={this.state.sideNavbarHeight}
-                            />
-                        }/>
-                        <Route path="/about" render={() =>
-                            <LoadableAboutScreen
-                                navbarHeight={this.state.mainNavbarHeight}
-                                strokeHeight={this.state.strokeSize}
-                                sideNavbarHeight={this.state.sideNavbarHeight}
-                            />}
-                        />
-                        <Route exact path="/work" render={() =>
-                            <LoadableWorkScreen
+                <GlobalStyle
+                    strokeSize={this.state.strokeSize}
+                />
+                <Router>
+                    <Stroke size={this.state.strokeSize}/>
+                        <StrokeTop size={this.state.strokeSize}/>
+                        <Navbar
+                            parentCallback = {this.callbackFunction}
+                            position={this.state.strokeSize}
                             navbarHeight={this.state.mainNavbarHeight}
-                            strokeHeight={this.state.strokeSize}
-                            sideNavbarHeight={this.state.sideNavbarHeight}
-                        />}
+                            sideBarHeight={this.state.sideNavbarHeight}
+                        />
+                        <Sidebar
+                            parentCallback = {this.sideCallbackFunction}
+                            position={this.state.strokeSize}
+                        />
+                        <Switch>
+                            <Route exact path="/" render={() =>
+                                <LoadableLandingScreen
+                                    navbarHeight={this.state.mainNavbarHeight}
+                                    strokeHeight={this.state.strokeSize}
+                                    sideNavbarHeight={this.state.sideNavbarHeight}
+                                />
+                            }/>
+                            <Route path="/about" render={() =>
+                                <LoadableAboutScreen
+                                    navbarHeight={this.state.mainNavbarHeight}
+                                    strokeHeight={this.state.strokeSize}
+                                    sideNavbarHeight={this.state.sideNavbarHeight}
+                                />}
                             />
-                        <Route path="/work/front-end" component={LoadableFrontEndScreen}/>
-                        <Route path="/work/web-design" component={LoadableGraphicDesignScreen}/>
-                        <Route path="/work/graphic-design" component={LoadableWebDesignScreen}/>
-                        <Route path="/contact"render={() =>
-                            <LoadableContactScreen
+                            <Route exact path="/work" render={() =>
+                                <LoadableWorkScreen
                                 navbarHeight={this.state.mainNavbarHeight}
                                 strokeHeight={this.state.strokeSize}
                                 sideNavbarHeight={this.state.sideNavbarHeight}
                             />}
-                        />
-                    </Switch>
-                </Stroke>
-            </Router>
+                                />
+                            <Route path="/work/front-end" render={() =>
+                                <LoadableFrontEndScreen
+                                    navbarHeight={this.state.mainNavbarHeight}
+                                    strokeHeight={this.state.strokeSize}
+                                    sideNavbarHeight={this.state.sideNavbarHeight}
+                                />}/>
+                            <Route path="/work/web-design" render={() =>
+                                <LoadableWebDesignScreen
+                                    navbarHeight={this.state.mainNavbarHeight}
+                                    strokeHeight={this.state.strokeSize}
+                                    sideNavbarHeight={this.state.sideNavbarHeight}
+                                />}/>
+                            <Route path="/work/graphic-design" render={() =>
+                                <LoadableGraphicDesignScreen
+                                    navbarHeight={this.state.mainNavbarHeight}
+                                    strokeHeight={this.state.strokeSize}
+                                    sideNavbarHeight={this.state.sideNavbarHeight}
+                                />}/>
+                            <Route path="/contact"render={() =>
+                                <LoadableContactScreen
+                                    navbarHeight={this.state.mainNavbarHeight}
+                                    strokeHeight={this.state.strokeSize}
+                                    sideNavbarHeight={this.state.sideNavbarHeight}
+                                />}
+                            />
+                        </Switch>
+                </Router>
             </React.Fragment>
         )
     }

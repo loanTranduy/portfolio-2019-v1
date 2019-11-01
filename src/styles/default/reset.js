@@ -4,6 +4,9 @@ import {backgroundColors, linkColors, textColors} from './Colors';
 import {media} from './Mediaqueries';
 
 export const GlobalStyle = createGlobalStyle`
+    html{
+      background: ${backgroundColors.primary};
+    }
     body,
     html {
       margin: 0;
@@ -11,10 +14,12 @@ export const GlobalStyle = createGlobalStyle`
       position: relative;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      display: block;
     }
     
     body{
         font-family: ${FontFamilies.mtRegular};
+        font-weight: 400;
         font-size: 16px;
         color: ${textColors.primary};
         background: ${backgroundColors.primary};
@@ -64,6 +69,9 @@ export const GlobalStyle = createGlobalStyle`
     `}
       &:active{
       color:${linkColors.active};
+      }
+      &:focus{
+      color:${linkColors.focus};
       }
     }
     

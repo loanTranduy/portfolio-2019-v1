@@ -7,7 +7,6 @@ import {GraphicDesignScreen} from './GraphicDesignScreen';
 import {Container} from '../components/SharedStyle';
 
 const Content = styled(Container)`
-  background: ${colors.grey20};
   color: ${colors.black};
   padding-top: 50px;
   

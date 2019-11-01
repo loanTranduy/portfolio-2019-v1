@@ -51,28 +51,32 @@ export const NavSidebarLinksPropTypes = PropTypes.arrayOf(NavSidebarLinkPropType
 export const NavSidebarLink = [
     {
         id: 0,
-        name: 'See All',
+        name: 'Discover all Projects',
+        label: 'See All',
         breadCrumb: '/work',
         icon: work,
         filter: 'all'
     },
     {
         id: 1,
-        name: 'ux/ui',
-        breadCrumb: '/work/web-design',
-        icon: ui,
-        filter: 'web'
-    },
-    {
-        id: 2,
-        name: 'Front-end',
+        name: 'Front-end Developer',
+        label: 'Front',
         breadCrumb: '/work/front-end',
         icon: front,
         filter: 'front'
     },
     {
+        id: 2,
+        name: 'UX / UI Designer',
+        label: 'ux/ui',
+        breadCrumb: '/work/web-design',
+        icon: ui,
+        filter: 'web'
+    },
+    {
         id: 3,
-        name: 'Graphic',
+        name: 'Graphic Designer',
+        label: 'Graphic',
         breadCrumb: '/work/graphic-design',
         icon: design,
         filter: 'graphic'

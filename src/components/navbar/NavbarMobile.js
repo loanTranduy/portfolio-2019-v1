@@ -1,11 +1,12 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components';
 import {media} from '../../styles/default/Mediaqueries';
-import {colors} from '../../styles/default/Colors';
+import {backgroundColors, colors} from '../../styles/default/Colors';
 import PropTypes from 'prop-types'
 import {NavMobileLinkList} from './NavMobileLinkList';
 import {NavMainLink} from '../../constants/navLinksMock';
 import {fontSize} from '../../styles/default/Mixins';
+import {SocialFooter} from './SocialFooter';
 
 //Burger Button
 const Toggle = styled.div`
@@ -32,6 +33,7 @@ export const Bar = styled.span`
   left: 50%;
   transform: translateX(-50%);
   transition: all .3s ease;
+  -webkit-transition: all .3s ease;
   &:nth-child(1) {
     top: ${props => props.isActive ? 
     'calc(50% - 11px)'
@@ -66,28 +68,76 @@ export const Bar = styled.span`
 
 //Menu mobile
 const NavMobile = styled.nav`
+    overflow: hidden;
+    border-bottom-left-radius: ${props => (props.isActive ? 0 : 20)}px;
+    border-bottom-right-radius: ${props => (props.isActive ? 0 : 20)}px;
     position: absolute;
-    background: white;
+    background: ${backgroundColors.navbar};
     top: 60px;
     bottom: 0;
     right: 0;
     left: 0;
-    height: ${props => (props.isActive ? '100vh' : 0)};
-    overflow: hidden;
+    height: ${props => (props.isActive ? 'calc(100vh - ' + props.navbarHeight + 'px )' : 0)};
     transition: height .6s;
     z-index: 2;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     ${fontSize(20)};
     ${media.md`
+        overflow: visible;
         height: auto;
         position: initial;
         display: inline-block;
-        ul{
-         display: flex;
-        }
     `}
+    ${media.xl`
+        margin-left: 100px;
+    `}
+    >ul{
+        margin-top: 56px;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        li:nth-child(1){
+           opacity:${props => props.isActive ? 1 : 0};
+        transform: translateX(${props => props.isActive ? 0 : -20}px);
+        transition: all .3s ease-in-out .3s;
+        }
+            li:nth-child(2){
+           opacity:${props => props.isActive ? 1 : 0};
+        transform: translateX(${props => props.isActive ? 0 : -20}px);
+        transition: all .3s ease-in-out .4s;
+        }
+            li:nth-child(3){
+        opacity:${props => props.isActive ? 1 : 0};
+        transform: translateX(${props => props.isActive ? 0 : -20}px);
+        transition: all .3s ease-in-out .5s;
+        }
+            li:nth-child(4){
+           opacity:${props => props.isActive ? 1 : 0};
+        transform: translateX(${props => props.isActive ? 0 : -20}px);
+        transition: all .3s ease-in-out .6s;
+        }
+        
+        ${media.md`
+            width: calc(100vw - 120px);
+            margin-top: 0;
+           li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4){
+               transition: none;
+               opacity: 1;
+                transform: translateX(0);
+            }
+           height: auto;
+           flex-direction: row;
+        `}
+        ${media.xl`
+         width: auto;
+        `}
+}
 `
-
 
 export class NavbarMobile extends React.Component {
 
@@ -95,25 +145,32 @@ export class NavbarMobile extends React.Component {
         slideMenuOpened: PropTypes.bool,
         toggleSlideMenu: PropTypes.func,
         closeSlideMenu: PropTypes.func,
+        navbarHeight: PropTypes.number,
+        sideBarHeight: PropTypes.number
     };
 
     render() {
-        const {slideMenuOpened, toggleSlideMenu, closeSlideMenu} = this.props;
+        const {slideMenuOpened, toggleSlideMenu, closeSlideMenu,navbarHeight, sideBarHeight} = this.props;
         return (
             <Fragment>
+                {window.innerWidth < 768 ?
+                    <Toggle onClick={toggleSlideMenu}>
+                        <Bar isActive={slideMenuOpened}/>
+                        <Bar isActive={slideMenuOpened}/>
+                        <Bar isActive={slideMenuOpened}/>
+                    </Toggle> : null
+                }
 
-                {/*Burger*/}
-                <Toggle onClick={toggleSlideMenu}>
-                    <Bar isActive={slideMenuOpened} />
-                    <Bar isActive={slideMenuOpened} />
-                    <Bar isActive={slideMenuOpened} />
-                </Toggle>
-
-                <NavMobile isActive={slideMenuOpened}>
+                <NavMobile isActive={slideMenuOpened} navbarHeight={navbarHeight} sideBarHeight={sideBarHeight}>
                     <ul>
-                        <NavMobileLinkList navMainLinks={Object.values(NavMainLink)} closeSlideMenu={closeSlideMenu}/>
+                        <NavMobileLinkList navMainLinks={Object.values(NavMainLink)} closeSlideMenu={closeSlideMenu} isActive={slideMenuOpened}/>
                     </ul>
+                    {window.innerWidth < 768  ?
+                    <SocialFooter/>
+                        : null
+                    }
                 </NavMobile>
+
             </Fragment>
         )
     }
