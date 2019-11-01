@@ -1,6 +1,7 @@
 export const colors = {
     white: '#FFFFFF',
     whiteOpacity: 'rgba(255,255,255,0.4)',
+    grey: '#F6F8FF',
     grey10: '#F3F4F4',
     grey20: '#DFE1E0',
     grey30: '#CBCECD',
@@ -24,7 +25,7 @@ export const colors = {
     blueFacebook: '#4267B2',
     blueKubernetes: 'rgba(60,99,171, .1)',
     lightBlue: '#30CFF7',
-    teal: '#00CCBE',
+    teal: '#50E3C2',
     tealOpaque: 'rgba(0, 204, 190, .1)',
     blueOpaque: 'rgba(68, 138, 255, .1)',
     darkteal: '#2BB4AA',
@@ -47,145 +48,22 @@ export const colors = {
     blueFacebookOpaque: 'rgba(12, 88, 202, .1)',
 }
 
-export const gradientColors = {
-    blue: 'linear-gradient(-50deg, #188DF2 0%, #00CCBE 100%)',
-}
+export const textColors = {
+    primary: colors.black,
+    secondary: colors.white,
+    active: colors.teal,
+};
 
-export const monthTextColors = [
-    colors.blue10,
-    colors.teal,
-    colors.orange,
-    colors.darkyellow,
-    colors.green,
-    colors.red,
-    colors.purple,
-    colors.pink,
-    colors.orange,
-    colors.lightBlue,
-    colors.blueFacebook,
-    colors.orange,
-]
+export const linkColors = {
+    regular: colors.black,
+    hover: colors.black,
+    active: colors.black,
+    focus: colors.black
+};
 
-export const monthBackgroundColors = [
-    colors.blueOpaque,
-    colors.tealOpaque,
-    colors.orangeOpaque,
-    colors.greenYellowOpaque,
-    colors.greenOpaque,
-    colors.redOpaque,
-    colors.purpleOpaque,
-    colors.pinkOpaque,
-    colors.tealOpaque,
-    colors.lightBlueOpaque,
-    colors.blueFacebookOpaque,
-    colors.orangeOpaque,
-]
-
-export const buttonColors = {
-    blue: {
-        box: colors.blue10,
-        shadow: '#1976D2',
-        hover: '#387DEF',
-    },
-    red: {
-        box: colors.red,
-        shadow: '#C70D00',
-        hover: '#E13627',
-    },
-    teal: {
-        box: colors.teal,
-        shadow: '#02ACA0',
-        hover: '#02BFB2',
-    },
-    linkedin: {
-        box: colors.blueLinkedIn,
-        shadow: '#005884',
-        hover: '#005F97',
-    },
-    google: {
-        box: colors.redGoogle,
-        shadow: '#C6362A',
-        hover: '#E13627',
-    },
-    facebook: {
-        box: colors.blueFacebook,
-        shadow: '#29487d',
-        hover: '#3A5BA0',
-    },
-    orange: {
-        box: colors.orange,
-        shadow: '#AE4A04',
-        hover: '#FF4B01',
-    },
-}
-
-export const techColors = {
-    angular: {
-        box: '#FF5748',
-        hover: 'rgba(246, 62, 62, 0.07)',
-    },
-    python: {
-        box: colors.blue30,
-        hover: 'rgba(62, 200, 246, 0.11)',
-    },
-    ionic: {
-        box: '#488AFF',
-        hover: 'rgba(62, 200, 246, 0.11)',
-    },
-    graphql: {
-        box: '#F45E8D',
-        hover: 'rgba(246, 62, 167, 0.07)',
-    },
-    typescript: {
-        box: colors.blue30,
-        hover: 'rgba(62, 200, 246, 0.11)',
-    },
-    reactnative: {
-        box: colors.grey100,
-        hover: 'rgba(62, 246, 238, 0.11)',
-    },
-    docker: {
-        box: colors.blue30,
-        hover: 'rgba(62, 200, 246, 0.11)',
-    },
-    vuejs: {
-        box: colors.green,
-        hover: 'rgba(62, 246, 181, 0.11)',
-    },
-    javascript: {
-        box: colors.yellow,
-        hover: 'rgba(246, 203, 62, 0.07)',
-    },
-    react: {
-        box: colors.lightBlue,
-        hover: 'rgba(62, 246, 238, 0.11)',
-    },
-    reason: {
-        box: colors.red,
-        hover: 'rgba(246, 62, 62, 0.07)',
-    },
-    ruby: {
-        box: '#F53B00',
-        hover: 'rgba(246, 62, 62, 0.07)',
-    },
-    c: {
-        box: '#9416C6',
-        hover: 'rgba(206, 62, 246, 0.07)',
-    },
-    swift: {
-        box: colors.orange,
-        hover: 'rgba(246, 130, 62, 0.07)',
-    },
-    rxjs: {
-        box: '#C616C1',
-        hover: 'rgba(206, 62, 246, 0.07)',
-    },
-    node: {
-        box: '#2ABD51',
-        hover: 'rgba(62, 246, 73, 0.07)',
-    },
-    kubernetes: {
-        box: '#3C63AB',
-        hover: 'rgba(60,99,171, 0.07)',
-    },
-}
+export const backgroundColors = {
+    primary: colors.grey,
+    secondary: colors.black,
+    navbar: colors.white,
+    stroke: colors.black,
+};

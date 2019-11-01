@@ -2,6 +2,8 @@ import {css} from 'styled-components'
 import {sizes} from './Mediaqueries'
 
 export const fontSize = fontSize => `font-size: ${fontSize / 16}rem`
+export const lineHeight = lineHeight => `line-height: ${lineHeight / 16}rem`
+
 
 export const ieMedia = Object.keys(sizes).reduce((accumulator, label) => {
     const emSize = sizes[label] / 16
