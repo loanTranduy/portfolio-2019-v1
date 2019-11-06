@@ -16,36 +16,19 @@ export const colors = {
     grey120: '#252726',
     black: '#121312',
 
-    blue10: '#448AFF',
-    blue20: '#3E8DF6',
-    blue30: '#188DF2',
-    darkBlue: '#0C58CA',
-    blueLinkedIn: '#006CAC',
-    blueTwitter: '#1997F0',
-    blueFacebook: '#4267B2',
-    blueKubernetes: 'rgba(60,99,171, .1)',
-    lightBlue: '#30CFF7',
+    violet: '#9013FE',
+    yellow: '#F8CA1C',
+    pink: '#F45E8D',
     teal: '#50E3C2',
-    tealOpaque: 'rgba(0, 204, 190, .1)',
-    blueOpaque: 'rgba(68, 138, 255, .1)',
+
     darkteal: '#2BB4AA',
     darkBlueTeal: '#058CDF',
-    redGoogle: '#EA4335',
-    red: '#FF5748',
-    redOpaque: 'rgba(199, 13, 0, .1)',
     orange: '#FF6A01',
     orangeOpaque: 'rgba(255, 106, 1, .1)',
-    yellow: '#FFC20D',
     darkyellow: '#F5A623',
-    darkYellowOpaque: 'rgba(229, 175, 15, .1)',
     green: '#1ADB7F',
     greenOpaque: 'rgba(66, 215, 144, .1)',
-    purple: '#9416C6',
-    purpleOpaque: 'rgba(148, 22, 198, .1)',
-    pink: '#F45E8D',
     pinkOpaque: 'rgba(244, 94, 141, .1)',
-    lightBlueOpaque: 'rgba(48, 207, 247, .1)',
-    blueFacebookOpaque: 'rgba(12, 88, 202, .1)',
 }
 
 export const textColors = {
@@ -61,9 +44,19 @@ export const linkColors = {
     focus: colors.black
 };
 
+export const skillsColors = {
+    front: colors.violet,
+    web: colors.yellow,
+    graphic: colors.pink,
+    all: colors.teal,
+};
+
 export const backgroundColors = {
     primary: colors.grey,
     secondary: colors.black,
+    tertiary: colors.white,
     navbar: colors.white,
     stroke: colors.black,
+    gradiant: 'linear-gradient(134deg,#F08FF2 0%,#F46183 60%) no-repeat',
+
 };

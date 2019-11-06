@@ -16,7 +16,7 @@ export const Content = styled.nav`
   bottom: ${props => (props.position)}px;
   right: ${props => (props.position)}px;
   left: ${props => (props.position)}px;
-  z-index: 0;
+  z-index: 1;
   transition: all 0.29s ease;
   ${media.md`
   display: flex;
@@ -30,7 +30,7 @@ export const Content = styled.nav`
           content:url(${corner});
           position: absolute;
           right: -39px;
-          top: 15px;
+          top: 10px;
           width: 40px;
       }
   `}
@@ -53,6 +53,9 @@ export class Sidebar extends React.Component {
         this.props.parentCallback(
             this.navbar.current.clientHeight
         );
+        this.props.parentCallbackWidth(
+            this.navbar.current.clientWidth
+        );
     };
 
     render() {
@@ -60,8 +63,9 @@ export class Sidebar extends React.Component {
         return (
             <Content ref={this.navbar} position={position}>
                 <NavSidebar/>
-                {window.innerWidth > 767 ?
-                <SocialFooter/> : null}
+                {window.innerWidth > 767 &&
+                <SocialFooter/>
+                }
             </Content>
         )
     }

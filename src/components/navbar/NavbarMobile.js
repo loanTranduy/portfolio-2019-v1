@@ -10,17 +10,13 @@ import {SocialFooter} from './SocialFooter';
 
 //Burger Button
 const Toggle = styled.div`
-  height: 32px;
-  width: 32px;
+  padding: 16px;
   margin: 16px;
   border: 4px solid black;
   border-radius: 100%;
   cursor: pointer;
   position: relative;
   float: right;
-    ${media.md`
-    display: none;
-`};
 `
 
 export const Bar = styled.span`
@@ -79,7 +75,7 @@ const NavMobile = styled.nav`
     left: 0;
     height: ${props => (props.isActive ? 'calc(100vh - ' + props.navbarHeight + 'px )' : 0)};
     transition: height .6s;
-    z-index: 2;
+    z-index: 4;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -91,34 +87,35 @@ const NavMobile = styled.nav`
         position: initial;
         display: inline-block;
     `}
+    ${media.lg`
+        margin-left: 70px;
+    `}
+    
     ${media.xl`
         margin-left: 100px;
     `}
+    
     >ul{
         margin-top: 56px;
         height: 60vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        li{
+          opacity:${props => props.isActive ? 1 : 0};
+          transform: translateX(${props => props.isActive ? 0 : -20}px);
+        }
         
         li:nth-child(1){
-           opacity:${props => props.isActive ? 1 : 0};
-        transform: translateX(${props => props.isActive ? 0 : -20}px);
         transition: all .3s ease-in-out .3s;
         }
             li:nth-child(2){
-           opacity:${props => props.isActive ? 1 : 0};
-        transform: translateX(${props => props.isActive ? 0 : -20}px);
         transition: all .3s ease-in-out .4s;
         }
             li:nth-child(3){
-        opacity:${props => props.isActive ? 1 : 0};
-        transform: translateX(${props => props.isActive ? 0 : -20}px);
         transition: all .3s ease-in-out .5s;
         }
             li:nth-child(4){
-           opacity:${props => props.isActive ? 1 : 0};
-        transform: translateX(${props => props.isActive ? 0 : -20}px);
         transition: all .3s ease-in-out .6s;
         }
         
@@ -128,12 +125,12 @@ const NavMobile = styled.nav`
            li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4){
                transition: none;
                opacity: 1;
-                transform: translateX(0);
+               transform: translateX(0);
             }
            height: auto;
            flex-direction: row;
         `}
-        ${media.xl`
+        ${media.lg`
          width: auto;
         `}
 }
@@ -153,21 +150,20 @@ export class NavbarMobile extends React.Component {
         const {slideMenuOpened, toggleSlideMenu, closeSlideMenu,navbarHeight, sideBarHeight} = this.props;
         return (
             <Fragment>
-                {window.innerWidth < 768 ?
+                {window.innerWidth < 768 &&
                     <Toggle onClick={toggleSlideMenu}>
                         <Bar isActive={slideMenuOpened}/>
                         <Bar isActive={slideMenuOpened}/>
                         <Bar isActive={slideMenuOpened}/>
-                    </Toggle> : null
+                    </Toggle>
                 }
 
                 <NavMobile isActive={slideMenuOpened} navbarHeight={navbarHeight} sideBarHeight={sideBarHeight}>
                     <ul>
                         <NavMobileLinkList navMainLinks={Object.values(NavMainLink)} closeSlideMenu={closeSlideMenu} isActive={slideMenuOpened}/>
                     </ul>
-                    {window.innerWidth < 768  ?
+                    {window.innerWidth < 768 &&
                     <SocialFooter/>
-                        : null
                     }
                 </NavMobile>
 

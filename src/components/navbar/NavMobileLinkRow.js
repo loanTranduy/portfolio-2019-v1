@@ -12,7 +12,6 @@ import {colors} from '../../styles/default/Colors';
 const Box = styled.li`
     ${lineHeight(64)};
     a{
-      //font-family: ${FontFamilies.mtSemiBold};
       font-weight: 600;
       padding: 16px;
       ${fontSize(20)};
@@ -21,10 +20,10 @@ const Box = styled.li`
       content:"";
       display: block;
       position: absolute;
-      bottom: 4px;
+      bottom: 0;
       left: 16px;
       width: 0;
-      height: 3px;
+      height: 4px;
       background: ${colors.teal};
       transition: .3s ease-in-out;
       }
@@ -33,22 +32,21 @@ const Box = styled.li`
       //underline
       &:after{
       width: 24px;
-
       }
     }
     }
     ${media.md`
-    ${lineHeight(39)};
+    ${lineHeight(28)};
         a{
         ${fontSize(12)};
           &:hover{
-      &:after{
-      width: 24px;
-      }
+              &:after{
+                width: 24px;
+              }
     }
         }
     `}
-    ${media.xl`
+    ${media.lg`
         margin-right: 56px;
     `}
 `

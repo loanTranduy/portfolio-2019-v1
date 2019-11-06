@@ -4,9 +4,8 @@ import {colors} from '../styles/default/Colors';
 import {FrontEndScreen} from './FrontEndScreen';
 import {WebDesignScreen} from './WebDesignScreen';
 import {GraphicDesignScreen} from './GraphicDesignScreen';
-import {Container} from '../components/SharedStyle';
 
-const Content = styled(Container)`
+const Content = styled.div`
   color: ${colors.black};
   padding-top: 50px;
   
@@ -23,9 +22,9 @@ const Content = styled(Container)`
 
 export class WorkScreen extends React.Component {
     render() {
-        const{navbarHeight, strokeHeight,sideNavbarHeight} = this.props;
         return (
-            <Content navbarHeight={navbarHeight} strokeHeight={strokeHeight} sideNavbarHeight={sideNavbarHeight}>
+            <Content
+            >
                 <h1>All my projects</h1>
                 <FrontEndScreen/>
                 <WebDesignScreen/>

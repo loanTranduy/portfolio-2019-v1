@@ -4,13 +4,16 @@ import {backgroundColors, linkColors, textColors} from './Colors';
 import {media} from './Mediaqueries';
 
 export const GlobalStyle = createGlobalStyle`
-    html{
-      background: ${backgroundColors.primary};
+    * {
+      box-sizing: border-box;
+      &::before, &::after {
+        box-sizing: border-box;
+      }
     }
+
     body,
     html {
       margin: 0;
-      box-sizing: border-box;
       position: relative;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -23,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         color: ${textColors.primary};
         background: ${backgroundColors.primary};
+        //background: linear-gradient(-144deg, #F08FF2 0%, #F46183 100%) no-repeat;
         
         //Stroke
         &:after, &:before{
@@ -46,6 +50,9 @@ export const GlobalStyle = createGlobalStyle`
     h2,
     h3,
     h4 {
+      text-rendering: optimizeLegibility; 
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       font-weight: normal;
       margin: 0;
     }
@@ -59,6 +66,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     a {
+    display: block;
     color:${linkColors.regular};
     text-decoration: none;
     ${media.sm`
@@ -76,6 +84,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     button {
+      border: none;
       cursor: pointer;
       &:focus {
         outline: none;

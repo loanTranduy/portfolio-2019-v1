@@ -10,23 +10,21 @@ import {fontSize} from '../../styles/default/Mixins';
 
 export const Content = styled.header`
   padding: 0 8px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   background: ${backgroundColors.navbar};
   position: fixed;
   top: ${props => (props.position)}px;
   right: ${props => (props.position)}px;
-  z-index: 2;
+  z-index: 3;
   left: ${props => (props.position)}px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   ${media.md`
-    align-items: flex-end;
+    align-items: center;
     border-radius: 0;
-    padding-top: 24px;
+    padding-top: 0;
   `}
-  ${media.xl`
+  ${media.lg`
     padding-right: 48px;
     justify-content: flex-start;
   `}
@@ -53,7 +51,7 @@ export const Brand = styled(Link)`
     ${media.md`
     padding: 0 16px 0 12px;
   `}
-    ${media.xl`
+    ${media.lg`
     padding: 0 16px;
     `}
 `;
@@ -101,7 +99,7 @@ export class Navbar extends React.Component {
                 {/*Logo*/}
                 <Brand to="/">
                     <img src={logo}  alt={"name"}/>
-                    {window.innerWidth < 768 || window.innerWidth > 1074 ?
+                    {window.innerWidth < 768 || window.innerWidth > 991 ?
                     <h1>Tran Duy <span>loan</span></h1>
                         : null }
                 </Brand>

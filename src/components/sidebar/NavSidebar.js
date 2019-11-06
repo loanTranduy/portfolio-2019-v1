@@ -46,7 +46,7 @@ export const Ul = styled.div`
         }
    }
   `}
-    ${media.xl`
+    ${media.lg`
     li{
         a{
         transition: border .1s ease-in;
