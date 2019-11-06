@@ -8,9 +8,11 @@ import {Navbar} from './components/navbar/Navbar';
 import {createLoadable} from './utils/loadable'
 import {GlobalStyle} from './styles/default/reset';
 import {Sidebar} from './components/sidebar/Sidebar';
-import {Stroke, StrokeTop} from './components/SharedStyle';
+import {Stroke, StrokeTop, TheContainer} from './components/SharedStyle';
 import Normalize from 'react-normalize';
-import {injectFonts} from './styles/default/Font';
+import { GridThemeProvider } from 'styled-bootstrap-grid';
+import { ThemeProvider } from 'styled-components';
+import {gridTheme, styledTheme} from './styles/BootstrapCustom';
 
 const LoadableWebDesignScreen = createLoadable(
     () => import(/* webpackChunkName: "WebDesignScreen" */ './screens/WebDesignScreen'),
@@ -54,6 +56,7 @@ export class App extends React.Component {
             mainNavbarHeight: 0,
             strokeSize: 10,
             sideNavbarHeight: 0,
+            sideNavbarWidth: 0,
         };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
@@ -80,80 +83,83 @@ export class App extends React.Component {
 
     sideCallbackFunction = (childData) => {
         this.setState({
-            sideNavbarHeight: childData})
+            sideNavbarHeight: childData
+        })
+    };
+
+    sideWidthCallbackFunction = (childData) => {
+        this.setState({
+            sideNavbarWidth: childData
+        })
     };
 
     render() {
+        const{mainNavbarHeight, strokeSize, sideNavbarHeight, sideNavbarWidth} = this.state;
         return (
-            <React.Fragment>
-                <injectFonts/>
-                <Normalize/>
-                <GlobalStyle
-                    strokeSize={this.state.strokeSize}
-                />
-                <Router>
-                    <Stroke size={this.state.strokeSize}/>
-                        <StrokeTop size={this.state.strokeSize}/>
+            <ThemeProvider
+                theme={styledTheme}
+            >
+                <GridThemeProvider
+                    gridTheme={gridTheme}
+                >
+                    <Normalize/>
+                    <GlobalStyle
+                        strokeSize={strokeSize}
+                    />
+                    <Router>
+                        <Stroke size={strokeSize}/>
+                        <StrokeTop size={strokeSize}/>
                         <Navbar
                             parentCallback = {this.callbackFunction}
-                            position={this.state.strokeSize}
-                            navbarHeight={this.state.mainNavbarHeight}
-                            sideBarHeight={this.state.sideNavbarHeight}
+                            position={strokeSize}
+                            navbarHeight={mainNavbarHeight}
+                            sideBarHeight={sideNavbarHeight}
                         />
                         <Sidebar
                             parentCallback = {this.sideCallbackFunction}
-                            position={this.state.strokeSize}
+                            parentCallbackWidth = {this.sideWidthCallbackFunction}
+                            position={strokeSize}
                         />
                         <Switch>
+                            <TheContainer
+                                navbarHeight={mainNavbarHeight}
+                                strokeHeight={strokeSize}
+                                sideNavbarHeight={sideNavbarHeight}
+                                sideNavbarWidth={sideNavbarWidth}
+                            >
+
                             <Route exact path="/" render={() =>
                                 <LoadableLandingScreen
-                                    navbarHeight={this.state.mainNavbarHeight}
-                                    strokeHeight={this.state.strokeSize}
-                                    sideNavbarHeight={this.state.sideNavbarHeight}
+                                    navbarHeight={mainNavbarHeight}
+                                    strokeHeight={strokeSize}
                                 />
                             }/>
-                            <Route path="/about" render={() =>
+                            <Route exact path="/about" render={() =>
                                 <LoadableAboutScreen
-                                    navbarHeight={this.state.mainNavbarHeight}
-                                    strokeHeight={this.state.strokeSize}
-                                    sideNavbarHeight={this.state.sideNavbarHeight}
                                 />}
                             />
                             <Route exact path="/work" render={() =>
                                 <LoadableWorkScreen
-                                navbarHeight={this.state.mainNavbarHeight}
-                                strokeHeight={this.state.strokeSize}
-                                sideNavbarHeight={this.state.sideNavbarHeight}
                             />}
                                 />
                             <Route path="/work/front-end" render={() =>
                                 <LoadableFrontEndScreen
-                                    navbarHeight={this.state.mainNavbarHeight}
-                                    strokeHeight={this.state.strokeSize}
-                                    sideNavbarHeight={this.state.sideNavbarHeight}
                                 />}/>
                             <Route path="/work/web-design" render={() =>
                                 <LoadableWebDesignScreen
-                                    navbarHeight={this.state.mainNavbarHeight}
-                                    strokeHeight={this.state.strokeSize}
-                                    sideNavbarHeight={this.state.sideNavbarHeight}
                                 />}/>
                             <Route path="/work/graphic-design" render={() =>
                                 <LoadableGraphicDesignScreen
-                                    navbarHeight={this.state.mainNavbarHeight}
-                                    strokeHeight={this.state.strokeSize}
-                                    sideNavbarHeight={this.state.sideNavbarHeight}
                                 />}/>
-                            <Route path="/contact"render={() =>
+                            <Route exact path="/contact"render={() =>
                                 <LoadableContactScreen
-                                    navbarHeight={this.state.mainNavbarHeight}
-                                    strokeHeight={this.state.strokeSize}
-                                    sideNavbarHeight={this.state.sideNavbarHeight}
                                 />}
                             />
+                            </TheContainer>
                         </Switch>
                 </Router>
-            </React.Fragment>
+                </GridThemeProvider>
+            </ThemeProvider>
         )
     }
 }

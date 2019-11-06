@@ -1,13 +1,12 @@
-import React from 'react'
-import {Container} from '../components/SharedStyle';
+import React, {Fragment} from 'react'
+
 
 export class GraphicDesignScreen extends React.Component {
     render() {
-        const{navbarHeight, strokeHeight, sideNavbarHeight} = this.props;
         return (
-            <Container navbarHeight={navbarHeight} strokeHeight={strokeHeight} sideNavbarHeight={sideNavbarHeight}>
-                <h1>Graphic Design block</h1>
-            </Container>
+            <Fragment>
+                <h1>Graphic Design page</h1>
+            </Fragment>
         )
     }
 }

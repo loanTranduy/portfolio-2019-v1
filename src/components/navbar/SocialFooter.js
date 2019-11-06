@@ -34,7 +34,7 @@ ul{
         width: 24px;
         }
     `}
-      ${media.xl`
+      ${media.lg`
       margin: 16px 20px;
           padding: 0;
           flex-direction: row;
@@ -59,8 +59,8 @@ export class SocialFooter extends React.Component {
                 <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/loanTranduy"><img src={github} alt="github"/></a></li>
                 <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/tranduy"><img src={codepen} alt="codepen"/></a></li>
                 </ul>
-                {window.innerWidth > 1074 ?
-                    <p>TRAN DUY LOAN Sprl</p> : null
+                {window.innerWidth > 991 &&
+                    <p>TRAN DUY LOAN Sprl</p>
                 }
             </Footer>
         )
