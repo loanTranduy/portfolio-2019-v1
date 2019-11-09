@@ -17,7 +17,7 @@ export const NavMainLink = [
     {
         id: 0,
         name: 'Home',
-        breadCrumb: '/',
+        breadCrumb: '/home',
     },
     {
         id: 1,

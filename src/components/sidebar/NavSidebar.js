@@ -16,7 +16,7 @@ export const Ul = styled.div`
     
     li:nth-child(1){
         a{
-            &:hover,&:focus,&:active{
+            &:hover,&:focus,&.active{
             background: ${colors.teal};
             }
         }
@@ -24,7 +24,7 @@ export const Ul = styled.div`
     
     li:nth-child(2){
         a{
-            &:hover,&:focus,&:active{
+            &:hover,&:focus,&.active{
             background: #9013FE;
             }
         }
@@ -32,7 +32,7 @@ export const Ul = styled.div`
     
     li:nth-child(3){
         a{
-            &:hover,&:focus,&:active{
+            &:hover,&:focus,&.active{
             background: #FEC350;
             }
         }
@@ -40,7 +40,7 @@ export const Ul = styled.div`
         
     li:nth-child(4){
         a{
-            &:hover,&:focus,&:active{
+            &:hover,&:focus,&.active{
             background: #D52F66;
             }
         }
@@ -56,7 +56,7 @@ export const Ul = styled.div`
             ${Anime}{
                 transition: background .1s ease-in;
             }
-            &:hover,&:active, &:focus{
+            &:hover,&.active, &:focus{
             img{
                 //transform: translateY(-50%) scale(.9);
                 color: #1DAE8D;
@@ -67,14 +67,14 @@ export const Ul = styled.div`
     li:nth-child(1) { 
         a{
           border: 3px solid ${colors.black};
-          &:hover,&:active, &:focus{
+          &:hover,&.active, &:focus{
               //border: 3px solid ${colors.teal};
               background: transparent;
               ${Anime}{
                   background: ${colors.teal};
               }
           }
-          &:focus, &:active{
+          &:focus, &.active{
               border: 3px solid ${colors.teal};
           }
         }
@@ -82,14 +82,14 @@ export const Ul = styled.div`
     
     li:nth-child(2) { 
         a{
-            &:hover,&:active, &:focus{
+            &:hover,&.active, &:focus{
                 //border: 3px solid #9013FE;
                 background: transparent;
                 ${Anime}{
                     background: #9013FE;
                 }
             }
-            &:focus, &:active{
+            &:focus, &.active{
                 border: 3px solid #9013FE;
             }
         }
@@ -97,14 +97,14 @@ export const Ul = styled.div`
   
     li:nth-child(3){ 
         a{
-          &:hover,&:active, &:focus{
+          &:hover,&.active, &:focus{
           //border: 3px solid #FEC350;
           background: transparent;
            ${Anime}{
             background: #FEC350;
            }
           }
-          &:focus, &:active{
+          &:focus, &.active{
           border: 3px solid #FEC350;
           }
         }
@@ -112,14 +112,14 @@ export const Ul = styled.div`
   
   li:nth-child(4){ 
     a{
-      &:hover,&:active, &:focus{
+      &:hover,&.active, &:focus{
       //border: 3px solid #D52F66;
       background: transparent;
        ${Anime}{
         background: #D52F66;
        }
       }
-      &:focus, &:active{
+      &:focus, &.active{
       border: 3px solid #D52F66;
       }
     }

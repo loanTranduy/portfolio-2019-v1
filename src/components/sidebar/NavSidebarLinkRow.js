@@ -55,7 +55,8 @@ const Box = styled.li`
   ${media.lg`
     margin-bottom: 0;
     
-    a:active, a:focus {
+    a.active, 
+    a:focus {
     
       ${Inverter}{
         ${Invert}{
@@ -72,7 +73,8 @@ const Box = styled.li`
     `}
   
   ${media.xl`
-    a:active, a:focus {
+    a.active, 
+    a:focus {
       ${Anime}{
         transition: clip-path .6s ease-in-out;
       }
@@ -156,6 +158,7 @@ export class NavSidebarLinkRow extends React.Component {
         return (
             <Box>
                 <LinkWithIcon
+                    exact
                     to={this.props.navSidebarLink.breadCrumb}
                 >
                     {window.innerWidth > 991 &&

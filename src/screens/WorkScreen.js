@@ -23,14 +23,15 @@ const Content = styled.div`
 export class WorkScreen extends React.Component {
     render() {
         return (
-            <Content
-            >
+            <Content>
                 <h1>All my projects</h1>
-                <FrontEndScreen/>
-                <WebDesignScreen/>
-                <GraphicDesignScreen/>
+                    <FrontEndScreen/>
+                    <WebDesignScreen/>
+                    <GraphicDesignScreen/>
             </Content>
         )
     }
 }
+
+
 

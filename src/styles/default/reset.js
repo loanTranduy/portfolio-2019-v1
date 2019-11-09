@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import {fontFamilies as FontFamilies} from './Font';
 import {backgroundColors, linkColors, textColors} from './Colors';
-import {media} from './Mediaqueries';
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -26,7 +25,6 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         color: ${textColors.primary};
         background: ${backgroundColors.primary};
-        //background: linear-gradient(-144deg, #F08FF2 0%, #F46183 100%) no-repeat;
         
         //Stroke
         &:after, &:before{
@@ -66,21 +64,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     a {
-    display: block;
-    color:${linkColors.regular};
-    text-decoration: none;
-    ${media.sm`
-      // &:hover {
-      //   color: ${linkColors.hover};
-      //   text-decoration: none;
-      // }
-    `}
-      // &:active{
-      // color:${linkColors.active};
-      // }
-      // &:focus{
-      // color:${linkColors.focus};
-      // }
+      display: block;
+      color:${linkColors.regular};
+      text-decoration: none;
     }
     
     button {

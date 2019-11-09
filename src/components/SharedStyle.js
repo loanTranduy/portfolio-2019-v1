@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {backgroundColors, textColors} from '../styles/default/Colors';
+import {backgroundColors, textColors, colors} from '../styles/default/Colors';
 import {fontSize, lineHeight} from '../styles/default/Mixins';
 import corner from '../assets/images/corner-black.svg';
 import {media} from '../styles/default/Mediaqueries';
@@ -81,15 +81,15 @@ export const Right = styled.div`
 
 
 export const Section = styled.section`
-border-bottom-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   padding-top: 32px;
   background: ${props => props.backgroundColor};
   padding-bottom: ${props => props.noOverflow ? 54 : 120}px;
   position: relative;
-  overflow: ${props => props.noOverflow ? 'hidden' : 'visible'};
+  height: auto;
+  overflow: visible;
   &:after{
-    display: ${props => props.title ? 'block' : 'none'};
-    content:'Projects';
+    content:"Projects";
     position: absolute;
     bottom: 0;
     ${fontSize(130)};
@@ -103,16 +103,15 @@ border-bottom-left-radius: 50px;
     font-style: italic;
     z-index: -1;
     display: none;
-  
   }
   ${media.md`
+    overflow: ${props => props.noOverflow ? 'hidden' : 'visible'};
     border-bottom-left-radius: 40px;
     padding-top: ${props => props.noOverflow ? 40 : 68}px;
-    // padding-bottom: 120px;
     border-top-left-radius: 35px;
     height: calc(${props => props.height}vh - ${props => (props.navbarHeight)}px - (${props => (props.strokeHeight)}px * 2));
     &:after{
-        display: block;
+      display: ${props => props.title ? 'block' : 'none'};
     }
   `}
   ${media.xl`
@@ -122,7 +121,7 @@ border-bottom-left-radius: 50px;
 export const Flex = styled.div`
 
   ${media.md`
-      width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
   `}

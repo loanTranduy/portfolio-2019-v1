@@ -17,10 +17,34 @@ import graphic from '../assets/icons/pencil.svg'
 import all from '../assets/icons/eye.svg'
 import andresSarda from '../assets/images/project/andres-sarda.jpg'
 import {Town} from '../components/landing/Town';
+import throttle from 'lodash.throttle';
 
 
 export class LandingScreen extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            visibleTown: false,
+        };
+        this.updateDimensions = throttle(this.updateDimensions, 500).bind(this);
+    };
+
+
+    updateDimensions() {
+        if (window.innerWidth < 768) {
+            this.setState({visibleTown: false});
+        } else {
+            this.setState({visibleTown: true});
+        }
+    };
+
+    componentDidMount() {
+        this.updateDimensions();
+        window.addEventListener('resize', this.updateDimensions);
+    };
+
     render() {
+        const {visibleTown} = this.state;
         const{navbarHeight, strokeHeight} = this.props;
         return (
             <Fragment>
@@ -31,7 +55,7 @@ export class LandingScreen extends React.Component {
                             <Hello/>
                             <Flex>
                                 <IntroBox/>
-                                {window.innerWidth > 768 &&
+                                {visibleTown &&
                                     <TownTransparent/>
                                 }
                             </Flex>
@@ -44,7 +68,7 @@ export class LandingScreen extends React.Component {
                         <Row>
                             {/*_______________________*/}
                             <Col col sm='12' md='4'>
-                                {window.innerWidth < 768 &&
+                                {!visibleTown &&
                                 <Town/>
                                 }
                                 <LinkProject
