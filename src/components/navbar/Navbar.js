@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
 import {backgroundColors} from '../../styles/default/Colors';
-import Link from 'react-router-dom/es/Link';
 import logo from '../../assets/images/logo-v1.svg'
 import {NavbarMobile} from './NavbarMobile';
 import {media} from '../../styles/default/Mediaqueries';
 import throttle from 'lodash.throttle';
 import {fontSize} from '../../styles/default/Mixins';
+import {Link} from 'react-router-dom';
 
 export const Content = styled.header`
   padding: 0 8px;

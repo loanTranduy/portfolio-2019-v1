@@ -9,7 +9,7 @@ const Text = styled.p`
   ${props => fontSize(props.SizeFr ? 70 :(props.SizeGr ? 83 : 94))};
   // ${props => lineHeight(props.SizeFr ? 50 : (props.SizeGr ? 60 : (props.SizeCn ? 87 : 66)))};
     ${lineHeight(100)};
-  font-weight: 800;
+  font-weight: 900;
   font-style: italic;
   letter-spacing: 10px;
   //margin-top: 48px;

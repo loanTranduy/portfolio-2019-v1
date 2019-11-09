@@ -3,7 +3,6 @@ import {fontSize, lineHeight} from '../../styles/default/Mixins';
 import {media} from '../../styles/default/Mediaqueries';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import {colors} from '../../styles/default/Colors';
 
 const LinkContainer = styled(Link)`
     overflow: hidden;

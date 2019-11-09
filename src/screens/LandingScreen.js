@@ -24,7 +24,7 @@ export class LandingScreen extends React.Component {
         const{navbarHeight, strokeHeight} = this.props;
         return (
             <Fragment>
-                <Section height={45} noOverflow navbarHeight={navbarHeight} backgroundColor={backgroundColors.gradiant} strokeHeight={strokeHeight}>
+                <Section height={40} noOverflow navbarHeight={navbarHeight} backgroundColor={backgroundColors.gradiant} strokeHeight={strokeHeight}>
                     <Container>
                     <Row>
                         <Col col sm='12'>
@@ -39,7 +39,7 @@ export class LandingScreen extends React.Component {
                     </Row>
                 </Container>
                 </Section>
-                <Section height={55} strokeHeight={strokeHeight} navbarHeight={navbarHeight} title>
+                <Section height={60} strokeHeight={strokeHeight} navbarHeight={navbarHeight} title>
                     <Container>
                         <Row>
                             {/*_______________________*/}

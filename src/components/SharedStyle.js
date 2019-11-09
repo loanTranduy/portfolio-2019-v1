@@ -12,6 +12,7 @@ export const TheContainer = styled.div`
   position: relative;
   min-height: var(--bodySize);
   margin-top: var(--topMarginHeight);
+  overflow: hidden;
   ${media.md`
   --bodySize: calc(100vh - (${props => (props.navbarHeight)}px + calc(${props => (props.strokeHeight)}px * 2)));
     margin-left: var(--leftMarginWidth);
@@ -90,7 +91,7 @@ border-bottom-left-radius: 50px;
     display: ${props => props.title ? 'block' : 'none'};
     content:'Projects';
     position: absolute;
-    bottom: -20px;
+    bottom: 0;
     ${fontSize(130)};
     ${lineHeight(96)};
     color: ${textColors.secondary};
@@ -105,15 +106,15 @@ border-bottom-left-radius: 50px;
   
   }
   ${media.md`
-  border-bottom-left-radius: 40px;
+    border-bottom-left-radius: 40px;
     padding-top: ${props => props.noOverflow ? 40 : 68}px;
-    padding-bottom: 120px;
+    // padding-bottom: 120px;
     border-top-left-radius: 35px;
     height: calc(${props => props.height}vh - ${props => (props.navbarHeight)}px - (${props => (props.strokeHeight)}px * 2));
-   &:after{
-   display: block;
-   }
-   `}
+    &:after{
+        display: block;
+    }
+  `}
   ${media.xl`
   `}
 `
