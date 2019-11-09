@@ -1,7 +1,6 @@
 import React from 'react'
-import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
-import {Flex, Section, TheContainer} from '../components/SharedStyle';
+import {Flex, Section} from '../components/SharedStyle';
 import {Hello} from '../components/hello/Hello';
 import {IntroBox} from '../components/landing/IntroBox';
 import {TownTransparent} from '../components/landing/TownTransparent';

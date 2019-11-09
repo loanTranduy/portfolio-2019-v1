@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {colors, textColors} from '../../styles/default/Colors';
+import {textColors} from '../../styles/default/Colors';
 import {media} from '../../styles/default/Mediaqueries';
 import {fontSize, lineHeight} from '../../styles/default/Mixins';
 import {Link} from 'react-router-dom';

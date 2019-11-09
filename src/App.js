@@ -1,165 +1,71 @@
 import React from 'react'
+import {withRouter, Route, Switch} from 'react-router-dom'
 import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
-} from 'react-router-dom'
-import {Navbar} from './components/navbar/Navbar';
-import {createLoadable} from './utils/loadable'
-import {GlobalStyle} from './styles/default/reset';
-import {Sidebar} from './components/sidebar/Sidebar';
-import {Stroke, StrokeTop, TheContainer} from './components/SharedStyle';
-import Normalize from 'react-normalize';
-import { GridThemeProvider } from 'styled-bootstrap-grid';
-import { ThemeProvider } from 'styled-components';
-import {gridTheme, styledTheme} from './styles/BootstrapCustom';
+    LoadableAboutScreen, LoadableContactScreen,
+    LoadableFrontEndScreen, LoadableGraphicDesignScreen,
+    LoadableLandingScreen, LoadableWebDesignScreen,
+    LoadableWorkScreen
+} from './ComponentLoadable';
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import {Layout} from './screens/Layout';
+import styled from 'styled-components';
 
-const LoadableWebDesignScreen = createLoadable(
-    () => import(/* webpackChunkName: "WebDesignScreen" */ './screens/WebDesignScreen'),
-    'WebDesignScreen'
-)
-
-const LoadableGraphicDesignScreen = createLoadable(
-    () => import(/* webpackChunkName: "FrontEndScreen" */ './screens/GraphicDesignScreen'),
-    'GraphicDesignScreen'
-)
-
-const LoadableFrontEndScreen = createLoadable(
-    () => import(/* webpackChunkName: "FrontEndScreen" */ './screens/FrontEndScreen'),
-    'FrontEndScreen'
-)
-
-const LoadableContactScreen = createLoadable(
-    () => import(/* webpackChunkName: "ContactScreen" */ './screens/ContactScreen'),
-    'ContactScreen'
-)
-
-const LoadableWorkScreen = createLoadable(
-    () => import(/* webpackChunkName: "WorkScreen" */ './screens/WorkScreen'),
-    'WorkScreen'
-)
-
-const LoadableAboutScreen = createLoadable(
-    () => import(/* webpackChunkName: "AboutScreen" */ './screens/AboutScreen'),
-    'AboutScreen'
-)
-
-const LoadableLandingScreen = createLoadable(
-    () => import(/* webpackChunkName: "LandingScreen" */ './screens/LandingScreen'),
-    'LandingScreen',
-)
-
-export class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            mainNavbarHeight: 0,
-            strokeSize: 10,
-            sideNavbarHeight: 0,
-            sideNavbarWidth: 0,
-        };
-        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+const Section = styled.section`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+    &.fade-appear,
+    &.fade-enter {
+        opacity: 0;
     }
-
-    componentDidMount() {
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
+    
+    &.fade-appear-active,
+    &.fade-enter-active {
+        transition: opacity .3s linear;
+        opacity: 1;
     }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions);
+    
+    &.fade-exit {
+        transition: opacity .2s linear;
+        opacity: 1;
     }
-
-    updateWindowDimensions() {
-        this.setState({
-            windowWidth: window.innerWidth,
-            windowHeight: window.innerHeight });
+    
+    &.fade-exit-active {
+        opacity: 0;
     }
+`;
 
-    callbackFunction = (childData) => {
-        this.setState({
-            mainNavbarHeight: childData})
-    };
+const App = ({ location }) => {
+    const currentKey = location.pathname.split('/')[1] || '/';
+    const timeout = { enter: 300, exit: 300 };
 
-    sideCallbackFunction = (childData) => {
-        this.setState({
-            sideNavbarHeight: childData
-        })
-    };
-
-    sideWidthCallbackFunction = (childData) => {
-        this.setState({
-            sideNavbarWidth: childData
-        })
-    };
-
-    render() {
-        const{mainNavbarHeight, strokeSize, sideNavbarHeight, sideNavbarWidth} = this.state;
         return (
-            <ThemeProvider
-                theme={styledTheme}
-            >
-                <GridThemeProvider
-                    gridTheme={gridTheme}
-                >
-                    <Normalize/>
-                    <GlobalStyle
-                        strokeSize={strokeSize}
-                    />
-                    <Router>
-                        <Stroke size={strokeSize}/>
-                        <StrokeTop size={strokeSize}/>
-                        <Navbar
-                            parentCallback = {this.callbackFunction}
-                            position={strokeSize}
-                            navbarHeight={mainNavbarHeight}
-                            sideBarHeight={sideNavbarHeight}
-                        />
-                        <Sidebar
-                            parentCallback = {this.sideCallbackFunction}
-                            parentCallbackWidth = {this.sideWidthCallbackFunction}
-                            position={strokeSize}
-                        />
-                        <Switch>
-                            <TheContainer
-                                navbarHeight={mainNavbarHeight}
-                                strokeHeight={strokeSize}
-                                sideNavbarHeight={sideNavbarHeight}
-                                sideNavbarWidth={sideNavbarWidth}
-                            >
-
+            <Layout>
+                <TransitionGroup component={null}>
+                    <CSSTransition key={currentKey} timeout={timeout} classNames="fade" appear>
+                        <Section>
+                        <Switch location={location}>
                             <Route exact path="/" render={() =>
                                 <LoadableLandingScreen
-                                    navbarHeight={mainNavbarHeight}
-                                    strokeHeight={strokeSize}
+                                    navbarHeight={30}
+                                    strokeHeight={5}
                                 />
                             }/>
-                            <Route exact path="/about" render={() =>
-                                <LoadableAboutScreen
-                                />}
+                            <Route exact path="/about" render={() => <LoadableAboutScreen/>}/>
+                            <Route exact path="/work" render={() => <LoadableWorkScreen/>}/>
+                            <Route exact path="/work/front-end" render={() => <LoadableFrontEndScreen/>}/>
+                            <Route exact path="/work/web-design" render={() => <LoadableWebDesignScreen/>}/>
+                            <Route exact path="/work/graphic-design" render={() => <LoadableGraphicDesignScreen/>}/>
+                            <Route exact path="/contact"render={() => <LoadableContactScreen/>}
                             />
-                            <Route exact path="/work" render={() =>
-                                <LoadableWorkScreen
-                            />}
-                                />
-                            <Route path="/work/front-end" render={() =>
-                                <LoadableFrontEndScreen
-                                />}/>
-                            <Route path="/work/web-design" render={() =>
-                                <LoadableWebDesignScreen
-                                />}/>
-                            <Route path="/work/graphic-design" render={() =>
-                                <LoadableGraphicDesignScreen
-                                />}/>
-                            <Route exact path="/contact"render={() =>
-                                <LoadableContactScreen
-                                />}
-                            />
-                            </TheContainer>
                         </Switch>
-                </Router>
-                </GridThemeProvider>
-            </ThemeProvider>
-        )
-    }
+                        </Section>
+                    </CSSTransition>
+                </TransitionGroup>
+            </Layout>
+    )
 }
+
+export default withRouter(App)

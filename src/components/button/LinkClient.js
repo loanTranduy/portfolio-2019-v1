@@ -77,7 +77,7 @@ const LinkContainer = styled(Link)`
     }
     
     &:hover{
-        // transform: scale(0.98);
+        transform: scale(0.98);
     box-shadow: -8px 19px 18px 0 rgba(0,2,117,0.16);
     }
   `}

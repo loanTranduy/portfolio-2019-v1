@@ -4,7 +4,6 @@ import {NavMainLinkPropTypes} from '../../constants/navLinksMock';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {media} from '../../styles/default/Mediaqueries';
-import {fontFamilies as FontFamilies} from '../../styles/default/Font';
 import {fontSize, lineHeight} from '../../styles/default/Mixins';
 import {colors} from '../../styles/default/Colors';
 
@@ -28,7 +27,7 @@ const Box = styled.li`
       transition: .3s ease-in-out;
       }
       
-      &:active, &:focus{
+      &.active, &:focus{
       //underline
       &:after{
       width: 24px;
@@ -39,12 +38,12 @@ const Box = styled.li`
     ${lineHeight(28)};
         a{
         ${fontSize(12)};
-          &:hover{
-              &:after{
-                width: 24px;
-              }
-    }
-        }
+               &:hover, &.active{
+                   &:after{
+                     width: 24px;
+                   }
+         }
+          }
     `}
     ${media.lg`
         margin-right: 56px;
@@ -55,15 +54,15 @@ export class NavMobileLinkRow extends React.Component {
     static propTypes = {
         navMainLink: NavMainLinkPropTypes,
         closeSlideMenu: PropTypes.func,
-        isCurrentPage: PropTypes.bool,
     };
 
     render() {
 
-        const{closeSlideMenu, isCurrentPage} = this.props;
+        const{closeSlideMenu} = this.props;
         return (
-            <Box isCurrentPage={isCurrentPage} >
+            <Box>
                 <NavLink
+                    exact
                     onClick={closeSlideMenu}
                     to={this.props.navMainLink.breadCrumb}
                 >

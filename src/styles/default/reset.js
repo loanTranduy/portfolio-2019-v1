@@ -70,17 +70,17 @@ export const GlobalStyle = createGlobalStyle`
     color:${linkColors.regular};
     text-decoration: none;
     ${media.sm`
-      &:hover {
-        color: ${linkColors.hover};
-        text-decoration: none;
-      }
+      // &:hover {
+      //   color: ${linkColors.hover};
+      //   text-decoration: none;
+      // }
     `}
-      &:active{
-      color:${linkColors.active};
-      }
-      &:focus{
-      color:${linkColors.focus};
-      }
+      // &:active{
+      // color:${linkColors.active};
+      // }
+      // &:focus{
+      // color:${linkColors.focus};
+      // }
     }
     
     button {

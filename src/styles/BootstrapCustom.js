@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const gridTheme = {
     breakpoints: { // defaults below
         xl: 1366,
@@ -17,7 +15,7 @@ export const gridTheme = {
     container: {
         padding: 48, // default 15
         maxWidth: { // defaults below
-            xl: 800,
+            xl: 900,
             lg: 800,
             md: 720,
             sm: 540,
@@ -28,4 +26,4 @@ export const gridTheme = {
 
 export const styledTheme = {
     mainColor: 'purple',
-}
+};
