@@ -1,6 +1,6 @@
 import React from 'react'
-import {fontSize, lineHeight} from '../../styles/default/Mixins';
-import {media} from '../../styles/default/Mediaqueries';
+import {fontSize, lineHeight} from '../../../styles/default/Mixins';
+import {media} from '../../../styles/default/Mediaqueries';
 import styled from 'styled-components';
 
 const Text = styled.p`

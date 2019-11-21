@@ -1,7 +1,7 @@
 export const colors = {
     white: '#FFFFFF',
     whiteOpacity: 'rgba(255,255,255,0.4)',
-    grey: '#F6F8FF',
+    grey: '#F2F7FF',
     grey10: '#F3F4F4',
     grey20: '#DFE1E0',
     grey30: '#CBCECD',
@@ -14,12 +14,20 @@ export const colors = {
     grey100: '#4B4F4E',
     grey110: '#383B3A',
     grey120: '#252726',
-    black: '#121312',
+    black: '#352B51',
 
     violet: '#9013FE',
-    yellow: '#F8CA1C',
+    lila: '#D291FF',
+    purple: '#EA77FF',
+    yellow: '#FFD658',
     pink: '#F45E8D',
+    brightPink: '#FF408C',
     teal: '#50E3C2',
+
+    blue: '#2C8DBA',
+    lightBlue: '#30CFF7',
+
+    yellowOrange: '#FDAD00',
 
     darkteal: '#2BB4AA',
     darkBlueTeal: '#058CDF',
@@ -51,6 +59,25 @@ export const skillsColors = {
     all: colors.teal,
 };
 
+export const softwareColors = {
+    react: colors.lightBlue,
+    sass: colors.pink,
+    git: colors.orange,
+    webpack: colors.black,
+    styledComponent: colors.grey,
+    yarn: colors.blue,
+    sketch: colors.yellowOrange,
+    zeplin: colors.yellowOrange,
+    principle: colors.violet,
+    glooMaps: colors.green,
+    ai: colors.orange,
+    ps: colors.lightBlue,
+    ind: colors.brightPink,
+    ae: colors.lila,
+    figma: colors.black,
+    pr: colors.purple,
+};
+
 export const backgroundColors = {
     primary: colors.grey,
     secondary: colors.black,
@@ -58,5 +85,6 @@ export const backgroundColors = {
     navbar: colors.white,
     stroke: colors.black,
     gradiant: 'linear-gradient(134deg,#F08FF2 0%,#F46183 60%) no-repeat',
+    gradiantBlue: 'linear-gradient(134deg, #64E4DE 0%, #248CBB 60%) no-repeat'
 
 };

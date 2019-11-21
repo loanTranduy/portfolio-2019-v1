@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Spinner} from './Spinner'
+import {colors} from '../../styles/default/Colors';
 
 const Container = styled.div`
   display: flex;
@@ -10,6 +11,6 @@ const Container = styled.div`
 
 export const CenteredSpinner = () => (
     <Container>
-        <Spinner color="#00d1b2" />
+        <Spinner color={colors.teal} />
     </Container>
 )

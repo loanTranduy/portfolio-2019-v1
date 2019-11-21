@@ -34,3 +34,8 @@ export const LoadableLandingScreen = createLoadable(
     () => import(/* webpackChunkName: "LandingScreen" */ './screens/LandingScreen'),
     'LandingScreen',
 );
+
+export const LoadableFrontEndProjectScreen = createLoadable(
+    () => import(/* webpackChunkName: "ProjectFrontEndScreen" */ './screens/ProjectFrontEndScreen'),
+    'ProjectFrontEndScreen',
+);

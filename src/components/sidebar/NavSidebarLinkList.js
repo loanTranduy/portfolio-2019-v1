@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavSidebarLinkRow} from './NavSidebarLinkRow';
-import {NavSidebarLinksPropTypes} from '../../constants/navLinksMock';
+import {NavSidebarLinksPropTypes} from '../../constants/nav-links-mock';
 
 export class NavSidebarLinkList extends React.Component {
     static propTypes = {

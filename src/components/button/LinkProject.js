@@ -2,27 +2,26 @@ import React from 'react'
 import {fontSize, lineHeight} from '../../styles/default/Mixins';
 import {media} from '../../styles/default/Mediaqueries';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const LinkContainer = styled(Link)`
+const LinkContainer = styled(NavLink)`
     overflow: hidden;
     border-radius: 40px;
     position: relative;
     background-image: url(${props => props.image}), ${props => props.background};
     background-blend-mode: overlay;
-    width: 100%;
     height: 0;
     padding-top: ${props => props.portrait ? 150 : 60}%;
     background-size: cover;
     background-position-x: center;
-    margin: 16px 0;
     transition: .3s ease-in-out;
     border-top-right-radius: ${props => props.noRadiusTopRight ? '0' : '40'}px;
     border-bottom-left-radius: ${props => props.noRadiusBottomLeft ? '0' : '40'}px;
     border-top-left-radius: ${props => props.noRadiusTopLeft ? '0' : '40'}px;
     
     h2{
-    overflow: visible;
+      overflow: visible;
       transform: rotate(${props => props.portrait ? -90 : 0}deg);
       ${fontSize(100)};
       ${lineHeight(80)};
@@ -52,12 +51,14 @@ const LinkContainer = styled(Link)`
 
   ${media.md`
       margin: ${props => props.portrait ? 0 : '0 0 24px 0'};
-      padding-top: ${props => props.portrait ? 139 :(props.small ? 89 : 82)}%;
+      padding-top: 0;
+      height: 100%;
+      width: 100%;
+
       background-image: url(${props => props.image});
       transition: all .3s ease-in-out;
       
     &:hover{
-        // transform: scale(0.98);
       background-image: url(${props => props.image}), ${props => props.background};
         h2{
             animation: ${props => props.portrait ? 'loopBottomText' : 'loopText'} 6s infinite linear;
@@ -79,6 +80,9 @@ const LinkContainer = styled(Link)`
 
 
 export class LinkProject extends React.Component {
+    static propTypes = {
+        noRadiusBottomLeft: PropTypes.bool,
+    }
 
     render() {
         const {name, image, background, url, noRadiusTopLeft, portrait, small, noRadiusBottomLeft, noRadiusTopRight} = this.props;

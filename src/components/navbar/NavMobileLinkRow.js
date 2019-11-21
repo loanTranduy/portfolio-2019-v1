@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import {NavMainLinkPropTypes} from '../../constants/navLinksMock';
+import {NavMainLinkPropTypes} from '../../constants/nav-links-mock';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {media} from '../../styles/default/Mediaqueries';
@@ -15,6 +15,7 @@ const Box = styled.li`
       padding: 16px;
       ${fontSize(20)};
       position: relative;
+      display: initial;
       &:after{
       content:"";
       display: block;
@@ -37,6 +38,7 @@ const Box = styled.li`
     ${media.md`
     ${lineHeight(28)};
         a{
+        display: block;
         ${fontSize(12)};
                &:hover, &.active{
                    &:after{
@@ -62,7 +64,7 @@ export class NavMobileLinkRow extends React.Component {
         return (
             <Box>
                 <NavLink
-                    exact
+                    exact={this.props.navMainLink.exact}
                     onClick={closeSlideMenu}
                     to={this.props.navMainLink.breadCrumb}
                 >

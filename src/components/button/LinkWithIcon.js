@@ -36,6 +36,7 @@ const Text = styled.p`
   color:${textColors.primary};
   
   ${media.md`
+    margin-left: ${props => props.circleColor ? 16 : 0}px;
   `}
   
     ${media.xl`
@@ -48,7 +49,7 @@ const Circle = styled.div`
   margin: 0;
   width: 40px;
   height: 40px;
-  background: transparent;
+  background: ${props => props.circleColor};
   border-radius: 1.625rem;
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   
@@ -74,6 +75,7 @@ const Button = styled(Link)`
   height: auto;
   
   ${media.md`
+  width: 16.4rem;
     &:hover{
         ${Circle}{
             width: 101%;
@@ -93,15 +95,15 @@ const Button = styled(Link)`
 
 export class LinkWithIcon extends React.Component {
     render() {
-        const{children, to, icon, alt} = this.props;
+        const{children, to, icon, alt, circleColor} = this.props;
         return (
             <Button to={to}>
                 <Content>
-                    <Text>{children}</Text>
+                    <Text circleColor={circleColor}>{children}</Text>
                     <img src={icon} alt={alt}/>
                 </Content>
                 {window.innerWidth > 768 &&
-                <Circle/>
+                    <Circle circleColor={circleColor}/>
                 }
             </Button>
         )

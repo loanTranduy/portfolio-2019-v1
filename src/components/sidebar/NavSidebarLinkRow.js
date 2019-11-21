@@ -2,7 +2,7 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import styled from 'styled-components';
 import {media} from '../../styles/default/Mediaqueries';
-import {NavSidebarLinkPropTypes} from '../../constants/navLinksMock';
+import {NavSidebarLinkPropTypes} from '../../constants/nav-links-mock';
 import {fontSize} from '../../styles/default/Mixins';
 import {colors} from '../../styles/default/Colors';
 
@@ -55,7 +55,8 @@ const Box = styled.li`
   ${media.lg`
     margin-bottom: 0;
     
-    a:active, a:focus {
+    a.active, 
+    a:focus {
     
       ${Inverter}{
         ${Invert}{
@@ -72,19 +73,19 @@ const Box = styled.li`
     `}
   
   ${media.xl`
-    a:active, a:focus {
+    a.active, 
+    a:focus {
       ${Anime}{
         transition: clip-path .6s ease-in-out;
       }
     }
   `}
 `;
-
 export const LinkWithIcon = styled(NavLink)`
-    width: 38px;
+    width: 50px;
     border-radius: 10px;
     margin: 0 8px;
-    padding: 5px 1px;
+    padding: 0 8px 9px 9px;
     display: flex;
     flex-direction: column;
     font-weight: 700;
@@ -93,19 +94,17 @@ export const LinkWithIcon = styled(NavLink)`
     justify-content: space-between;
     
     img{
-      margin-bottom: 4px;
-      height: 16px
+      height: 32px
     }
     
     ${media.md`
     margin: 0;
-    padding: 10px 4px;
-    height: 24px;
+    padding: 5px 4px;
     margin-right: 0;
     
     img{
         height: auto;
-        width: 24px;
+        width: 40px;
     }
     
      > span{
@@ -117,7 +116,7 @@ export const LinkWithIcon = styled(NavLink)`
       display: block;
       text-align: inherit;
       overflow: hidden;
-      border-radius: 6px;
+      border-radius: 24px;
       margin: 10px;
       padding: 16px 147px 16px 16px;
       background: transparent;
@@ -128,9 +127,8 @@ export const LinkWithIcon = styled(NavLink)`
       transition: color 0s .3s;
       
       img{
-        width: 22px;
         position: absolute;
-        right: 20px;
+        right: 10px;
         top: 50%;
         transform: translateY(-50%);
         color: black;
@@ -156,6 +154,7 @@ export class NavSidebarLinkRow extends React.Component {
         return (
             <Box>
                 <LinkWithIcon
+                    exact
                     to={this.props.navSidebarLink.breadCrumb}
                 >
                     {window.innerWidth > 991 &&

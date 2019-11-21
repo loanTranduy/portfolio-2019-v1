@@ -1,12 +1,13 @@
 import React from 'react'
-import {GlobalStyle} from '../styles/default/reset';
-import {Stroke, StrokeTop, TheContainer} from '../components/SharedStyle';
+import {GlobalStyle} from './default/reset';
+import {TheContainer} from '../components/SharedStyle';
 import {Navbar} from '../components/navbar/Navbar';
 import {Sidebar} from '../components/sidebar/Sidebar';
 import {ThemeProvider} from 'styled-components';
-import {gridTheme, styledTheme} from './../styles/BootstrapCustom';
+import {gridTheme, styledTheme} from './BootstrapCustom';
 import { GridThemeProvider } from 'styled-bootstrap-grid';
 import Normalize from 'react-normalize';
+import {Strokes} from '../components/stroke/Strokes';
 
 export class Layout extends React.Component {
     constructor(props) {
@@ -53,7 +54,7 @@ export class Layout extends React.Component {
     };
 
     render() {
-        const {sideNavbarWidth, strokeSize, mainNavbarHeight, sideNavbarHeight} = this.state;
+        const {sideNavbarWidth, strokeSize, mainNavbarHeight, sideNavbarHeight, } = this.state;
         return (
             <ThemeProvider
                 theme={styledTheme}
@@ -65,8 +66,7 @@ export class Layout extends React.Component {
                     <GlobalStyle
                         strokeSize={strokeSize}
                     />
-                    <Stroke size={strokeSize}/>
-                    <StrokeTop size={strokeSize}/>
+                    <Strokes size={strokeSize} url={this.props.url} sideNavbarWidth={sideNavbarWidth}/>
                     <Navbar
                         parentCallback = {this.callbackFunction}
                         position={strokeSize}
@@ -83,6 +83,7 @@ export class Layout extends React.Component {
                         strokeHeight={strokeSize}
                         sideNavbarHeight={sideNavbarHeight}
                         sideNavbarWidth={sideNavbarWidth}
+                        scrollBlockerActif={this.props.scrollBlockerActif}
                     >
                         {this.props.children}
                     </TheContainer>

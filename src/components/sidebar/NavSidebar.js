@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavSidebarLink} from '../../constants/navLinksMock';
+import {NavSidebarLink} from '../../constants/nav-links-mock';
 import {NavSidebarLinkList} from './NavSidebarLinkList';
 import styled from 'styled-components';
 import {media} from '../../styles/default/Mediaqueries';
@@ -10,13 +10,21 @@ export const Ul = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 8px;
-    ${media.md`
-    padding: 50px 16px; 
-    flex-direction: column;
     
-    li:nth-child(1){
+    li a {
+    transition: all .3s ease;
+    }
+    
+    li{
+    a.active{
+        transform: translateY(-15px);
+        color: white;
+    }
+    }
+    
+        li:nth-child(1){
         a{
-            &:hover,&:focus,&:active{
+            &:hover,&:focus,&.active{
             background: ${colors.teal};
             }
         }
@@ -24,27 +32,36 @@ export const Ul = styled.div`
     
     li:nth-child(2){
         a{
-            &:hover,&:focus,&:active{
-            background: #9013FE;
+            &:hover,&:focus,&.active{
+            background: ${colors.violet};
             }
         }
     }
     
     li:nth-child(3){
         a{
-            &:hover,&:focus,&:active{
-            background: #FEC350;
+            &:hover,&:focus,&.active{
+            background: ${colors.yellow};
             }
         }
     }
         
     li:nth-child(4){
         a{
-            &:hover,&:focus,&:active{
-            background: #D52F66;
+            &:hover,&:focus,&.active{
+            background: ${colors.pink};
             }
         }
    }
+    ${media.md`
+    padding: 50px 16px; 
+    flex-direction: column;
+        li{
+    a.active{
+        transform: none;
+        color: white;
+    }
+    }
   `}
     ${media.lg`
     li{
@@ -56,7 +73,7 @@ export const Ul = styled.div`
             ${Anime}{
                 transition: background .1s ease-in;
             }
-            &:hover,&:active, &:focus{
+            &:hover,&.active, &:focus{
             img{
                 //transform: translateY(-50%) scale(.9);
                 color: #1DAE8D;
@@ -67,14 +84,14 @@ export const Ul = styled.div`
     li:nth-child(1) { 
         a{
           border: 3px solid ${colors.black};
-          &:hover,&:active, &:focus{
+          &:hover,&.active, &:focus{
               //border: 3px solid ${colors.teal};
               background: transparent;
               ${Anime}{
                   background: ${colors.teal};
               }
           }
-          &:focus, &:active{
+          &:focus, &.active{
               border: 3px solid ${colors.teal};
           }
         }
@@ -82,45 +99,45 @@ export const Ul = styled.div`
     
     li:nth-child(2) { 
         a{
-            &:hover,&:active, &:focus{
+            &:hover,&.active, &:focus{
                 //border: 3px solid #9013FE;
                 background: transparent;
                 ${Anime}{
-                    background: #9013FE;
+                    background: ${colors.violet};
                 }
             }
-            &:focus, &:active{
-                border: 3px solid #9013FE;
+            &:focus, &.active{
+                border: 3px solid ${colors.violet};
             }
         }
     }
   
     li:nth-child(3){ 
         a{
-          &:hover,&:active, &:focus{
+          &:hover,&.active, &:focus{
           //border: 3px solid #FEC350;
           background: transparent;
            ${Anime}{
-            background: #FEC350;
+            background: ${colors.yellow};
            }
           }
-          &:focus, &:active{
-          border: 3px solid #FEC350;
+          &:focus, &.active{
+          border: 3px solid ${colors.yellow};
           }
         }
   }
   
   li:nth-child(4){ 
     a{
-      &:hover,&:active, &:focus{
+      &:hover,&.active, &:focus{
       //border: 3px solid #D52F66;
       background: transparent;
        ${Anime}{
-        background: #D52F66;
+        background: ${colors.pink};
        }
       }
-      &:focus, &:active{
-      border: 3px solid #D52F66;
+      &:focus, &.active{
+      border: 3px solid ${colors.pink};
       }
     }
   }

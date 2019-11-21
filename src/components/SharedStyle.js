@@ -1,61 +1,36 @@
 import styled from 'styled-components';
 import {backgroundColors, textColors} from '../styles/default/Colors';
 import {fontSize, lineHeight} from '../styles/default/Mixins';
-import corner from '../assets/images/corner-black.svg';
 import {media} from '../styles/default/Mediaqueries';
+import {ProjectContainer} from '../screens/SkillsScreen';
+import {SideInfo} from './skills/side-infos/SideInfos';
 
 
 export const TheContainer = styled.div`
 --topMarginHeight: calc(${props => (props.navbarHeight)}px + ${props => (props.strokeHeight)}px);
 --bodySize: calc(100vh - (${props => (props.navbarHeight)}px + calc(${props => (props.strokeHeight)}px * 2)) - ${props => (props.sideNavbarHeight)}px);
 --leftMarginWidth: calc( ${props => (props.sideNavbarWidth)}px + ${props => (props.strokeHeight)}px);
+--totalStrokeSize: calc(${props => (props.strokeHeight)}px + 26px);
+ max-height: ${props => props.scrollBlockerActif ? 'var(--bodySize)' : 'auto'};
   position: relative;
   min-height: var(--bodySize);
   margin-top: var(--topMarginHeight);
   overflow: hidden;
+  
+  ${SideInfo}{
+    top: var(--topMarginHeight);
+  }
   ${media.md`
-  --bodySize: calc(100vh - (${props => (props.navbarHeight)}px + calc(${props => (props.strokeHeight)}px * 2)));
+  max-height: var(--bodySize);
+  --bodySize: calc(100vh - (${props => (props.navbarHeight)}px + ${props => (props.strokeHeight)}px + var(--totalStrokeSize)));
     margin-left: var(--leftMarginWidth);
+    margin-right: var(--totalStrokeSize);
+    margin-bottom: var(--totalStrokeSize);
+    
+    ${ProjectContainer}{
+        min-height: var(--bodySize);
+    }
   `}
-`;
-
-export const Stroke = styled.div`
-    height: ${props => (props.size)}px;
-    z-index: 9999;
-    position: fixed;
-    content: '';
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: ${backgroundColors.stroke};
-${media.md`
-    &:after, &:before{
-      content:url(${corner});
-      position: absolute;
-      bottom: calc(${props => (props.size)}px - 4px);
-      left: ${props => (props.size)}px;
-      width: 10px;
-      transform: rotate(-90deg);
-    }
-    &:before{
-      left: auto;
-      right: ${props => (props.size)}px;
-      transform: rotate(180deg);
-    }
-`}
-`;
-
-export const StrokeTop = styled(Stroke)`
-     top: 0;
-     bottom: auto;
-      &:after, &:before{
-          top: calc(${props => (props.size)}px - 4px);
-          bottom: auto;
-          transform: rotate(0);
-      }
-      &:before{
-      transform: rotate(90deg);
-      }
 `;
 
 export const Box = styled.div`
@@ -81,15 +56,15 @@ export const Right = styled.div`
 
 
 export const Section = styled.section`
-border-bottom-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   padding-top: 32px;
   background: ${props => props.backgroundColor};
   padding-bottom: ${props => props.noOverflow ? 54 : 120}px;
   position: relative;
-  overflow: ${props => props.noOverflow ? 'hidden' : 'visible'};
+  height: auto;
+  overflow: visible;
   &:after{
-    display: ${props => props.title ? 'block' : 'none'};
-    content:'Projects';
+    content:"Projects";
     position: absolute;
     bottom: 0;
     ${fontSize(130)};
@@ -103,16 +78,15 @@ border-bottom-left-radius: 50px;
     font-style: italic;
     z-index: -1;
     display: none;
-  
   }
   ${media.md`
+    overflow: ${props => props.noOverflow ? 'hidden' : 'visible'};
     border-bottom-left-radius: 40px;
     padding-top: ${props => props.noOverflow ? 40 : 68}px;
-    // padding-bottom: 120px;
     border-top-left-radius: 35px;
     height: calc(${props => props.height}vh - ${props => (props.navbarHeight)}px - (${props => (props.strokeHeight)}px * 2));
     &:after{
-        display: block;
+      display: ${props => props.title ? 'block' : 'none'};
     }
   `}
   ${media.xl`
@@ -122,7 +96,7 @@ border-bottom-left-radius: 50px;
 export const Flex = styled.div`
 
   ${media.md`
-      width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
   `}
