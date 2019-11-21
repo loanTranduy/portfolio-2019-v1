@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import {SkillFrontEnd, SoftwareDesignFrontEnd, SoftwareFrontEnd} from '../constants/front-end-skills-mock';
 import {SkillsScreen} from './SkillsScreen';
 import {skillsColors} from '../styles/default/Colors';

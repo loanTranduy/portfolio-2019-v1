@@ -16,8 +16,9 @@ import {SideInfo} from './components/skills/side-infos/SideInfos';
 import {ProjectContainer} from './screens/SkillsScreen';
 import {media} from './styles/default/Mediaqueries';
 import {BoxPageTransition, ShapeOverlays} from './components/loading/PageTransition';
-import FrontEndProject from './components/front-end/FrontEndProject';
-import {Child} from './components/skills/projects/ProjectCoverList';
+import {FrontEndProject} from './components/skills/front-end/FrontEndProject';
+import {WebDesignProject} from './components/skills/web-design/WebDesignProject';
+import {GraphicDesignProject} from './components/skills/graphic-design/GraphicDesignProject';
 
 const timeout = 500;
 const Page = styled.div`
@@ -113,7 +114,9 @@ const App = ({ location }) => {
                             <Route exact path="/work/web-design" render={() => <LoadableWebDesignScreen/>}/>
                             <Route exact path="/work/graphic-design" render={() => <LoadableGraphicDesignScreen/>}/>
                             <Route exact path="/contact" render={() => <LoadableContactScreen/>}/>
-                            <Route path={`/work/:skill/:slug`} component={Child} />
+                            <Route path={`/work/front-end/:slug`} component={FrontEndProject} />
+                            <Route path={`/work/web-design/:slug`} component={WebDesignProject} />
+                            <Route path={`/work/graphic-design/:slug`} component={GraphicDesignProject} />
                         </Switch>
                         </Page>
                             )}
