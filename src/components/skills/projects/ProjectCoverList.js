@@ -2,17 +2,23 @@ import React from 'react'
 import {ProjectCoverRow} from './ProjectCoverRow';
 import {ProjectsPropTypes} from '../../../constants/projects-mock';
 import {Route} from 'react-router-dom';
+import {ProjectFrontEnd} from '../../../constants/projects-front-end-mock';
+import {ProjectWebDesign} from '../../../constants/projects-web-design-mock';
 
 
-function Topic () {
+export function Child ({match}) {
+    const topic = ProjectWebDesign.find(({ slug }) => slug === match.params.slug);
+    console.log(topic);
+    console.log(match)
     return (
         <div>
-            TOPIC TOPIC TOPIC TOPIC TOPIC TOPIC
+            {/*<p>{topic.resources[0].name}</p>*/}
+            <p>{topic.name}</p>
         </div>
+
     )
 }
 
-export default Topic
 
 export class ProjectCoverList extends React.Component {
     static propTypes = {
@@ -24,7 +30,9 @@ export class ProjectCoverList extends React.Component {
             <>
                 {this.props.projects.map( project  => (
                     <ProjectCoverRow key={project.id} project={project} url={`/work/${project.skill}/${project.slug}`}/>
+
                 ))}
+                <Route path={`/work/:skill/:slug`} component={Child} />
             </>
         )
     }
