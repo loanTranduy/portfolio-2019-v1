@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {Fragment, useState} from 'react'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import {
     LoadableAboutScreen, LoadableContactScreen,
@@ -7,51 +7,119 @@ import {
     LoadableWorkScreen
 } from './ComponentLoadable';
 import { TransitionGroup } from 'react-transition-group'
-import {Layout} from './screens/Layout';
-import styled from 'styled-components';
+import {Layout} from './styles/Layout';
+import styled  from "styled-components";
 import { Transition } from 'react-transition-group';
-import {Section} from './components/SharedStyle';
-import SkillsPage from './screens/SkillsPage';
+import {SectionTop} from './screens/LandingScreen';
+import {SectionBlue} from './screens/AboutScreen';
+import {SideInfo} from './components/skills/side-infos/SideInfos';
+import {ProjectContainer} from './screens/SkillsScreen';
+import {media} from './styles/default/Mediaqueries';
+import {BoxPageTransition, ShapeOverlays} from './components/loading/PageTransition';
+import Topic from './components/skills/projects/ProjectCoverList';
 
-const timeout = 900;
-
+const timeout = 500;
 const Page = styled.div`
   position: ${({ state }) => (state === "entering"  ? "absolute" : "inherit")};
   top: 0;
   left: 0;
   width: 100%;
-  transition: opacity ${timeout}ms ease-in-out;
-  ${Section} {
-    transition: all ${timeout}ms ease-in-out;
-    transform: translateX(${({state}) => (state === "entering" ? 100 : 0)}%);
+  
+  ${ProjectContainer}{
+  a{
     opacity: ${({state}) => (state === "entered" ? 1 : 0) };
   }
+  
+  a:nth-child(1){
+    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .5 : 0)}s;
+  }
+  a:nth-child(2){
+    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .7 : 0)}s;
+  }
+  a:nth-child(3){
+    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .9 : 0)}s;
+  }
+  a:nth-child(4){
+    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .6 : 0)}s;
+  }
+  a:nth-child(5){
+    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .8 : 0)}s;
+  }
+  a:nth-child(6){
+    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1 : 0)}s;
+  }
+  a:nth-child(7){
+    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.3 : 0)}s;
+  }
+  a:nth-child(8){
+    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.1 : 0)}s;
+  }
+  a:nth-child(9){
+    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.2 : 0)}s;
+  }
+  a:nth-child(10){
+    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.4 : 0)}s;
+  }
+  }
+  ${BoxPageTransition} {
+      animation: ${({state}) => (state === "entered" ? 'test' : ' ' )} 1.5s ease-in-out;
+    }
+    
+    ${ShapeOverlays}{
+        path{
+      animation: ${({state}) => (state === "entered" ? 'testD' : ' ' )} 1s ease-in-out;
+        }
+    }
+  
+  ${SectionTop},${SectionBlue} {
+    transition: all ${timeout}ms ease-in-out;
+    opacity: ${({state}) => (state === "entered" ? 1 : 0) };
+  }
+    ${SideInfo} {
+    section{
+      opacity: ${({state}) => (state === "entered" ? 1 : 0) };
+      transition: opacity ${timeout}ms ease-in-out .4s;
+    }
+  }
+  
+  ${media.xl`
+      ${SideInfo} {
+        transition: all ${timeout}ms ease-in-out;
+        transform: translateX(${({state}) => (state === "entering" ? 100 : (state === 'exiting' ? 100 :  0))}%);
+      }
+  `}
 `;
 
 const App = ({ location }) => {
-    const currentKey = location.pathname.split('/')[1] || '/';
-    const [animate, setAnimate] = useState(false);
+    const currentKey = location.pathname;
+    const [animate] = useState(false);
         return (
-            <Layout>
+            <Fragment>
+                {/*<LoadableLoader/>*/}
+                {/*<OrganicShape/>*/}
+                {/*<Percentage/>*/}
+            <Layout url={currentKey}>
                 <TransitionGroup component={null}>
                     <Transition key={currentKey} in={animate} timeout={timeout} appear>
                         {(state) => (
                         <Page state={state}>
+                            {/*<PageTransition/>*/}
                         <Switch location={location}>
-                            <Route exact path="/home" render={() => <LoadableLandingScreen navbarHeight={30} strokeHeight={5}/>}/>
+                            <Route exact path="/" render={() => <LoadableLandingScreen navbarHeight={30} strokeHeight={5}/>}/>
                             <Route exact path="/about" render={() => <LoadableAboutScreen/>}/>
                             <Route exact path="/work" component={LoadableWorkScreen}/>
                             <Route exact path="/work/front-end" render={() => <LoadableFrontEndScreen/>}/>
                             <Route exact path="/work/web-design" render={() => <LoadableWebDesignScreen/>}/>
                             <Route exact path="/work/graphic-design" render={() => <LoadableGraphicDesignScreen/>}/>
-                            <Route exact path="/contact"render={() => <LoadableContactScreen/>}
-                            />
+                            <Route exact path="/contact" render={() => <LoadableContactScreen/>}/>
+                            <Route path={`/work/:skill/:slug`} component={Topic} />
                         </Switch>
                         </Page>
                             )}
                     </Transition>
                 </TransitionGroup>
             </Layout>
+            </Fragment>
     )
 }
 

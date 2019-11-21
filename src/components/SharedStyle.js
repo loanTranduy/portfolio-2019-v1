@@ -1,61 +1,36 @@
 import styled from 'styled-components';
-import {backgroundColors, textColors, colors} from '../styles/default/Colors';
+import {backgroundColors, textColors} from '../styles/default/Colors';
 import {fontSize, lineHeight} from '../styles/default/Mixins';
-import corner from '../assets/images/corner-black.svg';
 import {media} from '../styles/default/Mediaqueries';
+import {ProjectContainer} from '../screens/SkillsScreen';
+import {SideInfo} from './skills/side-infos/SideInfos';
 
 
 export const TheContainer = styled.div`
 --topMarginHeight: calc(${props => (props.navbarHeight)}px + ${props => (props.strokeHeight)}px);
 --bodySize: calc(100vh - (${props => (props.navbarHeight)}px + calc(${props => (props.strokeHeight)}px * 2)) - ${props => (props.sideNavbarHeight)}px);
 --leftMarginWidth: calc( ${props => (props.sideNavbarWidth)}px + ${props => (props.strokeHeight)}px);
+--totalStrokeSize: calc(${props => (props.strokeHeight)}px + 26px);
+ max-height: ${props => props.scrollBlockerActif ? 'var(--bodySize)' : 'auto'};
   position: relative;
   min-height: var(--bodySize);
   margin-top: var(--topMarginHeight);
   overflow: hidden;
+  
+  ${SideInfo}{
+    top: var(--topMarginHeight);
+  }
   ${media.md`
-  --bodySize: calc(100vh - (${props => (props.navbarHeight)}px + calc(${props => (props.strokeHeight)}px * 2)));
+  max-height: var(--bodySize);
+  --bodySize: calc(100vh - (${props => (props.navbarHeight)}px + ${props => (props.strokeHeight)}px + var(--totalStrokeSize)));
     margin-left: var(--leftMarginWidth);
+    margin-right: var(--totalStrokeSize);
+    margin-bottom: var(--totalStrokeSize);
+    
+    ${ProjectContainer}{
+        min-height: var(--bodySize);
+    }
   `}
-`;
-
-export const Stroke = styled.div`
-    height: ${props => (props.size)}px;
-    z-index: 9999;
-    position: fixed;
-    content: '';
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: ${backgroundColors.stroke};
-${media.md`
-    &:after, &:before{
-      content:url(${corner});
-      position: absolute;
-      bottom: calc(${props => (props.size)}px - 4px);
-      left: ${props => (props.size)}px;
-      width: 10px;
-      transform: rotate(-90deg);
-    }
-    &:before{
-      left: auto;
-      right: ${props => (props.size)}px;
-      transform: rotate(180deg);
-    }
-`}
-`;
-
-export const StrokeTop = styled(Stroke)`
-     top: 0;
-     bottom: auto;
-      &:after, &:before{
-          top: calc(${props => (props.size)}px - 4px);
-          bottom: auto;
-          transform: rotate(0);
-      }
-      &:before{
-      transform: rotate(90deg);
-      }
 `;
 
 export const Box = styled.div`

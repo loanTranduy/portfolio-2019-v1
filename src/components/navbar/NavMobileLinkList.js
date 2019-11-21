@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavMainLinksPropTypes} from '../../constants/navLinksMock';
+import {NavMainLinksPropTypes} from '../../constants/nav-links-mock';
 import {NavMobileLinkRow} from './NavMobileLinkRow';
 import PropTypes from 'prop-types';
 

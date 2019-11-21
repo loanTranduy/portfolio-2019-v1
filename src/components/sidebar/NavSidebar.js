@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavSidebarLink} from '../../constants/navLinksMock';
+import {NavSidebarLink} from '../../constants/nav-links-mock';
 import {NavSidebarLinkList} from './NavSidebarLinkList';
 import styled from 'styled-components';
 import {media} from '../../styles/default/Mediaqueries';
@@ -10,11 +10,19 @@ export const Ul = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 8px;
-    ${media.md`
-    padding: 50px 16px; 
-    flex-direction: column;
     
-    li:nth-child(1){
+    li a {
+    transition: all .3s ease;
+    }
+    
+    li{
+    a.active{
+        transform: translateY(-15px);
+        color: white;
+    }
+    }
+    
+        li:nth-child(1){
         a{
             &:hover,&:focus,&.active{
             background: ${colors.teal};
@@ -25,7 +33,7 @@ export const Ul = styled.div`
     li:nth-child(2){
         a{
             &:hover,&:focus,&.active{
-            background: #9013FE;
+            background: ${colors.violet};
             }
         }
     }
@@ -33,7 +41,7 @@ export const Ul = styled.div`
     li:nth-child(3){
         a{
             &:hover,&:focus,&.active{
-            background: #FEC350;
+            background: ${colors.yellow};
             }
         }
     }
@@ -41,10 +49,19 @@ export const Ul = styled.div`
     li:nth-child(4){
         a{
             &:hover,&:focus,&.active{
-            background: #D52F66;
+            background: ${colors.pink};
             }
         }
    }
+    ${media.md`
+    padding: 50px 16px; 
+    flex-direction: column;
+        li{
+    a.active{
+        transform: none;
+        color: white;
+    }
+    }
   `}
     ${media.lg`
     li{
@@ -86,11 +103,11 @@ export const Ul = styled.div`
                 //border: 3px solid #9013FE;
                 background: transparent;
                 ${Anime}{
-                    background: #9013FE;
+                    background: ${colors.violet};
                 }
             }
             &:focus, &.active{
-                border: 3px solid #9013FE;
+                border: 3px solid ${colors.violet};
             }
         }
     }
@@ -101,11 +118,11 @@ export const Ul = styled.div`
           //border: 3px solid #FEC350;
           background: transparent;
            ${Anime}{
-            background: #FEC350;
+            background: ${colors.yellow};
            }
           }
           &:focus, &.active{
-          border: 3px solid #FEC350;
+          border: 3px solid ${colors.yellow};
           }
         }
   }
@@ -116,11 +133,11 @@ export const Ul = styled.div`
       //border: 3px solid #D52F66;
       background: transparent;
        ${Anime}{
-        background: #D52F66;
+        background: ${colors.pink};
        }
       }
       &:focus, &.active{
-      border: 3px solid #D52F66;
+      border: 3px solid ${colors.pink};
       }
     }
   }

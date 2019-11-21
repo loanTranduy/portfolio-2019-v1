@@ -1,14 +1,10 @@
 import React from 'react'
 import { Container, Row, Col } from 'styled-bootstrap-grid';
-import {Flex, Section} from '../components/SharedStyle';
-import {Hello} from '../components/hello/Hello';
-import {IntroBox} from '../components/landing/IntroBox';
-import {TownTransparent} from '../components/landing/TownTransparent';
+import {Section} from '../components/SharedStyle';
 import {backgroundColors} from '../styles/default/Colors';
 import styled from 'styled-components';
 
-
-const SectionBlue = styled(Section)`
+export const SectionBlue = styled(Section)`
   background: ${props => props.backgroundColor};
 `
 
@@ -25,13 +21,7 @@ export class AboutScreen extends React.Component {
                     <Container>
                         <Row>
                             <Col col sm='12'>
-                                <Hello/>
-                                <Flex>
-                                    <IntroBox/>
-                                    {window.innerWidth > 768 &&
-                                    <TownTransparent/>
-                                    }
-                                </Flex>
+                                <h1>About</h1>
                             </Col>
                         </Row>
                     </Container>

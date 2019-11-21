@@ -23,7 +23,7 @@ export const Spinner = styled.div`
   width: ${props => sizes[props.size].size}px;
   height: ${props => sizes[props.size].size}px;
   border-radius: 50%;
-  border: ${props => sizes[props.size].border}px solid grey;
+  border: ${props => sizes[props.size].border}px solid #DCE7F9;
   border-top-color: ${props => props.color};
 
   animation: spCircRot 1s infinite linear;

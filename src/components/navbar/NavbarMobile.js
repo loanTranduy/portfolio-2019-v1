@@ -4,7 +4,7 @@ import {media} from '../../styles/default/Mediaqueries';
 import {backgroundColors, colors} from '../../styles/default/Colors';
 import PropTypes from 'prop-types'
 import {NavMobileLinkList} from './NavMobileLinkList';
-import {NavMainLink} from '../../constants/navLinksMock';
+import {NavMainLink} from '../../constants/nav-links-mock';
 import {fontSize} from '../../styles/default/Mixins';
 import {SocialFooter} from './SocialFooter';
 

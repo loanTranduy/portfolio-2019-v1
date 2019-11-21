@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import {NavMainLinkPropTypes} from '../../constants/navLinksMock';
+import {NavMainLinkPropTypes} from '../../constants/nav-links-mock';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {media} from '../../styles/default/Mediaqueries';
@@ -64,7 +64,7 @@ export class NavMobileLinkRow extends React.Component {
         return (
             <Box>
                 <NavLink
-
+                    exact={this.props.navMainLink.exact}
                     onClick={closeSlideMenu}
                     to={this.props.navMainLink.breadCrumb}
                 >

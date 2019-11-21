@@ -25,22 +25,6 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         color: ${textColors.primary};
         background: ${backgroundColors.primary};
-        
-        //Stroke
-        &:after, &:before{
-            width: ${props => (props.strokeSize)}px;
-            z-index: 9999;
-            position: fixed;
-            content: '';
-            top: 0;
-            right: 0;
-            bottom: 0;
-            background: ${backgroundColors.stroke};
-        }
-        &:before{
-            left: 0;
-            right: auto;
-        };
     }
     
     p,

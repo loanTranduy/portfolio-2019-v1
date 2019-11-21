@@ -9,6 +9,7 @@ import {SocialFooter} from '../navbar/SocialFooter';
 
 
 export const Content = styled.nav`
+  box-shadow: 0 0 20px 0 rgba(0,2,117,0.16);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background: ${backgroundColors.navbar};
@@ -16,10 +17,11 @@ export const Content = styled.nav`
   bottom: ${props => (props.position)}px;
   right: ${props => (props.position)}px;
   left: ${props => (props.position)}px;
-  z-index: 1;
+  z-index: 2;
   transition: all 0.29s ease;
   ${media.md`
   display: flex;
+  box-shadow: none;
   flex-direction: column;
   justify-content: space-between;
       border-radius: 0;

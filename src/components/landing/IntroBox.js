@@ -2,10 +2,9 @@ import React from 'react'
 import {media} from '../../styles/default/Mediaqueries';
 import styled from 'styled-components';
 import {fontSize, lineHeight} from '../../styles/default/Mixins';
-import {backgroundColors, colors, textColors} from '../../styles/default/Colors';
-import {InputSound} from '../../components/icons/InputSound';
+import {colors, textColors} from '../../styles/default/Colors';
+import {InputSound} from '../svg/InputSound';
 import arrow from '../../assets/icons/right-arrow.svg'
-import {Link} from 'react-router-dom';
 import {LinkWithIcon} from '../button/LinkWithIcon';
 
 const Name = styled.p`
@@ -95,41 +94,41 @@ const Intro = styled.p`
   `}
 `
 
-const LinkBlack = styled(Link)`
-  color:${textColors.secondary};
-  background: ${backgroundColors.secondary};
-  padding: 8px 80px 8px 24px;
-  ${fontSize(12)};
-  ${lineHeight(16)};
-  font-weight: 500;
-  letter-spacing: .5px;
-  margin-top: 16px;
-  position: relative;
-  display: inline-block;
-  border-radius: 50px;
-  
-  &:after{
-  content:url(${arrow});
-  display: block;
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  right: 24px;
-  }
-  //
-  // ${media.md`
-  // padding: 0 80px 0 0;
-  // color:${textColors.secondary};
-  // background: transparent;
-  //   ${fontSize(12)};
-  //   margin-top: 8px;
-  //  
-  // `}
-  
-  ${media.xl`
-
-  `}
-`
+// const LinkBlack = styled(Link)`
+//   color:${textColors.secondary};
+//   background: ${backgroundColors.secondary};
+//   padding: 8px 80px 8px 24px;
+//   ${fontSize(12)};
+//   ${lineHeight(16)};
+//   font-weight: 500;
+//   letter-spacing: .5px;
+//   margin-top: 16px;
+//   position: relative;
+//   display: inline-block;
+//   border-radius: 50px;
+//
+//   &:after{
+//   content:url(${arrow});
+//   display: block;
+//   position: absolute;
+//   transform: translateY(-50%);
+//   top: 50%;
+//   right: 24px;
+//   }
+//   //
+//   // ${media.md`
+//   // padding: 0 80px 0 0;
+//   // color:${textColors.secondary};
+//   // background: transparent;
+//   //   ${fontSize(12)};
+//   //   margin-top: 8px;
+//   //
+//   // `}
+//
+//   ${media.xl`
+//
+//   `}
+// `
 
 const Wrap = styled.div`
   max-width: 350px;

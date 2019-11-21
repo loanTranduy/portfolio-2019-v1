@@ -51,7 +51,7 @@ const LinkContainer = styled(Link)`
     display: flex;
     flex-direction column;
     justify-content: space-between;
-    border-radius: 24px;
+    border-radius: 30px;
     
     height: ${props => props.main ? '323px' : 'auto'};
     transition: .3s ease-in-out;
@@ -70,7 +70,7 @@ const LinkContainer = styled(Link)`
         top: auto;
     }
     img{
-        width: ${props => props.main ? '80%' : '70%'};
+        width: ${props => props.main ? '80%' : '60%'};
         height: ${props => props.main ? 'auto' : 'auto'};
         top: ${props => props.main ? '0' : '50%'};
         margin: 0 auto;
@@ -78,7 +78,7 @@ const LinkContainer = styled(Link)`
     
     &:hover{
         transform: scale(0.98);
-    box-shadow: -8px 19px 18px 0 rgba(0,2,117,0.16);
+        box-shadow: -8px 19px 18px 0 rgba(0,2,117,0.16);
     }
   `}
   

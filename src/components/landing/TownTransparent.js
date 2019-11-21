@@ -19,15 +19,26 @@ const BoxFlex = styled(Box)`
   ${media.md`
     padding: 0;
     margin: 0;
+    width: 194px;
+    img{
+        width: 60px;
+    }
+  `}
+  
+  ${media.lg`
+  width: 222px;
+  img{
+        width: 72px;
+    }
   `}
   
   ${media.xl`
+  width: 256px;
   `}
 `
 
 const Text = styled.div`
   ${fontSize(14)};
-  ${lineHeight()};
   font-weight: 800;
   font-style: italic;
   display: flex;
@@ -42,28 +53,31 @@ const Text = styled.div`
     font-weight: 600;
   }
   ${media.md`
-  
+  margin-right: 16px;
+  >p{
+    ${fontSize(9)};
+    }
   `}
   
-  ${media.xl`
+  ${media.lg`
+    >p{
+    ${fontSize(10)};
+    }
   `}
 `
 
 const City = styled.h2`
   ${fontSize(22)};
-  ${lineHeight()};
   font-weight: 700;
   font-style: italic;
   margin-bottom: 16px;
-  //background: linear-gradient(514deg,#64E4DE -50%,#248CBB 50%);
-  //-webkit-background-clip: text;
-  //-webkit-text-fill-color: transparent;
   
   ${media.md`
-  
+  ${fontSize(18)};
   `}
   
   ${media.xl`
+  ${fontSize(22)};
   `}
 `
 

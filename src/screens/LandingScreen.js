@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 import {Flex, Section} from '../components/SharedStyle';
 import {IntroBox} from '../components/landing/IntroBox';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
-import {Hello} from '../components/hello/Hello';
+import {Hello} from '../components/landing/hello/Hello';
 import {TownTransparent} from '../components/landing/TownTransparent';
 import {LinkProject} from '../components/button/LinkProject';
 import Primadonna from '../assets/images/project/primadonna-cover.jpg'
@@ -18,7 +18,11 @@ import all from '../assets/icons/eye.svg'
 import andresSarda from '../assets/images/project/andres-sarda.jpg'
 import {Town} from '../components/landing/Town';
 import throttle from 'lodash.throttle';
+import styled from 'styled-components';
 
+
+export const SectionTop = styled(Section)`
+`
 
 export class LandingScreen extends React.Component {
     constructor(props) {
@@ -48,7 +52,7 @@ export class LandingScreen extends React.Component {
         const{navbarHeight, strokeHeight} = this.props;
         return (
             <Fragment>
-                <Section height={40} noOverflow navbarHeight={navbarHeight} backgroundColor={backgroundColors.gradiant} strokeHeight={strokeHeight}>
+                <SectionTop height={40} noOverflow navbarHeight={navbarHeight} backgroundColor={backgroundColors.gradiant} strokeHeight={strokeHeight}>
                     <Container>
                     <Row>
                         <Col col sm='12'>
@@ -62,7 +66,7 @@ export class LandingScreen extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-                </Section>
+                </SectionTop>
                 <Section height={60} strokeHeight={strokeHeight} navbarHeight={navbarHeight} title>
                     <Container>
                         <Row>
@@ -135,7 +139,7 @@ export class LandingScreen extends React.Component {
                                         <Row>
                                             <Col col sm='12' md={12}>
                                                 <LinkClient
-                                                    url={'/about'}
+                                                    url={'/work'}
                                                     name={'All projects'}
                                                     image={all}
                                                     background={skillsColors.all}
@@ -144,7 +148,7 @@ export class LandingScreen extends React.Component {
                                             </Col>
                                             <Col col sm='4' md={12}>
                                                 <LinkClient
-                                                    url={'/about'}
+                                                    url={'/work/front-end'}
                                                     name={'front-end development'}
                                                     image={front}
                                                     background={skillsColors.front}
@@ -152,7 +156,7 @@ export class LandingScreen extends React.Component {
                                             </Col>
                                             <Col col sm='4' md={12}>
                                                 <LinkClient
-                                                    url={'/about'}
+                                                    url={'/work/web-design'}
                                                     name={'web design'}
                                                     image={web}
                                                     background={skillsColors.web}
@@ -160,7 +164,7 @@ export class LandingScreen extends React.Component {
                                             </Col>
                                             <Col col sm='4' md={12}>
                                                 <LinkClient
-                                                    url={'/about'}
+                                                    url={'/work/graphic-design'}
                                                     name={'graphic design'}
                                                     image={graphic}
                                                     background={skillsColors.graphic}

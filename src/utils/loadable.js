@@ -1,16 +1,19 @@
 import React, {Component} from 'react'
 import Loadable from 'react-loadable'
 import PropTypes from 'prop-types'
-import {CenteredSpinner} from '../components/CenteredSpinner'
+import {CenteredSpinner} from '../components/loading/CenteredSpinner'
 
-class LoadableLoader extends Component {
+export class LoadableLoader extends Component {
     static propTypes = {
         error: PropTypes.bool,
-    }
+    };
 
     componentDidUpdate() {
         if (this.props.error) {
-            //window.location.reload()
+            setTimeout(() => {
+                window.location.reload()
+            }, 6000);
+
         }
     }
 
