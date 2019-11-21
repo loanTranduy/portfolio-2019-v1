@@ -1,6 +1,6 @@
 import React from 'react'
 import {SideInfos} from '../components/skills/side-infos/SideInfos';
-import {ProjectCoverList} from '../components/skills/projects/ProjectCoverList';
+import {ProjectCoverList} from '../components/skills/projects-covers/ProjectCoverList';
 import styled from 'styled-components';
 import {media} from '../styles/default/Mediaqueries';
 
@@ -79,9 +79,11 @@ export class SkillsScreen extends React.Component {
                     communicationSoftware={communicationSoftware}
                     parentCallback={this.callbackFunctionSkills}
                 />
-                <ProjectContainer sideInfoWidth={this.state.sideInfoWidth} navbarHeight={navbarHeight}>
-                    <ProjectCoverList projects={projects}/>
-                </ProjectContainer>
+                {projects &&
+                    <ProjectContainer sideInfoWidth={this.state.sideInfoWidth} navbarHeight={navbarHeight}>
+                        <ProjectCoverList projects={projects}/>
+                    </ProjectContainer>
+                }
             </>
         )
     }

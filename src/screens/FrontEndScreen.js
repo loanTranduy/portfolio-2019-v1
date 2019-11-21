@@ -3,8 +3,6 @@ import {SkillFrontEnd, SoftwareDesignFrontEnd, SoftwareFrontEnd} from '../consta
 import {skillsColors} from '../styles/default/Colors';
 import {ProjectFrontEnd} from '../constants/projects-front-end-mock';
 import {SkillsScreen} from './SkillsScreen';
-import {Route, Switch} from 'react-router-dom';
-import Topic from '../components/skills/projects/ProjectCoverList';
 
 export class FrontEndScreen extends React.Component {
     constructor(props) {

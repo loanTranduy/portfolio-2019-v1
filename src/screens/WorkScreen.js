@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import {Project} from '../constants/projects-mock';
-import {ProjectCoverList} from '../components/skills/projects/ProjectCoverList';
+import {ProjectCoverList} from '../components/skills/projects-covers/ProjectCoverList';
 import {ProjectContainer} from './SkillsScreen';
 import {media} from '../styles/default/Mediaqueries';
 

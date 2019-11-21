@@ -13,8 +13,7 @@ import figma from '../assets/icons/software/figma.svg'
 
 
 import React from 'react';
-import {skillsColors, softwareColors, textColors} from '../styles/default/Colors';
-import {ProjectWebDesign} from './projects-web-design-mock';
+import {softwareColors, textColors} from '../styles/default/Colors';
 
 
 const openingText = (
