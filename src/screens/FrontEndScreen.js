@@ -14,7 +14,6 @@ export class FrontEndScreen extends React.Component {
 
     render() {
         return (
-            <>
             <SkillsScreen
                 circleColor={skillsColors.web}
                 title="Front-end Developer"
@@ -28,7 +27,6 @@ export class FrontEndScreen extends React.Component {
                 projects={Object.values(ProjectFrontEnd)}
                 navbarHeight={this.props.navbarHeight}
             />
-            </>
     )
     }
 }

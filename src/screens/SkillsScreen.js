@@ -3,6 +3,7 @@ import {SideInfos} from '../components/skills/side-infos/SideInfos';
 import {ProjectCoverList} from '../components/skills/projects-covers/ProjectCoverList';
 import styled from 'styled-components';
 import {media} from '../styles/default/Mediaqueries';
+import {FrontEndProjectMockup} from '../components/skills/front-end/FrontEndProjectMockup';
 
 export const ProjectContainer = styled.div`
   display: grid;
@@ -20,28 +21,28 @@ export const ProjectContainer = styled.div`
   }
   
   ${media.md`
-  padding: 48px;
-  
-  a:nth-child(1){
-    grid-column: span 1;
-    grid-row: span 2; 
-  }
-    a:nth-child(2){
-    grid-column: span 2; 
-    grid-row: span 2; 
-  }
-    a:nth-child(3){
-    grid-column: span 2; 
-    grid-row: span 2; 
-  }
-    a:nth-child(4){
-    grid-column: span 1; 
-    grid-row: span 1; 
-  }
-    a:nth-child(5){
-    grid-column: span 1;
-    grid-row: span 1;  
-  }
+    padding: 48px;
+    
+    a:nth-child(1){
+      grid-column: span 1;
+      grid-row: span 2; 
+    }
+      a:nth-child(2){
+      grid-column: span 2; 
+      grid-row: span 2; 
+    }
+      a:nth-child(3){
+      grid-column: span 2; 
+      grid-row: span 2; 
+    }
+      a:nth-child(4){
+      grid-column: span 1; 
+      grid-row: span 1; 
+    }
+      a:nth-child(5){
+      grid-column: span 1;
+      grid-row: span 1;  
+    }
   `}
   
 ${media.xl`
@@ -64,7 +65,24 @@ export class SkillsScreen extends React.Component {
     };
 
     render() {
-        const {circleColor,projects, title, skills, softwareTitle, software, cta, ctaTo, communication, communicationSoftware, navbarHeight}= this.props;
+        const {circleColor,
+            coverMobile,
+            cover,
+            name,
+            projects,
+            title,
+            skills,
+            softwareTitle,
+            software,
+            cta,
+            ctaTo,
+            communication,
+            communicationSoftware,
+            navbarHeight,
+            screens,
+            handleScreen,
+            value
+        }= this.props;
         return (
             <>
                 <SideInfos
@@ -83,6 +101,18 @@ export class SkillsScreen extends React.Component {
                     <ProjectContainer sideInfoWidth={this.state.sideInfoWidth} navbarHeight={navbarHeight}>
                         <ProjectCoverList projects={projects}/>
                     </ProjectContainer>
+                }
+                {cover &&
+                <FrontEndProjectMockup
+                    coverMobile={coverMobile}
+                    sideInfoWidth={this.state.sideInfoWidth}
+                    navbarHeight={navbarHeight}
+                    name={name}
+                    cover={cover}
+                    screens={screens}
+                    handleScreen={handleScreen}
+                    value={value}
+                />
                 }
             </>
         )

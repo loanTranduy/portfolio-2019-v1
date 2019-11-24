@@ -85,6 +85,8 @@ export const backgroundColors = {
     navbar: colors.white,
     stroke: colors.black,
     gradiant: 'linear-gradient(134deg,#F08FF2 0%,#F46183 60%) no-repeat',
-    gradiantBlue: 'linear-gradient(134deg, #64E4DE 0%, #248CBB 60%) no-repeat'
+};
 
+export const hackagesColors = {
+    background: 'linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%) no-repeat'
 };

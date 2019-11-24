@@ -4,6 +4,7 @@ import {fontSize, lineHeight} from '../styles/default/Mixins';
 import {media} from '../styles/default/Mediaqueries';
 import {ProjectContainer} from '../screens/SkillsScreen';
 import {SideInfo} from './skills/side-infos/SideInfos';
+import {ContentInside} from './skills/front-end/FrontEndProjectMockup';
 
 
 export const TheContainer = styled.div`
@@ -28,6 +29,9 @@ export const TheContainer = styled.div`
     margin-bottom: var(--totalStrokeSize);
     
     ${ProjectContainer}{
+        min-height: var(--bodySize);
+    }
+    ${ContentInside}{
         min-height: var(--bodySize);
     }
   `}

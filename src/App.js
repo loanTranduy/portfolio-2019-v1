@@ -109,8 +109,8 @@ const App = ({ location }) => {
                         <Switch location={location}>
                             <Route exact path="/" render={() => <LoadableLandingScreen navbarHeight={30} strokeHeight={5}/>}/>
                             <Route exact path="/about" render={() => <LoadableAboutScreen/>}/>
-                            <Route exact path="/work" component={LoadableWorkScreen}/>
-                            <Route exact path="/work/front-end" render={() => <LoadableFrontEndScreen/>}/>
+                            <Route exact path="/work/all" component={LoadableWorkScreen}/>
+                            <Route exact path="/work/front-end" render={() => <LoadableFrontEndScreen navbarHeight={30}/>}/>
                             <Route exact path="/work/web-design" render={() => <LoadableWebDesignScreen/>}/>
                             <Route exact path="/work/graphic-design" render={() => <LoadableGraphicDesignScreen/>}/>
                             <Route exact path="/contact" render={() => <LoadableContactScreen/>}/>
