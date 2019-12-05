@@ -154,7 +154,6 @@ export class NavSidebarLinkRow extends React.Component {
         return (
             <Box>
                 <LinkWithIcon
-                    exact
                     to={this.props.navSidebarLink.breadCrumb}
                 >
                     {window.innerWidth > 991 &&

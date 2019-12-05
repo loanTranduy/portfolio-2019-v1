@@ -23,7 +23,7 @@ export const NavMainLink = [
     {
         id: 1,
         name: 'Work',
-        breadCrumb: '/work',
+        breadCrumb: '/work/all',
         exact: false
     },
     {
@@ -57,7 +57,7 @@ export const NavSidebarLink = [
         id: 0,
         name: 'Discover all Projects',
         label: 'See All',
-        breadCrumb: '/work',
+        breadCrumb: '/work/all',
         icon: work,
         filter: 'all'
     },

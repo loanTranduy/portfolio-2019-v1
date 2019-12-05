@@ -15,6 +15,7 @@ export const colors = {
     grey110: '#383B3A',
     grey120: '#252726',
     black: '#352B51',
+    darkgrey: '#8394B0',
 
     violet: '#9013FE',
     lila: '#D291FF',
@@ -31,17 +32,20 @@ export const colors = {
 
     darkteal: '#2BB4AA',
     darkBlueTeal: '#058CDF',
+    darkVelvet: '#4A164B',
     orange: '#FF6A01',
     orangeOpaque: 'rgba(255, 106, 1, .1)',
     darkyellow: '#F5A623',
     green: '#1ADB7F',
     greenOpaque: 'rgba(66, 215, 144, .1)',
     pinkOpaque: 'rgba(244, 94, 141, .1)',
+    marineBlue: '#3685E1'
 }
 
 export const textColors = {
     primary: colors.black,
     secondary: colors.white,
+    tertiary: colors.darkgrey,
     active: colors.teal,
 };
 
@@ -76,6 +80,10 @@ export const softwareColors = {
     ae: colors.lila,
     figma: colors.black,
     pr: colors.purple,
+    freedcamp: colors.marineBlue,
+    slack: colors.darkVelvet,
+    agile: colors.orange,
+    bigCommerce: '#34313F'
 };
 
 export const backgroundColors = {
@@ -85,6 +93,8 @@ export const backgroundColors = {
     navbar: colors.white,
     stroke: colors.black,
     gradiant: 'linear-gradient(134deg,#F08FF2 0%,#F46183 60%) no-repeat',
-    gradiantBlue: 'linear-gradient(134deg, #64E4DE 0%, #248CBB 60%) no-repeat'
+};
 
+export const hackagesColors = {
+    background: 'linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%) no-repeat'
 };

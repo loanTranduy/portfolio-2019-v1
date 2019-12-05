@@ -17,7 +17,6 @@ export const Grid = styled.div`
     grid-column-gap: 34px;
     grid-row-gap: 16px;
     margin-bottom: 40px;
-
   `}
 `;
 
@@ -25,9 +24,11 @@ export const Grid = styled.div`
 export class IconsWithLabel extends React.Component {
 
     render() {
+        const {sixItems, skillsFrontEnd} = this.props;
+
         return (
-            <Grid>
-                <IconsWithLabelList skillsFrontEnd={this.props.skillsFrontEnd}/>
+            <Grid sixItems={sixItems}>
+                <IconsWithLabelList skillsFrontEnd={skillsFrontEnd}/>
             </Grid>
         )
     }

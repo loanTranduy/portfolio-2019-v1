@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import marieJo from '../assets/images/project/primadonna-cover.jpg';
+import marieJo from '../assets/images/project/primadonna/primadonna-cover.jpg';
 
 export const ProjectPropTypes = PropTypes.shape({
     id: PropTypes.number,

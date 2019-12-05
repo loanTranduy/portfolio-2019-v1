@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react'
+import React, {Fragment, useState, useEffect} from 'react'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import {
     LoadableAboutScreen, LoadableContactScreen,
@@ -19,6 +19,8 @@ import {BoxPageTransition, ShapeOverlays} from './components/loading/PageTransit
 import {FrontEndProject} from './components/skills/front-end/FrontEndProject';
 import {WebDesignProject} from './components/skills/web-design/WebDesignProject';
 import {GraphicDesignProject} from './components/skills/graphic-design/GraphicDesignProject';
+import { useLocation } from "react-router-dom";
+import ScrollToTop from './components/loading/ScrollToTop';
 
 const timeout = 500;
 const Page = styled.div`
@@ -87,7 +89,7 @@ const Page = styled.div`
   ${media.xl`
       ${SideInfo} {
         transition: all ${timeout}ms ease-in-out;
-        transform: translateX(${({state}) => (state === "entering" ? 100 : (state === 'exiting' ? 100 :  0))}%);
+        transform: translateX(${({state}) => (state === "entering" ? 100 : (state === 'exiting' ? 0 :  0))}%);
       }
   `}
 `;
@@ -95,8 +97,11 @@ const Page = styled.div`
 const App = ({ location }) => {
     const currentKey = location.pathname;
     const [animate] = useState(false);
+
+console.log(window.scroll);
         return (
             <Fragment>
+                <ScrollToTop/>
                 {/*<LoadableLoader/>*/}
                 {/*<OrganicShape/>*/}
                 {/*<Percentage/>*/}
@@ -109,8 +114,8 @@ const App = ({ location }) => {
                         <Switch location={location}>
                             <Route exact path="/" render={() => <LoadableLandingScreen navbarHeight={30} strokeHeight={5}/>}/>
                             <Route exact path="/about" render={() => <LoadableAboutScreen/>}/>
-                            <Route exact path="/work" component={LoadableWorkScreen}/>
-                            <Route exact path="/work/front-end" render={() => <LoadableFrontEndScreen/>}/>
+                            <Route exact path="/work/all" component={LoadableWorkScreen}/>
+                            <Route exact path="/work/front-end" render={() => <LoadableFrontEndScreen navbarHeight={30}/>}/>
                             <Route exact path="/work/web-design" render={() => <LoadableWebDesignScreen/>}/>
                             <Route exact path="/work/graphic-design" render={() => <LoadableGraphicDesignScreen/>}/>
                             <Route exact path="/contact" render={() => <LoadableContactScreen/>}/>

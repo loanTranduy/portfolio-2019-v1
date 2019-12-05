@@ -12,7 +12,12 @@ export class NavMobileLinkList extends React.Component {
 
     render() {
         return this.props.navMainLinks.map(navMainLink => (
-            <NavMobileLinkRow key={navMainLink.id} navMainLink={navMainLink} closeSlideMenu={this.props.closeSlideMenu} isActive={this.props.isActive}/>
+            <NavMobileLinkRow
+                key={navMainLink.id}
+                navMainLink={navMainLink}
+                closeSlideMenu={this.props.closeSlideMenu}
+                isActive={this.props.isActive}
+            />
         ))
     }
 }

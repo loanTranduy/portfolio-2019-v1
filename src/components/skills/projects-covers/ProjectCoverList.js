@@ -11,7 +11,11 @@ export class ProjectCoverList extends React.Component {
         return (
             <>
                 {this.props.projects.map( project  => (
-                    <ProjectCoverRow key={project.id} project={project} url={`/work/${project.skill}/${project.slug}`}/>
+                    <ProjectCoverRow
+                        key={project.id}
+                        project={project}
+                        url={`/work/${project.skill}/${project.slug}`}
+                    />
 
                 ))}
             </>

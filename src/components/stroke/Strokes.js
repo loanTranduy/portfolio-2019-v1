@@ -44,9 +44,9 @@ export const Stroke = styled.div`
     bottom: ${props => Bottom[props.position]};
     top:${props => Top[props.position]};
     background: ${props => props.url === '/work' ? skillsColors.all : 
-                (props.url === '/work/front-end' ?  skillsColors.front : 
+                (props.url === '/work/front-end' || props.url === '/work/front-end/hackages' ?  skillsColors.front : 
     (props.url === '/work/web-design' ? skillsColors.web : 
-        (props.url === '/work/graphic-design' ? skillsColors.graphic : 
+        (props.url === '/work/graphic-design' || props.url === '/work/graphic-design/hackages' || props.url === '/work/graphic-design/bhack-to-school' ? skillsColors.graphic : 
                 backgroundColors.stroke)))
     };
 `;
@@ -69,7 +69,7 @@ const BoxCorner = styled.div`
     svg{
       width: ${props => (props.size)}px;
       fill: ${props => props.url === '/work' ? skillsColors.all :
-        (props.url === '/work/front-end' ?  skillsColors.front :
+        (props.url === '/work/front-end' || props.url === '/work/front-end/hackages' ?  skillsColors.front :
             (props.url === '/work/web-design' ? skillsColors.web :
                 (props.url === '/work/graphic-design' ? skillsColors.graphic :
                     backgroundColors.stroke)))

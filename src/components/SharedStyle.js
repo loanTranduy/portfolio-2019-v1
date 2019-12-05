@@ -4,6 +4,7 @@ import {fontSize, lineHeight} from '../styles/default/Mixins';
 import {media} from '../styles/default/Mediaqueries';
 import {ProjectContainer} from '../screens/SkillsScreen';
 import {SideInfo} from './skills/side-infos/SideInfos';
+import {ContentInside} from './skills/front-end/FrontEndProjectMockup';
 
 
 export const TheContainer = styled.div`
@@ -11,7 +12,7 @@ export const TheContainer = styled.div`
 --bodySize: calc(100vh - (${props => (props.navbarHeight)}px + calc(${props => (props.strokeHeight)}px * 2)) - ${props => (props.sideNavbarHeight)}px);
 --leftMarginWidth: calc( ${props => (props.sideNavbarWidth)}px + ${props => (props.strokeHeight)}px);
 --totalStrokeSize: calc(${props => (props.strokeHeight)}px + 26px);
- max-height: ${props => props.scrollBlockerActif ? 'var(--bodySize)' : 'auto'};
+  max-height: ${props => props.scrollBlockerActif ? 'var(--bodySize)' : 'auto'};
   position: relative;
   min-height: var(--bodySize);
   margin-top: var(--topMarginHeight);
@@ -19,6 +20,7 @@ export const TheContainer = styled.div`
   
   ${SideInfo}{
     top: var(--topMarginHeight);
+    height: var(--bodySize);
   }
   ${media.md`
   max-height: var(--bodySize);
@@ -26,9 +28,14 @@ export const TheContainer = styled.div`
     margin-left: var(--leftMarginWidth);
     margin-right: var(--totalStrokeSize);
     margin-bottom: var(--totalStrokeSize);
-    
+    overflow: scroll;
     ${ProjectContainer}{
+        // height: var(--bodySize);
+        // min-height: 600px;
+    }
+    ${ContentInside}{
         min-height: var(--bodySize);
+        
     }
   `}
 `;
@@ -46,14 +53,6 @@ export const Box = styled.div`
     margin-bottom: 32px;
   `}
 `;
-
-export const Right = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  ${media.md`
-  `}
-`;
-
 
 export const Section = styled.section`
   border-bottom-left-radius: 50px;

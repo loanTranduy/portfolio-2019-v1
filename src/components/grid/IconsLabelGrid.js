@@ -28,11 +28,11 @@ const IconBox = styled.div`
     ${props => props.withColorBox ? lineHeight(10) : lineHeight(14)};
   }
   ${media.md`
-  border-radius: 28px;
-    min-width: ${props => props.withColorBox ? 80 : 0}px;
-  padding: ${props => props.withColorBox ? 'calc(100% - 6px) 0 0 0' : '0 5px' };
-  text-align: center;
-  align-items: center;
+    border-radius: ${props => props.label ? 28 : 10}px;
+    min-width: ${props => props.withColorBox ? (props.label ? 80 : 0) : 0}px;
+    padding: ${props => props.withColorBox ? 'calc(100% - 6px) 0 0 0' : '0 5px' };
+    text-align: center;
+    align-items: center;
       p{
         display: block;
       }
@@ -52,7 +52,7 @@ const ImageContainer = styled.div`
   }
   ${media.md`
     margin-bottom: 4px;
-  --iconsHeight: 60px ;
+  --iconsHeight: ${props => props.label ? 60 : 47}px ;
   position: ${props => props.withColorBox ? 'absolute' : 'inherit'};
   height: var(--iconsHeight);
   display: flex;
@@ -73,6 +73,7 @@ export class IconsLabelGrid extends React.Component {
                 backgroundColor={backgroundColor}
                 borderColor={borderColor}
                 textColor={textColor}
+                label={label}
             >
                 <ImageContainer withColorBox={withColorBox} label={label} >
                     <img src={icon} alt={label}/>
