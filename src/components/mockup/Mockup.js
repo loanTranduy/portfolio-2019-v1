@@ -1,23 +1,23 @@
 import React from 'react'
 import styled from 'styled-components';
-import {backgroundColors} from '../../styles/default/Colors';
+import {backgroundColors, colors} from '../../styles/default/Colors';
 import {media} from '../../styles/default/Mediaqueries';
 
 const Mask = styled.div`
-    width: ${props => props.device === 'mobile' ? '200px' : '80%'};
+    width: ${props => props.device === 'mobile' ? '140px' : '80%'};
     position: relative;
     overflow-y: scroll;
     border-radius: 10px;
-    border: 4px solid white;
+    border: 2px solid white;
     box-shadow: 4px 5px 22px 0 rgba(164,181,208,0.5);
     margin: 0 auto;
     transition: all .6s ease-in-out;
+    background: ${backgroundColors.darkgrey};
     
     &:after{
       content: "";
       display: block;
-      padding-top: ${props => props.device === 'mobile' ? 200 : 75}%;
-
+      padding-top: ${props => props.device === 'mobile' ? 207 : 70}%;
     }
     
     img{
@@ -30,9 +30,11 @@ const Mask = styled.div`
     }
     
     ${media.md`
-    &:after{
-     //max-width: ${props => props.device === 'mobile' ? '200px' : 'none'};
-    }
+        width: ${props => props.device === 'mobile' ? '200px' : '80%'};
+        border: 4px solid white;
+    `}
+    ${media.lg`
+        width: ${props => props.device === 'mobile' ? '240px' : '80%'};
     `}
 `
 

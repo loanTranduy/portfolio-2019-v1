@@ -5,19 +5,20 @@ import { Container, Row, Col } from 'styled-bootstrap-grid';
 import {Hello} from '../components/landing/hello/Hello';
 import {TownTransparent} from '../components/landing/TownTransparent';
 import {LinkProject} from '../components/button/LinkProject';
-import Primadonna from '../assets/images/project/primadonna-cover.jpg'
+import Primadonna from '../assets/images/project/primadonna/primadonna-cover.jpg'
 import {backgroundColors, skillsColors} from '../styles/default/Colors';
 import {LinkClient} from '../components/button/LinkClient';
-import sideLogo from '../assets/images/project/3dside-logo.svg'
+import sideLogo from '../assets/images/project/3d-side/3d-side-logo.svg'
 import elleLogo from '../assets/images/project/ELLE_Magazine_Logo.svg'
-import marieJo from '../assets/images/project/eirin-800.jpg'
+import marieJo from '../assets/images/project/marie-jo/marie-jo-cover.jpg'
 import front from '../assets/icons/front.svg'
 import web from '../assets/icons/layout.svg'
 import graphic from '../assets/icons/pencil.svg'
 import all from '../assets/icons/eye.svg'
-import andresSarda from '../assets/images/project/andres-sarda.jpg'
+import andresSarda from '../assets/images/project/andress-sarda/andres-sarda.jpg'
 import {Town} from '../components/landing/Town';
-import throttle from 'lodash.throttle';
+import
+    throttle from 'lodash.throttle';
 import styled from 'styled-components';
 
 

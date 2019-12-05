@@ -11,6 +11,7 @@ export const InputBox = styled.section`
   align-items: center;
   flex-wrap: wrap;
   margin-top: 32px;
+  margin-bottom: 80px;
 
   label:first-of-type{
     width: ${props => props.noLabel ? '15px' : 'auto'};

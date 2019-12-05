@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import {ProjectFrontEnd} from '../../../constants/projects-front-end-mock';
-import {SkillFrontEnd, SoftwareDesignFrontEnd, SoftwareFrontEnd} from '../../../constants/front-end-skills-mock';
 import {SkillsScreen} from '../../../screens/SkillsScreen';
 import {skillsColors} from '../../../styles/default/Colors';
 
@@ -21,23 +20,37 @@ export function FrontEndProject ({match}) {
 
     return (
             <SkillsScreen
-                circleColor={skillsColors.web}
-                title={topic.name}
-                skills={Object.values(SkillFrontEnd)}
-                softwareTitle='Favorite Workflow'
-                software={Object.values(SoftwareFrontEnd)}
-                communication='Communication with designers'
-                communicationSoftware={Object.values(SoftwareDesignFrontEnd)}
-                cta="Discover my web design skills"
-                ctaTo="/work/web-design"
+                positionDate={topic.position.date}
+                position={topic.position.name}
+
+                projectTitle={topic.name}
+                description={topic.position.description}
+
+                tasks={Object.values(topic.position.tasks)}
+                skillLinks={Object.values(topic.position.skillLinks)}
+
+                communication='Project Management'
+                communicationSoftware={Object.values(topic.position.managment)}
+
+                softwareUsed={Object.values(topic.position.softwares)}
 
                 name={topic.name}
                 cover={topic.desktop[screenId]}
                 coverMobile={topic.mobile[screenId]}
+                coverLow={topic.desktopLowQuality[screenId]}
                 screens={topic.links}
                 parentScreenId={callbackScreenId}
                 handleScreen={handleScreenChange}
                 value={Number(screenId)}
+
+                circleColor={skillsColors.front}
+                cta="Next Front-end Project"
+                ctaTo={topic.nextSlug}
+
+                backgroundColor={topic.background}
+                marginTop={topic.marginTop}
+
+                sixItems
             />
     )
 

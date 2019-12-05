@@ -53,6 +53,7 @@ export const SoftwareGraphicDesigner = [
     {
         id: 0,
         icon: ind,
+        label: 'In Design',
         backgroundColor: backgroundColors.secondary,
         borderColor: softwareColors.ind,
         textColor: softwareColors.ind
@@ -60,22 +61,23 @@ export const SoftwareGraphicDesigner = [
     {
         id: 1,
         icon: ps,
+        label: 'Photoshop',
         backgroundColor: backgroundColors.secondary,
         borderColor: softwareColors.ps,
         textColor: softwareColors.ps,
-
     },
     {
         id: 2,
         icon: ai,
+        label: 'Illustrator',
         backgroundColor: backgroundColors.secondary,
         borderColor: softwareColors.ai,
         textColor: softwareColors.ai,
-
     },
     {
         id: 3,
         icon: ae,
+        label: 'After Effect',
         backgroundColor: backgroundColors.secondary,
         borderColor: softwareColors.ae,
         textColor: softwareColors.ae,
@@ -83,10 +85,10 @@ export const SoftwareGraphicDesigner = [
     {
         id: 4,
         icon: pr,
+        label: 'Premiere',
         backgroundColor: backgroundColors.secondary,
         borderColor: softwareColors.pr,
         textColor: softwareColors.pr,
-
     },
     {
         id: 5,
@@ -95,7 +97,6 @@ export const SoftwareGraphicDesigner = [
         backgroundColor: 'transparent',
         borderColor: softwareColors.sass,
         textColor: textColors.primary
-
     }
 ]
 

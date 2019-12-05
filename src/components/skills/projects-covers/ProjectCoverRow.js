@@ -12,9 +12,11 @@ export class ProjectCoverRow extends React.Component {
         return (
             <LinkProject
                 url={url}
+                portraitDesktop={project.portraitDesktop}
+                col={project.col}
                 name={project.name}
                 image={project.image}
-                background={project.background}
+                background={project.coverColor}
                 portrait={project.portrait}
                 noRadiusBottomLeft={project.noRadiusBottomLeft}
                 noRadiusTopRight={project.noRadiusTopRight}

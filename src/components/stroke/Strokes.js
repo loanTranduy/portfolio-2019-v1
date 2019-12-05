@@ -46,7 +46,7 @@ export const Stroke = styled.div`
     background: ${props => props.url === '/work' ? skillsColors.all : 
                 (props.url === '/work/front-end' || props.url === '/work/front-end/hackages' ?  skillsColors.front : 
     (props.url === '/work/web-design' ? skillsColors.web : 
-        (props.url === '/work/graphic-design' ? skillsColors.graphic : 
+        (props.url === '/work/graphic-design' || props.url === '/work/graphic-design/hackages' || props.url === '/work/graphic-design/bhack-to-school' ? skillsColors.graphic : 
                 backgroundColors.stroke)))
     };
 `;

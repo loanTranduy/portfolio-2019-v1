@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>play-button</title>
+    <desc>Created with Sketch.</desc>
+    <g id="hackages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.679710751">
+        <g id="Desktop-HD-Copy-56" transform="translate(-484.000000, -2062.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="play-button" transform="translate(484.000000, 2062.000000)">
+                <path d="M27,0 C12.0885117,0 0,12.0883008 0,27 C0,41.9116992 12.0885117,54 27,54 C41.9114883,54 54,41.9116992 54,27 C54,12.0883008 41.9114883,0 27,0 Z M36.331875,28.4312109 L22.831875,36.8687109 C22.5587109,37.0392539 22.2481055,37.125 21.9375,37.125 C21.6561094,37.125 21.3742969,37.0549688 21.1192734,36.9132188 C20.5828594,36.6157969 20.25,36.0513281 20.25,35.4375 L20.25,18.5625 C20.25,17.9486719 20.5828594,17.3842031 21.1192734,17.0867812 C21.6556875,16.7876719 22.3115977,16.8058125 22.831875,17.1312891 L36.331875,25.5687891 C36.8250469,25.8778125 37.125,26.4183398 37.125,27 C37.125,27.5816602 36.8250469,28.122293 36.331875,28.4312109 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
