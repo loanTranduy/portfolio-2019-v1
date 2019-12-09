@@ -9,30 +9,45 @@ import throttle from 'lodash.throttle';
 
 export const ContentInside = styled.section`
   padding: ${props => props.marginTop ? '80px 72px 32px 24px' : '24px 72px 32px 24px'};
+  position: relative;
   
   &:before{
     content:'';
-    position: fixed;
+    position: ${props => props.absolute ? 'absolute' : 'fixed'};
     z-index: -1;
-    top: -160px;
+    top: ${props => props.absolute ? -200 : -160}px;
     left: -100px;
-    right: 0;
+    right: -10px;
     background:${props => props.backgroundColor};
-    height: 400px;
+    height: ${props => props.absolute ? 415 : 400}px;
     transform: rotate(-16deg);
   }
   ${media.md`
   &:before{
-    top: -80px;
+    top: ${props => props.absolute ? -160 : -80}px;
     }
   `}
   
   ${media.xl`
   &:before{
-    top: -55px;
+    top: ${props => props.absolute ? -104 : -55}px;
     }
     padding: ${props => props.marginTop ? '100px 48px 48px 48px' : '48px'};
     width: calc(100% - ${props => props.sideInfoWidth}px);
+  `}
+`;
+
+export const Logo = styled.img`
+
+  
+  ${media.md`
+    width: 123px;
+    margin: 8px auto 44px auto;
+    display: block;
+  `}
+  
+  ${media.xl`
+
   `}
 `;
 
@@ -72,9 +87,10 @@ export class FrontEndProjectMockup extends React.Component {
     };
 
     render() {
-        const{cover,handleScreen,value, sideInfoWidth, coverMobile, screens, coverLow, backgroundColor, marginTop} = this.props;
+        const{cover,handleScreen,value, sideInfoWidth, coverMobile, screens,logo, coverLow, backgroundColor, marginTop} = this.props;
         return (
             <ContentInside sideInfoWidth={sideInfoWidth} backgroundColor={backgroundColor} marginTop={marginTop}>
+                <Logo src={logo} alt=""/>
                 {coverMobile && !!coverMobile.length &&
                     <ButtonRadioDevice
                         items={devices}

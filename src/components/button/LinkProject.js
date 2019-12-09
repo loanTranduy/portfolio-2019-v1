@@ -4,18 +4,17 @@ import {media} from '../../styles/default/Mediaqueries';
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import throttle from 'lodash.throttle';
 
 const LinkContainer = styled(NavLink)`
     overflow: hidden;
     border-radius: 40px;
     position: relative;
     background: url(${props => props.image}), ${props => props.background};
-    background-blend-mode: overlay;
+    background-blend-mode: color-burn;
     height: 0;
     padding-top: ${props => props.portrait ? 125 : 60}%;
     transition: .3s ease-in-out;
-    
+    animation: animate 3s linear infinite;
     grid-column: span 1;
     
     background-size: ${props => props.portrait ? 'auto 100%' : '100% auto'};
@@ -23,62 +22,50 @@ const LinkContainer = styled(NavLink)`
     background-repeat: no-repeat;
 
     h2{
-    transform-origin: 0 0;
-      white-space: nowrap;
-      min-width: 480px;
-      transform: rotate(${props => props.portrait ? -90 : 0}deg);
-      ${fontSize(140)};
-      position: absolute; 
-      
-      bottom: ${props => props.portrait ? 'auto' : '-29px'};
-      top: auto;
-      left: ${props => props.portrait ? 32 : 'auto'}px;
-      
+      letter-spacing: .5px;
+      text-align: center;
+      ${fontSize(50)};
+      ${lineHeight(72)};
+      position: absolute;
+      color: black;
+      top: 50%;
+      left: 50%;
+      transform: translate(-47%, -50%) rotate(-7deg);
       font-weight: 900;
       font-style: italic;
-      background: ${props => props.background};
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-blend-mode: overlay;
-      animation: ${props => props.portrait ? 'loopBottomText' : 'loopText'} 8s infinite linear;
-      
-      @keyframes loopText {
-          from {transform: translateX(0)}
-          to {transform: translateX(-100%)}
-      }
-      
-      @keyframes loopBottomText {
-          from {transform: translateY(0) rotate(-90deg)}
-          to {transform: translateY(-100%) rotate(-90deg)}
-      }
     }
     
     h2:first-of-type{
-      top: ${props => props.portrait ? 'auto' : '-32px'};
-      margin-left: 108px;
-      animation: ${props => props.portrait ? 'loopBottomText' : 'loopText'} 8s reverse infinite linear;
+      transform: translate(-50%, -50%) rotate(-7deg);
+      z-index: 2;
+      color: white;
+      background: none;
+      span{
+        background: ${props => props.background};
+        background-blend-mode: difference;
+      }
     }
     
     img{
       display: none
     }
-
+    
   ${media.md`
-      margin: ${props => props.portrait ? 0 : '0 0 24px 0'};
-      padding-top: 0;
-      height: 100%;
-      width: 100%;
-      position: relative;
-      position: relative;
-      height: 0;
-      padding-top: ${props => props.col};
-      overflow: hidden;
-      width: 100%;
-      left: 50%;
-      border-radius: 40px;
-      background: white;
-      transform: translateX(-50%);
-      position: relative;
+    margin: ${props => props.portrait ? 0 : '0 0 24px 0'};
+    padding-top: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding-top: ${props => props.col};
+    overflow: hidden;
+    width: 100%;
+    left: 50%;
+    border-radius: 40px;
+    background: white;
+    transform: translateX(-50%);
+    position: relative;
+    
     div{
         position: absolute;
         top: 50%;
@@ -86,6 +73,7 @@ const LinkContainer = styled(NavLink)`
         transform: translate(-50%,-50%);
         height: 102%;
         width: 100%;
+        
         >img{
             display: block;
             position: absolute;
@@ -106,7 +94,7 @@ const LinkContainer = styled(NavLink)`
             right:0;
             position: absolute;
             opacity: 0;
-            mix-blend-mode: hue;
+            mix-blend-mode: hard-light;
         }
       }
 
@@ -115,22 +103,22 @@ const LinkContainer = styled(NavLink)`
       
     &:hover{
       div:after{
-      opacity: .6;
+        opacity: 1;
       }
-      div>img{
+      div > img{
           height: ${props => props.portraitDesktop ? '105%' : 'auto'};
             width: ${props => props.portraitDesktop ? 'auto' : '105%'};
           }
         h2{
-            animation: ${props => props.portrait ? 'loopBottomText' : 'loopText'} 6s infinite linear;
             opacity: 1;
         }
     }
     
     h2{
-        animation: none;
-        opacity: 0;
-        left: ${props => props.portrait ? -150 : 450}px;
+      opacity: 0;
+      ${fontSize(44)};
+      ${lineHeight(55)};
+      transition: opacity .3s ease-in-out .1S;
     }
   `}
   
@@ -163,7 +151,7 @@ export class LinkProject extends React.Component {
                 <div>
                     <img src={image} alt=""/>
                 </div>
-                <h2>{name}</h2>
+                <h2><span>{name}</span></h2>
             </LinkContainer>
         )
     }

@@ -9,7 +9,7 @@ import {colors} from '../../styles/default/Colors';
 export const Ul = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 8px;
+    padding: 8px 14px;
     
     li a {
     transition: all .3s ease;

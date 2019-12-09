@@ -164,6 +164,8 @@ import marieJoCover from '../assets/images/project/marie-jo/marie-jo-cover.jpg';
 import vdabCover from '../assets/images/project/vdab/vdab-cover-screen.png';
 import edenredCover from '../assets/images/project/edenred/edenred-cover.png';
 
+import marieJoLogo from '../assets/images/project/marie-jo/logo_MJ_black.png';
+
 // ______________________________________________________________________________________________
 
 import {skillsColors, softwareColors, textColors} from '../styles/default/Colors';
@@ -184,6 +186,7 @@ export const ProjectFrontEnd = [
     {
         coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
         col: '123%',
+        logo: marieJoLogo,
         image: marieJoCover,
         skill: 'front-end',
         slug: 'marie-jo',

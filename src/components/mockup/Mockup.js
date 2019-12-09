@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
-import {backgroundColors, colors} from '../../styles/default/Colors';
+import {backgroundColors} from '../../styles/default/Colors';
 import {media} from '../../styles/default/Mediaqueries';
 
 const Mask = styled.div`
-    width: ${props => props.device === 'mobile' ? '140px' : '80%'};
+    width: ${props => props.device === 'mobile' ? '140px' : props.side ? '400px' : '80%'};
     position: relative;
     overflow-y: scroll;
     border-radius: 10px;
@@ -13,6 +13,7 @@ const Mask = styled.div`
     margin: 0 auto;
     transition: all .6s ease-in-out;
     background: ${backgroundColors.darkgrey};
+    transform: ${props => props.side ? 'translateX(140px)' : 'none'};
     
     &:after{
       content: "";
@@ -30,20 +31,21 @@ const Mask = styled.div`
     }
     
     ${media.md`
-        width: ${props => props.device === 'mobile' ? '200px' : '80%'};
+        width: ${props => props.device === 'mobile' ? '200px' : props.side ? '400px': '80%'};
         border: 4px solid white;
+        transform: ${props => props.side ? 'translateX(300px)' : 'none'};
     `}
     ${media.lg`
-        width: ${props => props.device === 'mobile' ? '240px' : '80%'};
+        width: ${props => props.device === 'mobile' ? '240px' : props.side ? '600px' : '80%'};
     `}
 `
 
 export class Mockup extends React.Component {
 
     render() {
-        const{cover, device} = this.props;
+        const{cover, device, side} = this.props;
         return (
-            <Mask device={device}>
+            <Mask device={device} side={side}>
                 <img src={cover} alt=""/>
             </Mask>
         )

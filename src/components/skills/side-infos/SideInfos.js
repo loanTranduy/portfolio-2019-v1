@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {media} from '../../../styles/default/Mediaqueries';
 import cornerWhite from '../../../assets/images/corner.svg';
 import {fontSize, lineHeight} from '../../../styles/default/Mixins';
-import {backgroundColors, colors, textColors} from '../../../styles/default/Colors';
+import {backgroundColors, textColors} from '../../../styles/default/Colors';
 import {IconsWithLabel} from './skills/IconsWithLabel';
 import {BoxIconsWithLabel} from './software/BoxIconsWithLabel';
 import {LinkWithIcon} from '../../button/LinkWithIcon';
@@ -15,7 +15,7 @@ import {Link} from 'react-router-dom';
 export const SideInfo = styled.div`
   background: ${backgroundColors.navbar};
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   right: 35px;
   top: 82px;
   bottom:0;

@@ -21,6 +21,7 @@ export const fontFamilies = {
     // mtLight: "'montserratlight', Helvetica, sans-serif",
     // mtMedium: "'montserratmedium', Helvetica, sans-serif",
     mtRegular: "'Montserrat', Helvetica, sans-serif",
+    RbMedium: "'Roboto', Helvetica, sans-serif",
     // mtMediumItalic: "'montserratregular', Helvetica, sans-serif",
 };
 //

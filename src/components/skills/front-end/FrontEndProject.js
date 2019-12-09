@@ -20,6 +20,7 @@ export function FrontEndProject ({match}) {
 
     return (
             <SkillsScreen
+                logo={topic.logo}
                 positionDate={topic.position.date}
                 position={topic.position.name}
 

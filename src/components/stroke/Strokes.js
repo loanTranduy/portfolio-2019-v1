@@ -44,9 +44,9 @@ export const Stroke = styled.div`
     bottom: ${props => Bottom[props.position]};
     top:${props => Top[props.position]};
     background: ${props => props.url === '/work' ? skillsColors.all : 
-                (props.url === '/work/front-end' || props.url === '/work/front-end/hackages' ?  skillsColors.front : 
-    (props.url === '/work/web-design' ? skillsColors.web : 
-        (props.url === '/work/graphic-design' || props.url === '/work/graphic-design/hackages' || props.url === '/work/graphic-design/bhack-to-school' ? skillsColors.graphic : 
+                (props.url === '/work/front-end' || props.url === '/work/front-end/hackages' || props.url === '/work/front-end/marie-jo' || props.url === '/work/front-end/primadonna' || props.url === '/work/front-end/vdab' || props.url === '/work/front-end/edenred' ?  skillsColors.front : 
+    (props.url === '/work/web-design' || props.url === '/work/web-design/hackages' ? skillsColors.web : 
+        (props.url === '/work/graphic-design' || props.url === '/work/graphic-design/hackages' || props.url === '/work/graphic-design/verger-bio' || props.url === '/work/graphic-design/brussels-foodtruck-festival' || props.url === '/work/graphic-design/beta-bon-dieu' || props.url === '/work/graphic-design/hugeia' || props.url === '/work/graphic-design/bhack-to-school' || props.url === '/work/graphic-design/3d-side' ? skillsColors.graphic : 
                 backgroundColors.stroke)))
     };
 `;
@@ -69,9 +69,9 @@ const BoxCorner = styled.div`
     svg{
       width: ${props => (props.size)}px;
       fill: ${props => props.url === '/work' ? skillsColors.all :
-        (props.url === '/work/front-end' || props.url === '/work/front-end/hackages' ?  skillsColors.front :
-            (props.url === '/work/web-design' ? skillsColors.web :
-                (props.url === '/work/graphic-design' ? skillsColors.graphic :
+        (props.url === '/work/front-end' || props.url === '/work/front-end/hackages' || props.url === '/work/front-end/marie-jo' || props.url === '/work/front-end/primadonna' || props.url === '/work/front-end/vdab' || props.url === '/work/front-end/edenred' ?  skillsColors.front :
+            (props.url === '/work/web-design' || props.url === '/work/web-design/hackages' ? skillsColors.web :
+                (props.url === '/work/graphic-design' || props.url === '/work/graphic-design/hackages' || props.url === '/work/graphic-design/verger-bio' || props.url === '/work/graphic-design/brussels-foodtruck-festival' || props.url === '/work/graphic-design/beta-bon-dieu' || props.url === '/work/graphic-design/hugeia' || props.url === '/work/graphic-design/bhack-to-school' || props.url === '/work/graphic-design/3d-side' ? skillsColors.graphic :
                     backgroundColors.stroke)))
         };
       }
@@ -90,9 +90,9 @@ ${media.md`
     display: block;
     bottom: calc(${props => props.size}px + 1px);
     left:${props => props.right ? 'auto ' : (props.sideNavbarWidth)+ 'px'};;
-    right: calc(${props => props.size}px + 1px);
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: ${props => props.right ? 20 : 0}px;
+    right: ${props => props.size}px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: ${props => props.right ? 8 : 0}px;
     top: ${props => props.right ? props.size + 'px' : 'auto'};
     
     &:after, &:before{

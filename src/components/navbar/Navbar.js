@@ -14,7 +14,7 @@ export const Content = styled.header`
   position: fixed;
   top: ${props => (props.position)}px;
   right: ${props => (props.position)}px;
-  z-index: 3;
+  z-index: 5;
   left: ${props => (props.position)}px;
   display: flex;
   justify-content: space-between;
