@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import {media} from '../styles/default/Mediaqueries';
 import {FrontEndProjectMockup} from '../components/skills/front-end/FrontEndProjectMockup';
 import {GraphicDesignProjectMockup} from '../components/skills/graphic-design/GraphicDesignProjectMockup';
+import {WebDesignProjectMockup} from '../components/skills/web-design/WebDesignProjectMockup';
 
 export const ProjectContainer = styled.div`
   display: grid;
@@ -17,9 +18,8 @@ export const ProjectContainer = styled.div`
   
   ${media.md`
     grid-template-columns: repeat(12, 1fr);
-    padding: 48px;
-    margin-bottom: 0;
-    
+    margin: 48px;
+    padding: 0;
     a{
         background-size: auto 100%;
         margin: 0;
@@ -56,11 +56,17 @@ export const ProjectContainer = styled.div`
       border-bottom-left-radius: 0px;
       background-size: auto 100%;
     }
+    
+    // transition: all .3S ease-in-out;
+    // &:hover{
+    //     a:not(:hover) {
+    //       filter: grayscale(100%);
+    //     }
+    // }
   `}
   
 ${media.xl`
-  width: calc(100% - ${state => state.sideInfoWidth}px);
- 
+  width: calc(100% - 470px);
 `}
 `;
 
@@ -107,6 +113,7 @@ export class SkillsScreen extends React.Component {
             backgroundColor,
             coverMobile,
             cover,
+            mobileScreens,
             name,
             projects,
             title,
@@ -138,7 +145,13 @@ export class SkillsScreen extends React.Component {
             logo,
             baselineColor,
             backgroundImage,
-            marginTop
+            marginTop,
+            webDesignProject,
+            MainCover,
+            desktopScreens,
+            colors,
+            gradiants,
+            fontName
         }= this.props;
         console.log(this.state.theposition)
         return (
@@ -171,6 +184,7 @@ export class SkillsScreen extends React.Component {
                 }
                 {cover &&
                 <FrontEndProjectMockup
+                    logo={logo}
                     coverLow={coverLow}
                     coverMobile={coverMobile}
                     sideInfoWidth={this.state.sideInfoWidth}
@@ -197,6 +211,20 @@ export class SkillsScreen extends React.Component {
                         baseline={baseline}
                         logo={logo}
                     />
+                }
+
+                {webDesignProject &&
+                <WebDesignProjectMockup
+                    logo={logo}
+                    fontName={fontName}
+                    cover={MainCover}
+                    backgroundColor={backgroundColor}
+                    sideInfoWidth={this.state.sideInfoWidth}
+                    colors={colors}
+                    gradiants={gradiants}
+                    mobileScreens={mobileScreens}
+                    desktopScreens={desktopScreens}
+                />
                 }
 
             </>

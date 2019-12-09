@@ -84,7 +84,6 @@ export const SoftwareWebDesigner = [
         backgroundColor: 'transparent',
         borderColor: softwareColors.principle,
         textColor: textColors.primary
-
     }
 ]
 

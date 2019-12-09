@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import {backgroundColors, textColors} from '../styles/default/Colors';
 import {fontSize, lineHeight} from '../styles/default/Mixins';
 import {media} from '../styles/default/Mediaqueries';
-import {ProjectContainer} from '../screens/SkillsScreen';
 import {SideInfo} from './skills/side-infos/SideInfos';
 import {ContentInside} from './skills/front-end/FrontEndProjectMockup';
 
@@ -29,10 +28,6 @@ export const TheContainer = styled.div`
     margin-right: var(--totalStrokeSize);
     margin-bottom: var(--totalStrokeSize);
     overflow: scroll;
-    ${ProjectContainer}{
-        // height: var(--bodySize);
-        // min-height: 600px;
-    }
     ${ContentInside}{
         min-height: var(--bodySize);
         

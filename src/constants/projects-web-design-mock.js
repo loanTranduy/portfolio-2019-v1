@@ -92,188 +92,76 @@ import hackagesCover from '../assets/images/project/hackages/hackages-cover.png'
 import primadonnaCover from '../assets/images/project/primadonna/primadonna-cover.jpg';
 import marieJoCover from '../assets/images/project/marie-jo/marie-jo-cover-screen.png';
 
+import hackagesLogo from '../assets/images/project/hackages/hackages-logo.svg';
+
+
 // ______________________________________________________________________________________________
 
-import {skillsColors, softwareColors, textColors} from '../styles/default/Colors';
-import react from '../assets/icons/software/react.svg'
-import styled from '../assets/icons/software/styled-component.png'
-import sass from '../assets/icons/software/sass.svg'
+import {skillsColors, softwareColors, textColors, hackagesColors} from '../styles/default/Colors';
 import slack from '../assets/icons/software/slack.svg'
 import freedcamp from '../assets/icons/software/freedcamp.svg'
 import agile from '../assets/icons/software/agile.svg'
-import jquery from '../assets/icons/software/jquery-1.svg'
-import handlebars from '../assets/icons/software/handlebars-1.svg'
-import bigCommerce from '../assets/icons/software/bigcommerce-1.svg'
+import sketch from '../assets/icons/software/sketchh.svg'
+import sitemap from '../assets/icons/software/sitemap.svg'
+import principle from '../assets/icons/software/principle-app.svg'
 
 export const ProjectWebDesign = [
     {
-        coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
-        col: '100%',
-        image: marieJoCover,
-        skill: 'front-end',
-        slug: 'marie-jo',
-        id: 0,
-        name: 'Marie Jo',
-        position:{
-            name: "Front-end Developer",
-            date: "2018 - 2019",
-            description: "Implement an e-commerce using BigCommerce ",
-            tasks:[
-                'Current website Maintenance',
-                'New platform implementation',
-                'Component Storybook creation',
-            ],
-            skillLinks:[
-                {
-                    label: 'Web Design',
-                    to: '/work/Web-design/hackages',
-                    color: skillsColors.web
-                },
-                {
-                    label: 'Graphic Design',
-                    to: '/work/graphic-design/hackages',
-                    color: skillsColors.graphic
-                }
-            ],
-            softwares:[
-                {
-                    id: 2,
-                    label: 'BigCommerce',
-                    icon: bigCommerce,
-                    backgroundColor: softwareColors.bigCommerce,
-                    borderColor: softwareColors.bigCommerce,
-                    textColor: textColors.secondary
-                },
-                {
-                    id: 2,
-                    label: 'Handlebar',
-                    icon: handlebars,
-                    backgroundColor: softwareColors.agile,
-                    borderColor: softwareColors.agile,
-                    textColor: textColors.secondary
-                },
-                {
-                    id: 2,
-                    label: 'jQuery',
-                    icon: jquery,
-                    backgroundColor: 'transparent',
-                    borderColor: softwareColors.freedcamp,
-                    textColor: textColors.primary
-                },
-                {
-                    id: 0,
-                    label: 'React',
-                    icon: react,
-                    backgroundColor: softwareColors.react,
-                    borderColor: softwareColors.react,
-                    textColor: textColors.secondary
-                },
-                {
-                    id: 1,
-                    label: 'Styled component',
-                    icon: styled,
-                    backgroundColor: softwareColors.styledComponent,
-                    borderColor: softwareColors.styledComponent,
-                    textColor: textColors.primary
-
-                },
-                {
-                    id: 2,
-                    label: 'Sass',
-                    icon: sass,
-                    backgroundColor: softwareColors.sass,
-                    borderColor: softwareColors.sass,
-                    textColor: textColors.secondary
-                },
-            ],
-            managment:[
-                {
-                    id: 0,
-                    label: 'Agile Methodo',
-                    icon: agile,
-                    backgroundColor: softwareColors.agile,
-                    borderColor: softwareColors.agile,
-                    textColor: textColors.secondary
-                },
-                {
-                    id: 1,
-                    label: 'FreedCamp',
-                    icon: freedcamp,
-                    backgroundColor: 'transparent',
-                    borderColor: softwareColors.freedcamp,
-                    textColor: textColors.primary
-                },
-                {
-                    id: 2,
-                    label: 'Slack',
-                    icon: slack,
-                    backgroundColor: softwareColors.slack,
-                    borderColor: softwareColors.slack,
-                    textColor: textColors.secondary
-
-                },
-            ]
-        },
-        background: 'linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)',
-        links: [
-            {
-                id:0,
-                name: 'Home'
-            },
-            {
-                id:1,
-                name: 'Products List',
-            },
-            {
-                id:2,
-                name:'Product Details',
-            },
-            {
-                id:3,
-                name: 'Filters',
-            },
-            {
-                id:4,
-                name: 'Sign in',
-            },
-            {
-                id:5,
-                name: 'Store Locator',
-            }
-        ],
-        desktop: [
-            MarieJoHome,
-            MarieJoProductsList ,
-            MarieJoProductDetails,
-            MarieJoFilters,
-            MarieJoSignIn  ,
-            MarieJoStore ,
-        ],
-        desktopLowQuality: [
-            MarieJoHomeLow,
-            MarieJoProductsListLow ,
-            MarieJoProductDetailsLow,
-            MarieJoFiltersLow,
-            MarieJoSignInLow  ,
-            MarieJoStoreLow ,
-        ],
-        mobile: [
-            MarieJoHomeMobile,
-            MarieJoProductsListMobile ,
-            MarieJoProductDetailsMobile,
-            MarieJoFiltersMobile,
-            MarieJoSignInMobile  ,
-            MarieJoStoreMobile ,
-        ],
-    },
-    {
+        logo: hackagesLogo,
         coverColor: "linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)",
-        col: '48%',
+        col: '58%',
         image: hackagesCover,
-        skill: 'front-end',
+        skill: 'web-design',
         slug: 'hackages',
         id: 1,
         name: 'Hackages',
+        styles:{
+            fontName: 'Roboto',
+            gradiants: [
+                {
+                    mainColor: '#FFFFFF',
+                    gradiantsList: [
+                        '#F3F4F4',
+                        '#E9EAEA',
+                        '#DFE1E0',
+                        '#CBCECD',
+                        '#B7BBBA',
+                        '#ADB1B0',
+                    ],
+                },
+                {
+                    mainColor: '#121312',
+                    gradiantsList: [
+                        '#252726',
+                        '#383B3A',
+                        '#4B4F4E',
+                        '#5E6362',
+                        '#717776',
+                        '#999E9D',
+                        '#ADB1B0',
+                    ],
+                },
+                {
+                    mainColor: hackagesColors.background,
+                    gradiantsList: [
+                        '#00CCBE',
+                        '#188DF2',
+                    ],
+                },
+            ],
+            colors: [
+                '#FFC907',
+                '#F45E8D',
+                '#FF5748',
+                '#C70D00',
+                '#9416C6',
+                '#009047',
+                '#42D790',
+                '#30CFF7',
+                '#0C58CA',
+                '#FD6900',
+            ],
+        },
         position:{
             name: "Interactive Designer",
             date: "2017 - 2018",
@@ -285,8 +173,8 @@ export const ProjectWebDesign = [
             ],
             skillLinks:[
                 {
-                    label: 'Web Design',
-                    to: '/work/Web-design/hackages',
+                    label: 'Front-end',
+                    to: '/work/front-end/hackages',
                     color: skillsColors.web
                 },
                 {
@@ -298,28 +186,25 @@ export const ProjectWebDesign = [
             softwares:[
                 {
                     id: 0,
-                    label: 'React',
-                    icon: react,
-                    backgroundColor: softwareColors.react,
-                    borderColor: softwareColors.react,
+                    icon: sitemap,
+                    backgroundColor: softwareColors.glooMaps,
+                    borderColor: softwareColors.glooMaps,
                     textColor: textColors.secondary
                 },
                 {
                     id: 1,
-                    label: 'Styled component',
-                    icon: styled,
-                    backgroundColor: softwareColors.styledComponent,
-                    borderColor: softwareColors.styledComponent,
+                    icon: sketch,
+                    backgroundColor: 'transparent',
+                    borderColor: softwareColors.sketch,
                     textColor: textColors.primary
 
                 },
                 {
                     id: 2,
-                    label: 'Sass',
-                    icon: sass,
-                    backgroundColor: softwareColors.sass,
-                    borderColor: softwareColors.sass,
-                    textColor: textColors.secondary
+                    icon: principle,
+                    backgroundColor: 'transparent',
+                    borderColor: softwareColors.principle,
+                    textColor: textColors.primary
                 }
             ],
             managment:[
@@ -351,60 +236,6 @@ export const ProjectWebDesign = [
             ]
         },
         background: 'linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)',
-        links: [
-            {
-                id:0,
-                name: 'Home'
-            },
-            {
-                id:1,
-                name: 'Explore Events',
-            },
-            {
-                id:2,
-                name:'Event Details',
-            },
-            {
-                id:3,
-                name: 'Search',
-            },
-            {
-                id:4,
-                name: 'My events',
-            },
-            {
-                id:5,
-                name: 'Settings',
-            },
-            {
-                id:6,
-                name: 'About',
-            },
-            {
-                id:7,
-                name: 'Faq',
-            },
-            {
-                id:8,
-                name: 'Login',
-            },
-            {
-                id:9,
-                name: 'Contact',
-            },
-            {
-                id:10,
-                name: 'User Profile',
-            },
-            {
-                id:11,
-                name: 'Payment Process',
-            },
-            {
-                id: 12,
-                name: 'Notifications',
-            }
-        ],
         desktop: [
             hackagesHome,
             hackagesExplore ,
@@ -440,185 +271,14 @@ export const ProjectWebDesign = [
             hackagesExploreMobile,
             hackagesEventDetailsMobile,
             hackagesSearchMobile,
-            hackagesEventsMobile,
-            hackagesSettingsMobile,
             hackagesAboutMobile,
             hackagesFaqMobile,
             hackagesLoginMobile,
             hackagesContactMobile,
-            hackagesUserProfileMobile,
-            hackagesPaymentMobile,
             hackagesNatificationsMobile,
         ],
+        nextSlug: '/work/web-design/primadonna'
     },
-    {
-        coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
-        col: '63%',
-        image: primadonnaCover,
-        skill: 'front-end',
-        slug: 'primadonna',
-        id: 2,
-        name: 'Primadonna',
-        position:{
-            name: "Front-end Developer",
-            date: "2018 - 2019",
-            description: "Implement an e-commerce using BigCommerce ",
-            tasks:[
-                'Current website Maintenance',
-                'New platform implementation',
-                'Component Storybook creation',
-            ],
-            skillLinks:[
-                {
-                    label: 'Web Design',
-                    to: '/work/Web-design/hackages',
-                    color: skillsColors.web
-                },
-                {
-                    label: 'Graphic Design',
-                    to: '/work/graphic-design/hackages',
-                    color: skillsColors.graphic
-                }
-            ],
-            softwares:[
-                {
-                    id: 2,
-                    label: 'BigCommerce',
-                    icon: bigCommerce,
-                    backgroundColor: softwareColors.bigCommerce,
-                    borderColor: softwareColors.bigCommerce,
-                    textColor: textColors.secondary
-                },
-                {
-                    id: 2,
-                    label: 'Handlebar',
-                    icon: handlebars,
-                    backgroundColor: softwareColors.agile,
-                    borderColor: softwareColors.agile,
-                    textColor: textColors.secondary
-                },
-                {
-                    id: 2,
-                    label: 'jQuery',
-                    icon: jquery,
-                    backgroundColor: 'transparent',
-                    borderColor: softwareColors.freedcamp,
-                    textColor: textColors.primary
-                },
-                {
-                    id: 0,
-                    label: 'React',
-                    icon: react,
-                    backgroundColor: softwareColors.react,
-                    borderColor: softwareColors.react,
-                    textColor: textColors.secondary
-                },
-                {
-                    id: 1,
-                    label: 'Styled component',
-                    icon: styled,
-                    backgroundColor: softwareColors.styledComponent,
-                    borderColor: softwareColors.styledComponent,
-                    textColor: textColors.primary
-
-                },
-                {
-                    id: 2,
-                    label: 'Sass',
-                    icon: sass,
-                    backgroundColor: softwareColors.sass,
-                    borderColor: softwareColors.sass,
-                    textColor: textColors.secondary
-                },
-            ],
-            managment:[
-                {
-                    id: 0,
-                    label: 'Agile Methodo',
-                    icon: agile,
-                    backgroundColor: softwareColors.agile,
-                    borderColor: softwareColors.agile,
-                    textColor: textColors.secondary
-                },
-                {
-                    id: 1,
-                    label: 'FreedCamp',
-                    icon: freedcamp,
-                    backgroundColor: 'transparent',
-                    borderColor: softwareColors.freedcamp,
-                    textColor: textColors.primary
-                },
-                {
-                    id: 2,
-                    label: 'Slack',
-                    icon: slack,
-                    backgroundColor: softwareColors.slack,
-                    borderColor: softwareColors.slack,
-                    textColor: textColors.secondary
-
-                },
-            ]
-        },
-        background: 'linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)',
-        links: [
-            {
-                id:0,
-                name: 'Home'
-            },
-            {
-                id:1,
-                name: 'Products List',
-            },
-            {
-                id:2,
-                name:'Product Details',
-            },
-            {
-                id:3,
-                name: 'Filters',
-            },
-            {
-                id:4,
-                name: 'Sign in',
-            },
-            {
-                id:5,
-                name: 'Store Locator',
-            },
-            {
-                id:6,
-                name: 'Perfect Fit',
-            },
-        ],
-        desktop: [
-            PrimadonnaHome,
-            PrimadonnaProductsList ,
-            PrimadonnaProductDetails,
-            PrimadonnaFilters,
-            PrimadonnaSignIn  ,
-            PrimadonnaStore ,
-            PrimadonnaPerfectFit,
-        ],
-        desktopLowQuality: [
-            PrimadonnaHomeLow,
-            PrimadonnaProductsListLow ,
-            PrimadonnaProductDetailsLow,
-            PrimadonnaFiltersLow,
-            PrimadonnaSignInLow  ,
-            PrimadonnaStoreLow ,
-            PrimadonnaPerfectFitLow,
-        ],
-        mobile: [
-            PrimadonnaHomeMobile,
-            PrimadonnaProductsListMobile ,
-            PrimadonnaProductDetailsMobile,
-            PrimadonnaFiltersMobile,
-            PrimadonnaSignInMobile  ,
-            PrimadonnaStoreMobile ,
-            PrimadonnaPerfectFitMobile,
-        ],
-    },
-
 ];
 
 
