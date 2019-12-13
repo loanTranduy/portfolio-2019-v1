@@ -1,98 +1,238 @@
 import PropTypes from 'prop-types'
-import marieJo from '../assets/images/project/primadonna/primadonna-cover.jpg';
+
+import btsGraphicDesignCover from '../assets/images/project/hackages/mockups/bts-logo.png';
+import hackagesGraphicDesignCover from '../assets/images/project/hackages/mockups/business-card-front-800.png';
+import vergerBioGraphicDesignCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.png';
+import btbdGraphicDesignCover from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/pattern-cover.svg';
+import dSideGraphicDesignCover from '../assets/images/project/3d-side/3dside-poster.svg';
+import hugeiaTablier from '../assets/images/project/hugeia/mockups/tablier.png';
+import bftfPoster from '../assets/images/project/brussel-food-truck-festival/mockups/only-poster.png';
+
+import hackagesCoverFront from '../assets/images/project/hackages/hackages-cover.png';
+import primadonnaCoverFront from '../assets/images/project/primadonna/primadonna-cover-web.png';
+import marieJoCoverFront from '../assets/images/project/marie-jo/marie-jo-cover-web.png';
+import vdabCoverFront from '../assets/images/project/vdab/VDAB_preview-900x627.jpg';
+import edenredCoverFront from '../assets/images/project/edenred/edenred-cover-web.png';
+
+import hackagesCoverWeb from '../assets/images/project/hackages/hackages-cover-web.png';
+import vdabCoverWeb from '../assets/images/project/vdab/vdab-cover-teste.png';
+import edenredCoverWeb from '../assets/images/project/edenred/edenred-cover-front.png';
+import marieJoCoverWeb from '../assets/images/project/marie-jo/marie-jo-cover.jpg';
+import primadonnaCoverWeb from '../assets/images/project/primadonna/primadonna-cover.jpg';
 
 export const ProjectPropTypes = PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
-    url: PropTypes.string,
+    slug: PropTypes.string,
     image: PropTypes.string,
     background: PropTypes.string,
     portrait: PropTypes.bool,
     noRadiusBottomLeft: PropTypes.bool,
     noRadiusTopRight: PropTypes.bool
-
 }).isRequired;
 
 export const ProjectsPropTypes = PropTypes.arrayOf(ProjectPropTypes).isRequired;
 
+const landscape = '58%';
+const portrait = '128%';
+const square = '80%';
+
+const gradiantFront = 'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)';
+const gradiantWeb = "linear-gradient(-180deg, #FFE998 0%, #FFEA00 100%)";
+const gradiantGaph = "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)";
 export const Project = [
     {
         id: 0,
-        name: 'Marie Jo',
-        url: '/work/hackages',
-        image: marieJo,
-        background:'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)',
-        portrait: true
+        colxl: landscape,
+        col: '60%',
+        name: 'Hackages',
+        slug: 'hackages',
+        image: hackagesCoverFront,
+        coverColor: gradiantFront,
+        skill: 'front-end',
     },
     {
         id: 1,
-        name: 'Primadonna',
-        url: '/work/front-end/marie-jo',
-        image: marieJo,
-        background:'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)',
-        portrait: true
+        colxl: square,
+        col: '130%',
+        name: 'Verger Bio',
+        slug: 'verger-bio',
+        image: vergerBioGraphicDesignCover,
+        coverColor: gradiantGaph,
+        skill: 'graphic-design',
+        portrait: true,
+        portraitDesktop: true,
     },
     {
         id: 2,
-        name: 'Hackages',
-        url: '/work/front-end/marie-jo',
-        image: marieJo,
-        background:'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)',
-        portrait: true,
-        noRadiusBottomLeft: true
+        colxl: portrait,
+        col: square,
+        name: '3D side',
+        slug: '3d-side',
+        image: dSideGraphicDesignCover,
+        coverColor: gradiantGaph,
+        skill: 'graphic-design',
+        portraitDesktop: true,
     },
     {
         id: 3,
-        name: 'Edenred',
-        url: '/work/front-end/marie-jo',
-        image: marieJo,
-        background:'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)',
-        portrait: true
+        colxl: square,
+        col: square,
+        name: 'Brussels Food Truck Festival',
+        slug: 'brussels-foodtruck-festival',
+        image: bftfPoster,
+        coverColor: gradiantGaph,
+        skill: 'graphic-design',
+        portrait: true,
+        portraitDesktop: true,
+        noRadiusBottomLeft: true
     },
     {
         id: 4,
-        name: 'Vdab',
-        url: '/work/front-end/marie-jo',
-        image: marieJo,
-        background:'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)',
+        colxl: portrait,
+        col: portrait,
+        name: 'Bhack to School',
+        slug: 'bhack-to-school',
+        image: btsGraphicDesignCover,
+        coverColor: gradiantGaph,
+        skill: 'graphic-design',
+        portrait: true,
+        portraitDesktop: true,
 
     },
     {
         id: 5,
+        colxl: landscape,
+        col: landscape,
         name: 'Marie Jo',
-        url: '/work/front-end/marie-jo',
-        image: marieJo,
-        background:'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)',
+        slug: 'marie-jo',
+        image: marieJoCoverFront,
+        coverColor: gradiantFront,
+        skill: 'front-end',
     },
     {
         id: 6,
-        name: 'Primadonna',
-        url: '/work/front-end/marie-jo',
-        image: marieJo,
-        background:'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)',
+        colxl: landscape,
+        col: landscape,
+        name: 'Hackages',
+        slug: 'hackages',
+        image: hackagesGraphicDesignCover,
+        coverColor: gradiantGaph,
+        skill: 'graphic-design',
     },
     {
         id: 7,
-        name: 'Hackages',
-        url: '/work/front-end/marie-jo',
-        image: marieJo,
-        background:'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)',
+        colxl: portrait,
+        col: portrait,
+        name: 'VDAB',
+        slug: 'vdab',
+        image: vdabCoverFront,
+        coverColor: gradiantFront,
+        skill: 'front-end',
+        portrait: true,
+        portraitDesktop: true,
     },
     {
         id: 8,
-        name: 'Edenred',
-        url: '/work/front-end/marie-jo',
-        image: marieJo,
-        background:'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)',
+        colxl: portrait,
+        col: portrait,
+        name: 'Marie Jo',
+        slug: 'marie-jo',
+        image: marieJoCoverWeb,
+        coverColor: gradiantWeb,
+        skill: 'web-design',
+        portrait: true,
+        portraitDesktop: true,
     },
     {
         id: 9,
-        name: 'Vdab',
-        url: '/work/front-end/marie-jo',
-        image: marieJo,
-        background:'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)',
+        colxl: landscape,
+        col: landscape,
+        name: 'Primadonna',
+        slug: 'primadonna',
+        image: primadonnaCoverFront,
+        coverColor: gradiantWeb,
+        skill: 'web-design',
     },
-
+    {
+        id: 10,
+        colxl: portrait,
+        col: portrait,
+        name: 'Primadonna',
+        slug: 'primadonna',
+        image: primadonnaCoverWeb,
+        coverColor: gradiantFront,
+        skill: 'front-end',
+        portrait: true,
+        portraitDesktop: true,
+    },
+    {
+        id: 11,
+        colxl: landscape,
+        col: landscape,
+        name: 'Hackages',
+        slug: 'hackages',
+        image: hackagesCoverWeb,
+        coverColor: gradiantWeb,
+        skill: 'web-design',
+    },
+    {
+        id: 12,
+        colxl: portrait,
+        col: portrait,
+        name: 'Edenred',
+        slug: 'edenred',
+        image: edenredCoverWeb,
+        coverColor: gradiantWeb,
+        skill: 'web-design',
+        portrait: true,
+        portraitDesktop: true,
+    },
+    {
+        id: 13,
+        colxl: portrait,
+        col: portrait,
+        name: 'Edenred',
+        slug: 'edenred',
+        image: edenredCoverFront,
+        coverColor: gradiantFront,
+        skill: 'front-end',
+        portrait: true,
+        portraitDesktop: true,
+    },
+    {
+        id: 14,
+        colxl: portrait,
+        col: portrait,
+        name: 'Vdab',
+        slug: 'vdab',
+        image: vdabCoverWeb,
+        coverColor: gradiantWeb,
+        skill: 'web-design',
+        portrait: true,
+        portraitDesktop: true,
+    },
+    {
+        id: 15,
+        colxl: portrait,
+        col: portrait,
+        name: 'Beta Bondieu',
+        slug: 'beta-bon-dieu',
+        image: btbdGraphicDesignCover,
+        coverColor: gradiantGaph,
+        skill: 'graphic-design',
+        portraitDesktop: true,
+    },
+    {
+        id: 16,
+        colxl: landscape,
+        col: landscape,
+        name: 'Hugeia',
+        slug: 'hugeia',
+        image: hugeiaTablier,
+        coverColor: gradiantGaph,
+        skill: 'graphic-design'
+    },
 ];
 
 

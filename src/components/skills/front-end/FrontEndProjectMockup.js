@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import {hackagesColors} from '../../../styles/default/Colors';
 import {Mockup} from '../../mockup/Mockup';
 import {media} from '../../../styles/default/Mediaqueries';
 import {ButtonRadioDevice} from '../../mockup/ButtonRadioDevice';

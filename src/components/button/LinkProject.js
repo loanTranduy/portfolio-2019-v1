@@ -100,7 +100,10 @@ const LinkContainer = styled(NavLink)`
 
       background: url('');
       transition: all .3s ease-in-out;
-      
+      h2{
+          transform: translate(-50%, -40%) rotate(-7deg);
+          transition: all .3s ease-in-out;
+      }
     &:hover{
       div:after{
         opacity: 1;
@@ -110,6 +113,7 @@ const LinkContainer = styled(NavLink)`
             width: ${props => props.portraitDesktop ? 'auto' : '105%'};
           }
         h2{
+        transform: translate(-50%, -50%) rotate(-7deg);
             opacity: 1;
         }
     }
@@ -123,6 +127,7 @@ const LinkContainer = styled(NavLink)`
   `}
   
   ${media.xl`
+  padding-top: ${props => props.colxl};
   `}
 `
 
@@ -134,7 +139,7 @@ export class LinkProject extends React.Component {
 
 
     render() {
-        const {name, image, portraitDesktop, col, background, url, noRadiusTopLeft, portrait, small, noRadiusBottomLeft, noRadiusTopRight} = this.props;
+        const {name, image, portraitDesktop,col, colxl, background, url, noRadiusTopLeft, portrait, small, noRadiusBottomLeft, noRadiusTopRight} = this.props;
         return (
             <LinkContainer
                 portraitDesktop={portraitDesktop}
@@ -142,6 +147,7 @@ export class LinkProject extends React.Component {
                 image={image}
                 small={small}
                 col={col}
+                colxl={colxl}
                 portrait={portrait}
                 background={background}
                 to={url}

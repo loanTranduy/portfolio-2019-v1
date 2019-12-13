@@ -4,12 +4,14 @@ import {Mockup} from '../../mockup/Mockup';
 import {fontSize, lineHeight} from '../../../styles/default/Mixins';
 import {media} from '../../../styles/default/Mediaqueries';
 import {ContentInside} from '../front-end/FrontEndProjectMockup';
-import {fontFamilies as FontFamilies} from '../../../styles/default/Font';
+
+import Video from '../../video/Video';
+import {backgroundColors, textColors} from '../../../styles/default/Colors';
 
 export const Logo = styled.img`
   width: 200px;
-    margin: 8px 0 44px 0;
-    display: block;
+  margin: ${props => props.center ? '0 auto 40px' : '8px 0 44px 0'};
+  display: block;
   ${media.md`
     width: 160px;
   `}
@@ -20,29 +22,47 @@ export const Logo = styled.img`
 `;
 
 export const TextStyle = styled.div`
-  font-family: ${FontFamilies.RbMedium};
+  font-family: ${props => props.font};
+      hyphens: auto;
   color: #252726;
   margin-top: 80px;
   margin-bottom: 80px;
+  white-space: pre-wrap;max-width: 90%;
   p{
     letter-spacing: .5px;
     ${fontSize(14)};
     ${lineHeight(20)};
+    position: relative;
   }
   
   h2{
-    ${fontSize(50)};
+    ${fontSize(32)};
     margin-bottom: 8px;
   }
+  
   ${media.md`
-      h2{
-        ${fontSize(62)};
-      }
+    h2{
+      ${fontSize(54)};
+    }
   `}
   
   ${media.xl`
 
   `}
+`;
+
+export const FontHierarchy = styled.p`
+    display: inline-block;
+    margin-bottom: 8px;
+    &:after{
+      content: "";
+      width: 80px;
+      height: 1px;
+      background:${backgroundColors.secondary};
+      position: absolute;
+      right: -88px;
+      bottom: 6px;
+    }
 `;
 
 export const Colors = styled.ul`
@@ -58,7 +78,7 @@ export const Colors = styled.ul`
   }
   
   ${media.md`
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(${props => props.colorsLength}, 1fr);
     grid-column-gap: 32px;
   `}
   
@@ -83,9 +103,9 @@ export const Color = styled.div`
 
 export const ColorLabel = styled.p`
   margin-top: 8px;
-  font-family: ${FontFamilies.RbMedium};
+  font-family: ${props => props.font};
   font-weight: 700;
-  color: ${props => props.truc};
+  color: ${textColors.primary};
   ${fontSize(14)};
   
   ${media.md`
@@ -144,7 +164,7 @@ export const GradiantList = styled.div`
   }
 
   ${media.md`
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(${props =>props.gradiantNumber}, 1fr);
   `}
   
   ${media.xl`
@@ -155,7 +175,7 @@ export const GradiantList = styled.div`
 export const Mobile = styled.div`
   display: grid;
   margin-top: 180px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-column-gap: 0;
   grid-row-gap: 48px;
   margin-bottom: 100px;
@@ -166,11 +186,12 @@ export const Mobile = styled.div`
 
   ${media.md`
    grid-column-gap: 32px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   `}
   
-  ${media.xl`
-
+  ${media.lg`
+grid-column-gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
   `}
 `;
 
@@ -195,23 +216,65 @@ export const Desktop = styled(Mobile)`
   `}
 `;
 
+export const TopPosition = styled.div`
+  margin: auto;
+  ${media.md`
+  `}
+  
+  ${media.xl`
+
+  `}
+`;
+
 export class WebDesignProjectMockup extends React.Component {
 
     render() {
-        const{sideInfoWidth, fontName,logo, cover,backgroundColor, marginTop, colors, gradiants, mobileScreens, desktopScreens} = this.props;
+        const{sideInfoWidth, video, fontName,logo, cover,backgroundColor, marginTop, colors, gradiants, mobileScreens, desktopScreens, secondaryFontName, secondaryFont, font} = this.props;
         return (
             <ContentInside sideInfoWidth={sideInfoWidth} backgroundColor={backgroundColor} marginTop={marginTop} absolute>
-                <Logo src={logo} alt=""/>
-                <Mockup
-                    cover={cover}
-                    side
-                />
-                <TextStyle>
-                    <h2>{fontName}</h2>
-                    <p>AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz<br/>
-                        1234567890!@#$%^&$()_+</p>
-                </TextStyle>
-                <GradiantList>
+                {video &&
+                    <>
+                        <Logo src={logo} alt="" center/>
+                        <TopPosition>
+                            <Video
+                                mockupVideo
+                                src={video}
+                                ratio="video"
+                                ratioDesktop="video"
+                                poster={cover}
+                            />
+                        </TopPosition>
+                    </>
+                }
+
+                {!video &&
+                    <>
+                        <Logo src={logo} alt=""/>
+                        <Mockup
+                            cover={cover}
+                            side
+                        />
+                    </>
+                }
+                {fontName &&
+                    <TextStyle font={font}>
+                        <h2>{fontName}</h2>
+                        {secondaryFontName &&
+                            <FontHierarchy >Primary Font</FontHierarchy>
+                        }
+                        <p>AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz<br/>
+                            1234567890!@#$%^&$()_+</p>
+                    </TextStyle>
+                }
+                {secondaryFontName &&
+                    <TextStyle font={secondaryFont}>
+                        <h2>{secondaryFontName}</h2>
+                        <FontHierarchy>Secondary Font</FontHierarchy>
+                        <p>AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz<br/>
+                            1234567890!@#$%^&$()_+</p>
+                    </TextStyle>
+                }
+                <GradiantList gradiantNumber={gradiants.length}>
                     {gradiants.map((gradiant, id) => (
                         <li>
                             <Gradiants key={id} mainColor={gradiant.mainColor} gradiantsSize={gradiant.gradiantsList.length}>
@@ -221,31 +284,34 @@ export class WebDesignProjectMockup extends React.Component {
                                     </li>
                                 ))}
                             </Gradiants>
-                            <ColorLabel truc={gradiant.gradiantsList[0]}>{gradiant.gradiantsList[0]}</ColorLabel>
+                            <ColorLabel font={secondaryFont ? secondaryFont : font}>{gradiant.gradiantsList[0]}</ColorLabel>
                         </li>
                     ))}
                 </GradiantList>
-                <Colors>
+                <Colors colorsLength={colors.length/2}>
                     {colors.map((color, id) => (
                         <li key={id}>
                             <Color backgroundColors={color}/>
-                            <ColorLabel truc={color}>{color}</ColorLabel>
+                            <ColorLabel font={secondaryFont ? secondaryFont : font}>{color}</ColorLabel>
                         </li>
-                    ))
-                    }
+                    ))}
                 </Colors>
+                {mobileScreens && mobileScreens.length > 0 &&
                 <Mobile>
                     {mobileScreens.map((mobileScreen, id) => (
                         <Mockup
+                            inGrid
                             key={id}
                             cover={mobileScreen}
                             device="mobile"
                         />
                     ))}
                 </Mobile>
+                }
                 <Desktop>
                     {desktopScreens.map((mobileScreen, id) => (
                         <Mockup
+                            inGrid
                             key={id}
                             cover={mobileScreen}
                         />

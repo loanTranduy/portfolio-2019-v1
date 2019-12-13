@@ -7,53 +7,40 @@ import {media} from '../styles/default/Mediaqueries';
 
 const Content = styled(ProjectContainer)`
 padding: 48px 32px;
+grid-row-gap: 32px;
 ${media.md`
-  max-width: 3000px;
   width: auto;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 32px;
-  grid-row-gap: 32px;
+  grid-row-gap: 0;
   
-  a:nth-child(1){
-    grid-column: span 2;
-    grid-row: span 3; 
+  a{margin-bottom: 32px}
+  
+  a:nth-child(1), a:nth-child(6), a:nth-child(7), a:nth-child(10), a:nth-child(12){
+    grid-column: span 8;
   }
-    a:nth-child(2){
-    grid-column: span 1; 
-    grid-row: span 2; 
+  a:nth-child(2), a:nth-child(5), a:nth-child(8), a:nth-child(9), a:nth-child(11){
+    grid-column: span 4;
   }
-    a:nth-child(3){
-    grid-column: span 1; 
-    grid-row: span 2; 
+    
+  a:nth-child(3), a:nth-child(4), a:nth-child(13), a:nth-child(14), a:nth-child(15), a:nth-child(16), a:nth-child(17){
+    grid-column: span 6; 
   }
-    a:nth-child(4){
+`}
+
+${media.xl`
+  grid-column-gap: 32px;
+  
+  a:nth-child(1), a:nth-child(17), a:nth-child(6), a:nth-child(7), a:nth-child(10), a:nth-child(12){
+    grid-column: span 4;
+  }
+  
+  a:nth-child(2), a:nth-child(4), a:nth-child(13), a:nth-child(14), a:nth-child(15) , a:nth-child(16){
+    grid-column: span 3; 
+  }
+  
+  a:nth-child(3), a:nth-child(5), a:nth-child(8), a:nth-child(9), a:nth-child(11){
     grid-column: span 2; 
-    grid-row: span 3; 
-  }
-    a:nth-child(5){
-    grid-column: span 1;
-    grid-row: span 3;  
-  }
-  a:nth-child(6){
-    grid-column: span 1;
-    grid-row: span 3; 
-  }
-    a:nth-child(7){
-    grid-column: span 2; 
-    grid-row: span 3; 
-  }
-    a:nth-child(8){
-    grid-column: span 2; 
-    grid-row: span 3; 
-  }
-    a:nth-child(9){
-    grid-column: span 1; 
-    grid-row: span 1; 
-  }
-    a:nth-child(10){
-    grid-column: span 1;
-    grid-row: span 1;  
   }
 `}
  

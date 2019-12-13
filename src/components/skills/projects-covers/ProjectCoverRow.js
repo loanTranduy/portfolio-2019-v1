@@ -14,6 +14,7 @@ export class ProjectCoverRow extends React.Component {
                 url={url}
                 portraitDesktop={project.portraitDesktop}
                 col={project.col}
+                colxl={project.colxl}
                 name={project.name}
                 image={project.image}
                 background={project.coverColor}
@@ -21,6 +22,7 @@ export class ProjectCoverRow extends React.Component {
                 noRadiusBottomLeft={project.noRadiusBottomLeft}
                 noRadiusTopRight={project.noRadiusTopRight}
             />
+
         )
     }
 }
