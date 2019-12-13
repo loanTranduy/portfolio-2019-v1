@@ -40,33 +40,6 @@ import hackagesUserProfileLow  from '../assets/images/project/hackages/screens/l
 import hackagesPaymentLow  from '../assets/images/project/hackages/screens/low-quality/13-payment-desktop.png';
 import hackagesNatificationsLow  from '../assets/images/project/hackages/screens/low-quality/14-notifications-desktop.png';
 
-// ______________________________________________________________________________________________
-import AndresSardaProductsList  from '../assets/images/project/andress-sarda/desktop/as-products-list.png';
-import AndresSardaProductDetails  from '../assets/images/project/andress-sarda/desktop/as-product.png';
-import AndresSardaFilters  from '../assets/images/project/andress-sarda/desktop/as-filters.png';
-import AndresSardaCheckout  from '../assets/images/project/andress-sarda/desktop/checkout.png';
-import AndresSardaShipment  from '../assets/images/project/andress-sarda/desktop/shipment.png';
-import AndresSardaAccount  from '../assets/images/project/andress-sarda/desktop/my-account.png';
-import AndresSardaCreateAccount  from '../assets/images/project/andress-sarda/desktop/create-account.png';
-
-import AndresSardaProductsListLow  from '../assets/images/project/andress-sarda/desktop/as-products-list.png';
-import AndresSardaProductDetailsLow  from '../assets/images/project/andress-sarda/desktop/as-product.png';
-import AndresSardaFiltersLow  from '../assets/images/project/andress-sarda/desktop/as-filters.png';
-import AndresSardaCheckoutLow  from '../assets/images/project/andress-sarda/desktop/checkout.png';
-import AndresSardaShipmentLow  from '../assets/images/project/andress-sarda/desktop/shipment.png';
-import AndresSardaAccountLow  from '../assets/images/project/andress-sarda/desktop/my-account.png';
-import AndresSardaCreateAccountLow  from '../assets/images/project/andress-sarda/desktop/create-account.png';
-
-import AndresSardaProductsListMobile  from '../assets/images/project/andress-sarda/mobile/as-products-list.png';
-import AndresSardaProductDetailsMobile  from '../assets/images/project/andress-sarda/mobile/as-product.png';
-import AndresSardaFiltersMobile  from '../assets/images/project/andress-sarda/mobile/filters.png';
-import AndresSardaCheckoutMobile  from '../assets/images/project/andress-sarda/mobile/checkout.png';
-import AndresSardaShipmentMobile  from '../assets/images/project/andress-sarda/mobile/delivery.png';
-import AndresSardaAccountMobile  from '../assets/images/project/andress-sarda/mobile/my-account.png';
-import AndresSardaCreateAccountMobile  from '../assets/images/project/andress-sarda/mobile/my-account.png';
-
-// ______________________________________________________________________________________________
-
 import PrimadonnaHome  from '../assets/images/project/primadonna/desktop/home.png';
 import PrimadonnaProductsList  from '../assets/images/project/primadonna/desktop/products-list.png';
 import PrimadonnaProductDetails  from '../assets/images/project/primadonna/desktop/product-details-1400.png';
@@ -116,7 +89,6 @@ import MarieJoSignInMobile  from '../assets/images/project/marie-jo/mobile/sign-
 
 // ______________________________________________________________________________________________
 
-
 import vdabHome  from '../assets/images/project/vdab/screens/home.png';
 import vdabError  from '../assets/images/project/vdab/screens/error.png';
 import vdabModal  from '../assets/images/project/vdab/screens/modal.png';
@@ -134,7 +106,6 @@ import vdabManagmentLow  from '../assets/images/project/vdab/screens/services-ma
 import vdabManagmentSuccessLow  from '../assets/images/project/vdab/screens/sucess-services-managment.png';
 
 // ______________________________________________________________________________________________
-
 
 import edenredStep01  from '../assets/images/project/edenred/01-declaration-type.jpg';
 import edenredStep02  from '../assets/images/project/edenred/02-declaration-user.jpg';
@@ -159,12 +130,10 @@ import edenredStep09Low  from '../assets/images/project/edenred/09-forgot-passwo
 
 
 import hackagesCover from '../assets/images/project/hackages/hackages-cover.png';
-import primadonnaCover from '../assets/images/project/primadonna/primadonna-cover.jpg';
-import marieJoCover from '../assets/images/project/marie-jo/marie-jo-cover.jpg';
-import vdabCover from '../assets/images/project/vdab/vdab-cover-screen.png';
-import edenredCover from '../assets/images/project/edenred/edenred-cover.png';
-
-import marieJoLogo from '../assets/images/project/marie-jo/logo_MJ_black.png';
+import primadonnaCover from '../assets/images/project/primadonna/primadonna-cover-web.png';
+import marieJoCover from '../assets/images/project/marie-jo/marie-jo-cover-web.png';
+import vdabCover from '../assets/images/project/vdab/VDAB_preview-900x627.jpg';
+import edenredCover from '../assets/images/project/edenred/edenred-cover-web.png';
 
 // ______________________________________________________________________________________________
 
@@ -184,9 +153,9 @@ import bigCommerce from '../assets/icons/software/bigcommerce-1.svg'
 
 export const ProjectFrontEnd = [
     {
+        portraitDesktop: true,
         coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
         col: '123%',
-        logo: marieJoLogo,
         image: marieJoCover,
         skill: 'front-end',
         slug: 'marie-jo',
@@ -527,8 +496,9 @@ export const ProjectFrontEnd = [
         nextSlug: '/work/front-end/primadonna'
     },
     {
+        portraitDesktop: true,
         coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
-        col: '110%',
+        col: '123%',
         image: primadonnaCover,
         skill: 'front-end',
         slug: 'primadonna',
@@ -690,9 +660,10 @@ export const ProjectFrontEnd = [
         nextSlug: '/work/front-end/vdab'
     },
     {
+        portraitDesktop: true,
         marginTop:true,
         coverColor: "linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)",
-        col: '110%',
+        col: '123%',
         image: vdabCover,
         skill: 'front-end',
         slug: 'vdab',
@@ -821,7 +792,7 @@ export const ProjectFrontEnd = [
     {
         marginTop:true,
         coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
-        col: '110%',
+        col: '123%',
         image: edenredCover,
         skill: 'front-end',
         slug: 'edenred',

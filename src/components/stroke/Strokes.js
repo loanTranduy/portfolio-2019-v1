@@ -43,7 +43,7 @@ export const Stroke = styled.div`
     right: ${props => Right[props.position]};
     bottom: ${props => Bottom[props.position]};
     top:${props => Top[props.position]};
-    background: ${props => props.url === '/work' ? skillsColors.all : 
+    background: ${props => props.url === '/work/all' ? skillsColors.all : 
                 (props.url === '/work/front-end' || props.url === '/work/front-end/hackages' || props.url === '/work/front-end/marie-jo' || props.url === '/work/front-end/primadonna' || props.url === '/work/front-end/vdab' || props.url === '/work/front-end/edenred' ?  skillsColors.front : 
     (props.url === '/work/web-design' || props.url === '/work/web-design/hackages' ? skillsColors.web : 
         (props.url === '/work/graphic-design' || props.url === '/work/graphic-design/hackages' || props.url === '/work/graphic-design/verger-bio' || props.url === '/work/graphic-design/brussels-foodtruck-festival' || props.url === '/work/graphic-design/beta-bon-dieu' || props.url === '/work/graphic-design/hugeia' || props.url === '/work/graphic-design/bhack-to-school' || props.url === '/work/graphic-design/3d-side' ? skillsColors.graphic : 
@@ -68,7 +68,7 @@ const BoxCorner = styled.div`
    transform: rotate(${props => Rotate[props.cornerPosition]}deg);
     svg{
       width: ${props => (props.size)}px;
-      fill: ${props => props.url === '/work' ? skillsColors.all :
+      fill: ${props => props.url === '/work/all' ? skillsColors.all :
         (props.url === '/work/front-end' || props.url === '/work/front-end/hackages' || props.url === '/work/front-end/marie-jo' || props.url === '/work/front-end/primadonna' || props.url === '/work/front-end/vdab' || props.url === '/work/front-end/edenred' ?  skillsColors.front :
             (props.url === '/work/web-design' || props.url === '/work/web-design/hackages' ? skillsColors.web :
                 (props.url === '/work/graphic-design' || props.url === '/work/graphic-design/hackages' || props.url === '/work/graphic-design/verger-bio' || props.url === '/work/graphic-design/brussels-foodtruck-festival' || props.url === '/work/graphic-design/beta-bon-dieu' || props.url === '/work/graphic-design/hugeia' || props.url === '/work/graphic-design/bhack-to-school' || props.url === '/work/graphic-design/3d-side' ? skillsColors.graphic :

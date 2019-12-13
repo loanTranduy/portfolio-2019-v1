@@ -46,6 +46,7 @@ export const ProjectContainer = styled.div`
     }
       a:nth-child(5){
       grid-column: span 4; 
+      border-top-right-radius: 0px;
     }
       a:nth-child(6){
       grid-column: span 6;
@@ -151,7 +152,12 @@ export class SkillsScreen extends React.Component {
             desktopScreens,
             colors,
             gradiants,
-            fontName
+            video,
+            fontName,
+            secondaryFontName,
+            secondaryFont,
+            font,
+            titleLink
         }= this.props;
         console.log(this.state.theposition)
         return (
@@ -175,6 +181,7 @@ export class SkillsScreen extends React.Component {
                     softwareUsed={softwareUsed}
                     projectTitle={projectTitle}
                     sixItems={sixItems}
+                    titleLink={titleLink}
                     nosixItems={false}
                 />
                 {projects &&
@@ -223,7 +230,11 @@ export class SkillsScreen extends React.Component {
                     colors={colors}
                     gradiants={gradiants}
                     mobileScreens={mobileScreens}
+                    video={video}
                     desktopScreens={desktopScreens}
+                    secondaryFontName={secondaryFontName}
+                    secondaryFont={secondaryFont}
+                    font={font}
                 />
                 }
 

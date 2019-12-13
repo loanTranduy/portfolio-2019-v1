@@ -1,81 +1,53 @@
-// import MontserratBoldWoff from '../../assets/fonts/montserrat/montserrat-semibold-webfont.woff'
-// import MontserratBoldWoff2 from '../../assets/fonts/montserrat/montserrat-semibold-webfont.woff2'
-// import MontserratSemiBoldWoff from '../../assets/fonts/montserrat/montserrat-bold-webfont.woff'
-// import MontserratSemiBoldWoff2 from '../../assets/fonts/montserrat/montserrat-bold-webfont.woff2'
-// import MontserratItalicWoff from '../../assets/fonts/montserrat/montserrat-italic-webfont.woff'
-// import MontserratItalicWoff2 from '../../assets/fonts/montserrat/montserrat-italic-webfont.woff2'
-// import MontserratLightWoff from '../../assets/fonts/montserrat/montserrat-light-webfont.woff'
-// import MontserratLightWoff2 from '../../assets/fonts/montserrat/montserrat-light-webfont.woff2'
-// import MontserratMediumWoff from '../../assets/fonts/montserrat/montserrat-medium-webfont.woff'
-// import MontserratMediumWoff2 from '../../assets/fonts/montserrat/montserrat-medium-webfont.woff2'
-// import MontserratMediumItalicWoff from '../../assets/fonts/montserrat/montserrat-mediumitalic-webfont.woff'
-// import MontserratMediumItalicWoff2 from '../../assets/fonts/montserrat/montserrat-mediumitalic-webfont.woff2'
-// import MontserratRegularWoff from '../../assets/fonts/montserrat/montserrat-regular-webfont.woff'
-// import MontserratRegularWoff2 from '../../assets/fonts/montserrat/montserrat-regular-webfont.woff2'
-// import {createGlobalStyle} from 'styled-components';
+import MarieJoRegularWoff2 from '../../assets/fonts/marie-jo/marieandjo-webfont.woff2'
+import MarieJoRegularWoff from '../../assets/fonts/marie-jo/marieandjo-webfont.woff'
+import BrandonGrotesqueWoff from '../../assets/fonts/brandon-grotesque/Brandon_reg.woff'
+import PlayfairWoff from '../../assets/fonts/playfair-display/playfairdisplay-black-webfont.woff'
+import PlayfairWoff2 from '../../assets/fonts/playfair-display/playfairdisplay-black-webfont.woff2'
+import LatoWoff2 from '../../assets/fonts/lato/lato-regular-webfont.woff2'
+import LatoWoff from '../../assets/fonts/lato/lato-regular-webfont.woff'
+
+import { createGlobalStyle } from 'styled-components';
+
+export const InjectFont = createGlobalStyle`
+    @font-face {
+        font-family: 'marie_and_joregular';
+        src: url('${MarieJoRegularWoff2}') format('woff2'),
+            url('${MarieJoRegularWoff}') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Brandon Grotesque Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: url('${BrandonGrotesqueWoff}') format('woff');
+    }
+    
+    @font-face {
+        font-family: 'playfair_displayblack';
+        src: url('${PlayfairWoff2}') format('woff2'),
+             url('${PlayfairWoff}') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'latoregular';
+        src: url('${LatoWoff2}') format('woff2'),
+             url('${LatoWoff}') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+`
 
 export const fontFamilies = {
-    // mtBold: "'montserratbold', Helvetica, sans-serif",
-    // mtSemiBold: "'montserratsemibold', Helvetica, sans-serif",
-    // mtItalic: "'montserratitalic', Helvetica, sans-serif",
-    // mtLight: "'montserratlight', Helvetica, sans-serif",
-    // mtMedium: "'montserratmedium', Helvetica, sans-serif",
     mtRegular: "'Montserrat', Helvetica, sans-serif",
     RbMedium: "'Roboto', Helvetica, sans-serif",
-    // mtMediumItalic: "'montserratregular', Helvetica, sans-serif",
+    mjRegular: "'marie_and_joregular', Helvetica, sans-serif",
+    bgLight:"'Brandon Grotesque Light', Helvetica, sans-serif",
+    bgRegular: "'Brandon Grotesque Regular', Helvetica, sans-serif",
+    pfBlack: "'playfair_displayblack', Helvetica, sans-serif",
+    latoRegular: "'latoregular', Helvetica, sans-serif",
+
 };
-//
-// export const injectFonts = createGlobalStyle`
-//     @font-face {
-//         font-family: 'montserratbold';
-//         src: url('${MontserratBoldWoff2}') format('woff2'),
-//              url('${MontserratBoldWoff}') format('woff');
-//         font-weight: 700;
-//         font-style: normal;
-//     }
-//         @font-face {
-//         font-family: 'montserratsemibold';
-//         src: url('${MontserratSemiBoldWoff2}') format('woff2'),
-//              url('${MontserratSemiBoldWoff}') format('woff');
-//         font-weight: 600;
-//         font-style: normal;
-//     }
-//         @font-face {
-//         font-family: 'montserratmedium';
-//         src: url('${MontserratMediumWoff2}') format('woff2'),
-//              url('${MontserratMediumWoff}') format('woff');
-//         font-weight: 500;
-//         font-style: normal;
-//
-//     }
-//     @font-face {
-//         font-family: 'montserratmedium_italic';
-//         src: url('${MontserratMediumItalicWoff2}') format('woff2'),
-//              url('${MontserratMediumItalicWoff}') format('woff');
-//         font-weight: 500;
-//         font-style: italic;
-//     }
-//     @font-face {
-//         font-family: 'montserratitalic';
-//         src: url('${MontserratItalicWoff2}') format('woff2'),
-//              url('${MontserratItalicWoff}') format('woff');
-//         font-weight: 400;
-//         font-style: italic;
-//
-//     }
-//         @font-face {
-//         font-family: 'montserratregular';
-//         src: url('${MontserratRegularWoff2}') format('woff2'),
-//              url('${MontserratRegularWoff}') format('woff');
-//         font-weight: 400;
-//         font-style: normal;
-//
-//     }
-//     @font-face {
-//         font-family: 'montserratlight';
-//         src: url('${MontserratLightWoff2}') format('woff2'),
-//              url('${MontserratLightWoff}') format('woff');
-//         font-weight: 200;
-//         font-style: normal;
-//     }
-// `

@@ -110,6 +110,9 @@ export const SideInfo = styled.div`
         transform:translateX(${props => props.active ? 0 : 100}%);
         a{
             display: block;
+            &:hover{
+            opacity: .6;
+        }
         }
     `}
     ${media.xl`
@@ -131,7 +134,7 @@ export const SideInfo = styled.div`
   }
   
   //Subtitle
-  h2{
+  h2, a{
     font-weight: 700;
     ${fontSize(12)};
     ${lineHeight(18)};
@@ -298,6 +301,7 @@ export class SideInfos extends React.Component {
             skillLinks,
             projectTitle,
             sixItems,
+            titleLink
         }= this.props;
         return (
 
@@ -319,7 +323,9 @@ export class SideInfos extends React.Component {
                                 </Position>
                             }
 
-                            {projectTitle &&
+                            {titleLink ?
+                                <a target='_blank' rel="noopener noreferrer" href={titleLink}>{projectTitle}</a>
+                                :
                                 <h2>{projectTitle}</h2>
                             }
 
@@ -337,7 +343,7 @@ export class SideInfos extends React.Component {
                                             <li key={id}><Text>{task}</Text></li>
                                             )
                                         )}
-                                        {skillLinks && !!skillLinks.length &&
+                                        {skillLinks && skillLinks.length &&
                                             <>
                                             {skillLinks.map(
                                                 (skillLink, id) => (
@@ -369,7 +375,7 @@ export class SideInfos extends React.Component {
                             }
 
                             {softwareUsed &&
-                                <BoxIconsWithLabel softwaresFrontEnd={softwareUsed} title='Software' sixItems={sixItems}/>
+                                <BoxIconsWithLabel softwaresFrontEnd={softwareUsed} title='Tools' sixItems={sixItems}/>
                             }
 
                             {communication && !!communicationSoftware.length &&

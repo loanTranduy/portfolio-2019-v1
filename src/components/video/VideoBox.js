@@ -2,9 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 import {media} from '../../styles/default/Mediaqueries';
 import play from '../../assets/icons/play-button.svg';
-import {YoutubeComponent} from './YoutubeComponent';
-
-
 
 export const ButtonImage = styled.button`
     overflow: hidden;

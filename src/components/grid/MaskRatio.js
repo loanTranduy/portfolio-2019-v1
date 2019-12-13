@@ -6,13 +6,16 @@ import {Ratios} from '../../styles/default/Mixins';
 import {backgroundColors} from '../../styles/default/Colors';
 
 const MaskRatioWrap = styled.div`
+    border: ${props => props.mockupVideo ? '2px solid white' : 'none'};
+    box-shadow: ${props => props.mockupVideo ? '4px 5px 22px 0 rgba(164,181,208,0.5)' : 'none'};
+    
     position: relative;
     height: 0;
     padding-top: ${props => Ratios[props.ratio]};
     overflow: hidden;
     width: 100%;
     left: 50%;
-    border-radius: 40px;
+    border-radius: ${props => props.mockupVideo ? 10 : 40}px;
     background: ${backgroundColors.tertiary};
     transform: translateX(-50%);
     ${media.lg`
@@ -48,7 +51,8 @@ class MaskRatio extends React.Component {
     static propTypes = {
         ratio: PropTypes.oneOf(Object.keys(Ratios)),
         ratioDesktop: PropTypes.oneOf(Object.keys(Ratios)),
-        children: PropTypes.node
+        children: PropTypes.node,
+        mockupVideo: PropTypes.bool
     };
 
     static defaultProps = {
@@ -56,9 +60,9 @@ class MaskRatio extends React.Component {
     };
 
     render() {
-        const {ratio, children, ratioDesktop} = this.props;
+        const {ratio, children, ratioDesktop, mockupVideo} = this.props;
         return (
-            <MaskRatioWrap ratio={ratio} ratioDesktop={ratioDesktop}>
+            <MaskRatioWrap ratio={ratio} ratioDesktop={ratioDesktop} mockupVideo={mockupVideo}>
                 {children}
             </MaskRatioWrap>
         );

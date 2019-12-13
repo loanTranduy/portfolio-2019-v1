@@ -8,7 +8,7 @@ export function WebDesignProject ({match}) {
     return (
         <SkillsScreen
             webDesignProject
-
+            video={topic.video}
             logo={topic.logo}
             positionDate={topic.position.date}
             position={topic.position.name}
@@ -16,6 +16,9 @@ export function WebDesignProject ({match}) {
             desktopScreens={topic.desktop}
             mobileScreens={topic.mobile}
             fontName={topic.styles.fontName}
+            font={topic.styles.font}
+            secondaryFontName={topic.styles.secondaryFontName}
+            secondaryFont={topic.styles.secondaryFont}
             projectTitle={topic.name}
             description={topic.position.description}
 
@@ -28,7 +31,7 @@ export function WebDesignProject ({match}) {
             softwareUsed={Object.values(topic.position.softwares)}
 
             name={topic.name}
-
+            titleLink={topic.website}
             gradiants={topic.styles.gradiants}
             colors={topic.styles.colors}
             circleColor={skillsColors.web}

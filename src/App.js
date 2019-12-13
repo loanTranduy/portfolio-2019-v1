@@ -1,4 +1,4 @@
-import React, {Fragment, useState, useEffect} from 'react'
+import React, {Fragment, useState} from 'react'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import {
     LoadableAboutScreen, LoadableContactScreen,
@@ -6,10 +6,10 @@ import {
     LoadableLandingScreen, LoadableWebDesignScreen,
     LoadableWorkScreen
 } from './ComponentLoadable';
-import { TransitionGroup } from 'react-transition-group'
+import {TransitionGroup} from 'react-transition-group'
 import {Layout} from './styles/Layout';
 import styled  from "styled-components";
-import { Transition } from 'react-transition-group';
+import {Transition} from 'react-transition-group';
 import {SectionTop} from './screens/LandingScreen';
 import {SectionBlue} from './screens/AboutScreen';
 import {SideInfo} from './components/skills/side-infos/SideInfos';
@@ -19,8 +19,8 @@ import {BoxPageTransition, ShapeOverlays} from './components/loading/PageTransit
 import {FrontEndProject} from './components/skills/front-end/FrontEndProject';
 import {WebDesignProject} from './components/skills/web-design/WebDesignProject';
 import {GraphicDesignProject} from './components/skills/graphic-design/GraphicDesignProject';
-import { useLocation } from "react-router-dom";
 import ScrollToTop from './components/loading/ScrollToTop';
+import {InjectFont} from './styles/default/Font';
 
 const timeout = 500;
 const Page = styled.div`
@@ -30,56 +30,79 @@ const Page = styled.div`
   width: 100%;
   
   ${ProjectContainer}{
-  a{
-    opacity: ${({state}) => (state === "entered" ? 1 : 0) };
+      a{
+        opacity: ${({state}) => (state === "entered" ? 1 : 0) };
+      }
+      
+      a:nth-child(1){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .5 : 0)}s;
+      }
+      a:nth-child(2){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .7 : 0)}s;
+      }
+      a:nth-child(3){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .9 : 0)}s;
+      }
+      a:nth-child(4){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .6 : 0)}s;
+      }
+      a:nth-child(5){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .8 : 0)}s;
+      }
+      a:nth-child(6){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1 : 0)}s;
+      }
+      a:nth-child(7){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.3 : 0)}s;
+      }
+      a:nth-child(8){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.1 : 0)}s;
+      }
+      a:nth-child(9){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.2 : 0)}s;
+      }
+      a:nth-child(10){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.4 : 0)}s;
+      }
+      a:nth-child(11){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .9 : 0)}s;
+      }
+      a:nth-child(12){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.3 : 0)}s;
+      }
+      a:nth-child(13){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.1 : 0)}s;
+      }
+      a:nth-child(14){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .5 : 0)}s;
+      }
+      a:nth-child(15){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.4 : 0)}s;
+      }
+      a:nth-child(16){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .2 : 0)}s;
+      }
+      a:nth-child(17){
+        transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.5 : 0)}s;
+      }
   }
   
-  a:nth-child(1){
-    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .5 : 0)}s;
-  }
-  a:nth-child(2){
-    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .7 : 0)}s;
-  }
-  a:nth-child(3){
-    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .9 : 0)}s;
-  }
-  a:nth-child(4){
-    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .6 : 0)}s;
-  }
-  a:nth-child(5){
-    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? .8 : 0)}s;
-  }
-  a:nth-child(6){
-    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1 : 0)}s;
-  }
-  a:nth-child(7){
-    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.3 : 0)}s;
-  }
-  a:nth-child(8){
-    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.1 : 0)}s;
-  }
-  a:nth-child(9){
-    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.2 : 0)}s;
-  }
-  a:nth-child(10){
-    transition: opacity ${timeout}ms ease-in-out ${({state}) => (state === "entered" ? 1.4 : 0)}s;
-  }
-  }
   ${BoxPageTransition} {
       animation: ${({state}) => (state === "entered" ? 'test' : ' ' )} 1.5s ease-in-out;
-    }
+  }
     
-    ${ShapeOverlays}{
-        path{
+  ${ShapeOverlays}{
+    path{
       animation: ${({state}) => (state === "entered" ? 'testD' : ' ' )} 1s ease-in-out;
-        }
     }
+  }
   
   ${SectionTop},${SectionBlue} {
     transition: all ${timeout}ms ease-in-out;
     opacity: ${({state}) => (state === "entered" ? 1 : 0) };
   }
-    ${SideInfo} {
+  
+  ${SideInfo} {
     section{
       opacity: ${({state}) => (state === "entered" ? 1 : 0) };
       transition: opacity ${timeout}ms ease-in-out .4s;
@@ -97,10 +120,9 @@ const Page = styled.div`
 const App = ({ location }) => {
     const currentKey = location.pathname;
     const [animate] = useState(false);
-
-console.log(window.scroll);
         return (
             <Fragment>
+                <InjectFont/>
                 <ScrollToTop/>
                 {/*<LoadableLoader/>*/}
                 {/*<OrganicShape/>*/}
