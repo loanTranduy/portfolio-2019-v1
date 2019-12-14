@@ -33,7 +33,7 @@ export function GraphicDesignProject ({match}) {
 
             mockups={topic.desktop}
 
-            circleColor={skillsColors.front}
+            circleColor={skillsColors.graphic}
             cta="Next Graphic Design Project"
             ctaTo={topic.nextSlug}
 
