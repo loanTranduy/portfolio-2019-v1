@@ -226,12 +226,15 @@ export const TopPosition = styled.div`
   `}
 `;
 
+export const ContentInsideWeb = styled(ContentInside)``
+
+
 export class WebDesignProjectMockup extends React.Component {
 
     render() {
         const{sideInfoWidth, video, fontName,logo, cover,backgroundColor, marginTop, colors, gradiants, mobileScreens, desktopScreens, secondaryFontName, secondaryFont, font} = this.props;
         return (
-            <ContentInside sideInfoWidth={sideInfoWidth} backgroundColor={backgroundColor} marginTop={marginTop} absolute>
+            <ContentInsideWeb sideInfoWidth={sideInfoWidth} backgroundColor={backgroundColor} marginTop={marginTop} absolute>
                 {video &&
                     <>
                         <Logo src={logo} alt="" center/>
@@ -317,7 +320,7 @@ export class WebDesignProjectMockup extends React.Component {
                         />
                     ))}
                 </Desktop>
-            </ContentInside>
+            </ContentInsideWeb>
         )
     }
 }

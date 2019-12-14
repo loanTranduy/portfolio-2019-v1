@@ -12,13 +12,13 @@ export const ProjectContainer = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 32px;
-  grid-row-gap: 32px;
   padding: 48px 72px 48px 32px;
   margin-bottom: 100px;
   
   ${media.md`
     grid-template-columns: repeat(12, 1fr);
     margin: 48px;
+    grid-row-gap: 32px;
     padding: 0;
     a{
         background-size: auto 100%;

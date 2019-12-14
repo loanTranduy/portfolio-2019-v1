@@ -94,42 +94,6 @@ const Intro = styled.p`
   `}
 `
 
-// const LinkBlack = styled(Link)`
-//   color:${textColors.secondary};
-//   background: ${backgroundColors.secondary};
-//   padding: 8px 80px 8px 24px;
-//   ${fontSize(12)};
-//   ${lineHeight(16)};
-//   font-weight: 500;
-//   letter-spacing: .5px;
-//   margin-top: 16px;
-//   position: relative;
-//   display: inline-block;
-//   border-radius: 50px;
-//
-//   &:after{
-//   content:url(${arrow});
-//   display: block;
-//   position: absolute;
-//   transform: translateY(-50%);
-//   top: 50%;
-//   right: 24px;
-//   }
-//   //
-//   // ${media.md`
-//   // padding: 0 80px 0 0;
-//   // color:${textColors.secondary};
-//   // background: transparent;
-//   //   ${fontSize(12)};
-//   //   margin-top: 8px;
-//   //
-//   // `}
-//
-//   ${media.xl`
-//
-//   `}
-// `
-
 const Wrap = styled.div`
   max-width: 350px;
   
@@ -150,9 +114,8 @@ export class IntroBox extends React.Component {
                     <span>Loan </span>
                     <InputSound/>
                 </Name>
-                <Intro>I’m a Belgian Mutli Designer traveling the world to be part of awesome new web teams.</Intro>
-                <LinkWithIcon to={"/about"} icon={arrow} alt="go to about page">Learn more about me</LinkWithIcon>
-                {/*<LinkBlack to={"/about"} alt="go to about page">Learn more about me</LinkBlack>*/}
+                <Intro>I’m a Belgian Creative Developer traveling the world to be part of awesome new teams.</Intro>
+                <LinkWithIcon to="/about" icon={arrow} alt="go to about page">Learn more about me</LinkWithIcon>
             </Wrap>
         )
     }

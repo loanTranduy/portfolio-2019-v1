@@ -7,7 +7,6 @@ import {media} from '../styles/default/Mediaqueries';
 
 const Content = styled(ProjectContainer)`
 padding: 48px 32px;
-grid-row-gap: 32px;
 ${media.md`
   width: auto;
   grid-template-columns: repeat(12, 1fr);

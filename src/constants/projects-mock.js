@@ -19,6 +19,11 @@ import vdabCoverWeb from '../assets/images/project/vdab/vdab-cover-teste.png';
 import edenredCoverWeb from '../assets/images/project/edenred/edenred-cover-front.png';
 import marieJoCoverWeb from '../assets/images/project/marie-jo/marie-jo-cover.jpg';
 import primadonnaCoverWeb from '../assets/images/project/primadonna/primadonna-cover.jpg';
+import {gradiantFront, gradiantGaph, gradiantWeb} from '../styles/default/Colors';
+
+import web from './../assets/icons/layout.svg'
+import front from './../assets/icons/front.svg'
+import graph from './../assets/icons/pencil.svg'
 
 export const ProjectPropTypes = PropTypes.shape({
     id: PropTypes.number,
@@ -37,9 +42,6 @@ const landscape = '58%';
 const portrait = '128%';
 const square = '80%';
 
-const gradiantFront = 'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)';
-const gradiantWeb = "linear-gradient(-180deg, #FFE998 0%, #FFEA00 100%)";
-const gradiantGaph = "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)";
 export const Project = [
     {
         id: 0,
@@ -50,6 +52,7 @@ export const Project = [
         image: hackagesCoverFront,
         coverColor: gradiantFront,
         skill: 'front-end',
+        skillIcon: front,
     },
     {
         id: 1,
@@ -62,6 +65,7 @@ export const Project = [
         skill: 'graphic-design',
         portrait: true,
         portraitDesktop: true,
+        skillIcon: graph,
     },
     {
         id: 2,
@@ -73,6 +77,7 @@ export const Project = [
         coverColor: gradiantGaph,
         skill: 'graphic-design',
         portraitDesktop: true,
+        skillIcon: graph,
     },
     {
         id: 3,
@@ -85,7 +90,8 @@ export const Project = [
         skill: 'graphic-design',
         portrait: true,
         portraitDesktop: true,
-        noRadiusBottomLeft: true
+        noRadiusBottomLeft: true,
+        skillIcon: graph,
     },
     {
         id: 4,
@@ -98,6 +104,7 @@ export const Project = [
         skill: 'graphic-design',
         portrait: true,
         portraitDesktop: true,
+        skillIcon: graph,
 
     },
     {
@@ -109,6 +116,7 @@ export const Project = [
         image: marieJoCoverFront,
         coverColor: gradiantFront,
         skill: 'front-end',
+        skillIcon: front,
     },
     {
         id: 6,
@@ -119,6 +127,7 @@ export const Project = [
         image: hackagesGraphicDesignCover,
         coverColor: gradiantGaph,
         skill: 'graphic-design',
+        skillIcon: graph,
     },
     {
         id: 7,
@@ -131,6 +140,7 @@ export const Project = [
         skill: 'front-end',
         portrait: true,
         portraitDesktop: true,
+        skillIcon: front,
     },
     {
         id: 8,
@@ -142,7 +152,7 @@ export const Project = [
         coverColor: gradiantWeb,
         skill: 'web-design',
         portrait: true,
-        portraitDesktop: true,
+        skillIcon: web,
     },
     {
         id: 9,
@@ -153,6 +163,7 @@ export const Project = [
         image: primadonnaCoverFront,
         coverColor: gradiantWeb,
         skill: 'web-design',
+        skillIcon: web,
     },
     {
         id: 10,
@@ -165,6 +176,7 @@ export const Project = [
         skill: 'front-end',
         portrait: true,
         portraitDesktop: true,
+        skillIcon: front,
     },
     {
         id: 11,
@@ -175,6 +187,7 @@ export const Project = [
         image: hackagesCoverWeb,
         coverColor: gradiantWeb,
         skill: 'web-design',
+        skillIcon: web,
     },
     {
         id: 12,
@@ -187,6 +200,7 @@ export const Project = [
         skill: 'web-design',
         portrait: true,
         portraitDesktop: true,
+        skillIcon: web,
     },
     {
         id: 13,
@@ -199,6 +213,7 @@ export const Project = [
         skill: 'front-end',
         portrait: true,
         portraitDesktop: true,
+        skillIcon: front,
     },
     {
         id: 14,
@@ -211,6 +226,7 @@ export const Project = [
         skill: 'web-design',
         portrait: true,
         portraitDesktop: true,
+        skillIcon: web,
     },
     {
         id: 15,
@@ -222,6 +238,7 @@ export const Project = [
         coverColor: gradiantGaph,
         skill: 'graphic-design',
         portraitDesktop: true,
+        skillIcon: graph,
     },
     {
         id: 16,
@@ -231,7 +248,8 @@ export const Project = [
         slug: 'hugeia',
         image: hugeiaTablier,
         coverColor: gradiantGaph,
-        skill: 'graphic-design'
+        skill: 'graphic-design',
+        skillIcon: graph,
     },
 ];
 

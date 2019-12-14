@@ -15,8 +15,8 @@ export const ContentInside = styled.section`
     position: ${props => props.absolute ? 'absolute' : 'fixed'};
     z-index: -1;
     top: ${props => props.absolute ? -200 : -160}px;
-    left: -100px;
-    right: -10px;
+    left: ${props => props.absolute ? -120 : -100}px;
+    right: ${props => props.absolute ? -320 : -10}px;
     background:${props => props.backgroundColor};
     height: ${props => props.absolute ? 415 : 400}px;
     transform: rotate(-16deg);
@@ -29,7 +29,7 @@ export const ContentInside = styled.section`
   
   ${media.xl`
   &:before{
-    top: ${props => props.absolute ? -104 : -55}px;
+    top: ${props => props.absolute ? -154 : -55}px;
     }
     padding: ${props => props.marginTop ? '100px 48px 48px 48px' : '48px'};
     width: calc(100% - ${props => props.sideInfoWidth}px);

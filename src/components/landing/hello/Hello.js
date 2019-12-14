@@ -4,7 +4,6 @@ import {media} from '../../../styles/default/Mediaqueries';
 import styled from 'styled-components';
 
 const Text = styled.p`
-  //position: absolute;
   bottom: 0;
   ${props => fontSize(props.SizeFr ? 70 :(props.SizeGr ? 83 : 94))};
   // ${props => lineHeight(props.SizeFr ? 50 : (props.SizeGr ? 60 : (props.SizeCn ? 87 : 66)))};
@@ -12,7 +11,6 @@ const Text = styled.p`
   font-weight: 900;
   font-style: italic;
   letter-spacing: 10px;
-  //margin-top: 48px;
   
   ${media.md`
     ${fontSize(60)};

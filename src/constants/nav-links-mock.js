@@ -31,14 +31,7 @@ export const NavMainLink = [
         name: 'About',
         breadCrumb: '/about',
         exact: false
-    },
-    {
-        id: 3,
-        name: 'Contact',
-        breadCrumb: '/contact',
-        exact: false
     }
-
 ]
 
 
