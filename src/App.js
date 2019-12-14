@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import {
-    LoadableAboutScreen, LoadableContactScreen,
+    LoadableAboutScreen,
     LoadableFrontEndScreen, LoadableGraphicDesignScreen,
     LoadableLandingScreen, LoadableWebDesignScreen,
     LoadableWorkScreen
@@ -11,7 +11,7 @@ import {Layout} from './styles/Layout';
 import styled  from "styled-components";
 import {Transition} from 'react-transition-group';
 import {SectionLanding, SectionTop} from './screens/LandingScreen';
-import {SectionBlue} from './screens/AboutScreen';
+import {ContentText, SectionBlue, SideName} from './screens/AboutScreen';
 import {SideInfo} from './components/skills/side-infos/SideInfos';
 import {ProjectContainer} from './screens/SkillsScreen';
 import {media} from './styles/default/Mediaqueries';
@@ -120,7 +120,12 @@ const Page = styled.div`
     }
   }
   
-  ${SectionTop},${SectionBlue}, ${ContentInside}, ${ContentInsideGrap}, ${ContentInsideWeb} {
+  ${SideName}{
+    transition: all ${timeout}ms ease-in-out ;
+    transform: translateX(${({state}) => (state === "entering" ? -101 :  0)}%);
+  }
+  
+  ${SectionTop}, ${ContentInside}, ${ContentInsideGrap}, ${ContentInsideWeb} {
     transition: all ${timeout}ms ease-in-out;
     opacity: ${({state}) => (state === "entered" ? 1 : 0) };
   }
@@ -130,6 +135,11 @@ const Page = styled.div`
       opacity: ${({state}) => (state === "entered" ? 1 : 0) };
       transition: opacity ${timeout}ms ease-in-out .4s;
     }
+  }
+  
+  ${ContentText} {
+    transition: all 500ms ease-in-out .5s;
+    opacity: ${({state}) => (state === "entered" ? 1 : 0) };
   }
   
   ${media.xl`

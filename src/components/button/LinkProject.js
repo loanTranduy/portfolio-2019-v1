@@ -5,25 +5,6 @@ import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Icon = styled.section`
-  width: 44px;
-  height: 44px;
-  position: absolute;
-  right: 24px;
-  bottom: 16px;
-  
-  &:after{
-    content:url(${props => props.skillIcon});
-    width: 100%;
-  }
-  ${media.md`
-    &:after{
-        transition: .3s ease-in-out;
-        opacity: 0;
-    }
-  `}
-`
-
 const LinkContainer = styled(NavLink)`
     overflow: hidden;
     border-radius: 40px;
@@ -125,11 +106,6 @@ const LinkContainer = styled(NavLink)`
           transition: all .3s ease-in-out;
       }
     &:hover{
-    ${Icon}{
-    &:after{
-        opacity: 1;
-        }
-    }
       div:after{
         opacity: 1;
       }
@@ -162,7 +138,7 @@ export class LinkProject extends React.Component {
 
 
     render() {
-        const {name,skillIcon, image, portraitDesktop,col, colxl, background, url, noRadiusTopLeft, portrait, small, noRadiusBottomLeft, noRadiusTopRight} = this.props;
+        const {name, image, portraitDesktop,col, colxl, background, url, noRadiusTopLeft, portrait, small, noRadiusBottomLeft, noRadiusTopRight} = this.props;
         return (
             <LinkContainer
                 portraitDesktop={portraitDesktop}
@@ -181,7 +157,6 @@ export class LinkProject extends React.Component {
                     <img src={image} alt=""/>
                 </div>
                 <h2><span>{name}</span></h2>
-                {/*<Icon skillIcon={skillIcon}/>*/}
             </LinkContainer>
         )
     }

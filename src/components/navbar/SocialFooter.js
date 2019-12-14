@@ -5,14 +5,21 @@ import github from '../../assets/icons/github.svg'
 import codepen from '../../assets/icons/codepen.svg'
 import {media} from '../../styles/default/Mediaqueries';
 import {fontSize} from '../../styles/default/Mixins';
+import mail from '../../assets/icons/at.svg'
+import {backgroundColors} from '../../styles/default/Colors';
 
 const Footer = styled.footer`
-ul{
+  background:${props => props.blackTop ? backgroundColors.secondary : 'transparent'};
+  border-bottom-left-radius: ${props => props.blackTop ? 24 : 0}px;
+  border-bottom-right-radius: ${props => props.blackTop ? 24 : 0}px;
+  padding: ${props => props.blackTop ? '8px 64px' : 0};
+  
+  ul{
     bottom: 0;
     display: flex; 
-    margin: 0 auto 48px auto;
+    margin:${props => props.blackTop ? 0 : '0 auto 48px auto'};
     justify-content: space-between; 
-    width: 200px;
+    width: ${props => props.blackTop ? 'auto' : '200px'};
     flex-direction: row;
     a{
         padding: 16px;
@@ -43,7 +50,7 @@ ul{
             margin: 0 24px 0 0;
           }
       `}
-      }
+  }
       p{
       ${fontSize(12)};
         margin: 0 0 32px 24px;
@@ -52,12 +59,14 @@ ul{
 export class SocialFooter extends React.Component {
 
     render() {
+        const{blackTop} = this.props;
         return (
-            <Footer>
+            <Footer blackTop={blackTop}>
                 <ul>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/loan-tran-duy-87690a111/"><img src={linkedin} alt="linkedin"/></a></li>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/loanTranduy"><img src={github} alt="github"/></a></li>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/tranduy"><img src={codepen} alt="codepen"/></a></li>
+                    <li><a href="mailto:tdl.tranduy@gmail.com" ><img src={mail} alt="mail"/></a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/loan-tran-duy-87690a111/"><img src={linkedin} alt="linkedin"/></a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/loanTranduy"><img src={github} alt="github"/></a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/tranduy"><img src={codepen} alt="codepen"/></a></li>
                 </ul>
                 {window.innerWidth > 991 &&
                     <p>TRAN DUY LOAN Sprl</p>

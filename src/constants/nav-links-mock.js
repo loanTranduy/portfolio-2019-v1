@@ -4,7 +4,6 @@ import ui from '../assets/icons/layout.svg'
 import front from '../assets/icons/front.svg'
 import design from '../assets/icons/pencil.svg'
 
-
 export const NavMainLinkPropTypes = PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
