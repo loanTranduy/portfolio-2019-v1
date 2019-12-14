@@ -6,24 +6,31 @@ import {Hello} from '../components/landing/hello/Hello';
 import {TownTransparent} from '../components/landing/TownTransparent';
 import {LinkProject} from '../components/button/LinkProject';
 import Primadonna from '../assets/images/project/primadonna/primadonna-cover.jpg'
-import {backgroundColors, skillsColors} from '../styles/default/Colors';
+import {
+    backgroundColors, gradiantBlue,
+    gradiantFront, gradiantGaph,
+    gradiantWeb,
+    skillsColors
+} from '../styles/default/Colors';
 import {LinkClient} from '../components/button/LinkClient';
-import sideLogo from '../assets/images/project/3d-side/3d-side-logo.svg'
-import elleLogo from '../assets/images/project/ELLE_Magazine_Logo.svg'
+import sideLogo from '../assets/images/project/3d-side/3d-side-logo-cube.svg'
+import hackagesCubeLogo from '../assets/images/project/hackages/hackages-logo-cube.svg'
 import marieJo from '../assets/images/project/marie-jo/marie-jo-cover.jpg'
 import front from '../assets/icons/front.svg'
 import web from '../assets/icons/layout.svg'
 import graphic from '../assets/icons/pencil.svg'
 import all from '../assets/icons/eye.svg'
-import andresSarda from '../assets/images/project/andress-sarda/andres-sarda.jpg'
 import {Town} from '../components/landing/Town';
+import hackagesCoverFront from '../assets/images/project/hackages/hackages-cover.png';
+import vergerBioGraphicDesignCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.png';
+
 import
     throttle from 'lodash.throttle';
 import styled from 'styled-components';
 
-
 export const SectionTop = styled(Section)`
 `
+export const SectionLanding = styled(Section)``
 
 export class LandingScreen extends React.Component {
     constructor(props) {
@@ -68,7 +75,7 @@ export class LandingScreen extends React.Component {
                     </Row>
                 </Container>
                 </SectionTop>
-                <Section height={60} strokeHeight={strokeHeight} navbarHeight={navbarHeight} title>
+                <SectionLanding height={60} strokeHeight={strokeHeight} navbarHeight={navbarHeight} title>
                     <Container>
                         <Row>
                             {/*_______________________*/}
@@ -77,29 +84,29 @@ export class LandingScreen extends React.Component {
                                 <Town/>
                                 }
                                 <LinkProject
-                                    url={'/about'}
-                                    name={'Primadonna'}
-                                    image={Primadonna}
-                                    background='linear-gradient(129deg,
-                                    #FFC800 0%, #F76B1C 100%)'
+                                    url='/work/front-end/hackages'
+                                    name='Hackages'
+                                    image={hackagesCoverFront}
+                                    background={gradiantWeb}
                                     noRadiusTopRight
+                                    portraitDesktop
+                                    col='78%'
                                 />
                                 <Row>
-                                    <Col col sm='5' md="6">
+                                    <Col col sm='6' md="6">
                                         <LinkClient
-                                        url={'/about'}
-                                        name={'3dSide'}
+                                        url='/work/graphic-design/3d-side'
+                                        name='3dSide'
                                         image={sideLogo}
                                         background={backgroundColors.navbar}
                                         />
                                     </Col>
-                                    <Col col sm='7' md="6">
+                                    <Col col sm='6' md="6">
                                         <LinkClient
-                                        url={'/about'}
-                                        name={'Elle'}
-                                        image={elleLogo}
-                                        background={backgroundColors.secondary}
-                                        rectangle
+                                        url='/work/graphic-design/hackages'
+                                        name='Hackages'
+                                        image={hackagesCubeLogo}
+                                        background={'linear-gradient(50deg, #188DF2 0%, #00CCBE 100%)'}
                                         />
                                     </Col>
                                 </Row>
@@ -108,31 +115,36 @@ export class LandingScreen extends React.Component {
 
                             <Col col sm='12' md='4'>
                                 <LinkProject
-                                    url={'/about'}
-                                    name={'MarieJo'}
+                                    url='/work/front-end/marie-jo'
+                                    name='MarieJo'
                                     image={marieJo}
-                                    background='linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)'
+                                    background={gradiantFront}
                                     portrait
+                                    portraitDesktop
                                     noRadiusBottomLeft
+                                    col='134%'
                                 />
                             </Col>
                             {/*_______________________*/}
                             <Col col sm='12' md={3} >
                                                 <LinkProject
-                                                    url={'/about'}
-                                                    name={'Primadonna'}
+                                                    url='/work/front-end/primadonna'
+                                                    name='Primadonna'
                                                     image={Primadonna}
-                                                    background='linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)'
+                                                    background={gradiantBlue}
                                                     small
                                                     noRadiusTopLeft
+                                                    col='85.5%'
                                                 />
                                                 <LinkProject
-                                                    url={'/about'}
-                                                    name={'Andres Sarda'}
-                                                    image={andresSarda}
-                                                    background='linear-gradient(-144deg, #64E4DE 0%, #248CBB 100%)'
+                                                    url='/work/graphic-design/verger-bio'
+                                                    name='Verger Bio'
+                                                    image={vergerBioGraphicDesignCover}
+                                                    background={gradiantGaph}
                                                     small
                                                     noRadiusBottomLeft
+                                                    col='85.5%'
+                                                    portraitDesktop
                                                 />
                             </Col>
                             {/*_______________________*/}
@@ -140,7 +152,7 @@ export class LandingScreen extends React.Component {
                                         <Row>
                                             <Col col sm='12' md={12}>
                                                 <LinkClient
-                                                    url={'/work'}
+                                                    url={'/work/all'}
                                                     name={'All projects'}
                                                     image={all}
                                                     background={skillsColors.all}
@@ -176,7 +188,7 @@ export class LandingScreen extends React.Component {
                             {/*_______________________*/}
                             </Row>
                     </Container>
-                </Section>
+                </SectionLanding>
             </Fragment>
 
         )

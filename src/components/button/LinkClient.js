@@ -13,11 +13,10 @@ const LinkContainer = styled(Link)`
   width: 100%;
   height: 0;
   padding-top: ${props => props.rectangle ? 70 :(props.main ?  30 : 100)}%;
-  margin: 12px 0;
   background: ${props => props.background};
   display: block;
   box-shadow: -13px 45px 40px 0 rgba(0,2,117,0.16);
-  
+  margin-bottom: 32px;
   img, p{
     padding: 16px;
     position: absolute;
@@ -29,7 +28,7 @@ const LinkContainer = styled(Link)`
       left:${props => props.main ? 'auto' : '50%'};
       right:${props => props.main ? '16px' : 'auto'};
       transform: translate(${props => props.main ? 0 : '-50%'}, -50%);
-      width: ${props => props.main ? 'auto' : '60%'};
+      width: ${props => props.main ? 'auto' : '80%'};
       height: ${props => props.main ? '60%' : 'auto'};
     }
     
@@ -46,7 +45,7 @@ const LinkContainer = styled(Link)`
   ${media.md`
     padding: ${props => props.main ? '24px' : '100% 0 0 0'};
     height: ${props => props.main ? 100 : 0}%;
-    margin: ${props => props.main ? 0 : '0 0 42px 0'};
+    margin: ${props => props.main ? 0 : '0 0 32px 0'};
     
     display: flex;
     flex-direction column;
@@ -70,7 +69,7 @@ const LinkContainer = styled(Link)`
         top: auto;
     }
     img{
-        width: ${props => props.main ? '80%' : '60%'};
+        width: ${props => props.main ? '80%' : '90%'};
         height: ${props => props.main ? 'auto' : 'auto'};
         top: ${props => props.main ? '0' : '50%'};
         margin: 0 auto;
@@ -82,7 +81,8 @@ const LinkContainer = styled(Link)`
     }
   `}
   
-  ${media.xl`
+  ${media.lg`
+   margin: ${props => props.main ? 0 : '0 0 42px 0'};
   `}
 `
 

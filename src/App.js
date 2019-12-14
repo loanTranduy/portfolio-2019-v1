@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import {
-    LoadableAboutScreen, LoadableContactScreen,
+    LoadableAboutScreen,
     LoadableFrontEndScreen, LoadableGraphicDesignScreen,
     LoadableLandingScreen, LoadableWebDesignScreen,
     LoadableWorkScreen
@@ -10,8 +10,8 @@ import {TransitionGroup} from 'react-transition-group'
 import {Layout} from './styles/Layout';
 import styled  from "styled-components";
 import {Transition} from 'react-transition-group';
-import {SectionTop} from './screens/LandingScreen';
-import {SectionBlue} from './screens/AboutScreen';
+import {SectionLanding, SectionTop} from './screens/LandingScreen';
+import {ContentText, SectionBlue, SideName} from './screens/AboutScreen';
 import {SideInfo} from './components/skills/side-infos/SideInfos';
 import {ProjectContainer} from './screens/SkillsScreen';
 import {media} from './styles/default/Mediaqueries';
@@ -21,14 +21,37 @@ import {WebDesignProject} from './components/skills/web-design/WebDesignProject'
 import {GraphicDesignProject} from './components/skills/graphic-design/GraphicDesignProject';
 import ScrollToTop from './components/loading/ScrollToTop';
 import {InjectFont} from './styles/default/Font';
+import {ContentInside} from './components/skills/front-end/FrontEndProjectMockup';
+import {ContentInside as ContentInsideGrap} from './components/skills/graphic-design/GraphicDesignProjectMockup';
+import {ContentInsideWeb} from './components/skills/web-design/WebDesignProjectMockup';
 
 const timeout = 500;
+const timeoutHigh = 800;
 const Page = styled.div`
   position: ${({ state }) => (state === "entering"  ? "absolute" : "inherit")};
   top: 0;
   left: 0;
   width: 100%;
-  
+  ${SectionLanding}{
+      div{
+        opacity: ${({state}) => (state === "entered" ? 1 : 0) };
+      }
+      div:nth-child(1){
+        transition: opacity ${timeoutHigh}ms ease-in-out ${({state}) => (state === "entered" ? .2 : 0)}s;
+      }
+      div:nth-child(2){
+        transition: opacity ${timeoutHigh}ms ease-in-out ${({state}) => (state === "entered" ? .6 : 0)}s;
+      }
+      div:nth-child(3){
+        transition: opacity ${timeoutHigh}ms ease-in-out ${({state}) => (state === "entered" ? .8 : 0)}s;
+      }
+      div:nth-child(4){
+        transition: opacity ${timeoutHigh}ms ease-in-out ${({state}) => (state === "entered" ? .9 : 0)}s;
+      }
+      div:nth-child(5){
+        transition: opacity ${timeoutHigh}ms ease-in-out ${({state}) => (state === "entered" ? .3 : 0)}s;
+      }
+  }
   ${ProjectContainer}{
       a{
         opacity: ${({state}) => (state === "entered" ? 1 : 0) };
@@ -97,7 +120,12 @@ const Page = styled.div`
     }
   }
   
-  ${SectionTop},${SectionBlue} {
+  ${SideName}{
+    transition: all ${timeout}ms ease-in-out ;
+    transform: translateX(${({state}) => (state === "entering" ? -101 :  0)}%);
+  }
+  
+  ${SectionTop}, ${ContentInside}, ${ContentInsideGrap}, ${ContentInsideWeb} {
     transition: all ${timeout}ms ease-in-out;
     opacity: ${({state}) => (state === "entered" ? 1 : 0) };
   }
@@ -107,6 +135,11 @@ const Page = styled.div`
       opacity: ${({state}) => (state === "entered" ? 1 : 0) };
       transition: opacity ${timeout}ms ease-in-out .4s;
     }
+  }
+  
+  ${ContentText} {
+    transition: all 500ms ease-in-out .5s;
+    opacity: ${({state}) => (state === "entered" ? 1 : 0) };
   }
   
   ${media.xl`
@@ -140,7 +173,6 @@ const App = ({ location }) => {
                             <Route exact path="/work/front-end" render={() => <LoadableFrontEndScreen navbarHeight={30}/>}/>
                             <Route exact path="/work/web-design" render={() => <LoadableWebDesignScreen/>}/>
                             <Route exact path="/work/graphic-design" render={() => <LoadableGraphicDesignScreen/>}/>
-                            <Route exact path="/contact" render={() => <LoadableContactScreen/>}/>
                             <Route path={`/work/front-end/:slug`} component={FrontEndProject} />
                             <Route path={`/work/web-design/:slug`} component={WebDesignProject} />
                             <Route path={`/work/graphic-design/:slug`} component={GraphicDesignProject} />

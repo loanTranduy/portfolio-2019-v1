@@ -21,6 +21,7 @@ export class ProjectCoverRow extends React.Component {
                 portrait={project.portrait}
                 noRadiusBottomLeft={project.noRadiusBottomLeft}
                 noRadiusTopRight={project.noRadiusTopRight}
+                skillIcon={project.skillIcon}
             />
 
         )

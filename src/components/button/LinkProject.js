@@ -16,8 +16,9 @@ const LinkContainer = styled(NavLink)`
     transition: .3s ease-in-out;
     animation: animate 3s linear infinite;
     grid-column: span 1;
+    margin-bottom: 32px;
     
-    background-size: ${props => props.portrait ? 'auto 100%' : '100% auto'};
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 
@@ -130,8 +131,6 @@ const LinkContainer = styled(NavLink)`
   padding-top: ${props => props.colxl};
   `}
 `
-
-
 export class LinkProject extends React.Component {
     static propTypes = {
         noRadiusBottomLeft: PropTypes.bool,

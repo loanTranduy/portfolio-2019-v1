@@ -501,7 +501,7 @@ export const ProjectGraphicDesign = [
             managment:[]
         },
         image: dSideCover,
-        background: 'linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)',
+        background: '',
         desktop: [
             {
                 image: dSideLogoBackground,

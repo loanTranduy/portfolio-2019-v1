@@ -4,7 +4,6 @@ import ui from '../assets/icons/layout.svg'
 import front from '../assets/icons/front.svg'
 import design from '../assets/icons/pencil.svg'
 
-
 export const NavMainLinkPropTypes = PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
@@ -31,14 +30,7 @@ export const NavMainLink = [
         name: 'About',
         breadCrumb: '/about',
         exact: false
-    },
-    {
-        id: 3,
-        name: 'Contact',
-        breadCrumb: '/contact',
-        exact: false
     }
-
 ]
 
 

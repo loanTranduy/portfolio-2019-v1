@@ -4,21 +4,21 @@ import {media} from '../../../styles/default/Mediaqueries';
 import styled from 'styled-components';
 
 const Text = styled.p`
-  //position: absolute;
   bottom: 0;
   ${props => fontSize(props.SizeFr ? 70 :(props.SizeGr ? 83 : 94))};
-  // ${props => lineHeight(props.SizeFr ? 50 : (props.SizeGr ? 60 : (props.SizeCn ? 87 : 66)))};
-    ${lineHeight(100)};
+  ${props => lineHeight(props.SizeFr ? 50 : (props.SizeGr ? 60 : (props.SizeCn ? 87 : 66)))};
+  ${lineHeight(100)};
   font-weight: 900;
   font-style: italic;
   letter-spacing: 10px;
-  //margin-top: 48px;
-  
+  text-align: ${props => props.center ? 'center' : 'left'};
+  ${media.sm`
+  text-align: left;
+  `}
   ${media.md`
-    ${fontSize(60)};
+    ${props => fontSize(props.center ? 94 : 60)};
     ${lineHeight(100)};
     letter-spacing: 15.96px;
-  
   `}
   
   ${media.xl`
@@ -70,6 +70,7 @@ export class Hello extends React.Component {
                 <Text SizeFr={textIdx === 1}
                       SizeGr={textIdx === 6}
                       SizeCn={textIdx === 5}
+                      center={this.props.center}
                 >
                     {textThatChanges}
                     {window.innerWidth > 768 &&
