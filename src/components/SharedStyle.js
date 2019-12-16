@@ -60,7 +60,7 @@ export const Section = styled.section`
   &:after{
     content:"Projects";
     position: absolute;
-    bottom: 0;
+    bottom: -63px;
     ${fontSize(130)};
     ${lineHeight(96)};
     color: ${textColors.secondary};
