@@ -169,7 +169,7 @@ export const Project = [
         id: 10,
         colxl: portrait,
         col: portrait,
-        name: 'Primadonna',
+        name: 'Prima donna',
         slug: 'primadonna',
         image: primadonnaCoverWeb,
         coverColor: gradiantFront,

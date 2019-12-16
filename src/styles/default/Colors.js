@@ -103,4 +103,4 @@ export const gradiantFront = 'linear-gradient(-135deg, #C869FF 0%, #5424BB 100%)
 export const gradiantWeb = "linear-gradient(129deg, #FFC800 0%, #F76B1C 100%)";
 export const gradiantGaph = "linear-gradient(-105deg,#F08FF2 -80%,#FF2352 70%)";
 export const gradiantBlue = 'linear-gradient(-204deg,#004C88 0%,#00AFFF 170%)';
-export const gradiantOrange = 'linear-gradient(-424deg,#9D1101 0%,#FFC856 100%)';
+export const gradiantOrange = 'linear-gradient(-424deg,#C41804 0%,#F76B1C 100%)';

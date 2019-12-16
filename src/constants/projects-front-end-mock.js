@@ -137,7 +137,7 @@ import edenredCover from '../assets/images/project/edenred/edenred-cover-web.png
 
 // ______________________________________________________________________________________________
 
-import {skillsColors, softwareColors, textColors} from '../styles/default/Colors';
+import {gradiantFront, gradiantOrange, skillsColors, softwareColors, textColors} from '../styles/default/Colors';
 import react from '../assets/icons/software/react.svg'
 import styled from '../assets/icons/software/styled-component.png'
 import sass from '../assets/icons/software/sass.svg'
@@ -310,7 +310,7 @@ export const ProjectFrontEnd = [
         nextSlug: '/work/front-end/hackages'
     },
     {
-        coverColor: "linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)",
+        coverColor: gradiantOrange,
         col: '58%',
         image: hackagesCover,
         skill: 'front-end',
@@ -497,13 +497,13 @@ export const ProjectFrontEnd = [
     },
     {
         portraitDesktop: true,
-        coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
+        coverColor: "linear-gradient(280deg,#FAD961 0%,#F76B1C 100%)",
         col: '123%',
         image: primadonnaCover,
         skill: 'front-end',
         slug: 'primadonna',
         id: 2,
-        name: 'Primadonna',
+        name: 'Prima donna',
         position:{
             name: "Front-end Developer",
             date: "2018 - 2019",
@@ -791,7 +791,7 @@ export const ProjectFrontEnd = [
     },
     {
         marginTop:true,
-        coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
+        coverColor: gradiantFront,
         col: '123%',
         image: edenredCover,
         skill: 'front-end',

@@ -121,8 +121,8 @@ const LinkContainer = styled(NavLink)`
     
     h2{
       opacity: 0;
-      ${fontSize(44)};
-      ${lineHeight(55)};
+      ${props => props.longText ? fontSize(32) : fontSize(40)};
+      ${props => props.longText ? lineHeight(44) : lineHeight(55)};
       transition: opacity .3s ease-in-out .1S;
     }
   `}
@@ -138,9 +138,10 @@ export class LinkProject extends React.Component {
 
 
     render() {
-        const {name, image, portraitDesktop,col, colxl, background, url, noRadiusTopLeft, portrait, small, noRadiusBottomLeft, noRadiusTopRight} = this.props;
+        const {name, image, portraitDesktop,col, longText, colxl, background, url, noRadiusTopLeft, portrait, small, noRadiusBottomLeft, noRadiusTopRight} = this.props;
         return (
             <LinkContainer
+                longText={longText}
                 portraitDesktop={portraitDesktop}
                 noRadiusBottomLeft={noRadiusBottomLeft}
                 image={image}

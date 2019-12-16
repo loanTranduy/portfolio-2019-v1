@@ -26,6 +26,10 @@ const Footer = styled.footer`
         img{
           width: 20px;
         }
+        
+        svg path{
+        fill: ${props => props.blackTop ? 'white' : 'black'}
+        }
     }
     ${media.md`
     padding: 50px 16px 0 16px;
@@ -37,7 +41,7 @@ const Footer = styled.footer`
         padding: 10px 4px;
         height: 24px;}
         }
-        img{
+        img, svg{
         width: 24px;
         }
     `}
@@ -64,7 +68,11 @@ export class SocialFooter extends React.Component {
             <Footer blackTop={blackTop}>
                 <ul>
                     <li><a href="mailto:tdl.tranduy@gmail.com" ><img src={mail} alt="mail"/></a></li>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/loan-tran-duy-87690a111/"><img src={linkedin} alt="linkedin"/></a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/loan-tran-duy-87690a111/">
+                        <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.61 13.733H.768V4.682H3.61v9.051zM2.19 3.446h-.02C1.218 3.446.6 2.75.6 1.882.6.994 1.237.318 2.209.318c.972 0 1.57.676 1.589 1.564 0 .869-.617 1.564-1.608 1.564zm11.665 10.287h-2.84V8.891c0-1.217-.412-2.047-1.44-2.047-.785 0-1.253.56-1.458 1.1-.075.194-.094.464-.094.734v5.055h-2.84s.036-8.202 0-9.051h2.84v1.281c.378-.616 1.054-1.494 2.561-1.494 1.87 0 3.271 1.294 3.271 4.074v5.19z" fill="#000" fill-rule="nonzero"/>
+                        </svg>
+                    </a></li>
                     <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/loanTranduy"><img src={github} alt="github"/></a></li>
                     <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/tranduy"><img src={codepen} alt="codepen"/></a></li>
                 </ul>

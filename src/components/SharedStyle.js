@@ -53,7 +53,7 @@ export const Section = styled.section`
   border-bottom-left-radius: 50px;
   padding-top: 32px;
   background: ${props => props.backgroundColor};
-  padding-bottom: ${props => props.noOverflow ? 54 : 120}px;
+  padding-bottom: ${props => props.noOverflow ? 54 : 0}px;
   position: relative;
   height: auto;
   overflow: visible;

@@ -140,7 +140,7 @@ export class AboutScreen extends React.Component {
                                 }
                                 <p>Developer,<br/>Designer,<br/>Animal Lover</p>
                             </Name>
-                            <Text>When I was a child, I was into games such as MOTHER2, Pokémon, and Kirby Super Star. My interaction with them was a big turning point, leading me to strive to make websites that were just as amazing and exhilarating as those games. Most of all, I would like my clients to have a good experience while respecting the worldwide creators who have influenced me everyday. I am always ready to meet up and get to know other cool people.</Text>
+                            <Text>I am a Belgian Creative Developer. My approach is dynamic while also keeping clarity and balance in mind. My preference is developing with React and styled component for interactive websites. <br/>Most of all, I would like my clients to have a good experience while respecting the worldwide creators who have influenced me everyday. I am able to design & develope responsive websites that work on a wide range of devices, assist with production of clean and functional design and be the bridge communication gap between designers and developers. I am always ready to meet up and get to know other cool people.</Text>
                         </ContentText>
                     </Content>
                 </>

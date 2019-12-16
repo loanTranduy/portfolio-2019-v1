@@ -37,7 +37,7 @@ const Name = styled.p`
     
     //ToolTip
     &:after{
-      content: "Yep! that’s my name.. But I don’t have any money to lend. Sorry ! In fact 'loan' means phoenix in vitenamese";
+      content: "Yep! that’s my name.. But I don’t have any money to lend. Sorry ! ... Awkward joke I know..";
       bottom: var(--noteBottomPosition);
       display: block;
       background: ${colors.grey100};

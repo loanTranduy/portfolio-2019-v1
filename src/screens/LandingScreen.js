@@ -30,7 +30,13 @@ import styled from 'styled-components';
 
 export const SectionTop = styled(Section)`
 `
-export const SectionLanding = styled(Section)``
+export const SectionLanding = styled(Section)`
+div > div > div:last-of-type > div >div:last-of-type{
+  a{
+    margin-bottom: 200px;
+  }
+}
+`
 
 export class LandingScreen extends React.Component {
     constructor(props) {
@@ -60,7 +66,7 @@ export class LandingScreen extends React.Component {
         const{navbarHeight, strokeHeight} = this.props;
         return (
             <Fragment>
-                <SectionTop height={40} noOverflow navbarHeight={navbarHeight} backgroundColor={backgroundColors.gradiant} strokeHeight={strokeHeight}>
+                <SectionTop  noOverflow navbarHeight={navbarHeight} backgroundColor={backgroundColors.gradiant} strokeHeight={strokeHeight}>
                     <Container>
                     <Row>
                         <Col col sm='12'>
@@ -75,7 +81,7 @@ export class LandingScreen extends React.Component {
                     </Row>
                 </Container>
                 </SectionTop>
-                <SectionLanding height={60} strokeHeight={strokeHeight} navbarHeight={navbarHeight} title>
+                <SectionLanding strokeHeight={strokeHeight} navbarHeight={navbarHeight} title>
                     <Container>
                         <Row>
                             {/*_______________________*/}
@@ -129,7 +135,7 @@ export class LandingScreen extends React.Component {
                             <Col col sm='12' md={3} >
                                                 <LinkProject
                                                     url='/work/front-end/primadonna'
-                                                    name='Primadonna'
+                                                    name='Prima donna'
                                                     image={Primadonna}
                                                     background={gradiantBlue}
                                                     small
