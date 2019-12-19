@@ -6,26 +6,11 @@ import {fontSize, lineHeight} from '../../styles/default/Mixins';
 import {Link} from 'react-router-dom';
 
 const Content = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  img{
-    height: 12px;
-    margin-left: 8px;
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  }
-  
-  ${media.md`
-  `}
-  
-    ${media.xl`
-  `}
+
+${media.md`
+  position: relative;
+    display: inline-block;
+`}
 `;
 
 const Text = styled.p`
@@ -34,33 +19,56 @@ const Text = styled.p`
   ${lineHeight(20)};
   text-align: center;
   color:${textColors.primary};
-  
   ${media.md`
-    margin-left: ${props => props.circleColor ? 16 : 0}px;
-  `}
-  
-    ${media.xl`
+      padding: 11px 0;
+    margin-left: ${props => props.circleColor ? 10 : 0}px;
   `}
 `;
 
 
 const Circle = styled.div`
-  position: relative;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
   margin: 0;
   width: 40px;
   height: 40px;
   background: ${props => props.circleColor};
   border-radius: 1.625rem;
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  
+  display: none;
   ${media.md`
-  `}
-  
-    ${media.xl`
+    display: block;
   `}
 `;
 
 const Button = styled(Link)`
+  background: ${props => props.circleColor};
+  font-size: inherit;
+  border-radius: 50px;
+  padding: 8px !important;
+  
+  img{
+    top: 50%;
+    transform: translateY(-50%);
+    right: -24px;
+    position: absolute;
+    display: none;
+    height: 12px;
+    margin-left: 8px;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  }
+  
+  ${media.md`
+  display: inline !important;
+    img{
+        display: block;
+    }
+  
+  border-radius: none;
+  width: 12rem;
+  height: auto;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -68,26 +76,17 @@ const Button = styled(Link)`
   border: 0;
   vertical-align: middle;
   text-decoration: none;
-  background: transparent;
   padding: 0;
-  font-size: inherit;
-  width: 12rem;
-  height: auto;
-  
-  ${media.md`
+  background: transparent;
   width: 16.4rem;
     &:hover{
         ${Circle}{
-            width: 101%;
+            width: calc(100% + 40px);
         }
         img{
-            margin-left: 16px;
+            right: -32px;
         }
     }
-  `}
-  
-   ${media.xl`
-    // margin-top: 48px;
   `}
 `;
 
@@ -97,14 +96,12 @@ export class LinkWithIcon extends React.Component {
     render() {
         const{children, to, icon, alt, circleColor} = this.props;
         return (
-            <Button to={to}>
+            <Button to={to} circleColor={circleColor}>
                 <Content>
-                    <Text circleColor={circleColor}>{children}</Text>
-                    <img src={icon} alt={alt}/>
+                <Text circleColor={circleColor}>{children}</Text>
+                <img src={icon} alt={alt}/>
                 </Content>
-                {window.innerWidth > 768 &&
-                    <Circle circleColor={circleColor}/>
-                }
+                <Circle circleColor={circleColor}/>
             </Button>
         )
     }

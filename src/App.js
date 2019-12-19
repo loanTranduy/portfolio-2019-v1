@@ -11,7 +11,7 @@ import {Layout} from './styles/Layout';
 import styled  from "styled-components";
 import {Transition} from 'react-transition-group';
 import {SectionLanding, SectionTop} from './screens/LandingScreen';
-import {ContentText, SectionBlue, SideName} from './screens/AboutScreen';
+import {ContentText, SideName} from './screens/AboutScreen';
 import {SideInfo} from './components/skills/side-infos/SideInfos';
 import {ProjectContainer} from './screens/SkillsScreen';
 import {media} from './styles/default/Mediaqueries';

@@ -71,6 +71,10 @@ export class Navbar extends React.Component {
         window.addEventListener('resize', this.updateDimensions);
     };
 
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    };
+
 
     updateDimensions() {
         this.props.parentCallback(

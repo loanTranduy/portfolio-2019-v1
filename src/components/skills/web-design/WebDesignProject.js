@@ -40,7 +40,9 @@ export function WebDesignProject ({match}) {
 
             backgroundColor={topic.background}
             marginTop={topic.marginTop}
-
+            toolTipforCommunication
+            toolTipForTools
+            toolTipForSoftware
             sixItems
         />
 

@@ -60,7 +60,7 @@ import {skillsColors, softwareColors, textColors, hackagesColors} from '../style
 import slack from '../assets/icons/software/slack.svg'
 import freedcamp from '../assets/icons/software/freedcamp.svg'
 import agile from '../assets/icons/software/agile.svg'
-import sketch from '../assets/icons/software/sketchh.svg'
+import sketch from '../assets/icons/software/sketch.svg'
 import sitemap from '../assets/icons/software/sitemap.svg'
 import principle from '../assets/icons/software/principle-app.svg'
 import zeplin from '../assets/icons/software/zeplin.svg'
@@ -209,6 +209,7 @@ export const ProjectWebDesign = [
             softwares:[
                 {
                     id: 0,
+                    label:'Sketch',
                     icon: sketch,
                     backgroundColor: 'transparent',
                     borderColor: softwareColors.sketch,
@@ -217,6 +218,7 @@ export const ProjectWebDesign = [
                 },
                 {
                     id: 1,
+                    label:'Zeplin',
                     icon: zeplin,
                     backgroundColor: 'transparent',
                     borderColor: softwareColors.zeplin,
@@ -360,12 +362,14 @@ export const ProjectWebDesign = [
             softwares:[
                 {
                     id: 0,
+                    label: 'Sitemap',
                     icon: sitemap,
                     backgroundColor: softwareColors.glooMaps,
                     borderColor: softwareColors.glooMaps,
                     textColor: textColors.secondary
                 },
                 {
+                    label: 'Sketch',
                     id: 1,
                     icon: sketch,
                     backgroundColor: 'transparent',
@@ -374,6 +378,7 @@ export const ProjectWebDesign = [
 
                 },
                 {
+                    label: 'Principle',
                     id: 2,
                     icon: principle,
                     backgroundColor: 'transparent',
@@ -515,6 +520,7 @@ export const ProjectWebDesign = [
             softwares:[
                 {
                     id: 0,
+                    label:'Sketch',
                     icon: sketch,
                     backgroundColor: 'transparent',
                     borderColor: softwareColors.sketch,
@@ -523,6 +529,7 @@ export const ProjectWebDesign = [
                 },
                 {
                     id: 1,
+                    label:'Zeplin',
                     icon: zeplin,
                     backgroundColor: 'transparent',
                     borderColor: softwareColors.zeplin,
@@ -643,8 +650,8 @@ export const ProjectWebDesign = [
                     icon: sketch,
                     backgroundColor: 'transparent',
                     borderColor: softwareColors.sketch,
-                    textColor: textColors.primary
-
+                    textColor: textColors.primary,
+                    label: 'Sketch',
                 }
             ],
             managment:[
@@ -731,7 +738,8 @@ export const ProjectWebDesign = [
             ],
             softwares:[
                 {
-                    id: 1,
+                    label:'Sketch',
+                    id: 0,
                     icon: sketch,
                     backgroundColor: 'transparent',
                     borderColor: softwareColors.sketch,

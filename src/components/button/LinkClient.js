@@ -6,7 +6,7 @@ import {fontSize, lineHeight} from '../../styles/default/Mixins';
 import {textColors} from '../../styles/default/Colors';
 
 
-const LinkContainer = styled(Link)`
+const LinkContainer = styled(({ title, main, ...props }) => <Link {...props} />)`
   overflow: hidden;
   border-radius: 40px;
   position: relative;

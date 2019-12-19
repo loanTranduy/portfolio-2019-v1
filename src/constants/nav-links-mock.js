@@ -51,7 +51,7 @@ export const NavSidebarLink = [
         label: 'See All',
         breadCrumb: '/work/all',
         icon: work,
-        filter: 'all'
+        filter: 'all',
     },
     {
         id: 1,

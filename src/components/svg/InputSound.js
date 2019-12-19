@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 import soundfile from '../../assets/sound/name.mp3'
-import {media} from '../../styles/default/Mediaqueries';
 import {fontSize} from '../../styles/default/Mixins';
 import {textColors} from '../../styles/default/Colors';
 
@@ -181,14 +180,6 @@ const Wrapper = styled.div`
             left: 0;
           }
     }
-
-  ${media.md`
-  
-  `}
-  
-    ${media.xl`
-    
-  `}
 `
 
 const Wrap = styled.div`
@@ -196,10 +187,6 @@ const Wrap = styled.div`
   top: 0;
   right: -100px;
   bottom: 0;
-  ${media.md`
-  `}
-    ${media.xl`
-  `}
 `;
 
 export class InputSound extends React.Component {
@@ -222,21 +209,12 @@ export class InputSound extends React.Component {
             this.setState({inputClick: !this.state.inputClick});
     };
 
-    pause = () => {
-        this.setState({checked: !this.state.checked});
-    };
-
-
-
-
     render() {
         return (
             <Wrap>
-
             <Sound isActive={this.state.checked}>
                 <button
                        onClick={this.toggleInput}
-                       isActive={this.state.checked}
                 />
                 <svg viewBox="0 0 108 96">
                     <path

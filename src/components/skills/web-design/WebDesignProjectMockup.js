@@ -279,7 +279,7 @@ export class WebDesignProjectMockup extends React.Component {
                 }
                 <GradiantList gradiantNumber={gradiants.length}>
                     {gradiants.map((gradiant, id) => (
-                        <li>
+                        <li key={id}>
                             <Gradiants key={id} mainColor={gradiant.mainColor} gradiantsSize={gradiant.gradiantsList.length}>
                                 {gradiant.gradiantsList.map((gradiantItem, id) => (
                                     <li key={id}>

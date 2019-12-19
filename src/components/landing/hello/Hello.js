@@ -12,13 +12,11 @@ const Text = styled.p`
   font-style: italic;
   letter-spacing: 10px;
   text-align: ${props => props.center ? 'center' : 'left'};
-  ${media.sm`
-  text-align: left;
-  `}
   ${media.md`
     ${props => fontSize(props.center ? 94 : 60)};
     ${lineHeight(100)};
     letter-spacing: 15.96px;
+    text-align: left;
   `}
   
   ${media.xl`
@@ -59,7 +57,7 @@ export class Hello extends React.Component {
 
     }
 
-    componentDidUnmount() {
+    componentWillUnmount() {
         clearInterval(this.timeout);
     }
 

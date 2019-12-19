@@ -21,19 +21,8 @@ export const SideInfo = styled.div`
   bottom:0;
   max-width: 80vw;
   height: 100vh;
-  padding: 16px 32px 16px 48px;
   transform:translateX(${props => props.active ? 10 : 102}%);
   transition: transform .6s ease-in-out;
-  
-  ${media.md`
-    padding: 32px 0 0 56px;
-  `}
-  ${media.lg`
-  padding: 32px 40px 0 24px;
-  `}
-  ${media.xl`
-    padding: 32px 32px 0 64px;
-  `}
   &:after, &:before{
       content:url(${cornerWhite});
       position: absolute;
@@ -41,27 +30,24 @@ export const SideInfo = styled.div`
       left: -40px;
       width: 40px;
       transform: rotate(180deg);
-    }
-    &:before{
+  }
+  
+  &:before{
       bottom: auto;
       top: -3px;
       transform: rotate(90deg);
-    }
+  }
     
   section{
-    overflow:scroll;
     height: 100%;
-    max-width: 200px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: scroll;
     
     ${media.md`
-        max-width: 290px;
-    `}
-    
-    ${media.lg`
-        max-width: 320px;
+        max-width: 375px;
     `}
   }
     
@@ -102,10 +88,7 @@ export const SideInfo = styled.div`
         transform: rotate(-90deg);
       }
     }
-    
-    a{
-      display: none;
-    }
+   
     ${media.md`
         transform:translateX(${props => props.active ? 0 : 100}%);
         a{
@@ -151,6 +134,7 @@ export const SideInfo = styled.div`
 `
 
 const Position = styled.div`
+    white-space: nowrap;
   display: flex;
   margin-bottom: 24px;
   margin-top: 24px;
@@ -182,10 +166,6 @@ const Position = styled.div`
         padding: 0 6px 0 2px;
     }
   
-  `}
-  
-  ${media.xl`
-
   `}
 `
 
@@ -237,10 +217,6 @@ const List = styled.ul`
     }
     
   `}
-  
-  ${media.xl`
-
-  `}
 `
 
 const Text = styled.p`
@@ -259,11 +235,71 @@ const Text = styled.p`
   `}
 `
 
+const Overflow = styled.div`
+overflow-y: scroll;
+padding: 16px 32px 16px 48px;
+${media.md`
+    padding: 32px 32px 32px 48px;
+  `}
+  ${media.xl`
+    padding: 32px 32px 32px 64px;
+  `}
+
+`
+
+const BoxLink = styled.div`
+padding: 16px 48px;
+position: relative;
+
+${media.md`
+    &:after{
+    content: '';
+        top: -60px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(0deg,#FFFFFF 10%,rgba(255,255,255,0.00) 100%);
+    position: absolute;
+    }
+    padding: 0 0 0 56px;
+    a{
+        padding: 0;
+        margin-top: 16px
+    
+        &:hover{
+            opacity: 1;
+        }
+    }
+  `}
+  ${media.lg`
+  padding: 0 40px 0 46px;
+  a{
+  padding: 0;
+  margin-top: 16px;
+  &:hover{
+    opacity: 1;
+    }
+  }
+  `}
+  ${media.xl`
+    padding: 0 32px 0 64px;
+    a{
+    padding: 0;
+    margin-top: 16px;
+        &:hover{
+            opacity: 1;
+        }
+    }
+  `}
+  
+  a{padding: 0;}
+`
+
 export class SideInfos extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            sideInfosVisible: false
+            sideInfosVisible: true
         };
         this.sideInfo = React.createRef();
         this.sendData = throttle(this.sendData, 500).bind(this);
@@ -301,7 +337,9 @@ export class SideInfos extends React.Component {
             skillLinks,
             projectTitle,
             sixItems,
-            titleLink
+            titleLink,
+            toolTipForTools,
+            toolTipForSoftware
         }= this.props;
         return (
 
@@ -310,8 +348,9 @@ export class SideInfos extends React.Component {
                         {title}{projectTitle}
                         <img src={arrowHead} alt="collapse infos box"/>
                     </button>
+
                     <section>
-                        <div>
+                            <Overflow>
                             {title &&
                                 <h1>{title}</h1>
                             }
@@ -364,27 +403,37 @@ export class SideInfos extends React.Component {
                             }
 
                             {skills &&
-                                <IconsWithLabel skillsFrontEnd={skills}/>
+                                <IconsWithLabel skillsFrontEnd={skills} labelOnly/>
                             }
 
                             {software &&
                                 <BoxIconsWithLabel
                                     softwaresFrontEnd={software}
                                     title={softwareTitle}
+                                    toolTip={toolTipForSoftware}
                                 />
                             }
 
                             {softwareUsed &&
-                                <BoxIconsWithLabel softwaresFrontEnd={softwareUsed} title='Tools' sixItems={sixItems}/>
+                                <BoxIconsWithLabel
+                                    softwaresFrontEnd={softwareUsed}
+                                    title='Tools'
+                                    sixItems={sixItems}
+                                    toolTip={toolTipForTools}
+                                />
                             }
 
                             {communication && !!communicationSoftware.length &&
-                                <BoxIconsWithLabel softwaresFrontEnd={communicationSoftware} title={communication} />
+                                <BoxIconsWithLabel
+                                    softwaresFrontEnd={communicationSoftware}
+                                    title={communication}
+                                />
                             }
-                        </div>
-
+                        </Overflow>
                         {cta &&
+                            <BoxLink>
                             <LinkWithIcon to={ctaTo} icon={arrow} circleColor={circleColor}>{cta}</LinkWithIcon>
+                            </BoxLink>
                         }
                     </section>
             </SideInfo>

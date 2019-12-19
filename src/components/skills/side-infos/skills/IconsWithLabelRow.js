@@ -1,17 +1,19 @@
 import React from 'react';
-import {SkillPropTypes} from '../../../../constants/front-end-skills-mock';
 import {IconsLabelGrid} from '../../../grid/IconsLabelGrid';
+import PropTypes from 'prop-types';
 
 
 
 export class IconsWithLabelRow extends React.Component {
     static propTypes = {
-        skillFrontEnd: SkillPropTypes,
+        label: PropTypes.string,
+        icon: PropTypes.string,
+        labelOnly: PropTypes.bool,
     };
     render() {
-        const {skillFrontEnd} = this.props;
+        const {skillFrontEnd, labelOnly} = this.props;
         return (
-            <IconsLabelGrid icon={skillFrontEnd.icon} label={skillFrontEnd.label}/>
+            <IconsLabelGrid icon={skillFrontEnd.icon} label={skillFrontEnd.label} labelOnly={labelOnly}/>
         )
     }
 }

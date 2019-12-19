@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const LinkContainer = styled(NavLink)`
+const LinkContainer = styled(({ small, longText, portrait, noRadiusTopLeft,noRadiusTopRight, noRadiusBottomLeft, portraitDesktop, ...props }) => <NavLink {...props} />)`
     overflow: hidden;
     border-radius: 40px;
     position: relative;
@@ -25,7 +25,7 @@ const LinkContainer = styled(NavLink)`
     h2{
       letter-spacing: .5px;
       text-align: center;
-      ${fontSize(50)};
+      ${fontSize(50)}; portraitDesktop,
       ${lineHeight(72)};
       position: absolute;
       color: black;
@@ -131,9 +131,21 @@ const LinkContainer = styled(NavLink)`
   padding-top: ${props => props.colxl};
   `}
 `
+
 export class LinkProject extends React.Component {
     static propTypes = {
+        noRadiusTopRight: PropTypes.bool,
+        longText: PropTypes.bool,
+        portraitDesktop: PropTypes.bool,
         noRadiusBottomLeft: PropTypes.bool,
+        portrait: PropTypes.bool,
+        background: PropTypes.string,
+        noRadiusTopLeft: PropTypes.bool,
+        colxl: PropTypes.string,
+        col: PropTypes.string,
+        url: PropTypes.string,
+        image: PropTypes.string,
+        small: PropTypes.bool,
     };
 
 

@@ -23,10 +23,12 @@ import all from '../assets/icons/eye.svg'
 import {Town} from '../components/landing/Town';
 import hackagesCoverFront from '../assets/images/project/hackages/hackages-cover.png';
 import vergerBioGraphicDesignCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.png';
+import {media} from '../styles/default/Mediaqueries';
 
 import
     throttle from 'lodash.throttle';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 export const SectionTop = styled(Section)`
 `
@@ -37,9 +39,11 @@ div > div > div:last-of-type > div >div:last-of-type{
   }
 }
 
+${media.md`
 div > div > div {
     max-height: 360px;
 }
+`}
 `
 
 export class LandingScreen extends React.Component {
@@ -49,6 +53,11 @@ export class LandingScreen extends React.Component {
             visibleTown: false,
         };
         this.updateDimensions = throttle(this.updateDimensions, 500).bind(this);
+    };
+
+    static propTypes = {
+        navbarHeight: PropTypes.number,
+        strokeHeight: PropTypes.number,
     };
 
 
@@ -63,6 +72,10 @@ export class LandingScreen extends React.Component {
     componentDidMount() {
         this.updateDimensions();
         window.addEventListener('resize', this.updateDimensions);
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
     };
 
     render() {
@@ -85,7 +98,7 @@ export class LandingScreen extends React.Component {
                     </Row>
                 </Container>
                 </SectionTop>
-                <SectionLanding strokeHeight={strokeHeight} navbarHeight={navbarHeight} title>
+                <SectionLanding strokeHeight={strokeHeight} navbarHeight={navbarHeight} title="true">
                     <Container>
                         <Row>
                             {/*_______________________*/}

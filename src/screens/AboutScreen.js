@@ -9,13 +9,13 @@ import throttle from 'lodash.throttle';
 import cv from '../assets/pdf/TranDuy_Loan_cv_EN.pdf';
 
 export const Content = styled.div`
-  padding: 48px;
+  padding: 100px 36px 150px 36px;
   position: relative;
 `
 
 export const ContentText = styled.div`
-  ${media.sm`
-    margin-left: 150px;   
+  ${media.md`
+    margin-left: 170px;   
   `}
 `
 
@@ -41,14 +41,13 @@ export const SideName = styled.div`
   }
   
   h2{
-  margin-top: 122px;
-  color: white;
-  ${fontSize(17)};
+    margin-top: 122px;
+    color: white;
+    ${fontSize(17)};
     ${lineHeight(30)};
     font-weight: 700;
     text-align: right;
     margin-bottom: 51px;
-    
   }
 `
 
@@ -56,7 +55,7 @@ export const Text = styled.p`
    ${fontSize(18)};
     ${lineHeight(30)};
     
-    ${media.sm`
+    ${media.md`
     ${fontSize(16)};
     ${lineHeight(30)};
     max-width: 600px;
@@ -83,7 +82,7 @@ export const Name = styled.div`
     margin-top: 2px;
   }
   
-  ${media.sm`
+  ${media.md`
     justify-content: flex-start
   `}
 `
@@ -99,7 +98,7 @@ export class AboutScreen extends React.Component {
 
 
     updateDimensions() {
-        if (window.innerWidth < 576) {
+        if (window.innerWidth < 768) {
             this.setState({visibleOnMobile: true});
         } else {
             this.setState({visibleOnMobile: false});
@@ -109,6 +108,10 @@ export class AboutScreen extends React.Component {
     componentDidMount() {
         this.updateDimensions();
         window.addEventListener('resize', this.updateDimensions);
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
     };
 
     render() {

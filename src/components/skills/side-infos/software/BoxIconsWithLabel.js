@@ -5,13 +5,13 @@ import {media} from '../../../../styles/default/Mediaqueries';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-
 export const GridForBoxes = styled(Grid)`
   margin-left: 0;
   margin-bottom: 24px;
   grid-template-columns: repeat(3, 45px);
   grid-column-gap: 16px;
   grid-row-gap: 24px;
+  position: relative;
   
   ${media.md`
     margin-top: 24px;
@@ -30,12 +30,12 @@ export class BoxIconsWithLabel extends React.Component {
     };
 
     render() {
-        const {title, softwaresFrontEnd, sixItems} = this.props;
+        const {title, softwaresFrontEnd, sixItems, toolTip} = this.props;
         return (
             <>
                 <h2>{title}</h2>
                 <GridForBoxes sixItems={sixItems}>
-                    <BoxIconsWithLabelList softwaresFrontEnd={softwaresFrontEnd} />
+                    <BoxIconsWithLabelList softwaresFrontEnd={softwaresFrontEnd} toolTip={toolTip}/>
                 </GridForBoxes>
             </>
         )
