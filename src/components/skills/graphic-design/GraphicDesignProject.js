@@ -36,7 +36,9 @@ export function GraphicDesignProject ({match}) {
             circleColor={skillsColors.graphic}
             cta="Next Graphic Design Project"
             ctaTo={topic.nextSlug}
-
+            toolTipforCommunication
+            toolTipForTools
+            toolTipForSoftware
             sixItems
         />
     )

@@ -216,6 +216,7 @@ export const ProjectGraphicDesign = [
             softwares:[
                 {
                     id: 0,
+                    label:'Adobe Illustrator',
                     icon: ai,
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ai,
@@ -275,7 +276,7 @@ export const ProjectGraphicDesign = [
         name: 'Hackages',
         skill: 'graphic-design',
         slug: 'hackages',
-        id: 2,
+        id: 1,
         logo: hackagesLogo,
         baseline: {
             text: 'Company Materials',
@@ -306,6 +307,7 @@ export const ProjectGraphicDesign = [
             softwares:[
                 {
                     id: 0,
+                    label:'Adobe InDesign',
                     icon: ind,
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ind,
@@ -313,6 +315,7 @@ export const ProjectGraphicDesign = [
                 },
                 {
                     id: 1,
+                    label:'Adobe Photoshop',
                     icon: ps,
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ps,
@@ -320,6 +323,7 @@ export const ProjectGraphicDesign = [
                 },
                 {
                     id: 2,
+                    label:'Adobe Illustrator',
                     icon: ai,
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ai,
@@ -327,6 +331,7 @@ export const ProjectGraphicDesign = [
                 },
                 {
                     id: 3,
+                    label:'Adobe After effect',
                     icon: ae,
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ae,
@@ -335,6 +340,7 @@ export const ProjectGraphicDesign = [
                 {
                     id: 4,
                     icon: pr,
+                    label:'Adobe Premiere Pro',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.pr,
                     textColor: softwareColors.pr,
@@ -459,7 +465,7 @@ export const ProjectGraphicDesign = [
         name: '3D Side',
         skill: 'graphic-design',
         slug: '3d-side',
-        id: 0,
+        id: 2,
         logo: dSideLogo,
         backgroundImage: '',
         baseline: {
@@ -478,6 +484,7 @@ export const ProjectGraphicDesign = [
             softwares:[
                 {
                     id: 0,
+                    label:'Adobe InDesign',
                     icon: ind,
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ind,
@@ -485,6 +492,7 @@ export const ProjectGraphicDesign = [
                 },
                 {
                     id: 1,
+                    label:'Adobe Illustrator',
                     icon: ai,
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ai,
@@ -492,6 +500,7 @@ export const ProjectGraphicDesign = [
                 },
                 {
                     id: 2,
+                    label:'Adobe Photoshop',
                     icon: ps,
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ps,
@@ -597,6 +606,7 @@ export const ProjectGraphicDesign = [
             softwares:[
                 {
                     id: 0,
+                    label:'Adobe InDesign',
                     icon: ai,
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ai,
@@ -605,6 +615,7 @@ export const ProjectGraphicDesign = [
                 {
                     id: 1,
                     icon: ae,
+                    label:'Adobe After Effects',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ae,
                     textColor: softwareColors.ae,
@@ -612,6 +623,7 @@ export const ProjectGraphicDesign = [
                 {
                     id: 2,
                     icon: pr,
+                    label:'Adobe Premiere Pro',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.pr,
                     textColor: softwareColors.pr,
@@ -689,7 +701,7 @@ export const ProjectGraphicDesign = [
         name: 'Verger Bio',
         skill: 'graphic-design',
         slug: 'verger-bio',
-        id: 0,
+        id: 4,
         logo: vergerBioLogo,
         baseline: {
             text: 'Rebranding',
@@ -708,12 +720,14 @@ export const ProjectGraphicDesign = [
                 {
                     id: 0,
                     icon: ai,
+                    label:'Adobe Illustrator',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ai,
                     textColor: softwareColors.ai,
                 },
                 {
                     id: 1,
+                    label:'Adobe After Effects',
                     icon: ae,
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ae,
@@ -722,6 +736,7 @@ export const ProjectGraphicDesign = [
                 {
                     id: 2,
                     icon: pr,
+                    label:'Adobe Premiere Pro',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.pr,
                     textColor: softwareColors.pr,
@@ -841,7 +856,7 @@ export const ProjectGraphicDesign = [
         name: 'Hugeia',
         skill: 'graphic-design',
         slug: 'hugeia',
-        id: 0,
+        id: 5,
         logo: hugeiaLogo,
         background: backgroundColors.primary,
         baseline: {
@@ -862,6 +877,7 @@ export const ProjectGraphicDesign = [
                 {
                     id: 0,
                     icon: ind,
+                    label:'Adobe InDesign',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ind,
                     textColor: softwareColors.ind
@@ -869,6 +885,7 @@ export const ProjectGraphicDesign = [
                 {
                     id: 1,
                     icon: ai,
+                    label:'Adobe Illustrator',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ai,
                     textColor: softwareColors.ai,
@@ -876,6 +893,7 @@ export const ProjectGraphicDesign = [
                 {
                     id: 2,
                     icon: ps,
+                    label:'Adobe Photoshop',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ps,
                     textColor: softwareColors.ps,
@@ -883,6 +901,7 @@ export const ProjectGraphicDesign = [
                 {
                     id: 3,
                     icon: ae,
+                    label:'Adobe After Effects',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ae,
                     textColor: softwareColors.ae,
@@ -1066,7 +1085,7 @@ export const ProjectGraphicDesign = [
         name: 'Bêta bondieu',
         skill: 'graphic-design',
         slug: 'beta-bon-dieu',
-        id: 0,
+        id: 6,
         logo: btbdLogo,
         background: '#F5F3E6',
         baseline: {
@@ -1086,6 +1105,7 @@ export const ProjectGraphicDesign = [
                 {
                     id: 0,
                     icon: ind,
+                    label:'Adobe InDesign',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ind,
                     textColor: softwareColors.ind
@@ -1093,6 +1113,7 @@ export const ProjectGraphicDesign = [
                 {
                     id: 1,
                     icon: ai,
+                    label:'Adobe Illustrator',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ai,
                     textColor: softwareColors.ai,
@@ -1100,6 +1121,7 @@ export const ProjectGraphicDesign = [
                 {
                     id: 2,
                     icon: ps,
+                    label:'Adobe Photoshop',
                     backgroundColor: backgroundColors.secondary,
                     borderColor: softwareColors.ps,
                     textColor: softwareColors.ps,

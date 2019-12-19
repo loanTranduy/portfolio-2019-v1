@@ -20,15 +20,14 @@ export const Grid = styled.div`
   `}
 `;
 
-
 export class IconsWithLabel extends React.Component {
 
     render() {
-        const {sixItems, skillsFrontEnd} = this.props;
+        const {sixItems, skillsFrontEnd, labelOnly} = this.props;
 
         return (
             <Grid sixItems={sixItems}>
-                <IconsWithLabelList skillsFrontEnd={skillsFrontEnd}/>
+                <IconsWithLabelList skillsFrontEnd={skillsFrontEnd} labelOnly={labelOnly}/>
             </Grid>
         )
     }

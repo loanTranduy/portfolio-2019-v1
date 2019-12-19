@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react'
 import FadeIn from "react-fade-in";
-import Lottie from "react-lottie";
 import * as doneData from "./../../assets/animation/checked.json";
 import styled from 'styled-components';
 import * as legoData from "./../../assets/animation/loading.json"

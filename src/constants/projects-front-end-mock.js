@@ -503,7 +503,7 @@ export const ProjectFrontEnd = [
         skill: 'front-end',
         slug: 'primadonna',
         id: 2,
-        name: 'Prima donna',
+        name: 'Primadonna',
         position:{
             name: "Front-end Developer",
             date: "2018 - 2019",
@@ -688,6 +688,7 @@ export const ProjectFrontEnd = [
             softwares:[
                 {
                     id: 0,
+                    label: 'React',
                     icon: react,
                     backgroundColor: softwareColors.react,
                     borderColor: softwareColors.react,
@@ -695,6 +696,7 @@ export const ProjectFrontEnd = [
                 },
                 {
                     id: 1,
+                    label: 'Styled Component',
                     icon: styled,
                     backgroundColor: softwareColors.styledComponent,
                     borderColor: softwareColors.styledComponent,
@@ -703,6 +705,7 @@ export const ProjectFrontEnd = [
                 },
                 {
                     id: 2,
+                    label: 'Sass',
                     icon: sass,
                     backgroundColor: softwareColors.sass,
                     borderColor: softwareColors.sass,
@@ -817,6 +820,7 @@ export const ProjectFrontEnd = [
             softwares:[
                 {
                     id: 2,
+                    label: 'BigCommerce',
                     icon: bigCommerce,
                     backgroundColor: softwareColors.bigCommerce,
                     borderColor: softwareColors.bigCommerce,
@@ -824,6 +828,7 @@ export const ProjectFrontEnd = [
                 },
                 {
                     id: 2,
+                    label: 'Handlebars',
                     icon: handlebars,
                     backgroundColor: softwareColors.agile,
                     borderColor: softwareColors.agile,
@@ -831,6 +836,7 @@ export const ProjectFrontEnd = [
                 },
                 {
                     id: 2,
+                    label: 'Jquery',
                     icon: jquery,
                     backgroundColor: 'transparent',
                     borderColor: softwareColors.freedcamp,
@@ -838,6 +844,7 @@ export const ProjectFrontEnd = [
                 },
                 {
                     id: 0,
+                    label: 'React',
                     icon: react,
                     backgroundColor: softwareColors.react,
                     borderColor: softwareColors.react,
@@ -845,6 +852,7 @@ export const ProjectFrontEnd = [
                 },
                 {
                     id: 1,
+                    label: 'Styled component',
                     icon: styled,
                     backgroundColor: softwareColors.styledComponent,
                     borderColor: softwareColors.styledComponent,
@@ -853,11 +861,12 @@ export const ProjectFrontEnd = [
                 },
                 {
                     id: 2,
+                    label: 'Sass',
                     icon: sass,
                     backgroundColor: softwareColors.sass,
                     borderColor: softwareColors.sass,
                     textColor: textColors.secondary
-                },
+                }
             ],
             managment:[
                 {

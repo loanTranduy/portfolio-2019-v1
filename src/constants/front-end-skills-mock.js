@@ -8,7 +8,7 @@ import svg from '../assets/icons/skills/svg.svg'
 import styled from '../assets/icons/software/styled-component.png'
 import sass from '../assets/icons/software/sass.svg'
 import load from '../assets/icons/skills/refresh.svg'
-import sketch from '../assets/icons/software/sketchh.svg'
+import sketch from '../assets/icons/software/sketch.svg'
 import zeplin from '../assets/icons/software/zeplin.svg'
 import {softwareColors, textColors} from '../styles/default/Colors';
 

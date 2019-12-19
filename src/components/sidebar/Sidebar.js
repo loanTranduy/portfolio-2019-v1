@@ -58,6 +58,10 @@ export class Sidebar extends React.Component {
         );
     };
 
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    };
+
     render() {
         const {position} = this.props;
         return (

@@ -19,6 +19,7 @@ const Inverter = styled.span`
         
         p:first-of-type {
             color: black;
+            transition: color 0s linear;
         }
 `;
 
@@ -54,11 +55,15 @@ const Box = styled.li`
   
   ${media.lg`
     margin-bottom: 0;
-    
+   
     a.active, 
     a:focus {
     
       ${Inverter}{
+      p:first-of-type{
+      color: white;
+      transition: color 1s linear ;
+      }
         ${Invert}{
             transition: clip-path .1s ease-in-out .2s;
             clip-path: circle(260% at 84% 50%);

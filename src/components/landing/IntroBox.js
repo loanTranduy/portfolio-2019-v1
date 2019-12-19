@@ -7,7 +7,10 @@ import {InputSound} from '../svg/InputSound';
 import arrow from '../../assets/icons/right-arrow.svg'
 import {LinkWithIcon} from '../button/LinkWithIcon';
 
-const Name = styled.p`
+const Name = styled.div`
+position: relative;
+display: inline;
+p{
   display: inline-block;
   ${fontSize(22)};
   font-weight: 700;
@@ -62,7 +65,9 @@ const Name = styled.p`
       border-color: ${colors.grey100} transparent transparent transparent;
     }
   }
+  }
   ${media.md`
+  p{
     ${fontSize(20)};
     span:first-of-type:hover{
       :after, :before{
@@ -71,8 +76,7 @@ const Name = styled.p`
       }
     }
   `}
-    ${media.xl`
-  `}
+  }
 `
 
 const Intro = styled.p`
@@ -96,22 +100,15 @@ const Intro = styled.p`
 
 const Wrap = styled.div`
   max-width: 350px;
-  
-  ${media.md`
-  
-  `}
-  
-  ${media.xl`
-
-  `}
+ 
 `
 
 export class IntroBox extends React.Component {
     render() {
         return (
             <Wrap>
-                <Name>My name is
-                    <span>Loan </span>
+                <Name>
+                    <p>My name is<span>Loan </span></p>
                     <InputSound/>
                 </Name>
                 <Intro>I’m a Belgian Creative Developer traveling the world to be part of awesome new teams.</Intro>

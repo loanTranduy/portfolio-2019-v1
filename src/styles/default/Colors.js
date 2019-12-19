@@ -17,13 +17,13 @@ export const colors = {
     black: '#352B51',
     darkgrey: '#8394B0',
 
-    violet: '#9013FE',
+    violet: '#932cf9',
     lila: '#D291FF',
     purple: '#EA77FF',
-    yellow: '#FFD658',
+    yellow: '#F9CA1C',
     pink: '#F45E8D',
     brightPink: '#FF408C',
-    teal: '#50E3C2',
+    teal: '#0fe0af',
 
     blue: '#2C8DBA',
     lightBlue: '#30CFF7',

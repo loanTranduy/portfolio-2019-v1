@@ -75,7 +75,6 @@ export const Ul = styled.div`
             }
             &:hover,&.active, &:focus{
             img{
-                //transform: translateY(-50%) scale(.9);
                 color: #1DAE8D;
             }
           }
@@ -85,7 +84,6 @@ export const Ul = styled.div`
         a{
           border: 3px solid ${colors.black};
           &:hover,&.active, &:focus{
-              //border: 3px solid ${colors.teal};
               background: transparent;
               ${Anime}{
                   background: ${colors.teal};
@@ -100,7 +98,6 @@ export const Ul = styled.div`
     li:nth-child(2) { 
         a{
             &:hover,&.active, &:focus{
-                //border: 3px solid #9013FE;
                 background: transparent;
                 ${Anime}{
                     background: ${colors.violet};
@@ -115,7 +112,6 @@ export const Ul = styled.div`
     li:nth-child(3){ 
         a{
           &:hover,&.active, &:focus{
-          //border: 3px solid #FEC350;
           background: transparent;
            ${Anime}{
             background: ${colors.yellow};
@@ -130,7 +126,6 @@ export const Ul = styled.div`
   li:nth-child(4){ 
     a{
       &:hover,&.active, &:focus{
-      //border: 3px solid #D52F66;
       background: transparent;
        ${Anime}{
         background: ${colors.pink};

@@ -7,7 +7,7 @@ export class BoxIconsWithLabelRow extends React.Component {
         softwareFrontEnd: SkillPropTypes,
     };
     render() {
-        const {softwareFrontEnd} = this.props;
+        const {softwareFrontEnd, toolTip} = this.props;
         return (
             <IconsLabelGrid
                 icon={softwareFrontEnd.icon}
@@ -16,6 +16,8 @@ export class BoxIconsWithLabelRow extends React.Component {
                 borderColor={softwareFrontEnd.borderColor}
                 textColor={softwareFrontEnd.textColor}
                 withColorBox
+                toolTip={toolTip}
+                withLabel={toolTip}
             />
         )
     }

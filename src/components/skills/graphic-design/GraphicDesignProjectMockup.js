@@ -135,6 +135,10 @@ export class GraphicDesignProjectMockup extends React.Component {
         });
     };
 
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    };
+
     render() {
         const{sideInfoWidth, mockups, backgroundColor, logo, backgroundImage, baselineColor} = this.props;
         const {clicked} = this.state;

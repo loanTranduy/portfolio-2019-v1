@@ -157,9 +157,11 @@ export class SkillsScreen extends React.Component {
             secondaryFontName,
             secondaryFont,
             font,
-            titleLink
+            titleLink,
+            toolTipforCommunication,
+            toolTipForTools,
+            toolTipForSoftware
         }= this.props;
-        console.log(this.state.theposition)
         return (
             <>
                 <SideInfos
@@ -183,6 +185,9 @@ export class SkillsScreen extends React.Component {
                     sixItems={sixItems}
                     titleLink={titleLink}
                     nosixItems={false}
+                    toolTipforCommunication={toolTipforCommunication}
+                    toolTipForTools={toolTipForTools}
+                    toolTipForSoftware={toolTipForSoftware}
                 />
                 {projects &&
                     <ProjectContainer sideInfoWidth={this.state.sideInfoWidth} navbarHeight={navbarHeight}>

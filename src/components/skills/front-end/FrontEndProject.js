@@ -50,7 +50,9 @@ export function FrontEndProject ({match}) {
 
                 backgroundColor={topic.background}
                 marginTop={topic.marginTop}
-
+                toolTipforCommunication
+                toolTipForTools
+                toolTipForSoftware
                 sixItems
             />
     )
