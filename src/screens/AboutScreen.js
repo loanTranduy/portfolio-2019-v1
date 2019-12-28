@@ -6,7 +6,7 @@ import {fontSize, lineHeight} from '../styles/default/Mixins';
 import {media} from '../styles/default/Mediaqueries';
 import {backgroundColors} from '../styles/default/Colors';
 import throttle from 'lodash.throttle';
-import cv from '../assets/pdf/TranDuy_Loan_cv_EN.pdf';
+import cv from '../assets/pdf/tran-duy-loan-cv-2019.pdf';
 
 export const Content = styled.div`
   padding: 100px 36px 150px 36px;
@@ -95,7 +95,6 @@ export class AboutScreen extends React.Component {
         };
         this.updateDimensions = throttle(this.updateDimensions, 500).bind(this);
     };
-
 
     updateDimensions() {
         if (window.innerWidth < 768) {

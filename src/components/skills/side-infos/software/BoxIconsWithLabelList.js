@@ -11,7 +11,11 @@ export class BoxIconsWithLabelList extends React.Component {
 
     render() {
         return this.props.softwaresFrontEnd.map((softwareFrontEnd, id) => (
-            <BoxIconsWithLabelRow key={id} softwareFrontEnd={softwareFrontEnd} toolTip={this.props.toolTip}/>
+            <BoxIconsWithLabelRow
+                key={id}
+                softwareFrontEnd={softwareFrontEnd}
+                toolTip={this.props.toolTip}
+            />
         ))
     }
 }

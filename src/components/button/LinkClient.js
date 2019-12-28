@@ -29,7 +29,7 @@ const LinkContainer = styled(({ title, main, ...props }) => <Link {...props} />)
       right:${props => props.main ? '16px' : 'auto'};
       transform: translate(${props => props.main ? 0 : '-50%'}, -50%);
       width: ${props => props.main ? 'auto' : '80%'};
-      height: ${props => props.main ? '60%' : 'auto'};
+      height: ${props => props.main ? '100%' : 'auto'};
     }
     
     p{

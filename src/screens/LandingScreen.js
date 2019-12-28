@@ -36,6 +36,7 @@ export const SectionLanding = styled(Section)`
 div > div > div:last-of-type > div >div:last-of-type{
   a{
     margin-bottom: 200px;
+    
   }
 }
 

@@ -15,11 +15,6 @@ export const LoadableFrontEndScreen = createLoadable(
     'FrontEndScreen'
 );
 
-export const LoadableContactScreen = createLoadable(
-    () => import(/* webpackChunkName: "ContactScreen" */ './screens/ContactScreen'),
-    'ContactScreen'
-);
-
 export const LoadableWorkScreen = createLoadable(
     () => import(/* webpackChunkName: "WorkScreen" */ './screens/WorkScreen'),
     'WorkScreen'

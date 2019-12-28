@@ -10,7 +10,7 @@ export class GraphicDesignScreen extends React.Component {
         return (
             <SkillsScreen
                 circleColor={skillsColors.front}
-                title="Grahic Designer"
+                title="Graphic Designer"
                 skills={Object.values(SkillGraphicDesigner)}
                 softwareTitle='Favorite Workflow'
                 software={Object.values(SoftwareGraphicDesigner)}

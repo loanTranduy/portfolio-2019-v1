@@ -29,7 +29,7 @@ export const ContentInside = styled.section`
   
   ${media.xl`
   &:before{
-    top: ${props => props.absolute ? -154 : -55}px;
+    top: ${props => props.absolute ? -154 : -65}px;
     }
     padding: ${props => props.marginTop ? '100px 48px 48px 48px' : '48px'};
     width: calc(100% - ${props => props.sideInfoWidth}px);

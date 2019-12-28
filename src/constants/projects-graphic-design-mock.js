@@ -184,14 +184,21 @@ import ps from '../assets/icons/software/ps.svg'
 import pr from '../assets/icons/software/pr.svg'
 import ai from '../assets/icons/software/ai.svg'
 
-import {backgroundColors, skillsColors, softwareColors, textColors} from '../styles/default/Colors';
+import {
+    backgroundColors, gradiantBlue, gradiantFront,
+    gradiantGaph, gradiantOrange,
+    gradiantWeb,
+    skillsColors,
+    softwareColors,
+    textColors
+} from '../styles/default/Colors';
 import slack from '../assets/icons/software/slack.svg'
 import freedcamp from '../assets/icons/software/freedcamp.svg'
 import agile from '../assets/icons/software/agile.svg'
 
 export const ProjectGraphicDesign = [
     {
-        coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
+        coverColor: gradiantGaph,
         col: '128%',
         portraitDesktop: true,
         portrait: true,
@@ -271,7 +278,7 @@ export const ProjectGraphicDesign = [
         nextSlug: '/work/graphic-design/hackages'
     },
     {
-        coverColor: "linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)",
+        coverColor: gradiantBlue,
         col: '60%',
         name: 'Hackages',
         skill: 'graphic-design',
@@ -287,7 +294,7 @@ export const ProjectGraphicDesign = [
             date: "2017 - 2018",
             description: "Rethinking, redesigning and improving the entire visual communication of the company.",
             tasks:[
-                'Stationary Design',
+                'Stationery Design',
                 'Event Visual support',
                 'Video Introduction',
                 'Templates creation for community managers'
@@ -459,7 +466,7 @@ export const ProjectGraphicDesign = [
         nextSlug: '/work/graphic-design/3d-side'
     },
     {
-        coverColor: "linear-gradient(-144deg, #64E4DE 0%, #248CBB 100%)",
+        coverColor: gradiantBlue,
         portraitDesktop: true,
         col: '90%',
         name: '3D Side',
@@ -581,7 +588,7 @@ export const ProjectGraphicDesign = [
         nextSlug: '/work/graphic-design/bhack-to-school'
     },
     {
-        coverColor: "linear-gradient(-180deg, #FFE998 0%, #FFEA00 100%)",
+        coverColor: gradiantWeb,
         portraitDesktop: true,
         col: '90%',
         name: 'Bhack to School',
@@ -598,8 +605,8 @@ export const ProjectGraphicDesign = [
             date: "2017 - 2018",
             description: "Bhack to School second edition is an 'Hackages' Sub brand. Two weeks full of hands-on advanced trainings on several programming languages adapted to your interests and given by local and international experts.",
             tasks:[
-                'Logo',
-                'Motion Design',
+                'Logo creation',
+                'Promotional Motion Design Creation',
                 'Social Media Communication'
             ],
             skillLinks:[],
@@ -683,7 +690,7 @@ export const ProjectGraphicDesign = [
             {
                 image: bhackToSchoolFacebook,
                 imageLow: bhackToSchoolFacebookLow,
-                imageAlt: 'Bhack to School Facebook promotion',
+                imageAlt: 'Bhack to School Facebook Promotion',
                 ratio: 'portrait',
                 ratioDesktop: 'portrait',
                 col: 6,
@@ -694,7 +701,7 @@ export const ProjectGraphicDesign = [
 
     },
     {
-        coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
+        coverColor: gradiantOrange,
         portraitDesktop: true,
         col: '90%',
         portrait: true,
@@ -768,7 +775,7 @@ export const ProjectGraphicDesign = [
                 image: vergerBioPackaging,
                 imageLow: vergerBioPackagingLow,
                 imageAlt: 'Le Verger Bio packaging',
-                ratio: 'rectangle',
+                ratio: 'longLandscape',
                 ratioDesktop: 'longLandscape',
                 col: 12,
             },
@@ -792,8 +799,9 @@ export const ProjectGraphicDesign = [
                 image: vergerBioCoopeningFlat,
                 imageLow: vergerBioCoopeningFlat,
                 imageAlt: 'Le Verger Bio coopening',
-                ratio: 'longLandscape',
+                ratio: 'portrait',
                 ratioDesktop: 'portrait',
+                portrait: true,
                 col: 6,
             },
             {
@@ -851,7 +859,7 @@ export const ProjectGraphicDesign = [
         nextSlug: '/work/graphic-design/hugeia'
     },
     {
-        coverColor: "linear-gradient(-180deg, #51ECBF 0%, #219388 100%)",
+        coverColor: gradiantFront,
         col: '50%',
         name: 'Hugeia',
         skill: 'graphic-design',
@@ -1080,7 +1088,7 @@ export const ProjectGraphicDesign = [
 
     },
     {
-        coverColor: "linear-gradient(-144deg, #64E4DE 0%, #248CBB 100%)",
+        coverColor: gradiantGaph,
         col: '50%',
         name: 'Bêta bondieu',
         skill: 'graphic-design',
@@ -1207,7 +1215,7 @@ export const ProjectGraphicDesign = [
                 image: bbdThankCard,
                 imageLow: bbdThankCardLow,
                 imageAlt: 'Beta Bondieu Thank card',
-                ratio: 'square',
+                ratio: 'panorama',
                 ratioDesktop: 'panorama',
                 col: 12,
             },
