@@ -1,5 +1,5 @@
 export const colors = {
-    white: 'red',
+    white: '#FFFFFF',
     whiteOpacity: 'rgba(255,255,255,0.4)',
     grey: '#F2F7FF',
     grey10: '#F3F4F4',
