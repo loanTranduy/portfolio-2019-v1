@@ -13,6 +13,7 @@ const BoxFlex = styled(Box)`
   overflow: hidden;
   max-height: 135px;
   img{
+    height: 70px;
     width: 72px;
   }
   
@@ -26,14 +27,14 @@ const BoxFlex = styled(Box)`
   `}
   
   ${media.lg`
-  width: 222px;
-  img{
-        width: 72px;
+    width: 222px;
+    img{
+       width: 72px;
     }
   `}
   
   ${media.xl`
-  width: 256px;
+    width: 256px;
   `}
 `
 

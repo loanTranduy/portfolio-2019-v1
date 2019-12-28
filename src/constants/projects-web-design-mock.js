@@ -46,17 +46,23 @@ import vdabSearch  from '../assets/images/project/vdab/screens/Search.png';
 import vdabManagment  from '../assets/images/project/vdab/screens/services-managment.png';
 import vdabManagmentSuccess  from '../assets/images/project/vdab/screens/sucess-services-managment.png';
 
-import vdabHomeLow  from '../assets/images/project/vdab/screens/home.png';
-import vdabErrorLow  from '../assets/images/project/vdab/screens/error.png';
-import vdabModalLow  from '../assets/images/project/vdab/screens/modal.png';
-import vdabRefundLow  from '../assets/images/project/vdab/screens/refund.png';
-import vdabSearchLow  from '../assets/images/project/vdab/screens/Search.png';
-import vdabManagmentLow  from '../assets/images/project/vdab/screens/services-managment.png';
-import vdabManagmentSuccessLow  from '../assets/images/project/vdab/screens/sucess-services-managment.png';
+import vdabHomeLow  from '../assets/images/project/vdab/screens-low/home.png';
+import vdabErrorLow  from '../assets/images/project/vdab/screens-low/error.png';
+import vdabModalLow  from '../assets/images/project/vdab/screens-low/modal.png';
+import vdabRefundLow  from '../assets/images/project/vdab/screens-low/refund.png';
+import vdabSearchLow  from '../assets/images/project/vdab/screens-low/Search.png';
+import vdabManagmentLow  from '../assets/images/project/vdab/screens-low/services-managment.png';
+import vdabManagmentSuccessLow  from '../assets/images/project/vdab/screens-low/sucess-services-managment.png';
 
 // ______________________________________________________________________________________________
 
-import {skillsColors, softwareColors, textColors, hackagesColors} from '../styles/default/Colors';
+import {
+    skillsColors,
+    softwareColors,
+    textColors,
+    hackagesColors,
+    gradiantFront, gradiantWeb
+} from '../styles/default/Colors';
 import slack from '../assets/icons/software/slack.svg'
 import freedcamp from '../assets/icons/software/freedcamp.svg'
 import agile from '../assets/icons/software/agile.svg'
@@ -67,25 +73,25 @@ import zeplin from '../assets/icons/software/zeplin.svg'
 
 // ______________________________________________________________________________________________
 
-import edenredStep01  from '../assets/images/project/edenred/01-declaration-type.jpg';
-import edenredStep02  from '../assets/images/project/edenred/02-declaration-user.jpg';
-import edenredStep03  from '../assets/images/project/edenred/03-declaration-orders.jpg';
-import edenredStep04  from '../assets/images/project/edenred/04-declaration-cheque.jpg';
-import edenredStep05  from '../assets/images/project/edenred/05-declaration-recap.jpg';
-import edenredStep06  from '../assets/images/project/edenred/06-confirmation-modal.jpg';
-import edenredStep07  from '../assets/images/project/edenred/07-confirmation-success.jpg';
-import edenredStep08  from '../assets/images/project/edenred/08-password.jpg';
-import edenredStep09  from '../assets/images/project/edenred/09-forgot-password.jpg';
+import edenredStep01  from '../assets/images/project/edenred/desktop/01-declaration-type.jpg';
+import edenredStep02  from '../assets/images/project/edenred/desktop/02-declaration-user.jpg';
+import edenredStep03  from '../assets/images/project/edenred/desktop/03-declaration-orders.jpg';
+import edenredStep04  from '../assets/images/project/edenred/desktop/04-declaration-cheque.jpg';
+import edenredStep05  from '../assets/images/project/edenred/desktop/05-declaration-recap.jpg';
+import edenredStep06  from '../assets/images/project/edenred/desktop/06-confirmation-modal.jpg';
+import edenredStep07  from '../assets/images/project/edenred/desktop/07-confirmation-success.jpg';
+import edenredStep08  from '../assets/images/project/edenred/desktop/08-password.jpg';
+import edenredStep09  from '../assets/images/project/edenred/desktop/09-forgot-password.jpg';
 
-import edenredStep01Low  from '../assets/images/project/edenred/01-declaration-type.jpg';
-import edenredStep02Low  from '../assets/images/project/edenred/02-declaration-user.jpg';
-import edenredStep03Low  from '../assets/images/project/edenred/03-declaration-orders.jpg';
-import edenredStep04Low  from '../assets/images/project/edenred/04-declaration-cheque.jpg';
-import edenredStep05Low  from '../assets/images/project/edenred/05-declaration-recap.jpg';
-import edenredStep06Low  from '../assets/images/project/edenred/06-confirmation-modal.jpg';
-import edenredStep07Low  from '../assets/images/project/edenred/07-confirmation-success.jpg';
-import edenredStep08Low  from '../assets/images/project/edenred/08-password.jpg';
-import edenredStep09Low  from '../assets/images/project/edenred/09-forgot-password.jpg';
+import edenredStep01Low  from '../assets/images/project/edenred/desktop-low/01-declaration-type.jpg';
+import edenredStep02Low  from '../assets/images/project/edenred/desktop-low/02-declaration-user.jpg';
+import edenredStep03Low  from '../assets/images/project/edenred/desktop-low/03-declaration-orders.jpg';
+import edenredStep04Low  from '../assets/images/project/edenred/desktop-low/04-declaration-cheque.jpg';
+import edenredStep05Low  from '../assets/images/project/edenred/desktop-low/05-declaration-recap.jpg';
+import edenredStep06Low  from '../assets/images/project/edenred/desktop-low/06-confirmation-modal.jpg';
+import edenredStep07Low  from '../assets/images/project/edenred/desktop-low/07-confirmation-success.jpg';
+import edenredStep08Low  from '../assets/images/project/edenred/desktop-low/08-password.jpg';
+import edenredStep09Low  from '../assets/images/project/edenred/desktop-low/09-forgot-password.jpg';
 
 // ______________________________________________________________________________________________
 import MarieJoVideo  from '../assets/images/project/marie-jo/design/home.mp4';
@@ -97,12 +103,12 @@ import MarieJoFilters  from '../assets/images/project/marie-jo/desktop/filters.p
 import MarieJoStore  from '../assets/images/project/marie-jo/desktop/store-locator.png';
 import MarieJoSignIn  from '../assets/images/project/marie-jo/desktop/sign-in.png';
 
-import MarieJoHomeLow  from '../assets/images/project/marie-jo/desktop/home.png';
-import MarieJoProductsListLow  from '../assets/images/project/marie-jo/desktop/products-list.png';
-import MarieJoProductDetailsLow  from '../assets/images/project/marie-jo/desktop/product-details.png';
-import MarieJoFiltersLow  from '../assets/images/project/marie-jo/desktop/filters.png';
-import MarieJoStoreLow  from '../assets/images/project/marie-jo/desktop/store-locator.png';
-import MarieJoSignInLow  from '../assets/images/project/marie-jo/desktop/sign-in.png';
+import MarieJoHomeLow  from '../assets/images/project/marie-jo/desktop-low/home.png';
+import MarieJoProductsListLow  from '../assets/images/project/marie-jo/desktop-low/products-list.png';
+import MarieJoProductDetailsLow  from '../assets/images/project/marie-jo/desktop-low/product-details.png';
+import MarieJoFiltersLow  from '../assets/images/project/marie-jo/desktop-low/filters.png';
+import MarieJoStoreLow  from '../assets/images/project/marie-jo/desktop-low/store-locator.png';
+import MarieJoSignInLow  from '../assets/images/project/marie-jo/desktop-low/sign-in.png';
 
 import MarieJoHomeMobile  from '../assets/images/project/marie-jo/mobile/home.png';
 import MarieJoProductsListMobile  from '../assets/images/project/marie-jo/mobile/products-list.png';
@@ -133,11 +139,11 @@ import PrimadonnaSubcategory from '../assets/images/project/primadonna/design/de
 import PrimadonnaProductsList from '../assets/images/project/primadonna/design/desktop/05-products-list.png';
 import PrimadonnaProductDetails from '../assets/images/project/primadonna/design/desktop/06-product-details.png';
 
-import PrimadonnaGridLow from '../assets/images/project/primadonna/design/desktop/01-grid.png';
-import PrimadonnaHomeLow from '../assets/images/project/primadonna/design/desktop/02-home.png';
-import PrimadonnaSubcategoryLow from '../assets/images/project/primadonna/design/desktop/04-subcategory.png';
-import PrimadonnaProductsListLow from '../assets/images/project/primadonna/design/desktop/05-products-list.png';
-import PrimadonnaProductDetailsLow from '../assets/images/project/primadonna/design/desktop/06-product-details.png';
+import PrimadonnaGridLow from '../assets/images/project/primadonna/design/desktop-low/01-grid.png';
+import PrimadonnaHomeLow from '../assets/images/project/primadonna/design/desktop-low/02-home.png';
+import PrimadonnaSubcategoryLow from '../assets/images/project/primadonna/design/desktop-low/04-subcategory.png';
+import PrimadonnaProductsListLow from '../assets/images/project/primadonna/design/desktop-low/05-products-list.png';
+import PrimadonnaProductDetailsLow from '../assets/images/project/primadonna/design/desktop-low/06-product-details.png';
 
 import PrimadonnaGridMobile from '../assets/images/project/primadonna/design/mobile/01-grid.png';
 import PrimadonnaHomeMobile from '../assets/images/project/primadonna/design/mobile/02-home.png';
@@ -157,7 +163,7 @@ export const ProjectWebDesign = [
     {
         website: 'https://us-en.mariejo.com/',
         logo: marieJoLogo,
-        coverColor: "linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)",
+        coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
         col: '123%',
         image: marieJoCover,
         skill: 'web-design',
@@ -283,7 +289,7 @@ export const ProjectWebDesign = [
     },
     {
         logo: hackagesLogo,
-        coverColor: "linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)",
+        coverColor: gradiantWeb,
         col: '58%',
         image: hackagesCover,
         skill: 'web-design',
@@ -459,8 +465,8 @@ export const ProjectWebDesign = [
         nextSlug: '/work/web-design/vdab'
     },
     {
+        coverColor: gradiantWeb,
         logo: primadonnaLogo,
-        coverColor: "linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)",
         col: '123%',
         image: primadonnaCover,
         skill: 'web-design',
@@ -596,9 +602,9 @@ export const ProjectWebDesign = [
         nextSlug: '/work/web-design/marie-jo'
     },
     {
+        coverColor: "linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)",
         website:"https://www.vdab.be/",
         logo: vdabLogo,
-        coverColor: "linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)",
         col: '123%',
         image: vdabCover,
         skill: 'web-design',
@@ -688,9 +694,9 @@ export const ProjectWebDesign = [
         nextSlug: '/work/web-design/edenred'
     },
     {
+        coverColor: gradiantFront,
         website: "https://www.myedenred.fr/",
         logo: edenredLogo,
-        coverColor: "linear-gradient(-49deg,#188DF2 -9%,#00CCBE 100%)",
         col: '123%',
         image: edenredCover,
         skill: 'web-design',

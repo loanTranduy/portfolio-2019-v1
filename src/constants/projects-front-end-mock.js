@@ -40,6 +40,8 @@ import hackagesUserProfileLow  from '../assets/images/project/hackages/screens/l
 import hackagesPaymentLow  from '../assets/images/project/hackages/screens/low-quality/13-payment-desktop.png';
 import hackagesNatificationsLow  from '../assets/images/project/hackages/screens/low-quality/14-notifications-desktop.png';
 
+// ______________________________________________________________________________________________
+
 import PrimadonnaHome  from '../assets/images/project/primadonna/desktop/home.png';
 import PrimadonnaProductsList  from '../assets/images/project/primadonna/desktop/products-list.png';
 import PrimadonnaProductDetails  from '../assets/images/project/primadonna/desktop/product-details-1400.png';
@@ -48,13 +50,13 @@ import PrimadonnaStore  from '../assets/images/project/primadonna/desktop/store-
 import PrimadonnaSignIn  from '../assets/images/project/primadonna/desktop/sign-in.png';
 import PrimadonnaPerfectFit  from '../assets/images/project/primadonna/desktop/perfect-fit.png';
 
-import PrimadonnaHomeLow  from '../assets/images/project/primadonna/desktop/home.png';
-import PrimadonnaProductsListLow  from '../assets/images/project/primadonna/desktop/products-list.png';
-import PrimadonnaProductDetailsLow  from '../assets/images/project/primadonna/desktop/product-details-1400.png';
-import PrimadonnaFiltersLow  from '../assets/images/project/primadonna/desktop/filters.png';
-import PrimadonnaStoreLow  from '../assets/images/project/primadonna/desktop/store-locator-1400.png';
-import PrimadonnaSignInLow  from '../assets/images/project/primadonna/desktop/sign-in.png';
-import PrimadonnaPerfectFitLow  from '../assets/images/project/primadonna/desktop/perfect-fit.png';
+import PrimadonnaHomeLow  from '../assets/images/project/primadonna/desktop-low/home.png';
+import PrimadonnaProductsListLow  from '../assets/images/project/primadonna/desktop-low/products-list.png';
+import PrimadonnaProductDetailsLow  from '../assets/images/project/primadonna/desktop-low/product-details-1400.png';
+import PrimadonnaFiltersLow  from '../assets/images/project/primadonna/desktop-low/filters.png';
+import PrimadonnaStoreLow  from '../assets/images/project/primadonna/desktop-low/store-locator-1400.png';
+import PrimadonnaSignInLow  from '../assets/images/project/primadonna/desktop-low/sign-in.png';
+import PrimadonnaPerfectFitLow  from '../assets/images/project/primadonna/desktop-low/perfect-fit.png';
 
 import PrimadonnaHomeMobile  from '../assets/images/project/primadonna/mobile/home.png';
 import PrimadonnaProductsListMobile  from '../assets/images/project/primadonna/mobile/products-list.png';
@@ -73,12 +75,12 @@ import MarieJoFilters  from '../assets/images/project/marie-jo/desktop/filters.p
 import MarieJoStore  from '../assets/images/project/marie-jo/desktop/store-locator.png';
 import MarieJoSignIn  from '../assets/images/project/marie-jo/desktop/sign-in.png';
 
-import MarieJoHomeLow  from '../assets/images/project/marie-jo/desktop/home.png';
-import MarieJoProductsListLow  from '../assets/images/project/marie-jo/desktop/products-list.png';
-import MarieJoProductDetailsLow  from '../assets/images/project/marie-jo/desktop/product-details.png';
-import MarieJoFiltersLow  from '../assets/images/project/marie-jo/desktop/filters.png';
-import MarieJoStoreLow  from '../assets/images/project/marie-jo/desktop/store-locator.png';
-import MarieJoSignInLow  from '../assets/images/project/marie-jo/desktop/sign-in.png';
+import MarieJoHomeLow  from '../assets/images/project/marie-jo/desktop-low/home.png';
+import MarieJoProductsListLow  from '../assets/images/project/marie-jo/desktop-low/products-list.png';
+import MarieJoProductDetailsLow  from '../assets/images/project/marie-jo/desktop-low/product-details.png';
+import MarieJoFiltersLow  from '../assets/images/project/marie-jo/desktop-low/filters.png';
+import MarieJoStoreLow  from '../assets/images/project/marie-jo/desktop-low/store-locator.png';
+import MarieJoSignInLow  from '../assets/images/project/marie-jo/desktop-low/sign-in.png';
 
 import MarieJoHomeMobile  from '../assets/images/project/marie-jo/mobile/home.png';
 import MarieJoProductsListMobile  from '../assets/images/project/marie-jo/mobile/products-list.png';
@@ -97,35 +99,35 @@ import vdabSearch  from '../assets/images/project/vdab/screens/Search.png';
 import vdabManagment  from '../assets/images/project/vdab/screens/services-managment.png';
 import vdabManagmentSuccess  from '../assets/images/project/vdab/screens/sucess-services-managment.png';
 
-import vdabHomeLow  from '../assets/images/project/vdab/screens/home.png';
-import vdabErrorLow  from '../assets/images/project/vdab/screens/error.png';
-import vdabModalLow  from '../assets/images/project/vdab/screens/modal.png';
-import vdabRefundLow  from '../assets/images/project/vdab/screens/refund.png';
-import vdabSearchLow  from '../assets/images/project/vdab/screens/Search.png';
-import vdabManagmentLow  from '../assets/images/project/vdab/screens/services-managment.png';
-import vdabManagmentSuccessLow  from '../assets/images/project/vdab/screens/sucess-services-managment.png';
+import vdabHomeLow  from '../assets/images/project/vdab/screens-low/home.png';
+import vdabErrorLow  from '../assets/images/project/vdab/screens-low/error.png';
+import vdabModalLow  from '../assets/images/project/vdab/screens-low/modal.png';
+import vdabRefundLow  from '../assets/images/project/vdab/screens-low/refund.png';
+import vdabSearchLow  from '../assets/images/project/vdab/screens-low/Search.png';
+import vdabManagmentLow  from '../assets/images/project/vdab/screens-low/services-managment.png';
+import vdabManagmentSuccessLow  from '../assets/images/project/vdab/screens-low/sucess-services-managment.png';
 
 // ______________________________________________________________________________________________
 
-import edenredStep01  from '../assets/images/project/edenred/01-declaration-type.jpg';
-import edenredStep02  from '../assets/images/project/edenred/02-declaration-user.jpg';
-import edenredStep03  from '../assets/images/project/edenred/03-declaration-orders.jpg';
-import edenredStep04  from '../assets/images/project/edenred/04-declaration-cheque.jpg';
-import edenredStep05  from '../assets/images/project/edenred/05-declaration-recap.jpg';
-import edenredStep06  from '../assets/images/project/edenred/06-confirmation-modal.jpg';
-import edenredStep07  from '../assets/images/project/edenred/07-confirmation-success.jpg';
-import edenredStep08  from '../assets/images/project/edenred/08-password.jpg';
-import edenredStep09  from '../assets/images/project/edenred/09-forgot-password.jpg';
+import edenredStep01  from '../assets/images/project/edenred/desktop/01-declaration-type.jpg';
+import edenredStep02  from '../assets/images/project/edenred/desktop/02-declaration-user.jpg';
+import edenredStep03  from '../assets/images/project/edenred/desktop/03-declaration-orders.jpg';
+import edenredStep04  from '../assets/images/project/edenred/desktop/04-declaration-cheque.jpg';
+import edenredStep05  from '../assets/images/project/edenred/desktop/05-declaration-recap.jpg';
+import edenredStep06  from '../assets/images/project/edenred/desktop/06-confirmation-modal.jpg';
+import edenredStep07  from '../assets/images/project/edenred/desktop/07-confirmation-success.jpg';
+import edenredStep08  from '../assets/images/project/edenred/desktop/08-password.jpg';
+import edenredStep09  from '../assets/images/project/edenred/desktop/09-forgot-password.jpg';
 
-import edenredStep01Low  from '../assets/images/project/edenred/01-declaration-type.jpg';
-import edenredStep02Low  from '../assets/images/project/edenred/02-declaration-user.jpg';
-import edenredStep03Low  from '../assets/images/project/edenred/03-declaration-orders.jpg';
-import edenredStep04Low  from '../assets/images/project/edenred/04-declaration-cheque.jpg';
-import edenredStep05Low  from '../assets/images/project/edenred/05-declaration-recap.jpg';
-import edenredStep06Low  from '../assets/images/project/edenred/06-confirmation-modal.jpg';
-import edenredStep07Low  from '../assets/images/project/edenred/07-confirmation-success.jpg';
-import edenredStep08Low  from '../assets/images/project/edenred/08-password.jpg';
-import edenredStep09Low  from '../assets/images/project/edenred/09-forgot-password.jpg';
+import edenredStep01Low  from '../assets/images/project/edenred/desktop-low/01-declaration-type.jpg';
+import edenredStep02Low  from '../assets/images/project/edenred/desktop-low/02-declaration-user.jpg';
+import edenredStep03Low  from '../assets/images/project/edenred/desktop-low/03-declaration-orders.jpg';
+import edenredStep04Low  from '../assets/images/project/edenred/desktop-low/04-declaration-cheque.jpg';
+import edenredStep05Low  from '../assets/images/project/edenred/desktop-low/05-declaration-recap.jpg';
+import edenredStep06Low  from '../assets/images/project/edenred/desktop-low/06-confirmation-modal.jpg';
+import edenredStep07Low  from '../assets/images/project/edenred/desktop-low/07-confirmation-success.jpg';
+import edenredStep08Low  from '../assets/images/project/edenred/desktop-low/08-password.jpg';
+import edenredStep09Low  from '../assets/images/project/edenred/desktop-low/09-forgot-password.jpg';
 // ______________________________________________________________________________________________
 
 
@@ -147,12 +149,14 @@ import agile from '../assets/icons/software/agile.svg'
 import jquery from '../assets/icons/software/jquery-1.svg'
 import handlebars from '../assets/icons/software/handlebars-1.svg'
 import bigCommerce from '../assets/icons/software/bigcommerce-1.svg'
+import html from '../assets/icons/software/html.svg'
 
 // ______________________________________________________________________________________________
 
 
 export const ProjectFrontEnd = [
     {
+        website: 'https://us-en.mariejo.com/',
         portraitDesktop: true,
         coverColor: "linear-gradient(280deg,#F08FF2 0%,#F46183 100%)",
         col: '123%',
@@ -164,11 +168,11 @@ export const ProjectFrontEnd = [
         position:{
             name: "Front-end Developer",
             date: "2018 - 2019",
-            description: "Implement an e-commerce using BigCommerce ",
+            description: "Marie Jo is one of Van de Velde-owned brand, a dutch underclothes and luxurious lingerie group. I joined the front-end development team to create an e-shop template that will be used for all there brands.",
             tasks:[
-                'Current website Maintenance',
-                'New platform implementation',
-                'Component Storybook creation',
+                'Working closely with designers, implementing pixel perfect web designs.',
+                'Monitoring website performance and rectifying front-end-related issues.',
+                'Creating a component storybook',
             ],
             skillLinks:[
                 {
@@ -179,7 +183,7 @@ export const ProjectFrontEnd = [
             ],
             softwares:[
                 {
-                    id: 2,
+                    id: 0,
                     label: 'BigCommerce',
                     icon: bigCommerce,
                     backgroundColor: softwareColors.bigCommerce,
@@ -187,7 +191,7 @@ export const ProjectFrontEnd = [
                     textColor: textColors.secondary
                 },
                 {
-                    id: 2,
+                    id: 1,
                     label: 'Handlebar',
                     icon: handlebars,
                     backgroundColor: softwareColors.agile,
@@ -202,8 +206,18 @@ export const ProjectFrontEnd = [
                     borderColor: softwareColors.freedcamp,
                     textColor: textColors.primary
                 },
+            ],
+            softwaresV2:[
                 {
                     id: 0,
+                    label: 'BigCommerce',
+                    icon: bigCommerce,
+                    backgroundColor: softwareColors.bigCommerce,
+                    borderColor: softwareColors.bigCommerce,
+                    textColor: textColors.secondary
+                },
+                {
+                    id: 1,
                     label: 'React',
                     icon: react,
                     backgroundColor: softwareColors.react,
@@ -211,7 +225,7 @@ export const ProjectFrontEnd = [
                     textColor: textColors.secondary
                 },
                 {
-                    id: 1,
+                    id: 2,
                     label: 'Styled component',
                     icon: styled,
                     backgroundColor: softwareColors.styledComponent,
@@ -220,7 +234,7 @@ export const ProjectFrontEnd = [
 
                 },
                 {
-                    id: 2,
+                    id: 3,
                     label: 'Sass',
                     icon: sass,
                     backgroundColor: softwareColors.sass,
@@ -320,11 +334,12 @@ export const ProjectFrontEnd = [
         position:{
             name: "Interactive Designer",
             date: "2017 - 2018",
-            description: "Building a community-based learning platform aimed at beginners and professional. ",
+            description: "Building a community-based learning platform aimed at beginners and professionals. ",
             tasks:[
-                'Current website Maintenance',
-                'New platform implementation',
-                'Component Storybook creation',
+                'Monitoring current website performance and rectifying front-end-related issues.',
+                'Implementing web design and development principles to build stable software.',
+                'Creating Component storybook',
+                'Documenting bug reports, tickets, and any code changes.'
             ],
             skillLinks:[
                 {
@@ -365,6 +380,7 @@ export const ProjectFrontEnd = [
                     textColor: textColors.secondary
                 }
             ],
+            softwaresV2:[],
             managment:[
                 {
                     id: 0,
@@ -496,6 +512,7 @@ export const ProjectFrontEnd = [
         nextSlug: '/work/front-end/primadonna'
     },
     {
+        website: 'https://us-en.primadonna.com/',
         portraitDesktop: true,
         coverColor: "linear-gradient(280deg,#FAD961 0%,#F76B1C 100%)",
         col: '123%',
@@ -507,11 +524,12 @@ export const ProjectFrontEnd = [
         position:{
             name: "Front-end Developer",
             date: "2018 - 2019",
-            description: "Implement an e-commerce using BigCommerce ",
+            description: "Primadonna is one of VandeVelde-owned brand, a deutch underclothes and luxurious lingerie group. I joined the front-end development team to create an e-shop template that will be used for all there brands.",
             tasks:[
-                'Current website Maintenance',
-                'New platform implementation',
-                'Component Storybook creation',
+                'Working closely with designers, implementing pixel perfect web designs.',
+                'Monitoring current website performance and rectifying front-end-related issues.',
+                'Creating a component storybook',
+                'Collaborating closely with the team to support projects during all phases of delivery.',
             ],
             skillLinks:[
                 {
@@ -522,7 +540,7 @@ export const ProjectFrontEnd = [
             ],
             softwares:[
                 {
-                    id: 2,
+                    id: 0,
                     label: 'BigCommerce',
                     icon: bigCommerce,
                     backgroundColor: softwareColors.bigCommerce,
@@ -530,7 +548,7 @@ export const ProjectFrontEnd = [
                     textColor: textColors.secondary
                 },
                 {
-                    id: 2,
+                    id: 1,
                     label: 'Handlebar',
                     icon: handlebars,
                     backgroundColor: softwareColors.agile,
@@ -539,14 +557,24 @@ export const ProjectFrontEnd = [
                 },
                 {
                     id: 2,
-                    label: 'jQuery',
+                    label: 'JQuery',
                     icon: jquery,
                     backgroundColor: 'transparent',
                     borderColor: softwareColors.freedcamp,
                     textColor: textColors.primary
                 },
+            ],
+            softwaresV2:[
                 {
                     id: 0,
+                    label: 'BigCommerce',
+                    icon: bigCommerce,
+                    backgroundColor: softwareColors.bigCommerce,
+                    borderColor: softwareColors.bigCommerce,
+                    textColor: textColors.secondary
+                },
+                {
+                    id: 1,
                     label: 'React',
                     icon: react,
                     backgroundColor: softwareColors.react,
@@ -554,7 +582,7 @@ export const ProjectFrontEnd = [
                     textColor: textColors.secondary
                 },
                 {
-                    id: 1,
+                    id: 2,
                     label: 'Styled component',
                     icon: styled,
                     backgroundColor: softwareColors.styledComponent,
@@ -563,7 +591,7 @@ export const ProjectFrontEnd = [
 
                 },
                 {
-                    id: 2,
+                    id: 3,
                     label: 'Sass',
                     icon: sass,
                     backgroundColor: softwareColors.sass,
@@ -669,14 +697,15 @@ export const ProjectFrontEnd = [
         slug: 'vdab',
         id: 3,
         name: 'VDAB',
+        website:"https://www.vdab.be/",
         position:{
             name: "Interactive Designer",
             date: "2017 - 2018",
-            description: "Building a community-based learning platform aimed at beginners and professional. ",
+            description: "VDAB is a Belgian public service whose competence is employment and professional training. I had to implement new screens for there back office tool aimed at Job seekers and employers.",
             tasks:[
-                'Current website Maintenance',
-                'New platform implementation',
-                'Component Storybook creation',
+                'Monitoring website performance and rectifying front-end-related issues.\n',
+                'Implementing web design and development principles to build stable software using existing style',
+                'Testing to identify bugs and technical issues before and after deploying.',
             ],
             skillLinks:[
                 {
@@ -685,23 +714,15 @@ export const ProjectFrontEnd = [
                     color: skillsColors.web
                 }
             ],
+            softwaresV2:[],
             softwares:[
                 {
                     id: 0,
-                    label: 'React',
-                    icon: react,
-                    backgroundColor: softwareColors.react,
-                    borderColor: softwareColors.react,
+                    label: 'Html',
+                    icon: html,
+                    backgroundColor: softwareColors.agile,
+                    borderColor: softwareColors.agile,
                     textColor: textColors.secondary
-                },
-                {
-                    id: 1,
-                    label: 'Styled Component',
-                    icon: styled,
-                    backgroundColor: softwareColors.styledComponent,
-                    borderColor: softwareColors.styledComponent,
-                    textColor: textColors.primary
-
                 },
                 {
                     id: 2,
@@ -710,7 +731,15 @@ export const ProjectFrontEnd = [
                     backgroundColor: softwareColors.sass,
                     borderColor: softwareColors.sass,
                     textColor: textColors.secondary
-                }
+                },
+                {
+                    id: 2,
+                    label: 'JQuery',
+                    icon: jquery,
+                    backgroundColor: 'transparent',
+                    borderColor: softwareColors.freedcamp,
+                    textColor: textColors.primary
+                },
             ],
             managment:[
                 {
@@ -720,24 +749,7 @@ export const ProjectFrontEnd = [
                     backgroundColor: softwareColors.agile,
                     borderColor: softwareColors.agile,
                     textColor: textColors.secondary
-                },
-                {
-                    id: 1,
-                    label: 'FreedCamp',
-                    icon: freedcamp,
-                    backgroundColor: 'transparent',
-                    borderColor: softwareColors.freedcamp,
-                    textColor: textColors.primary
-                },
-                {
-                    id: 2,
-                    label: 'Slack',
-                    icon: slack,
-                    backgroundColor: softwareColors.slack,
-                    borderColor: softwareColors.slack,
-                    textColor: textColors.secondary
-
-                },
+                }
             ]
         },
         background: 'linear-gradient(-180deg, #00B7E5 0%, #0081C7 100%)',
@@ -793,6 +805,7 @@ export const ProjectFrontEnd = [
         nextSlug: '/work/front-end/edenred'
     },
     {
+        website: "https://www.myedenred.fr/",
         marginTop:true,
         coverColor: gradiantFront,
         col: '123%',
@@ -804,11 +817,10 @@ export const ProjectFrontEnd = [
         position:{
             name: "Front-end Developer",
             date: "2018 - 2019",
-            description: "Edenred, a French multinational and the inventor of the Ticket Restaurant® meal voucher is today the world leader in Employee Benefits and a major player in Fleet and Mobility solutions, providing transactional solutions for companies, employees and merchants.",
+            description: "Edenred, a French multinational and the inventor of the Ticket Restaurant® meal voucher is today the world leader in Employee Benefits. I had to develop new screens for there back office tool.",
             tasks:[
-                'Current website Maintenance',
-                'New platform implementation',
-                'Component Storybook creation',
+                'Monitoring website performance and rectifying front-end-related issues.\n',
+                'Implementing web design and development principles to build stable software using existing style',
             ],
             skillLinks:[
                 {
@@ -817,47 +829,15 @@ export const ProjectFrontEnd = [
                     color: skillsColors.web
                 }
             ],
+            softwaresV2:[],
             softwares:[
                 {
-                    id: 2,
-                    label: 'BigCommerce',
-                    icon: bigCommerce,
-                    backgroundColor: softwareColors.bigCommerce,
-                    borderColor: softwareColors.bigCommerce,
-                    textColor: textColors.secondary
-                },
-                {
-                    id: 2,
-                    label: 'Handlebars',
-                    icon: handlebars,
+                    id: 0,
+                    label: 'Html',
+                    icon: html,
                     backgroundColor: softwareColors.agile,
                     borderColor: softwareColors.agile,
                     textColor: textColors.secondary
-                },
-                {
-                    id: 2,
-                    label: 'Jquery',
-                    icon: jquery,
-                    backgroundColor: 'transparent',
-                    borderColor: softwareColors.freedcamp,
-                    textColor: textColors.primary
-                },
-                {
-                    id: 0,
-                    label: 'React',
-                    icon: react,
-                    backgroundColor: softwareColors.react,
-                    borderColor: softwareColors.react,
-                    textColor: textColors.secondary
-                },
-                {
-                    id: 1,
-                    label: 'Styled component',
-                    icon: styled,
-                    backgroundColor: softwareColors.styledComponent,
-                    borderColor: softwareColors.styledComponent,
-                    textColor: textColors.primary
-
                 },
                 {
                     id: 2,
@@ -866,7 +846,15 @@ export const ProjectFrontEnd = [
                     backgroundColor: softwareColors.sass,
                     borderColor: softwareColors.sass,
                     textColor: textColors.secondary
-                }
+                },
+                {
+                    id: 2,
+                    label: 'JQuery',
+                    icon: jquery,
+                    backgroundColor: 'transparent',
+                    borderColor: softwareColors.freedcamp,
+                    textColor: textColors.primary
+                },
             ],
             managment:[
                 {
@@ -876,24 +864,7 @@ export const ProjectFrontEnd = [
                     backgroundColor: softwareColors.agile,
                     borderColor: softwareColors.agile,
                     textColor: textColors.secondary
-                },
-                {
-                    id: 1,
-                    label: 'FreedCamp',
-                    icon: freedcamp,
-                    backgroundColor: 'transparent',
-                    borderColor: softwareColors.freedcamp,
-                    textColor: textColors.primary
-                },
-                {
-                    id: 2,
-                    label: 'Slack',
-                    icon: slack,
-                    backgroundColor: softwareColors.slack,
-                    borderColor: softwareColors.slack,
-                    textColor: textColors.secondary
-
-                },
+                }
             ]
         },
         background: 'linear-gradient(-180deg, #00B7E5 0%, #0081C7 100%)',

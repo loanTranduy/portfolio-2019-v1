@@ -20,6 +20,7 @@ export function FrontEndProject ({match}) {
 
     return (
             <SkillsScreen
+                titleLink={topic.website}
                 logo={topic.logo}
                 positionDate={topic.position.date}
                 position={topic.position.name}
@@ -34,7 +35,7 @@ export function FrontEndProject ({match}) {
                 communicationSoftware={Object.values(topic.position.managment)}
 
                 softwareUsed={Object.values(topic.position.softwares)}
-
+                softwareUsedV2={Object.values(topic.position.softwaresV2)}
                 name={topic.name}
                 cover={topic.desktop[screenId]}
                 coverMobile={topic.mobile[screenId]}

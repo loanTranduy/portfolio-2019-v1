@@ -25,8 +25,8 @@ const LinkContainer = styled(({ small, longText, portrait, noRadiusTopLeft,noRad
     h2{
       letter-spacing: .5px;
       text-align: center;
-      ${fontSize(50)}; portraitDesktop,
-      ${lineHeight(72)};
+      ${fontSize(32)};
+      ${lineHeight(48)};
       position: absolute;
       color: black;
       top: 50%;
@@ -61,10 +61,8 @@ const LinkContainer = styled(({ small, longText, portrait, noRadiusTopLeft,noRad
     padding-top: ${props => props.col};
     overflow: hidden;
     width: 100%;
-    left: 50%;
     border-radius: 40px;
     background: white;
-    transform: translateX(-50%);
     position: relative;
     
     div{
@@ -121,14 +119,14 @@ const LinkContainer = styled(({ small, longText, portrait, noRadiusTopLeft,noRad
     
     h2{
       opacity: 0;
-      ${props => props.longText ? fontSize(32) : fontSize(40)};
-      ${props => props.longText ? lineHeight(44) : lineHeight(55)};
+      ${props => props.longText ? fontSize(24) : fontSize(32)};
+      ${props => props.longText ? lineHeight(32) : lineHeight(48)};
       transition: opacity .3s ease-in-out .1S;
     }
   `}
   
   ${media.xl`
-  padding-top: ${props => props.colxl};
+      padding-top: ${props => props.colxl};
   `}
 `
 

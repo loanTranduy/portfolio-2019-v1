@@ -9,6 +9,7 @@ import {WebDesignProjectMockup} from '../components/skills/web-design/WebDesignP
 
 export const ProjectContainer = styled.div`
   display: grid;
+  display:-ms-grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 32px;
@@ -57,13 +58,6 @@ export const ProjectContainer = styled.div`
       border-bottom-left-radius: 0px;
       background-size: auto 100%;
     }
-    
-    // transition: all .3S ease-in-out;
-    // &:hover{
-    //     a:not(:hover) {
-    //       filter: grayscale(100%);
-    //     }
-    // }
   `}
   
 ${media.xl`
@@ -76,7 +70,6 @@ export class SkillsScreen extends React.Component {
         super(props);
         this.state = {
             sideInfoWidth: 0,
-            theposition: window.pageYOffset
         };
     }
 
@@ -84,21 +77,6 @@ export class SkillsScreen extends React.Component {
         this.setState({
             sideInfoWidth: childData})
     };
-
-    listenToScroll = () => {
-        const winScroll =
-            document.body.scrollTop || document.documentElement.scrollTop
-
-        const height =
-            document.documentElement.scrollHeight -
-            document.documentElement.clientHeight
-
-        const scrolled = winScroll / height
-
-        this.setState({
-            theposition: scrolled,
-        })
-    }
 
     componentDidMount() {
         window.addEventListener('scroll', this.listenToScroll)
@@ -160,11 +138,13 @@ export class SkillsScreen extends React.Component {
             titleLink,
             toolTipforCommunication,
             toolTipForTools,
-            toolTipForSoftware
+            toolTipForSoftware,
+            softwareUsedV2
         }= this.props;
         return (
             <>
                 <SideInfos
+                    softwareUsedV2={softwareUsedV2}
                     skillLinks={skillLinks}
                     position={position}
                     positionDate={positionDate}

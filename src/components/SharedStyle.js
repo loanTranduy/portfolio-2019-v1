@@ -11,6 +11,7 @@ export const TheContainer = styled.div`
 --bodySize: calc(100vh - (${props => (props.navbarHeight)}px + calc(${props => (props.strokeHeight)}px * 2)) - ${props => (props.sideNavbarHeight)}px);
 --leftMarginWidth: calc( ${props => (props.sideNavbarWidth)}px + ${props => (props.strokeHeight)}px);
 --totalStrokeSize: calc(${props => (props.strokeHeight)}px + 26px);
+
   max-height: ${props => props.scrollBlockerActif ? 'var(--bodySize)' : 'auto'};
   position: relative;
   min-height: var(--bodySize);
@@ -21,6 +22,7 @@ export const TheContainer = styled.div`
     top: var(--topMarginHeight);
     height: var(--bodySize);
   }
+  
   ${media.md`
   max-height: var(--bodySize);
   --bodySize: calc(100vh - (${props => (props.navbarHeight)}px + ${props => (props.strokeHeight)}px + var(--totalStrokeSize)));

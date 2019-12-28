@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Text = styled.p`
   bottom: 0;
-  ${props => fontSize(props.SizeFr ? 70 :(props.SizeGr ? 83 : 94))};
+  ${props => fontSize(props.SizeFr ? 56 :(props.SizeGr ? 64 : 80))};
   ${props => lineHeight(props.SizeFr ? 50 : (props.SizeGr ? 60 : (props.SizeCn ? 87 : 66)))};
   ${lineHeight(100)};
   font-weight: 900;

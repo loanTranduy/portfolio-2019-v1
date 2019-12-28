@@ -100,7 +100,6 @@ const Intro = styled.p`
 
 const Wrap = styled.div`
   max-width: 350px;
- 
 `
 
 export class IntroBox extends React.Component {
@@ -112,7 +111,7 @@ export class IntroBox extends React.Component {
                     <InputSound/>
                 </Name>
                 <Intro>I’m a Belgian Creative Developer traveling the world to be part of awesome new teams.</Intro>
-                <LinkWithIcon to="/about" icon={arrow} alt="go to about page">Learn more about me</LinkWithIcon>
+                <LinkWithIcon withIcon to="/about" icon={arrow} alt="go to about page">Learn more about me</LinkWithIcon>
             </Wrap>
         )
     }

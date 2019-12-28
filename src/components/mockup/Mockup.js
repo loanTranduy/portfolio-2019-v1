@@ -4,7 +4,7 @@ import {backgroundColors} from '../../styles/default/Colors';
 import {media} from '../../styles/default/Mediaqueries';
 
 const Mask = styled.div`
-    width: ${props => props.inGrid ? '100%' : props.device === 'mobile' ? '260px' : props.side ? '400px' : '80%'};
+    width: ${props => props.inGrid ? '100%' : props.device === 'mobile' ? '200px' : props.side ? '400px' : '80%'};
     position: relative;
     overflow-y: scroll;
     border-radius: 10px;

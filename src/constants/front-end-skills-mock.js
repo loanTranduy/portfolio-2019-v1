@@ -43,12 +43,12 @@ export const SkillFrontEnd = [
     },
     {
         id: 4,
-        label: 'Css Animation',
+        label: 'CSS Animation',
         icon: load
     },
     {
         id: 5,
-        label: 'Svg Icon',
+        label: 'SVG Icon',
         icon: svg
     },
 
@@ -66,7 +66,7 @@ export const SoftwareFrontEnd = [
     },
     {
         id: 1,
-        label: 'Styled component',
+        label: 'Styled Component',
         icon: styled,
         backgroundColor: softwareColors.styledComponent,
         borderColor: softwareColors.styledComponent,

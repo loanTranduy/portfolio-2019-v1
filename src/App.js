@@ -15,15 +15,14 @@ import {ContentText, SideName} from './screens/AboutScreen';
 import {SideInfo} from './components/skills/side-infos/SideInfos';
 import {ProjectContainer} from './screens/SkillsScreen';
 import {media} from './styles/default/Mediaqueries';
-import {BoxPageTransition, ShapeOverlays} from './components/loading/PageTransition';
 import {FrontEndProject} from './components/skills/front-end/FrontEndProject';
 import {WebDesignProject} from './components/skills/web-design/WebDesignProject';
 import {GraphicDesignProject} from './components/skills/graphic-design/GraphicDesignProject';
-import ScrollToTop from './components/loading/ScrollToTop';
 import {InjectFont} from './styles/default/Font';
 import {ContentInside} from './components/skills/front-end/FrontEndProjectMockup';
 import {ContentInside as ContentInsideGrap} from './components/skills/graphic-design/GraphicDesignProjectMockup';
 import {ContentInsideWeb} from './components/skills/web-design/WebDesignProjectMockup';
+import Loading from './components/loading/Loading';
 
 const timeout = 500;
 const timeoutHigh = 800;
@@ -110,15 +109,6 @@ const Page = styled.div`
       }
   }
   
-  ${BoxPageTransition} {
-      animation: ${({state}) => (state === "entered" ? 'test' : ' ' )} 1.5s ease-in-out;
-  }
-    
-  ${ShapeOverlays}{
-    path{
-      animation: ${({state}) => (state === "entered" ? 'testD' : ' ' )} 1s ease-in-out;
-    }
-  }
   
   ${SideName}{
     transition: all ${timeout}ms ease-in-out ;
@@ -156,16 +146,12 @@ const App = ({ location }) => {
         return (
             <Fragment>
                 <InjectFont/>
-                <ScrollToTop/>
-                {/*<LoadableLoader/>*/}
-                {/*<OrganicShape/>*/}
-                {/*<Percentage/>*/}
+                <Loading/>
             <Layout url={currentKey}>
                 <TransitionGroup component={null}>
                     <Transition key={currentKey} in={animate} timeout={timeout} appear>
                         {(state) => (
                         <Page state={state}>
-                            {/*<PageTransition/>*/}
                         <Switch location={location}>
                             <Route exact path="/" render={() => <LoadableLandingScreen navbarHeight={30} strokeHeight={5}/>}/>
                             <Route exact path="/about" render={() => <LoadableAboutScreen/>}/>

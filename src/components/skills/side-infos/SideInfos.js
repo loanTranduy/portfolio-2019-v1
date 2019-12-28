@@ -299,7 +299,7 @@ export class SideInfos extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            sideInfosVisible: true
+            sideInfosVisible: false
         };
         this.sideInfo = React.createRef();
         this.sendData = throttle(this.sendData, 500).bind(this);
@@ -339,7 +339,8 @@ export class SideInfos extends React.Component {
             sixItems,
             titleLink,
             toolTipForTools,
-            toolTipForSoftware
+            toolTipForSoftware,
+            softwareUsedV2
         }= this.props;
         return (
 
@@ -417,6 +418,7 @@ export class SideInfos extends React.Component {
                             {softwareUsed &&
                                 <BoxIconsWithLabel
                                     softwaresFrontEnd={softwareUsed}
+                                    softwaresFrontEndV2={softwareUsedV2}
                                     title='Tools'
                                     sixItems={sixItems}
                                     toolTip={toolTipForTools}
