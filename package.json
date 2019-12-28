@@ -51,5 +51,10 @@
     "babel-plugin-inline-react-svg": "^1.1.0",
     "copy-webpack-plugin": "^5.0.5",
     "react-app-rewired": "^2.1.5"
+  },
+  "devServer": {
+    "historyApiFallback": true,
+    "contentBase": "./",
+    "hot": true
   }
 }
