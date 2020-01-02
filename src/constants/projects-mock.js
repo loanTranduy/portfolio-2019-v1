@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 
-import btsGraphicDesignCover from '../assets/images/project/hackages/mockups/bts-logo.png';
-import hackagesGraphicDesignCover from '../assets/images/project/hackages/mockups/business-card-front-800.png';
-import vergerBioGraphicDesignCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.png';
-import btbdGraphicDesignCover from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/pattern-cover.svg';
+import btsGraphicDesignCover from '../assets/images/project/hackages/mockups/bts-logo.jpg';
+import hackagesGraphicDesignCover from '../assets/images/project/hackages/mockups/business-card-front-800.jpg';
+import vergerBioGraphicDesignCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.jpg';
+import btbdGraphicDesignCover from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/pattern-cover.jpg';
 import dSideGraphicDesignCover from '../assets/images/project/3d-side/3dside-poster.svg';
-import hugeiaTablier from '../assets/images/project/hugeia/mockups/tablier.png';
+import hugeiaTablier from '../assets/images/project/hugeia/mockups/tablier.jpg';
 import bftfPoster from '../assets/images/project/brussel-food-truck-festival/mockups/only-poster.jpg';
 
 import hackagesCoverFront from '../assets/images/project/hackages/hackages-cover.png';
