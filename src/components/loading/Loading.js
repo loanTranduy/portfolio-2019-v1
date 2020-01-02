@@ -16,7 +16,7 @@ const LoadingBox = styled.div`
     left: 0;
     right: 0;
     z-index: 9999;
-    animation: 1s collapse 4200ms ease-in-out;
+    animation: 1s collapse 4.2s ease-in-out;
     transform: translateY(0);
     
     @keyframes collapse {
@@ -153,24 +153,18 @@ export default class Loading extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            loading: undefined,
+            loading: true,
             done: undefined
         };
     }
 
     componentDidMount() {
         setTimeout(() => {
-            fetch("https://jsonplaceholder.typicode.com/posts")
-                .then(response => response.json())
-                .then(json => {
-                    setTimeout(() => {
-                        this.setState({ loading: true })
-                    }, 500);
-                    setTimeout(() => {
-                        this.setState({ done: true });
-                    }, 1500);
-                });
-        }, 4000);
+            this.setState({ done: true });
+        }, 5000);
+        setTimeout(() => {
+            this.setState({ loading: false });
+        }, 3000);
     }
 
     render() {
@@ -192,7 +186,7 @@ export default class Loading extends React.Component {
                                 </List>
                             </Name>
                             <Anime>
-                            {!this.state.loading ?
+                            {this.state.loading ?
                                     <h2>Loading...</h2>
                                 :
                                     <h2>Done</h2>
