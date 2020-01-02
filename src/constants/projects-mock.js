@@ -6,7 +6,7 @@ import vergerBioGraphicDesignCover from '../assets/images/project/verger-bio/moc
 import btbdGraphicDesignCover from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/pattern-cover.svg';
 import dSideGraphicDesignCover from '../assets/images/project/3d-side/3dside-poster.svg';
 import hugeiaTablier from '../assets/images/project/hugeia/mockups/tablier.png';
-import bftfPoster from '../assets/images/project/brussel-food-truck-festival/mockups/only-poster.png';
+import bftfPoster from '../assets/images/project/brussel-food-truck-festival/mockups/only-poster.jpg';
 
 import hackagesCoverFront from '../assets/images/project/hackages/hackages-cover.png';
 import primadonnaCoverFront from '../assets/images/project/primadonna/primadonna-cover-web.png';

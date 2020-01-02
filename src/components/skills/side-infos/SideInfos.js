@@ -55,7 +55,7 @@ export const SideInfo = styled.div`
      background: ${backgroundColors.navbar};
      transform-origin: top left;
      left: -30px;
-     top: 260px;
+     top: 320px;
      position: fixed;
      transform: rotate(-90deg);
      padding: 8px 44px 8px 16px;
