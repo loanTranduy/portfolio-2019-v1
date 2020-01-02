@@ -8,10 +8,6 @@ import zeplin from '../assets/icons/software/zeplin.svg'
 import sketch from '../assets/icons/software/sketch.svg'
 import sitemap from '../assets/icons/software/sitemap.svg'
 import principle from '../assets/icons/software/principle-app.svg'
-import figma from '../assets/icons/software/figma.svg'
-
-
-
 import React from 'react';
 import {softwareColors, textColors} from '../styles/default/Colors';
 
@@ -96,16 +92,7 @@ export const SoftwareWebDesignFrontEnd = [
         borderColor: softwareColors.zeplin,
         textColor: textColors.primary
 
-    },
-    {
-        id: 1,
-        label: 'Figma',
-        icon: figma,
-        backgroundColor: 'transparent',
-        borderColor: softwareColors.figma,
-        textColor: textColors.primary
-
-    },
+    }
 ]
 
 

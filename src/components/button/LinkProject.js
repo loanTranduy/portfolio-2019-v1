@@ -4,6 +4,7 @@ import {media} from '../../styles/default/Mediaqueries';
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
+import {backgroundColors} from '../../styles/default/Colors';
 
 const LinkContainer = styled(({ small, longText, portrait, noRadiusTopLeft,noRadiusTopRight, noRadiusBottomLeft, portraitDesktop, ...props }) => <NavLink {...props} />)`
     overflow: hidden;
@@ -49,6 +50,10 @@ const LinkContainer = styled(({ small, longText, portrait, noRadiusTopLeft,noRad
     
     img{
       display: none
+    }
+    
+    > div {
+    background: ${backgroundColors.tertiary};
     }
     
   ${media.md`
