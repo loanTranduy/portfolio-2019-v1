@@ -21,10 +21,15 @@ const LoadingBox = styled.div`
     
     @keyframes collapse {
       0% {
+        visibility: visible;
         transform: translateY(0);
       }
-      100% {
+      
+      90% {
         transform: translateY(-100%);
+      }
+      100% {
+        visibility: hidden;
       }
     }
     
@@ -111,6 +116,7 @@ margin-left: 16px;
 li{
     animation-name: change;
     animation-duration: 10s;
+    animation-delay: .7s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
@@ -143,7 +149,6 @@ li{
   }
 `
 
-
 export default class Loading extends React.Component {
     constructor(props){
         super(props)
@@ -165,7 +170,7 @@ export default class Loading extends React.Component {
                         this.setState({ done: true });
                     }, 1500);
                 });
-        }, 3400);
+        }, 4000);
     }
 
     render() {

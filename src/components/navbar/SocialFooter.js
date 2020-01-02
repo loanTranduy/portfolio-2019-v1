@@ -26,7 +26,7 @@ const Footer = styled.footer`
         padding: 16px;
     }
     ${media.md`
-    padding: 50px 16px 0 16px;
+    padding: 0 16px 0 16px;
     width: auto;
     flex-direction: column;
     li{

@@ -54,7 +54,7 @@ export const Ul = styled.div`
         }
    }
     ${media.md`
-    padding: 50px 16px; 
+    padding: 50px 16px 0 16px; 
     flex-direction: column;
         li{
     a.active{
