@@ -99,17 +99,17 @@ import dSideMagazineLow from '../assets/images/project/3d-side/mockups/magazine-
 // ______________________________________________________________________________________________
 
 
-import bftfPoster from '../assets/images/project/brussel-food-truck-festival/mockups/only-poster.png';
-import bftfTriptique from '../assets/images/project/brussel-food-truck-festival/mockups/food-truck-triptique.png';
-import bftfZoom01 from '../assets/images/project/brussel-food-truck-festival/mockups/zoom-01.png';
-import bftfZoom02 from '../assets/images/project/brussel-food-truck-festival/mockups/zoom-02.png';
-import bftfMockup from '../assets/images/project/brussel-food-truck-festival/mockups/bftf-mockup.png';
+import bftfPoster from '../assets/images/project/brussel-food-truck-festival/mockups/only-poster.jpg';
+import bftfTriptique from '../assets/images/project/brussel-food-truck-festival/mockups/food-truck-triptique.jpg';
+import bftfZoom01 from '../assets/images/project/brussel-food-truck-festival/mockups/zoom-01.jpg';
+import bftfZoom02 from '../assets/images/project/brussel-food-truck-festival/mockups/zoom-02.jpg';
+import bftfMockup from '../assets/images/project/brussel-food-truck-festival/mockups/bftf-mockup.jpg';
 
-import bftfPosterLow from '../assets/images/project/brussel-food-truck-festival/mockups/only-poster-800.png';
-import bftfTriptiqueLow from '../assets/images/project/brussel-food-truck-festival/mockups/food-truck-triptique-800.png';
-import bftfZoom01Low from '../assets/images/project/brussel-food-truck-festival/mockups/zoom-01-800.png';
-import bftfZoom02Low from '../assets/images/project/brussel-food-truck-festival/mockups/zoom-02-800.png';
-import bftfMockupLow from '../assets/images/project/brussel-food-truck-festival/mockups/bftf-mockup-800.png';
+import bftfPosterLow from '../assets/images/project/brussel-food-truck-festival/mockups/only-poster-800.jpg';
+import bftfTriptiqueLow from '../assets/images/project/brussel-food-truck-festival/mockups/food-truck-triptique-800.jpg';
+import bftfZoom01Low from '../assets/images/project/brussel-food-truck-festival/mockups/zoom-01-800.jpg';
+import bftfZoom02Low from '../assets/images/project/brussel-food-truck-festival/mockups/zoom-02-800.jpg';
+import bftfMockupLow from '../assets/images/project/brussel-food-truck-festival/mockups/bftf-mockup-800.jpg';
 
 // ______________________________________________________________________________________________
 
@@ -235,11 +235,12 @@ export const ProjectGraphicDesign = [
         image: bftfPoster,
         desktop: [
             {
+                portraitDesktop: true,
                 image: bftfMockup,
                 imageLow: bftfMockupLow,
                 imageAlt: 'Brussels Food Truck Festival Poster',
-                ratio: 'square',
-                ratioDesktop: 'square',
+                ratio: 'longPortrait',
+                ratioDesktop: 'portrait',
                 col: 12,
             },
             {
