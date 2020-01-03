@@ -1,100 +1,94 @@
-import btsCover from '../assets/images/project/hackages/mockups/bts-logo.png';
-import hackagesCover from '../assets/images/project/hackages/mockups/business-card-front-800.png';
-import vergerBioCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.png';
-import btbdCover from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/pattern-cover.svg';
+import btsCover from '../assets/images/project/hackages/mockups/bts-logo.jpg';
+import hackagesCover from '../assets/images/project/hackages/mockups/business-card-front-800.jpg';
+import vergerBioCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.jpg';
+import btbdCover from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/pattern-cover.jpg';
 import dSideCover from '../assets/images/project/3d-side/3dside-poster.svg';
 
 import hackagesLogo from '../assets/images/project/hackages/hackages-logo.svg';
 import vergerBioLogo from '../assets/images/project/verger-bio/vergerbio-logo.svg';
 import dSideLogo from '../assets/images/project/3d-side/3d-side-logo.svg';
 import bftfLogo from '../assets/images/project/brussel-food-truck-festival/BFTF-logo.png';
-import btbdLogo from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/beta-bon-dieu-logo.svg';
+import btbdLogo from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/beta-bon-dieu-logo.png';
 import hugeiaLogo from '../assets/images/project/hugeia/logo.svg';
 
 // ______________________________________________________________________________________________
 
-import hackagesBusinessCards from '../assets/images/project/hackages/mockups/business-cards.png';
-import hackagesBusinessCardFront from '../assets/images/project/hackages/mockups/business-card-front-800.png';
-import hackagesBusinessCardBack from '../assets/images/project/hackages/mockups/business-card-back-800.png';
-import hackagesTemplate from '../assets/images/project/hackages/mockups/template-800.png';
-import hackagesCertificate from '../assets/images/project/hackages/mockups/certificate.png';
-import hackagesLeaflet from '../assets/images/project/hackages/mockups/leaflet.png';
-import hackagesLeaflet01 from '../assets/images/project/hackages/mockups/leaflet-01-800.png';
-import hhackagesLeaflet02 from '../assets/images/project/hackages/mockups/leaflet-02-800.png';
-import hackagesLeaflet03 from '../assets/images/project/hackages/mockups/leaflet-03-800.png';
-import hackagesLeaflet04 from '../assets/images/project/hackages/mockups/leaflet-04-800.png';
-import bhackToSchoolFacebook from '../assets/images/project/hackages/mockups/facebook.png';
-import hackagesHire from '../assets/images/project/hackages/mockups/template-hiring-800.png';
-import hackagesLinkedin from '../assets/images/project/hackages/mockups/linkedin.png';
+import hackagesBusinessCards from '../assets/images/project/hackages/mockups/business-cards.jpg';
+import hackagesBusinessCardFront from '../assets/images/project/hackages/mockups/business-card-front-800.jpg';
+import hackagesBusinessCardBack from '../assets/images/project/hackages/mockups/business-card-back-800.jpg';
+import hackagesTemplate from '../assets/images/project/hackages/mockups/template-800.jpg';
+import hackagesCertificate from '../assets/images/project/hackages/mockups/certificate.jpg';
+import hackagesLeaflet from '../assets/images/project/hackages/mockups/leaflet.jpg';
+import hackagesLeaflet01 from '../assets/images/project/hackages/mockups/leaflet-01-800.jpg';
+import hhackagesLeaflet02 from '../assets/images/project/hackages/mockups/leaflet-02-800.jpg';
+import hackagesLeaflet03 from '../assets/images/project/hackages/mockups/leaflet-03-800.jpg';
+import hackagesLeaflet04 from '../assets/images/project/hackages/mockups/leaflet-04-800.jpg';
+import bhackToSchoolFacebook from '../assets/images/project/hackages/mockups/facebook.jpg';
+import hackagesHire from '../assets/images/project/hackages/mockups/template-hiring-800.jpg';
+import hackagesLinkedin from '../assets/images/project/hackages/mockups/linkedin.jpg';
 
-import hackagesIntro from '../assets/video/hackages-intro.mp4';
-import btsLogoVideo from '../assets/video/bts-logo.mp4';
-import btsPromo from '../assets/video/bts-promo.mp4';
+import hackagesIntro from '../assets/video/hackages-intro.gif';
+import btsLogoVideo from '../assets/video/bts-logo.gif';
+import btsPromo from '../assets/video/bts-promo.gif';
 
-import btsLogoVideoPoster from '../assets/images/project/hackages/mockups/bts-logo.png';
-import btsVideoPoster from '../assets/images/project/hackages/mockups/videoCover.png';
-import btsPromoVideoPoster from '../assets/images/project/hackages/mockups/gifCover-bts-promo.png';
+import btsLogoVideoPoster from '../assets/images/project/hackages/mockups/bts-logo.jpg';
+import btsVideoPoster from '../assets/images/project/hackages/mockups/videoCover.jpg';
+import btsPromoVideoPoster from '../assets/images/project/hackages/mockups/gifCover-bts-promo.jpg';
 
-import hackagesBusinessCardsLow from '../assets/images/project/hackages/mockups/business-cards-800.png';
-import hackagesBusinessCardFrontLow from '../assets/images/project/hackages/mockups/business-card-front-800.png';
-import hackagesBusinessCardBackLow from '../assets/images/project/hackages/mockups/business-card-back-800.png';
-import hackagesTemplateLow from '../assets/images/project/hackages/mockups/template-800.png';
-import hackagesCertificateLow from '../assets/images/project/hackages/mockups/certificate-800.png';
-import hackagesLeafletLow from '../assets/images/project/hackages/mockups/leaflet-800.png';
-import hackagesLeaflet01Low from '../assets/images/project/hackages/mockups/leaflet-01-800.png';
-import hhackagesLeaflet02Low from '../assets/images/project/hackages/mockups/leaflet-02-800.png';
-import hackagesLeaflet03Low from '../assets/images/project/hackages/mockups/leaflet-03-800.png';
-import hackagesLeaflet04Low from '../assets/images/project/hackages/mockups/leaflet-04-800.png';
-import bhackToSchoolFacebookLow from '../assets/images/project/hackages/mockups/facebook.png';
-import hackagesHireLow from '../assets/images/project/hackages/mockups/template-hiring-800.png';
-import hackagesLinkedinLow from '../assets/images/project/hackages/mockups/linkedin.png';
+import hackagesBusinessCardsLow from '../assets/images/project/hackages/mockups/business-cards-800.jpg';
+import hackagesBusinessCardFrontLow from '../assets/images/project/hackages/mockups/business-card-front-800.jpg';
+import hackagesBusinessCardBackLow from '../assets/images/project/hackages/mockups/business-card-back-800.jpg';
+import hackagesTemplateLow from '../assets/images/project/hackages/mockups/template-800.jpg';
+import hackagesCertificateLow from '../assets/images/project/hackages/mockups/certificate-800.jpg';
+import hackagesLeafletLow from '../assets/images/project/hackages/mockups/leaflet-800.jpg';
+import hackagesLeaflet01Low from '../assets/images/project/hackages/mockups/leaflet-01-800.jpg';
+import hhackagesLeaflet02Low from '../assets/images/project/hackages/mockups/leaflet-02-800.jpg';
+import hackagesLeaflet03Low from '../assets/images/project/hackages/mockups/leaflet-03-800.jpg';
+import hackagesLeaflet04Low from '../assets/images/project/hackages/mockups/leaflet-04-800.jpg';
+import bhackToSchoolFacebookLow from '../assets/images/project/hackages/mockups/facebook.jpg';
+import hackagesHireLow from '../assets/images/project/hackages/mockups/template-hiring-800.jpg';
+import hackagesLinkedinLow from '../assets/images/project/hackages/mockups/linkedin.jpg';
 
 // ______________________________________________________________________________________________
 
 import vergerBioFull from '../assets/video/levergerbio-full.mp4';
-import vergerBioTraffic from '../assets/video/levergerbio-traffic.mp4';
-import vergerBioHeart from '../assets/video/levergerbio-heart.mp4';
-import vergerBioGlass from '../assets/video/levergerbio-glass.mp4';
-import vergerBioBackGround from '../assets/images/project/verger-bio/background.png'
-import vergerBioProducts from '../assets/images/project/verger-bio/mockups/products.png';
+import vergerBioTraffic from '../assets/video/levergerbio-traffic.gif';
+import vergerBioHeart from '../assets/video/levergerbio-heart.gif';
+import vergerBioGlass from '../assets/video/levergerbio-glass.gif';
+import vergerBioBackGround from '../assets/images/project/verger-bio/background.jpg'
+import vergerBioProducts from '../assets/images/project/verger-bio/mockups/products.jpg';
+import vergerBioFullPoster from '../assets/images/project/verger-bio/mockups/verger-bio-poster-video-800.jpg';
+import vergerBioFlyerBack from '../assets/images/project/verger-bio/mockups/flyer-back-1600.jpg';
+import vergerBioFlyerFront from '../assets/images/project/verger-bio/mockups/flyer-front-1600.jpg';
+import vergerBioHandSketchFull from '../assets/images/project/verger-bio/mockups/handsketch-pano.jpg';
+import vergerBioPosterTriptique from '../assets/images/project/verger-bio/mockups/affiches-triptique-1600.jpg';
+import vergerBioCoopening from '../assets/images/project/verger-bio/mockups/coopening.jpg';
+import vergerBioCoopeningFlat from '../assets/images/project/verger-bio/mockups/coopening-flat-800.jpg';
+import vergerBioProductsLow from '../assets/images/project/verger-bio/mockups/produits-800.jpg';
+import vergerBioLogoBefore from '../assets/images/project/verger-bio/mockups/logo-before-after.jpg';
+import vergerBioPackaging from '../assets/images/project/verger-bio/mockups/packaging-1600.jpg';
 
-import vergerBioTrafficPoster from '../assets/images/project/verger-bio/mockups/traffic-poster.png';
-import vergerBioHeartPoster from '../assets/images/project/verger-bio/mockups/heart-poster.png';
-import vergerBioGlassPoster from '../assets/images/project/verger-bio/mockups/glass-poster.png';
-
-import vergerBioFullPoster from '../assets/images/project/verger-bio/mockups/verger-bio-poster-video-800.png';
-
-import vergerBioFlyerBack from '../assets/images/project/verger-bio/mockups/flyer-back-1600.png';
-import vergerBioFlyerFront from '../assets/images/project/verger-bio/mockups/flyer-front-1600.png';
-import vergerBioHandSketchFull from '../assets/images/project/verger-bio/mockups/handsketch-pano.png';
-import vergerBioPosterTriptique from '../assets/images/project/verger-bio/mockups/affiches-triptique-1600.png';
-import vergerBioCoopening from '../assets/images/project/verger-bio/mockups/coopening.png';
-import vergerBioCoopeningFlat from '../assets/images/project/verger-bio/mockups/coopening-flat-800.png';
-import vergerBioProductsLow from '../assets/images/project/verger-bio/mockups/produits-800.png';
-import vergerBioLogoBefore from '../assets/images/project/verger-bio/mockups/logo-before-after.png';
-import vergerBioPackaging from '../assets/images/project/verger-bio/mockups/packaging-1600.png';
-
-import vergerBioHandSketchFullLow from '../assets/images/project/verger-bio/mockups/handsketch-pano-800.png';
-import vergerBioPosterTriptiqueLow from '../assets/images/project/verger-bio/mockups/affiches-triptique-800.png';
-import vergerBioLogoBeforeLow from '../assets/images/project/verger-bio/mockups/logo-before-after-800.png';
-import vergerBioPackagingLow from '../assets/images/project/verger-bio/mockups/packaging-800.png';
+import vergerBioHandSketchFullLow from '../assets/images/project/verger-bio/mockups/handsketch-pano-800.jpg';
+import vergerBioPosterTriptiqueLow from '../assets/images/project/verger-bio/mockups/affiches-triptique-800.jpg';
+import vergerBioLogoBeforeLow from '../assets/images/project/verger-bio/mockups/logo-before-after-800.jpg';
+import vergerBioPackagingLow from '../assets/images/project/verger-bio/mockups/packaging-800.jpg';
 
 // ______________________________________________________________________________________________
 
-import dSideBusinessCards from '../assets/images/project/3d-side/mockups/business-cards-blue.png';
+import dSideBusinessCards from '../assets/images/project/3d-side/mockups/business-cards-blue.jpg';
 import dSideLogoBackground from '../assets/images/project/3d-side/mockups/logo-background.svg';
-import dSideRollUp from '../assets/images/project/3d-side/mockups/roll-up.png';
-import dSideWallUp from '../assets/images/project/3d-side/mockups/wall-up.png';
-import dSideNotePad from '../assets/images/project/3d-side/mockups/notepad.png';
-import dSideTemplate from '../assets/images/project/3d-side/mockups/template.png';
-import dSideLeaflet from '../assets/images/project/3d-side/mockups/leaflet.png';
-import dSideMagazine from '../assets/images/project/3d-side/mockups/magazine.png';
+import dSideRollUp from '../assets/images/project/3d-side/mockups/roll-up.jpg';
+import dSideWallUp from '../assets/images/project/3d-side/mockups/wall-up.jpg';
+import dSideNotePad from '../assets/images/project/3d-side/mockups/notepad.jpg';
+import dSideTemplate from '../assets/images/project/3d-side/mockups/template.jpg';
+import dSideLeaflet from '../assets/images/project/3d-side/mockups/leaflet.jpg';
+import dSideMagazine from '../assets/images/project/3d-side/mockups/magazine.jpg';
 
-import dSideRollUpLow from '../assets/images/project/3d-side/mockups/roll-up-800.png';
-import dSideWallUpLow from '../assets/images/project/3d-side/mockups/wall-up-800.png';
-import dSideNotePadLow from '../assets/images/project/3d-side/mockups/notepad-800.png';
-import dSideBusinessCardsLow from '../assets/images/project/3d-side/mockups/3d-side-business-cards-800.png';
-import dSideMagazineLow from '../assets/images/project/3d-side/mockups/magazine-800.png';
+import dSideRollUpLow from '../assets/images/project/3d-side/mockups/roll-up-800.jpg';
+import dSideWallUpLow from '../assets/images/project/3d-side/mockups/wall-up-800.jpg';
+import dSideNotePadLow from '../assets/images/project/3d-side/mockups/notepad-800.jpg';
+import dSideBusinessCardsLow from '../assets/images/project/3d-side/mockups/3d-side-business-cards-800.jpg';
+import dSideMagazineLow from '../assets/images/project/3d-side/mockups/magazine-800.jpg';
 
 // ______________________________________________________________________________________________
 
@@ -113,68 +107,61 @@ import bftfMockupLow from '../assets/images/project/brussel-food-truck-festival/
 
 // ______________________________________________________________________________________________
 
-import bbdLogoCharte from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/logo-charte.svg';
-import bbdBusinessCards from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/business-cards-800.png';
-import bbdBigEnveloppe from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/enveloppe-big-1600.png';
-import bbdThankCard from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/thank-card.png';
-import bbdPaper from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/A4.png';
-import bbdEnveloppe from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/enveloppe.png';
-import bbdPattern from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/pattern.svg';
+import bbdLogoCharte from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/logo-charte.jpg';
+import bbdBusinessCards from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/business-cards-800.jpg';
+import bbdBigEnveloppe from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/enveloppe-big-1600.jpg';
+import bbdThankCard from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/thank-card.jpg';
+import bbdPaper from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/A4.jpg';
+import bbdEnveloppe from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/enveloppe.jpg';
+import bbdPattern from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/pattern.jpg';
 
-import bbdAntz from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/antz.svg';
-import bbdWorm from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/worms.svg';
-import bbdButterfly from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/dragon-fly.svg';
-import bbdbitter from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/ladybug.svg';
-import bbdbug from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/bug.svg';
-import bbdGrassHoper from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/grasshopper.svg';
+import bbdAntz from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/antz.jpg';
+import bbdWorm from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/worms.jpg';
+import bbdButterfly from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/dragon-fly.jpg';
+import bbdbitter from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/ladybug.jpg';
+import bbdbug from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/bug.jpg';
+import bbdGrassHoper from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/grasshopper.jpg';
 
-import bbdBigEnveloppeLow from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/enveloppe-big-800.png';
-import bbdThankCardLow from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/thank-card-800.png';
-import bbdPaperLow from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/A4-800.png';
-import bbdEnveloppeLow from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/enveloppe-800.png';
+import bbdBigEnveloppeLow from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/enveloppe-big-800.jpg';
+import bbdThankCardLow from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/thank-card-800.jpg';
+import bbdPaperLow from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/A4-800.jpg';
+import bbdEnveloppeLow from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/enveloppe-800.jpg';
 
 // ______________________________________________________________________________________________
 
-import hugeiaCitron from '../assets/video/citron.mp4';
-import hugeiaBrocoli from '../assets/video/brocoli.mp4';
-import hugeiaPamplemousse from '../assets/video/pamplemousse.mp4';
-
-import hugeiaCitronPoster from '../assets/images/project/hugeia/mockups/citron-poster.png';
-import hugeiaBrocoliPoster from '../assets/images/project/hugeia/mockups/brocoli-poster.png';
-import hugeiaPamplemoussePoster from '../assets/images/project/hugeia/mockups/pamplemousse-poster.png';
-
-import hugeiaLogoCharte from '../assets/video/logo-charte.mp4';
+import hugeiaCitron from '../assets/video/citron.gif';
+import hugeiaBrocoli from '../assets/video/brocoli.gif';
+import hugeiaPamplemousse from '../assets/video/pamplemousse.gif';
+import hugeiaLogoCharte from '../assets/video/logo-charte.gif';
 import hugeiaPatternWithBaseline from '../assets/images/project/hugeia/mockups/pattern-02.jpg';
-import hugeiaPatternWithBaselineLow from '../assets/images/project/hugeia/mockups/pattern-02-800.png';
+import hugeiaPatternWithBaselineLow from '../assets/images/project/hugeia/mockups/pattern-02-800.jpg';
 
 import hugeiaPattern from '../assets/images/project/hugeia/mockups/pattern-03.jpg';
-import hugeiaPatternLow from '../assets/images/project/hugeia/mockups/pattern-03-800.png';
-import hugeiaTablier from '../assets/images/project/hugeia/mockups/tablier.png';
-import hugeiaEnveloppe from '../assets/images/project/hugeia/mockups/enveloppe-800.png';
-import hugeiaA4 from '../assets/images/project/hugeia/mockups/A4.png';
-import hugeiaA4Low from '../assets/images/project/hugeia/mockups/A4-800.png';
-import hugeiaPaperBag from '../assets/images/project/hugeia/mockups/paper-bag-800.png';
-import hugeiaBusinessCards from '../assets/images/project/hugeia/mockups/business-cards.png';
-import hugeiaBusinessCardsLow from '../assets/images/project/hugeia/mockups/business-cards-800.png';
-import hugeiaThanks from '../assets/images/project/hugeia/mockups/compliment-800.png';
+import hugeiaPatternLow from '../assets/images/project/hugeia/mockups/pattern-03-800.jpg';
+import hugeiaTablier from '../assets/images/project/hugeia/mockups/tablier.jpg';
+import hugeiaEnveloppe from '../assets/images/project/hugeia/mockups/enveloppe-800.jpg';
+import hugeiaA4 from '../assets/images/project/hugeia/mockups/A4.jpg';
+import hugeiaA4Low from '../assets/images/project/hugeia/mockups/A4-800.jpg';
+import hugeiaPaperBag from '../assets/images/project/hugeia/mockups/paper-bag-800.jpg';
+import hugeiaBusinessCards from '../assets/images/project/hugeia/mockups/business-cards.jpg';
+import hugeiaBusinessCardsLow from '../assets/images/project/hugeia/mockups/business-cards-800.jpg';
+import hugeiaThanks from '../assets/images/project/hugeia/mockups/compliment-800.jpg';
 
-import hugeiaPack01 from '../assets/images/project/hugeia/mockups/pack-01.png';
-import hugeiaPack02 from '../assets/images/project/hugeia/mockups/pack-02.png';
-import hugeiaPack02Low from '../assets/images/project/hugeia/mockups/pack-02-800.png';
-import hugeiaPack03 from '../assets/images/project/hugeia/mockups/pack-03.png';
-import hugeiaPack04 from '../assets/images/project/hugeia/mockups/pack-04.png';
-import hugeiaPack04Low from '../assets/images/project/hugeia/mockups/pack-04-800.png';
-import hugeiaPack05 from '../assets/images/project/hugeia/mockups/pack-05.png';
-import hugeiaPack06 from '../assets/images/project/hugeia/mockups/pack-06.png';
-import hugeiaPack06Low from '../assets/images/project/hugeia/mockups/pack-06-800.png';
+import hugeiaPack01 from '../assets/images/project/hugeia/mockups/pack-01.jpg';
+import hugeiaPack02 from '../assets/images/project/hugeia/mockups/pack-02.jpg';
+import hugeiaPack02Low from '../assets/images/project/hugeia/mockups/pack-02-800.jpg';
+import hugeiaPack03 from '../assets/images/project/hugeia/mockups/pack-03.jpg';
+import hugeiaPack04 from '../assets/images/project/hugeia/mockups/pack-04.jpg';
+import hugeiaPack04Low from '../assets/images/project/hugeia/mockups/pack-04-800.jpg';
+import hugeiaPack05 from '../assets/images/project/hugeia/mockups/pack-05.jpg';
+import hugeiaPack06 from '../assets/images/project/hugeia/mockups/pack-06.jpg';
+import hugeiaPack06Low from '../assets/images/project/hugeia/mockups/pack-06-800.jpg';
 
-import hugeiaPoster from '../assets/images/project/hugeia/mockups/poster.png';
-import hugeiaPoster02 from '../assets/images/project/hugeia/mockups/poster-02.png';
-import hugeiaFork from '../assets/images/project/hugeia/mockups/fork.png';
-import hugeiaLogoChartePoster from '../assets/images/project/hugeia/mockups/logo-poster.svg';
-
-import hugeiaPosterLow from '../assets/images/project/hugeia/mockups/poster-800.png';
-import hugeiaPoster02Low from '../assets/images/project/hugeia/mockups/poster-02-800.png';
+import hugeiaPoster from '../assets/images/project/hugeia/mockups/poster.jpg';
+import hugeiaPoster02 from '../assets/images/project/hugeia/mockups/poster-02.jpg';
+import hugeiaFork from '../assets/images/project/hugeia/mockups/fork.jpg';
+import hugeiaPosterLow from '../assets/images/project/hugeia/mockups/poster-800.jpg';
+import hugeiaPoster02Low from '../assets/images/project/hugeia/mockups/poster-02-800.jpg';
 
 // ______________________________________________________________________________________________
 
@@ -401,8 +388,7 @@ export const ProjectGraphicDesign = [
             },
             {
                 playingVideo: hackagesIntro,
-                poster: btsLogoVideoPoster,
-                playingVideoPoster: hackagesLinkedin,
+                alt: 'Motion Design - Introduction Hackages video',
                 col: 12,
                 ratio: 'videoSquare',
                 ratioDesktop: 'videoSquare',
@@ -831,21 +817,18 @@ export const ProjectGraphicDesign = [
             },
             {
                 playingVideo: vergerBioHeart,
-                poster: vergerBioHeartPoster,
                 col: 12,
                 ratio: 'videoSquare',
                 ratioDesktop: 'videoSquare',
             },
             {
                 playingVideo: vergerBioGlass,
-                poster: vergerBioGlassPoster,
                 col: 6,
                 ratio: 'videoSquare',
                 ratioDesktop: 'videoSquare',
             },
             {
                 playingVideo: vergerBioTraffic,
-                poster: vergerBioTrafficPoster,
                 col: 6,
                 ratio: 'videoSquare',
                 ratioDesktop: 'videoSquare',
@@ -938,7 +921,6 @@ export const ProjectGraphicDesign = [
             },
             {
                 playingVideo: hugeiaLogoCharte,
-                poster: hugeiaLogoChartePoster,
                 col: 12,
                 ratio: 'video',
                 ratioDesktop: 'video',
@@ -1049,21 +1031,18 @@ export const ProjectGraphicDesign = [
             },
             {
                 playingVideo: hugeiaPamplemousse,
-                poster: hugeiaPamplemoussePoster,
                 col: 4,
                 ratio: 'gif',
                 ratioDesktop: 'gif',
             },
             {
                 playingVideo: hugeiaCitron,
-                poster: hugeiaCitronPoster,
                 col: 4,
                 ratio: 'gif',
                 ratioDesktop: 'gif',
             },
             {
                 playingVideo: hugeiaBrocoli,
-                poster: hugeiaBrocoliPoster,
                 col: 4,
                 ratio: 'gif',
                 ratioDesktop: 'gif',

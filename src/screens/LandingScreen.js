@@ -22,7 +22,7 @@ import graphic from '../assets/icons/pencil.svg'
 import all from '../assets/icons/eye.svg'
 import {Town} from '../components/landing/Town';
 import hackagesCoverFront from '../assets/images/project/hackages/hackages-cover.png';
-import vergerBioGraphicDesignCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.png';
+import vergerBioGraphicDesignCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.jpg';
 import {media} from '../styles/default/Mediaqueries';
 
 import

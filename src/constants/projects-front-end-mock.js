@@ -135,7 +135,7 @@ import hackagesCover from '../assets/images/project/hackages/hackages-cover.png'
 import primadonnaCover from '../assets/images/project/primadonna/primadonna-cover-web.png';
 import marieJoCover from '../assets/images/project/marie-jo/marie-jo-cover-web.png';
 import vdabCover from '../assets/images/project/vdab/VDAB_preview-900x627.jpg';
-import edenredCover from '../assets/images/project/edenred/edenred-cover-web.png';
+import edenredCover from '../assets/images/project/edenred/edenred-cover-web.jpg';
 
 // ______________________________________________________________________________________________
 

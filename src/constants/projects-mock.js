@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types'
 
-import btsGraphicDesignCover from '../assets/images/project/hackages/mockups/bts-logo.png';
-import hackagesGraphicDesignCover from '../assets/images/project/hackages/mockups/business-card-front-800.png';
-import vergerBioGraphicDesignCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.png';
-import btbdGraphicDesignCover from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/pattern-cover.svg';
+import btsGraphicDesignCover from '../assets/images/project/hackages/mockups/bts-logo.jpg';
+import hackagesGraphicDesignCover from '../assets/images/project/hackages/mockups/business-card-front-800.jpg';
+import vergerBioGraphicDesignCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.jpg';
+import btbdGraphicDesignCover from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/pattern-cover.jpg';
 import dSideGraphicDesignCover from '../assets/images/project/3d-side/3dside-poster.svg';
-import hugeiaTablier from '../assets/images/project/hugeia/mockups/tablier.png';
+import hugeiaTablier from '../assets/images/project/hugeia/mockups/tablier.jpg';
 import bftfPoster from '../assets/images/project/brussel-food-truck-festival/mockups/only-poster.jpg';
 
 import hackagesCoverFront from '../assets/images/project/hackages/hackages-cover.png';
 import primadonnaCoverFront from '../assets/images/project/primadonna/primadonna-cover-web.png';
 import marieJoCoverFront from '../assets/images/project/marie-jo/marie-jo-cover-web.png';
 import vdabCoverFront from '../assets/images/project/vdab/VDAB_preview-900x627.jpg';
-import edenredCoverFront from '../assets/images/project/edenred/edenred-cover-web.png';
+import edenredCoverFront from '../assets/images/project/edenred/edenred-cover-web.jpg';
 
 import hackagesCoverWeb from '../assets/images/project/hackages/hackages-cover-web.png';
 import vdabCoverWeb from '../assets/images/project/vdab/vdab-cover-teste.png';
-import edenredCoverWeb from '../assets/images/project/edenred/edenred-cover-front.png';
+import edenredCoverWeb from '../assets/images/project/edenred/edenred-cover-front.jpg';
 import marieJoCoverWeb from '../assets/images/project/marie-jo/marie-jo-cover.jpg';
 import primadonnaCoverWeb from '../assets/images/project/primadonna/primadonna-cover.jpg';
 import {gradiantFront, gradiantGaph, gradiantWeb} from '../styles/default/Colors';
