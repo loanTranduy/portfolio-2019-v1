@@ -232,7 +232,7 @@ export const ContentInsideWeb = styled(ContentInside)``
 export class WebDesignProjectMockup extends React.Component {
 
     render() {
-        const{sideInfoWidth, video, fontName,logo, cover,backgroundColor, marginTop, colors, gradiants, mobileScreens, desktopScreens, secondaryFontName, secondaryFont, font} = this.props;
+        const{sideInfoWidth, video, fontName,logo,poster, cover,backgroundColor, marginTop, colors, gradiants, mobileScreens, desktopScreens, secondaryFontName, secondaryFont, font} = this.props;
         return (
             <ContentInsideWeb sideInfoWidth={sideInfoWidth} backgroundColor={backgroundColor} marginTop={marginTop} absolute>
                 {video &&
@@ -241,10 +241,10 @@ export class WebDesignProjectMockup extends React.Component {
                         <TopPosition>
                             <Video
                                 mockupVideo
-                                src={video}
+                                srcVideo={video}
                                 ratio="video"
                                 ratioDesktop="video"
-                                poster={cover}
+                                poster={poster}
                             />
                         </TopPosition>
                     </>

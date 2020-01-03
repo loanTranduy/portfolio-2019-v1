@@ -2,7 +2,7 @@ import btsCover from '../assets/images/project/hackages/mockups/bts-logo.jpg';
 import hackagesCover from '../assets/images/project/hackages/mockups/business-card-front-800.jpg';
 import vergerBioCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.jpg';
 import btbdCover from '../assets/images/project/brussel-food-truck-festival/mockups/stationary/pattern-cover.jpg';
-import dSideCover from '../assets/images/project/3d-side/3dside-poster.svg';
+import dSideCover from '../assets/images/project/3d-side/3dside-poster.jpg';
 
 import hackagesLogo from '../assets/images/project/hackages/hackages-logo.svg';
 import vergerBioLogo from '../assets/images/project/verger-bio/vergerbio-logo.svg';
@@ -51,7 +51,6 @@ import hackagesLinkedinLow from '../assets/images/project/hackages/mockups/linke
 
 // ______________________________________________________________________________________________
 
-import vergerBioFull from '../assets/video/levergerbio-full.mp4';
 import vergerBioTraffic from '../assets/video/levergerbio-traffic.gif';
 import vergerBioHeart from '../assets/video/levergerbio-heart.gif';
 import vergerBioGlass from '../assets/video/levergerbio-glass.gif';
@@ -219,7 +218,7 @@ export const ProjectGraphicDesign = [
             ],
             managment:[]
         },
-        image: bftfPoster,
+        image: bftfPosterLow,
         desktop: [
             {
                 portraitDesktop: true,
@@ -834,7 +833,7 @@ export const ProjectGraphicDesign = [
                 ratioDesktop: 'videoSquare',
             },
             {
-                videoIntern: vergerBioFull,
+                youtubeVideoId: 'dWT_IED9M_I',
                 posterVideoPlay: vergerBioFullPoster,
                 videoAlt: 'Le Verger bio promotion video',
                 col: 12,
