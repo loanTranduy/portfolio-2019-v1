@@ -1,58 +1,58 @@
-import hackagesHome from '../assets/images/project/hackages/screens/01-landing-desktop.png';
-import hackagesAbout from '../assets/images/project/hackages/screens/02-about-desktop.png';
-import hackagesExplore  from '../assets/images/project/hackages/screens/03-explore-desktop.png';
-import hackagesEventDetails  from '../assets/images/project/hackages/screens/04-event-details-desktop.png';
-import hackagesSearch  from '../assets/images/project/hackages/screens/05-search-desktop.png';
-import hackagesEvents  from '../assets/images/project/hackages/screens/06-events-desktop.png';
-import hackagesSettings  from '../assets/images/project/hackages/screens/07-settings-desktop.png';
-import hackagesFaq  from '../assets/images/project/hackages/screens/08-faq-desktop.png';
-import hackagesLogin  from '../assets/images/project/hackages/screens/09-login-desktop.png';
-import hackagesContact  from '../assets/images/project/hackages/screens/10-contact-desktop.png';
-import hackagesUserProfile  from '../assets/images/project/hackages/screens/12-user-profile-desktop.png';
-import hackagesPayment  from '../assets/images/project/hackages/screens/13-payment-desktop.png';
-import hackagesNatifications  from '../assets/images/project/hackages/screens/14-notifications-desktop.png';
+import hackagesHome from '../assets/images/project/hackages/screens/01-landing-desktop.jpg';
+import hackagesAbout from '../assets/images/project/hackages/screens/02-about-desktop.jpg';
+import hackagesExplore  from '../assets/images/project/hackages/screens/03-explore-desktop.jpg';
+import hackagesEventDetails  from '../assets/images/project/hackages/screens/04-event-details-desktop.jpg';
+import hackagesSearch  from '../assets/images/project/hackages/screens/05-search-desktop.jpg';
+import hackagesEvents  from '../assets/images/project/hackages/screens/06-events-desktop.jpg';
+import hackagesSettings  from '../assets/images/project/hackages/screens/07-settings-desktop.jpg';
+import hackagesFaq  from '../assets/images/project/hackages/screens/08-faq-desktop.jpg';
+import hackagesLogin  from '../assets/images/project/hackages/screens/09-login-desktop.jpg';
+import hackagesContact  from '../assets/images/project/hackages/screens/10-contact-desktop.jpg';
+import hackagesUserProfile  from '../assets/images/project/hackages/screens/12-user-profile-desktop.jpg';
+import hackagesPayment  from '../assets/images/project/hackages/screens/13-payment-desktop.jpg';
+import hackagesNatifications  from '../assets/images/project/hackages/screens/14-notifications-desktop.jpg';
 
-import hackagesHomeMobile from '../assets/images/project/hackages/screens/01-landing-mobile.png';
-import hackagesAboutMobile from '../assets/images/project/hackages/screens/02-about-mobile.png';
-import hackagesExploreMobile  from '../assets/images/project/hackages/screens/03-explore-mobile.png';
-import hackagesEventDetailsMobile  from '../assets/images/project/hackages/screens/04-event-details-mobile.png';
-import hackagesSearchMobile  from '../assets/images/project/hackages/screens/05-search-mobile.png';
-import hackagesFaqMobile  from '../assets/images/project/hackages/screens/08-faq-mobile.png';
-import hackagesLoginMobile  from '../assets/images/project/hackages/screens/09-login-mobile.png';
-import hackagesContactMobile  from '../assets/images/project/hackages/screens/10-contact-mobile.png';
-import hackagesNatificationsMobile  from '../assets/images/project/hackages/screens/14-notifications-mobile.png';
+import hackagesHomeMobile from '../assets/images/project/hackages/screens/01-landing-mobile.jpg';
+import hackagesAboutMobile from '../assets/images/project/hackages/screens/02-about-mobile.jpg';
+import hackagesExploreMobile  from '../assets/images/project/hackages/screens/03-explore-mobile.jpg';
+import hackagesEventDetailsMobile  from '../assets/images/project/hackages/screens/04-event-details-mobile.jpg';
+import hackagesSearchMobile  from '../assets/images/project/hackages/screens/05-search-mobile.jpg';
+import hackagesFaqMobile  from '../assets/images/project/hackages/screens/08-faq-mobile.jpg';
+import hackagesLoginMobile  from '../assets/images/project/hackages/screens/09-login-mobile.jpg';
+import hackagesContactMobile  from '../assets/images/project/hackages/screens/10-contact-mobile.jpg';
+import hackagesNatificationsMobile  from '../assets/images/project/hackages/screens/14-notifications-mobile.jpg';
 
-import hackagesHomeLow from '../assets/images/project/hackages/screens/low-quality/01-landing-desktop.png';
-import hackagesAboutLow from '../assets/images/project/hackages/screens/low-quality/02-about-desktop.png';
-import hackagesExploreLow  from '../assets/images/project/hackages/screens/low-quality/03-explore-desktop.png';
-import hackagesEventDetailsLow  from '../assets/images/project/hackages/screens/low-quality/04-event-details-desktop.png';
-import hackagesSearchLow  from '../assets/images/project/hackages/screens/low-quality/05-search-desktop.png';
-import hackagesEventsLow  from '../assets/images/project/hackages/screens/low-quality/06-events-desktop.png';
-import hackagesSettingsLow  from '../assets/images/project/hackages/screens/low-quality/07-settings-desktop.png';
-import hackagesFaqLow  from '../assets/images/project/hackages/screens/low-quality/08-faq-desktop.png';
-import hackagesLoginLow  from '../assets/images/project/hackages/screens/low-quality/09-login-desktop.png';
-import hackagesContactLow  from '../assets/images/project/hackages/screens/low-quality/10-contact-desktop.png';
-import hackagesUserProfileLow  from '../assets/images/project/hackages/screens/low-quality/12-user-profile-desktop.png';
-import hackagesPaymentLow  from '../assets/images/project/hackages/screens/low-quality/13-payment-desktop.png';
-import hackagesNatificationsLow  from '../assets/images/project/hackages/screens/low-quality/14-notifications-desktop.png';
+import hackagesHomeLow from '../assets/images/project/hackages/screens/low-quality/01-landing-desktop.jpg';
+import hackagesAboutLow from '../assets/images/project/hackages/screens/low-quality/02-about-desktop.jpg';
+import hackagesExploreLow  from '../assets/images/project/hackages/screens/low-quality/03-explore-desktop.jpg';
+import hackagesEventDetailsLow  from '../assets/images/project/hackages/screens/low-quality/04-event-details-desktop.jpg';
+import hackagesSearchLow  from '../assets/images/project/hackages/screens/low-quality/05-search-desktop.jpg';
+import hackagesEventsLow  from '../assets/images/project/hackages/screens/low-quality/06-events-desktop.jpg';
+import hackagesSettingsLow  from '../assets/images/project/hackages/screens/07-settings-desktop.jpg';
+import hackagesFaqLow  from '../assets/images/project/hackages/screens/low-quality/08-faq-desktop.jpg';
+import hackagesLoginLow  from '../assets/images/project/hackages/screens/low-quality/09-login-desktop.jpg';
+import hackagesContactLow  from '../assets/images/project/hackages/screens/low-quality/10-contact-desktop.jpg';
+import hackagesUserProfileLow  from '../assets/images/project/hackages/screens/low-quality/12-user-profile-desktop.jpg';
+import hackagesPaymentLow  from '../assets/images/project/hackages/screens/low-quality/13-payment-desktop.jpg';
+import hackagesNatificationsLow  from '../assets/images/project/hackages/screens/low-quality/14-notifications-desktop.jpg';
 
 // ______________________________________________________________________________________________
 
-import vdabHome  from '../assets/images/project/vdab/screens/home.png';
-import vdabError  from '../assets/images/project/vdab/screens/error.png';
-import vdabModal  from '../assets/images/project/vdab/screens/modal.png';
-import vdabRefund  from '../assets/images/project/vdab/screens/refund.png';
-import vdabSearch  from '../assets/images/project/vdab/screens/Search.png';
-import vdabManagment  from '../assets/images/project/vdab/screens/services-managment.png';
-import vdabManagmentSuccess  from '../assets/images/project/vdab/screens/sucess-services-managment.png';
+import vdabHome  from '../assets/images/project/vdab/screens/home.jpg';
+import vdabError  from '../assets/images/project/vdab/screens/error.jpg';
+import vdabModal  from '../assets/images/project/vdab/screens/modal.jpg';
+import vdabRefund  from '../assets/images/project/vdab/screens/refund.jpg';
+import vdabSearch  from '../assets/images/project/vdab/screens/Search.jpg';
+import vdabManagment  from '../assets/images/project/vdab/screens/services-managment.jpg';
+import vdabManagmentSuccess  from '../assets/images/project/vdab/screens/sucess-services-managment.jpg';
 
-import vdabHomeLow  from '../assets/images/project/vdab/screens-low/home.png';
-import vdabErrorLow  from '../assets/images/project/vdab/screens-low/error.png';
-import vdabModalLow  from '../assets/images/project/vdab/screens-low/modal.png';
-import vdabRefundLow  from '../assets/images/project/vdab/screens-low/refund.png';
-import vdabSearchLow  from '../assets/images/project/vdab/screens-low/Search.png';
-import vdabManagmentLow  from '../assets/images/project/vdab/screens-low/services-managment.png';
-import vdabManagmentSuccessLow  from '../assets/images/project/vdab/screens-low/sucess-services-managment.png';
+import vdabHomeLow  from '../assets/images/project/vdab/screens-low/home.jpg';
+import vdabErrorLow  from '../assets/images/project/vdab/screens-low/error.jpg';
+import vdabModalLow  from '../assets/images/project/vdab/screens-low/modal.jpg';
+import vdabRefundLow  from '../assets/images/project/vdab/screens-low/refund.jpg';
+import vdabSearchLow  from '../assets/images/project/vdab/screens-low/Search.jpg';
+import vdabManagmentLow  from '../assets/images/project/vdab/screens-low/services-managment.jpg';
+import vdabManagmentSuccessLow  from '../assets/images/project/vdab/screens-low/sucess-services-managment.jpg';
 
 // ______________________________________________________________________________________________
 
@@ -95,33 +95,34 @@ import edenredStep09Low  from '../assets/images/project/edenred/desktop-low/09-f
 
 // ______________________________________________________________________________________________
 import MarieJoVideo  from '../assets/images/project/marie-jo/design/home.mp4';
+import MarieJoVideoPoster  from '../assets/images/project/marie-jo/design/home-poster.jpg';
 
-import MarieJoHome  from '../assets/images/project/marie-jo/desktop/home.png';
-import MarieJoProductsList  from '../assets/images/project/marie-jo/desktop/products-list.png';
-import MarieJoProductDetails  from '../assets/images/project/marie-jo/desktop/product-details.png';
-import MarieJoFilters  from '../assets/images/project/marie-jo/desktop/filters.png';
-import MarieJoStore  from '../assets/images/project/marie-jo/desktop/store-locator.png';
-import MarieJoSignIn  from '../assets/images/project/marie-jo/desktop/sign-in.png';
+import MarieJoHome  from '../assets/images/project/marie-jo/desktop/home.jpg';
+import MarieJoProductsList  from '../assets/images/project/marie-jo/desktop/products-list.jpg';
+import MarieJoProductDetails  from '../assets/images/project/marie-jo/desktop/product-details.jpg';
+import MarieJoFilters  from '../assets/images/project/marie-jo/desktop/filters.jpg';
+import MarieJoStore  from '../assets/images/project/marie-jo/desktop/store-locator.jpg';
+import MarieJoSignIn  from '../assets/images/project/marie-jo/desktop/sign-in.jpg';
 
-import MarieJoHomeLow  from '../assets/images/project/marie-jo/desktop-low/home.png';
-import MarieJoProductsListLow  from '../assets/images/project/marie-jo/desktop-low/products-list.png';
-import MarieJoProductDetailsLow  from '../assets/images/project/marie-jo/desktop-low/product-details.png';
-import MarieJoFiltersLow  from '../assets/images/project/marie-jo/desktop-low/filters.png';
-import MarieJoStoreLow  from '../assets/images/project/marie-jo/desktop-low/store-locator.png';
-import MarieJoSignInLow  from '../assets/images/project/marie-jo/desktop-low/sign-in.png';
+import MarieJoHomeLow  from '../assets/images/project/marie-jo/desktop-low/home.jpg';
+import MarieJoProductsListLow  from '../assets/images/project/marie-jo/desktop-low/products-list.jpg';
+import MarieJoProductDetailsLow  from '../assets/images/project/marie-jo/desktop-low/product-details.jpg';
+import MarieJoFiltersLow  from '../assets/images/project/marie-jo/desktop-low/filters.jpg';
+import MarieJoStoreLow  from '../assets/images/project/marie-jo/desktop-low/store-locator.jpg';
+import MarieJoSignInLow  from '../assets/images/project/marie-jo/desktop-low/sign-in.jpg';
 
-import MarieJoHomeMobile  from '../assets/images/project/marie-jo/mobile/home.png';
-import MarieJoProductsListMobile  from '../assets/images/project/marie-jo/mobile/products-list.png';
-import MarieJoProductDetailsMobile  from '../assets/images/project/marie-jo/mobile/product-details.png';
-import MarieJoFiltersMobile  from '../assets/images/project/marie-jo/mobile/filters.png';
-import MarieJoStoreMobile  from '../assets/images/project/marie-jo/mobile/store-locator.png';
-import MarieJoSignInMobile  from '../assets/images/project/marie-jo/mobile/sign-in.png';
+import MarieJoHomeMobile  from '../assets/images/project/marie-jo/mobile/home.jpg';
+import MarieJoProductsListMobile  from '../assets/images/project/marie-jo/mobile/products-list.jpg';
+import MarieJoProductDetailsMobile  from '../assets/images/project/marie-jo/mobile/product-details.jpg';
+import MarieJoFiltersMobile  from '../assets/images/project/marie-jo/mobile/filters.jpg';
+import MarieJoStoreMobile  from '../assets/images/project/marie-jo/mobile/store-locator.jpg';
+import MarieJoSignInMobile  from '../assets/images/project/marie-jo/mobile/sign-in.jpg';
 
 // ______________________________________________________________________________________________
 
-import hackagesCover from '../assets/images/project/hackages/hackages-cover-web.png';
+import hackagesCover from '../assets/images/project/hackages/hackages-cover-web.jpg';
 import hackagesLogo from '../assets/images/project/hackages/hackages-logo.svg';
-import vdabCover from '../assets/images/project/vdab/vdab-cover-teste.png';
+import vdabCover from '../assets/images/project/vdab/vdab-cover-teste.jpg';
 import vdabLogo from '../assets/images/project/vdab/vdab.svg';
 import edenredCover from '../assets/images/project/edenred/edenred-cover-front.jpg';
 import edenredLogo from '../assets/images/project/edenred/edenred-logo-white.svg';
@@ -133,31 +134,31 @@ import primadonnaLogo from '../assets/images/project/primadonna/primadonna-logo.
 
 // ______________________________________________________________________________________________
 
-import PrimadonnaGrid from '../assets/images/project/primadonna/design/desktop/01-grid.png';
-import PrimadonnaHome from '../assets/images/project/primadonna/design/desktop/02-home.png';
-import PrimadonnaSubcategory from '../assets/images/project/primadonna/design/desktop/04-subcategory.png';
-import PrimadonnaProductsList from '../assets/images/project/primadonna/design/desktop/05-products-list.png';
-import PrimadonnaProductDetails from '../assets/images/project/primadonna/design/desktop/06-product-details.png';
+import PrimadonnaGrid from '../assets/images/project/primadonna/design/desktop/01-grid.jpg';
+import PrimadonnaHome from '../assets/images/project/primadonna/design/desktop/02-home.jpg';
+import PrimadonnaSubcategory from '../assets/images/project/primadonna/design/desktop/04-subcategory.jpg';
+import PrimadonnaProductsList from '../assets/images/project/primadonna/design/desktop/05-products-list.jpg';
+import PrimadonnaProductDetails from '../assets/images/project/primadonna/design/desktop/06-product-details.jpg';
 
-import PrimadonnaGridLow from '../assets/images/project/primadonna/design/desktop-low/01-grid.png';
-import PrimadonnaHomeLow from '../assets/images/project/primadonna/design/desktop-low/02-home.png';
-import PrimadonnaSubcategoryLow from '../assets/images/project/primadonna/design/desktop-low/04-subcategory.png';
-import PrimadonnaProductsListLow from '../assets/images/project/primadonna/design/desktop-low/05-products-list.png';
-import PrimadonnaProductDetailsLow from '../assets/images/project/primadonna/design/desktop-low/06-product-details.png';
+import PrimadonnaGridLow from '../assets/images/project/primadonna/design/desktop-low/01-grid.jpg';
+import PrimadonnaHomeLow from '../assets/images/project/primadonna/design/desktop-low/02-home.jpg';
+import PrimadonnaSubcategoryLow from '../assets/images/project/primadonna/design/desktop-low/04-subcategory.jpg';
+import PrimadonnaProductsListLow from '../assets/images/project/primadonna/design/desktop-low/05-products-list.jpg';
+import PrimadonnaProductDetailsLow from '../assets/images/project/primadonna/design/desktop-low/06-product-details.jpg';
 
-import PrimadonnaGridMobile from '../assets/images/project/primadonna/design/mobile/01-grid.png';
-import PrimadonnaHomeMobile from '../assets/images/project/primadonna/design/mobile/02-home.png';
-import PrimadonnaProductsListMobile from '../assets/images/project/primadonna/design/mobile/05-products-list.png';
-import PrimadonnaProductDetailsMobile from '../assets/images/project/primadonna/design/mobile/06-product-details.png';
-import PrimadonnaProductDetailsMenuMobile from '../assets/images/project/primadonna/design/mobile/07-product-screen-mobile.png';
+import PrimadonnaGridMobile from '../assets/images/project/primadonna/design/mobile/01-grid.jpg';
+import PrimadonnaHomeMobile from '../assets/images/project/primadonna/design/mobile/02-home.jpg';
+import PrimadonnaProductsListMobile from '../assets/images/project/primadonna/design/mobile/05-products-list.jpg';
+import PrimadonnaProductDetailsMobile from '../assets/images/project/primadonna/design/mobile/06-product-details.jpg';
+import PrimadonnaProductDetailsMenuMobile from '../assets/images/project/primadonna/design/mobile/07-product-screen-mobile.jpg';
 
-import PrimadonnaFilter01Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-01.png';
-import PrimadonnaFilter02Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-01-selected.png';
-import PrimadonnaFilter03Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-02.png';
-import PrimadonnaFilter04Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-03.png';
-import PrimadonnaFilter05Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-04.png';
-import PrimadonnaFilter06Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-05.png';
-import PrimadonnaFilter07Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-06.png';
+import PrimadonnaFilter01Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-01.jpg';
+import PrimadonnaFilter02Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-01-selected.jpg';
+import PrimadonnaFilter03Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-02.jpg';
+import PrimadonnaFilter04Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-03.jpg';
+import PrimadonnaFilter05Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-04.jpg';
+import PrimadonnaFilter06Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-05.jpg';
+import PrimadonnaFilter07Mobile from '../assets/images/project/primadonna/design/mobile/08-filter/filter-06.jpg';
 
 export const ProjectWebDesign = [
     {
@@ -261,6 +262,7 @@ export const ProjectWebDesign = [
         },
         background: '#DDCBCE',
         video: MarieJoVideo,
+        coverVideo: MarieJoVideoPoster,
         desktop: [
             MarieJoHome,
             MarieJoProductsList ,

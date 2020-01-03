@@ -210,6 +210,7 @@ export class SkillsScreen extends React.Component {
                     logo={logo}
                     fontName={fontName}
                     cover={MainCover}
+                    poster={coverVideo}
                     backgroundColor={backgroundColor}
                     sideInfoWidth={this.state.sideInfoWidth}
                     colors={colors}

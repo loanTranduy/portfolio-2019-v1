@@ -13,6 +13,7 @@ export function WebDesignProject ({match}) {
             positionDate={topic.position.date}
             position={topic.position.name}
             MainCover={topic.desktop[0]}
+            coverVideo={topic.coverVideo}
             desktopScreens={topic.desktop}
             mobileScreens={topic.mobile}
             fontName={topic.styles.fontName}

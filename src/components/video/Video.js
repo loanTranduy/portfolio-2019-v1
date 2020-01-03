@@ -14,14 +14,17 @@ export default class Video extends React.Component {
 
 
     render() {
-        const {ratio, src, ratioDesktop, poster, mockupVideo} = this.props;
+        const {ratio, src, ratioDesktop, poster, mockupVideo, srcVideo} = this.props;
         return (
             <MaskRatio ratio={ratio} ratioDesktop={ratioDesktop} mockupVideo={mockupVideo}>
-                {/*<video muted={true} autoPlay={true} loop={true} src={src} poster={poster}>*/}
-                    {/*<source type="video/gif" src={src}/>*/}
-                    {/*Your browser does not support HTML5 video.*/}
-                {/*</video>*/}
-                <img src={src} alt={poster}/>
+                {srcVideo ?
+                    <video muted={true} autoPlay={true} loop={true} src={src} poster={poster}>
+                        <source type="video/mp4" src={srcVideo}/>
+                        Your browser does not support HTML5 video.
+                    </video>
+                    :
+                    <img src={src} alt={poster}/>
+                }
             </MaskRatio>
         );
     }
