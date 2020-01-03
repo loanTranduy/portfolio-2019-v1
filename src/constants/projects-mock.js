@@ -12,11 +12,11 @@ import hackagesCoverFront from '../assets/images/project/hackages/hackages-cover
 import primadonnaCoverFront from '../assets/images/project/primadonna/primadonna-cover-web.png';
 import marieJoCoverFront from '../assets/images/project/marie-jo/marie-jo-cover-web.png';
 import vdabCoverFront from '../assets/images/project/vdab/VDAB_preview-900x627.jpg';
-import edenredCoverFront from '../assets/images/project/edenred/edenred-cover-web.png';
+import edenredCoverFront from '../assets/images/project/edenred/edenred-cover-web.jpg';
 
 import hackagesCoverWeb from '../assets/images/project/hackages/hackages-cover-web.png';
 import vdabCoverWeb from '../assets/images/project/vdab/vdab-cover-teste.png';
-import edenredCoverWeb from '../assets/images/project/edenred/edenred-cover-front.png';
+import edenredCoverWeb from '../assets/images/project/edenred/edenred-cover-front.jpg';
 import marieJoCoverWeb from '../assets/images/project/marie-jo/marie-jo-cover.jpg';
 import primadonnaCoverWeb from '../assets/images/project/primadonna/primadonna-cover.jpg';
 import {gradiantFront, gradiantGaph, gradiantWeb} from '../styles/default/Colors';

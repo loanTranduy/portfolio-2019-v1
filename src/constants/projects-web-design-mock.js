@@ -123,7 +123,7 @@ import hackagesCover from '../assets/images/project/hackages/hackages-cover-web.
 import hackagesLogo from '../assets/images/project/hackages/hackages-logo.svg';
 import vdabCover from '../assets/images/project/vdab/vdab-cover-teste.png';
 import vdabLogo from '../assets/images/project/vdab/vdab.svg';
-import edenredCover from '../assets/images/project/edenred/edenred-cover-front.png';
+import edenredCover from '../assets/images/project/edenred/edenred-cover-front.jpg';
 import edenredLogo from '../assets/images/project/edenred/edenred-logo-white.svg';
 import marieJoLogo from '../assets/images/project/marie-jo/design/logo-marie-jo.svg';
 import marieJoCover from '../assets/images/project/marie-jo/marie-jo-cover.jpg';
