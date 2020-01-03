@@ -7,43 +7,43 @@ import {fontSize} from '../../styles/default/Mixins';
 import {colors} from '../../styles/default/Colors';
 
 const Inverter = styled.span`
-        width: 92px;
-        position: relative;
-        display: block;
-        
-        p{
-            ${fontSize(12)};
-            font-weight: 600;
-            line-height: 16px;
-        }
-        
-        p:first-of-type {
-            color: black;
-            transition: color 0s linear;
-        }
+  width: 92px;
+  position: relative;
+  display: block;
+  
+  p{
+    ${fontSize(10.5)};
+    font-weight: 600;
+    line-height: 16px;
+  }
+  
+  p:first-of-type {
+    color: black;
+    transition: color 0s linear;
+  }
 `;
 
 const Invert = styled.p`
-          margin: 0;
-          clip-path: circle(11% at 84% 50%);
-          position: absolute;
-          top: 0;
-          left: 0;
-          color: white; 
+  margin: 0;
+  clip-path: circle(11% at 84% 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white; 
 `;
 
 export const Anime = styled.div`
-        clip-path: circle(11% at 84% 50%);
-        background: white;
-        position: absolute;
-        z-index: -1;
-        top: -38px;
-        bottom: -38px;
-        left: -84px;
-        width: 260%;
-        ${media.xl`
-            left: -23px;
-        `}
+  clip-path: circle(11% at 84% 50%);
+  background: white;
+  position: absolute;
+  z-index: -1;
+  top: -38px;
+  bottom: -38px;
+  left: -84px;
+  width: 260%;
+  ${media.xl`
+      left: -58px;
+  `}
 `;
 
 //Menu mobile
@@ -60,10 +60,10 @@ const Box = styled.li`
     a:focus {
     
       ${Inverter}{
-      p:first-of-type{
-      color: white;
-      transition: color 1s linear ;
-      }
+        p:first-of-type{
+            color: white;
+            transition: color 1s linear ;
+        }
         ${Invert}{
             transition: clip-path .1s ease-in-out .2s;
             clip-path: circle(260% at 84% 50%);
@@ -145,7 +145,7 @@ export const LinkWithIcon = styled(NavLink)`
         }
     `}
     ${media.xl`
-        width: 230px;
+        width: 195px;
     `}
 `
 

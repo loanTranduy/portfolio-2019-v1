@@ -61,7 +61,7 @@ export const ProjectContainer = styled.div`
   `}
   
 ${media.xl`
-  width: calc(100% - 470px);
+  width: calc(100% - 418px);
 `}
 `;
 

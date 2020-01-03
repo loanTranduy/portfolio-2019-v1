@@ -12,8 +12,6 @@ import pr from '../assets/icons/software/pr.svg'
 import ai from '../assets/icons/software/ai.svg'
 import pencil from '../assets/icons/pencil.svg'
 
-
-
 export const SkillGraphicDesigner = [
     {
         id: 0,

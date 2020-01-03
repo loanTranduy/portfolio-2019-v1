@@ -68,7 +68,7 @@ p{
   }
   ${media.md`
   p{
-    ${fontSize(20)};
+    ${fontSize(18)};
     span:first-of-type:hover{
       :after, :before{
       visibility: visible;
@@ -88,12 +88,12 @@ const Intro = styled.p`
   
   ${media.md`
     ${fontSize(12)};
-  margin-bottom: 16px;
+     margin-bottom: 16px;
      ${lineHeight(16)};
   `}
   
   ${media.xl`
-     ${fontSize(12)};
+     ${fontSize(11)};
      ${lineHeight(16)};
   `}
 `

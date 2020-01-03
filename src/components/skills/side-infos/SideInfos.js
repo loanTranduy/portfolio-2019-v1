@@ -110,9 +110,9 @@ export const SideInfo = styled.div`
     margin-bottom: 24px;
     
     ${media.md`
-        margin-top: 24px;
-        ${fontSize(19)};
-        margin-bottom: 56px;
+        margin-top: 16px;
+        ${fontSize(16)};
+        margin-bottom: 48px;
     `}
   }
   
@@ -127,14 +127,14 @@ export const SideInfo = styled.div`
     ${media.md`
         margin-top: 32px;
         margin-bottom: 16px;
-        ${fontSize(14)};
-        margin-bottom: 16px;
+        ${fontSize(12)};
+        margin-bottom: 14px;
     `}
   }  
 `
 
 const Position = styled.div`
-    white-space: nowrap;
+  white-space: nowrap;
   display: flex;
   margin-bottom: 24px;
   margin-top: 24px;
@@ -225,13 +225,8 @@ const Text = styled.p`
   ${fontSize(11)};
   
   ${media.md`
-  ${lineHeight(22)};
-  ${fontSize(13)};
-  
-  `}
-  
-  ${media.xl`
-
+    ${lineHeight(22)};
+    ${fontSize(13)};
   `}
 `
 
@@ -242,7 +237,7 @@ ${media.md`
     padding: 32px 32px 32px 48px;
   `}
   ${media.xl`
-    padding: 32px 32px 32px 64px;
+    padding: 32px 16px 32px 48px;
   `}
 
 `

@@ -146,7 +146,7 @@ const App = ({ location }) => {
         return (
             <Fragment>
                 <InjectFont/>
-                <Loading/>
+                {/*<Loading/>*/}
             <Layout url={currentKey}>
                 <TransitionGroup component={null}>
                     <Transition key={currentKey} in={animate} timeout={timeout} appear>

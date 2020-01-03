@@ -1,6 +1,6 @@
 import React from 'react'
 import {Box, Flex} from '../SharedStyle';
-import {fontSize, lineHeight} from '../../styles/default/Mixins';
+import {fontSize} from '../../styles/default/Mixins';
 import {media} from '../../styles/default/Mediaqueries';
 import styled from 'styled-components';
 import sydney from '../../assets/images/sydney-opera-house.svg'
@@ -11,7 +11,8 @@ const BoxFlex = styled(Box)`
   margin: 24px auto 0 auto;
   background: rgba(245,248,255,0.40);
   overflow: hidden;
-  max-height: 135px;
+  max-height: 115px;
+  
   img{
     height: 70px;
     width: 72px;
@@ -22,19 +23,15 @@ const BoxFlex = styled(Box)`
     margin: 0;
     width: 194px;
     img{
-        width: 60px;
+      width: 60px;
     }
   `}
   
   ${media.lg`
-    width: 222px;
+    width: 228px;
     img{
-       width: 72px;
+      width: 64px;
     }
-  `}
-  
-  ${media.xl`
-    width: 256px;
   `}
 `
 
@@ -48,21 +45,22 @@ const Text = styled.div`
   margin-right: 32px;
   
   >p{
-    ${fontSize(10)};
+    ${fontSize(9)};
     letter-spacing: 0;
     color:${textColors.secondary};
     font-weight: 600;
   }
+  
   ${media.md`
   margin-right: 16px;
   >p{
     ${fontSize(9)};
-    }
+  }
   `}
   
   ${media.lg`
     >p{
-    ${fontSize(10)};
+        ${fontSize(10)};
     }
   `}
 `
@@ -74,41 +72,24 @@ const City = styled.h2`
   margin-bottom: 16px;
   
   ${media.md`
-  ${fontSize(18)};
-  `}
-  
-  ${media.xl`
-  ${fontSize(22)};
+    ${fontSize(18)};
   `}
 `
 
 const Header = styled.p`
   text-transform: uppercase;
-  ${fontSize(8)};
-  ${lineHeight()};
+  ${fontSize(7)};
   font-weight: 700;
   font-style: normal;
-  opacity: .9px;
+  opacity: .9;
   background: rgba(245,248,255,0.90);
   letter-spacing: 2.5px;
   color:${textColors.primary};
-  padding: 16px 24px;
-  ${media.md`
-  
-  `}
-  
-  ${media.xl`
-  `}
+  padding: 14px 24px;
 `
 
 const FlexBox = styled(Flex)`
-  padding: 8px 24px;
-  ${media.md`
-  
-  `}
-  
-  ${media.xl`
-  `}
+  padding: 4px 24px;
 `
 
 export class TownTransparent extends React.Component {

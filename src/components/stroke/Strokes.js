@@ -108,7 +108,7 @@ ${media.md`
     }
     &:before{
       left: auto;
-        top: ${props => props.right ? '57.4px' : 'auto'};
+        top: ${props => props.right ? '51px' : 'auto'};
         right: ${props => props.right ? 'calc(var(--whitesize) + 2px)' : 'var(--whitesize)'};
         bottom: ${props => props.right ? 'auto' : 'calc(var(--whitesize) - 2px)'};
         transform: rotate(${props => props.right ? 90 : 180 }deg);

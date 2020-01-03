@@ -9,15 +9,15 @@ import throttle from 'lodash.throttle';
 import cv from '../assets/pdf/tran-duy-loan-cv-2019.pdf';
 
 export const Content = styled.div`
-  padding: 100px 36px 150px 36px;
+  padding: 55px 36px 150px 36px;
   position: relative;
-`
+`;
 
 export const ContentText = styled.div`
   ${media.md`
     margin-left: 170px;   
   `}
-`
+`;
 
 export const SideName = styled.div`
   padding: 24px;
@@ -30,7 +30,7 @@ export const SideName = styled.div`
     min-height: 100vh;
   a{
   color: white;
-  ${fontSize(14)};
+  ${fontSize(13)};
     ${lineHeight(24)};
     letter-spacing: .8px;
     text-align: right;
@@ -43,24 +43,24 @@ export const SideName = styled.div`
   h2{
     margin-top: 122px;
     color: white;
-    ${fontSize(17)};
-    ${lineHeight(30)};
+    ${fontSize(15)};
+    ${lineHeight(26)};
     font-weight: 700;
     text-align: right;
     margin-bottom: 51px;
   }
-`
+`;
 
 export const Text = styled.p`
    ${fontSize(18)};
     ${lineHeight(30)};
     
     ${media.md`
-    ${fontSize(16)};
-    ${lineHeight(30)};
-    max-width: 600px;
+       ${fontSize(14)};
+       ${lineHeight(27)};
+       max-width: 550px;
     `}
-`
+`;
 
 export const Name = styled.div`
   display: flex;
@@ -76,8 +76,8 @@ export const Name = styled.div`
   }
   
   p{
-    ${fontSize(14)};
-    ${lineHeight(24)};
+    ${fontSize(13)};
+    ${lineHeight(23)};
     letter-spacing: .6px;
     margin-top: 2px;
   }

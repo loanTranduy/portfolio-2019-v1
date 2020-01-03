@@ -13,13 +13,10 @@ const Text = styled.p`
   letter-spacing: 10px;
   text-align: ${props => props.center ? 'center' : 'left'};
   ${media.md`
-    ${props => fontSize(props.center ? 94 : 60)};
-    ${lineHeight(100)};
+    ${props => fontSize(props.center ? 72 : 50)};
+    ${lineHeight(90)};
     letter-spacing: 15.96px;
     text-align: left;
-  `}
-  
-  ${media.xl`
   `}
 `
 
