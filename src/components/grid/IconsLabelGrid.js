@@ -22,14 +22,14 @@ const IconBox = styled.div`
     position: ${props => props.withColorBox ? 'absolute' : 'inherit'};
     cursor: default;
     font-weight: 600;
-    ${fontSize(10)};
+    ${fontSize(8.5)};
     left: ${props => props.withColorBox ? 50 : 0}%;
     transform: translateX(${props => props.withColorBox ? -50 : 0}%);
-    ${props => props.withColorBox ? lineHeight(10) : lineHeight(14)};
+    ${props => props.withColorBox ? lineHeight(10) : lineHeight(12)};
   }
   ${media.md`
     border-radius: ${props => props.withLabel ? 10 : 28}px;
-    min-width: ${props => props.withColorBox ? (props.withLabel ? 0 : 80) : 0}px;
+    min-width: ${props => props.withColorBox ? (props.withLabel ? 0 : 70) : 0}px;
     padding: ${props => props.withColorBox ? 'calc(100% - 6px) 0 0 0' : '0 5px' };
     text-align: center;
     align-items: center;
@@ -101,7 +101,7 @@ const ImageContainer = styled.div`
   }
   ${media.md`
     margin-bottom: 4px;
-  --iconsHeight: ${props => props.withLabel ? 47 : 60}px ;
+  --iconsHeight: ${props => props.withLabel ? 47 : 50}px ;
   position: ${props => props.withColorBox ? 'absolute' : 'inherit'};
   height: var(--iconsHeight);
   display: flex;

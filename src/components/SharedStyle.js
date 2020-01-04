@@ -55,14 +55,14 @@ export const Section = styled.section`
   border-bottom-left-radius: 50px;
   padding-top: 32px;
   background: ${props => props.backgroundColor};
-  padding-bottom: ${props => props.noOverflow ? 54 : 0}px;
+  padding-bottom: ${props => props.noOverflow ? 40 : 0}px;
   position: relative;
   height: auto;
   overflow: visible;
   &:after{
     content:"Projects";
     position: absolute;
-    bottom: -63px;
+    bottom: 10px;
     ${fontSize(130)};
     ${lineHeight(96)};
     color: ${textColors.secondary};
@@ -75,22 +75,20 @@ export const Section = styled.section`
     z-index: -1;
     display: none;
   }
+  
   ${media.md`
     overflow: ${props => props.noOverflow ? 'hidden' : 'visible'};
     border-bottom-left-radius: 40px;
-    padding-top: ${props => props.noOverflow ? 40 : 68}px;
+    padding-top: ${props => props.noOverflow ? 32 : 46}px;
     border-top-left-radius: 35px;
     height: calc(${props => props.height}vh - ${props => (props.navbarHeight)}px - (${props => (props.strokeHeight)}px * 2));
     &:after{
       display: ${props => props.title ? 'block' : 'none'};
     }
   `}
-  ${media.xl`
-  `}
 `
 
 export const Flex = styled.div`
-
   ${media.md`
     width: 100%;
     display: flex;

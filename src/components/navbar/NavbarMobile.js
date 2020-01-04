@@ -107,16 +107,16 @@ const NavMobile = styled.nav`
         }
         
         li:nth-child(1){
-        transition: all .3s ease-in-out .3s;
+          transition: all .3s ease-in-out .3s;
         }
-            li:nth-child(2){
-        transition: all .3s ease-in-out .4s;
+        li:nth-child(2){
+          transition: all .3s ease-in-out .4s;
         }
-            li:nth-child(3){
-        transition: all .3s ease-in-out .5s;
+        li:nth-child(3){
+          transition: all .3s ease-in-out .5s;
         }
-            li:nth-child(4){
-        transition: all .3s ease-in-out .6s;
+        li:nth-child(4){
+          transition: all .3s ease-in-out .6s;
         }
         
         ${media.md`

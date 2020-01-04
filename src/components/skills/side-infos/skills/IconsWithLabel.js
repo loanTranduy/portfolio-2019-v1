@@ -14,9 +14,9 @@ export const Grid = styled.div`
     margin-left: 8px;
     max-width: 350px;
     grid-template-columns: 60px 75px 75px;
-    grid-column-gap: 34px;
+    grid-column-gap: 20px;
     grid-row-gap: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   `}
 `;
 

@@ -3,14 +3,15 @@ import work from '../assets/icons/eye.svg'
 import ui from '../assets/icons/layout.svg'
 import front from '../assets/icons/front.svg'
 import design from '../assets/icons/pencil.svg'
+import React from 'react';
 
 export const NavMainLinkPropTypes = PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
     breadCrumb: PropTypes.string,
-}).isRequired
+}).isRequired;
 
-export const NavMainLinksPropTypes = PropTypes.arrayOf(NavMainLinkPropTypes).isRequired
+export const NavMainLinksPropTypes = PropTypes.arrayOf(NavMainLinkPropTypes).isRequired;
 
 export const NavMainLink = [
     {
@@ -31,7 +32,7 @@ export const NavMainLink = [
         breadCrumb: '/about',
         exact: false
     }
-]
+];
 
 
 export const NavSidebarLinkPropTypes = PropTypes.shape({
@@ -39,10 +40,17 @@ export const NavSidebarLinkPropTypes = PropTypes.shape({
     name: PropTypes.string,
     breadCrumb: PropTypes.string,
     icon: PropTypes.string,
-}).isRequired
+}).isRequired;
 
-export const NavSidebarLinksPropTypes = PropTypes.arrayOf(NavSidebarLinkPropTypes).isRequired
+export const NavSidebarLinksPropTypes = PropTypes.arrayOf(NavSidebarLinkPropTypes).isRequired;
 
+const WrapTextDesign = (
+    <>
+        UX / UI
+        <br />
+        Designer
+    </>
+);
 
 export const NavSidebarLink = [
     {
@@ -63,7 +71,7 @@ export const NavSidebarLink = [
     },
     {
         id: 2,
-        name: 'UX / UI Designer',
+        name: WrapTextDesign,
         label: 'ux/ui',
         breadCrumb: '/work/web-design',
         icon: ui,
@@ -77,5 +85,4 @@ export const NavSidebarLink = [
         icon: design,
         filter: 'graphic'
     }
-
-]
+];

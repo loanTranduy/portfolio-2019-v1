@@ -12,29 +12,29 @@ export const Ul = styled.div`
     padding: 8px 14px;
     
     li a {
-    transition: all .3s ease;
+      transition: all .3s ease;
     }
     
     li{
-    a.active{
-        transform: translateY(-15px);
-        color: white;
-    }
+        a.active{
+            transform: translateY(-15px);
+            color: ${colors.white};
+        }
     }
     
-        li:nth-child(1){
+    li:nth-child(1){
         a{
             &:hover,&:focus,&.active{
-            background: ${colors.teal};
+              background: ${colors.teal};
             }
         }
     }
     
     li:nth-child(2){
         a{
-            &:hover,&:focus,&.active{
+          &:hover,&:focus,&.active{
             background: ${colors.violet};
-            }
+          }
         }
     }
     
@@ -54,7 +54,7 @@ export const Ul = styled.div`
         }
    }
     ${media.md`
-    padding: 50px 16px 0 16px; 
+    padding: 41px 16px 0 16px; 
     flex-direction: column;
         li{
     a.active{

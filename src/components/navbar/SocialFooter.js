@@ -11,9 +11,9 @@ const Footer = styled.footer`
   padding: ${props => props.blackTop ? '8px 64px' : 0};
   
   position: ${props => props.blackTop ? 'fixed' : 'ineherite'};
-    left: ${props => props.blackTop ? 0 : 'auto'};
-    right: ${props => props.blackTop ? 0 : 'auto'};
-    z-index: ${props => props.blackTop ? 1 : 0};
+  left: ${props => props.blackTop ? 0 : 'auto'};
+  right: ${props => props.blackTop ? 0 : 'auto'};
+  z-index: ${props => props.blackTop ? 1 : 0};
   
   ul{
     bottom: 0;
@@ -26,30 +26,31 @@ const Footer = styled.footer`
         padding: 16px;
     }
     ${media.md`
-    padding: 0 16px 0 16px;
-    width: auto;
-    flex-direction: column;
-    li{
+        padding: 0 16px 0 16px;
+        width: auto;
+        flex-direction: column;
+        li{
         margin: 32px auto 0 auto;
         a{
         padding: 10px 4px;
         height: 24px;}
         }
     `}
-      ${media.lg`
-          margin: 16px 20px;
-          padding: 0;
-          flex-direction: row;
-          justify-content: flex-start;
-          li{
-            margin: 0 24px 0 0;
-          }
-      `}
+    ${media.lg`
+       margin: 16px 20px;
+       padding: 0;
+       flex-direction: row;
+       justify-content: flex-start;
+       li{
+         margin: 0 20px 0 0;
+       }
+    `}
   }
-      p{
-      ${fontSize(12)};
-        margin: 0 0 32px 24px;
-      }
+  
+  p{
+    ${fontSize(11)};
+    margin: 0 0 32px 24px;
+  }
 `
 
 export const BoxSvg = styled.div`
@@ -66,9 +67,9 @@ export const BoxSvg = styled.div`
       }
    `}
    ${media.xl`
-   svg{
-      width:20px;
-      }
+        svg{
+           width:18px;
+        }
    `}
 `
 export class SocialFooter extends React.Component {

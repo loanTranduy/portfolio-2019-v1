@@ -33,18 +33,17 @@ import PropTypes from 'prop-types';
 export const SectionTop = styled(Section)`
 `
 export const SectionLanding = styled(Section)`
-div > div > div:last-of-type > div >div:last-of-type{
-  a{
-    margin-bottom: 200px;
-    
+  div > div > div:last-of-type > div >div:last-of-type{
+    a{
+      margin-bottom: 200px;
+    }
   }
-}
-
-${media.md`
-div > div > div {
-    max-height: 360px;
-}
-`}
+  
+  ${media.md`
+     div > div > div {
+       max-height: 360px;
+     }
+  `}
 `
 
 export class LandingScreen extends React.Component {

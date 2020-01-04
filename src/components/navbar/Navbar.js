@@ -39,13 +39,14 @@ export const Brand = styled(Link)`
     color: black;
     margin-left: 16px;
     font-weight: 700;
-    ${fontSize(16)};
+    ${fontSize(14)};
+    
     span{
-    font-weight: 300;
+      font-weight: 300;
     }
   }
   img{
-      height: 40px;
+      height: 36px;
       display: block;
   }
     ${media.md`

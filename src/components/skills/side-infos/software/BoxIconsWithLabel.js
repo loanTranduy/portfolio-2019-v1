@@ -30,11 +30,11 @@ export const GridForBoxes = styled(Grid)`
 export const Label = styled.p`
   ${lineHeight(13)};
   ${fontSize(10)};
-    font-weight: 700;
-    color: ${textColors.tertiary};
-  ${media.md`
+  font-weight: 700;
+  color: ${textColors.tertiary};
   
-  ${fontSize(13)};
+  ${media.md`
+    ${fontSize(12)};
   `}
 `;
 

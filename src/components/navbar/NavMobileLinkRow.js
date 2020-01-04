@@ -13,7 +13,7 @@ const Box = styled.li`
     a{
       font-weight: 600;
       padding: 16px;
-      ${fontSize(20)};
+      ${fontSize(18)};
       position: relative;
       display: initial;
       &:after{
@@ -26,26 +26,26 @@ const Box = styled.li`
       height: 4px;
       background: ${colors.teal};
       transition: .3s ease-in-out;
-      }
+    }
       
       &.active, &:focus{
       //underline
       &:after{
-      width: 24px;
+        width: 24px;
       }
     }
     }
     ${media.md`
-    ${lineHeight(28)};
+    ${lineHeight(22)};
         a{
         display: block;
-        ${fontSize(12)};
-               &:hover, &.active{
-                   &:after{
-                     width: 24px;
-                   }
-         }
-          }
+        ${fontSize(10.5)};
+           &:hover, &.active{
+             &:after{
+               width: 24px;
+             }
+           }
+        }
     `}
     ${media.lg`
         margin-right: 56px;

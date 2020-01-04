@@ -62,7 +62,7 @@ const Rotate = {
 const BoxCorner = styled.div`
    position: absolute;
    bottom: ${props => props.topRight || props.topLeft ? 'auto' : 'calc( ' + props.size + 'px - 5px)'};
-   top: ${props => props.topRight ? 'calc( ' + props.size + 'px - 4px)' :(props.topLeft ? 'calc( ' + props.size + 'px - 5px)' : 'auto')};
+   top: ${props => props.topRight ? 'calc( ' + props.size + 'px - 4px)' :(props.topLeft ? 'calc( ' + props.size + 'px - 4px)' : 'auto')};
    left: ${props => props.topLeft ? props.size + 'px' :(props.bottomLeft ? 'calc( ' + props.size + 'px - 1px)' : 'auto')};
    right: ${props => props.topRight ? 'calc(' + props.size + 'px - 1px)' :(props.bottomRight ? props.size + 'px' :  'auto')};
    transform: rotate(${props => Rotate[props.cornerPosition]}deg);
@@ -108,7 +108,7 @@ ${media.md`
     }
     &:before{
       left: auto;
-        top: ${props => props.right ? '57.4px' : 'auto'};
+        top: ${props => props.right ? '51px' : 'auto'};
         right: ${props => props.right ? 'calc(var(--whitesize) + 2px)' : 'var(--whitesize)'};
         bottom: ${props => props.right ? 'auto' : 'calc(var(--whitesize) - 2px)'};
         transform: rotate(${props => props.right ? 90 : 180 }deg);

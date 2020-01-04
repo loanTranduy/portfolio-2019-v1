@@ -30,7 +30,7 @@ export const Content = styled.nav`
           content:url(${corner});
           position: absolute;
           right: -39px;
-          top: 10px;
+          top: 4px;
           width: 40px;
       }
   `}

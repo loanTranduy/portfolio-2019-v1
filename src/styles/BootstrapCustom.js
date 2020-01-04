@@ -15,8 +15,8 @@ export const gridTheme = {
     container: {
         padding: 48, // default 15
         maxWidth: { // defaults below
-            xl: 900,
-            lg: 800,
+            xl: 800,
+            lg: 750,
             md: 720,
             sm: 540,
             xs: 540,
