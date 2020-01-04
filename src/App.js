@@ -24,6 +24,7 @@ import {ContentInside as ContentInsideGrap} from './components/skills/graphic-de
 import {ContentInsideWeb} from './components/skills/web-design/WebDesignProjectMockup';
 import Loading from './components/loading/Loading';
 
+
 const timeout = 500;
 const timeoutHigh = 800;
 const Page = styled.div`
