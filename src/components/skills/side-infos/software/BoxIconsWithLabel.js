@@ -34,7 +34,7 @@ export const Label = styled.p`
   color: ${textColors.tertiary};
   
   ${media.md`
-    ${fontSize(13)};
+    ${fontSize(12)};
   `}
 `;
 

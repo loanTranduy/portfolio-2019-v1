@@ -127,7 +127,7 @@ export const SideInfo = styled.div`
     ${media.md`
         margin-top: 32px;
         margin-bottom: 16px;
-        ${fontSize(12)};
+        ${fontSize(13)};
         margin-bottom: 14px;
     `}
   }  
@@ -137,7 +137,7 @@ const Position = styled.div`
   white-space: nowrap;
   display: flex;
   margin-bottom: 24px;
-  margin-top: 24px;
+  margin-top: 16px;
   p{
     ${fontSize(10)};
     font-weight: 500;
@@ -204,8 +204,8 @@ const List = styled.ul`
         }
   
     a{
-        ${lineHeight(22)};
-        ${fontSize(13)};
+        ${lineHeight(18)};
+        ${fontSize(12)};
         transition: all .3s ease;
         &:hover{
         opacity: .6;
@@ -225,8 +225,8 @@ const Text = styled.p`
   ${fontSize(11)};
   
   ${media.md`
-    ${lineHeight(22)};
-    ${fontSize(13)};
+    ${lineHeight(18)};
+    ${fontSize(12)};
   `}
 `
 
@@ -277,7 +277,7 @@ ${media.md`
   }
   `}
   ${media.xl`
-    padding: 0 32px 0 64px;
+    padding: 0 32px 0 49px;
     a{
     padding: 0;
     margin-top: 16px;
@@ -375,7 +375,7 @@ export class SideInfos extends React.Component {
                                     <List>
                                         {tasks.map(
                                             (task, id) =>(
-                                            <li key={id}><Text>{task}</Text></li>
+                                            <li key={id}><Text>- {task}</Text></li>
                                             )
                                         )}
                                         {skillLinks && skillLinks.length &&

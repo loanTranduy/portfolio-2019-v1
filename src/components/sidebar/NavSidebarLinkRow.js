@@ -2,9 +2,9 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import styled from 'styled-components';
 import {media} from '../../styles/default/Mediaqueries';
-import {NavSidebarLinkPropTypes} from '../../constants/nav-links-mock';
 import {fontSize} from '../../styles/default/Mixins';
 import {colors} from '../../styles/default/Colors';
+import PropTypes from 'prop-types';
 
 const Inverter = styled.span`
   width: 92px;
@@ -152,7 +152,10 @@ export const LinkWithIcon = styled(NavLink)`
 
 export class NavSidebarLinkRow extends React.Component {
     static propTypes = {
-        navSidebarLink: NavSidebarLinkPropTypes,
+        id: PropTypes.number,
+        name: PropTypes.string,
+        breadCrumb: PropTypes.string,
+        icon: PropTypes.string,
     };
 
     render() {

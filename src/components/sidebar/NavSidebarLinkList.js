@@ -1,10 +1,13 @@
 import React from 'react'
 import {NavSidebarLinkRow} from './NavSidebarLinkRow';
-import {NavSidebarLinksPropTypes} from '../../constants/nav-links-mock';
+import PropTypes from 'prop-types';
 
 export class NavSidebarLinkList extends React.Component {
     static propTypes = {
-        navSidebarLinks: NavSidebarLinksPropTypes,
+        id: PropTypes.number,
+        name: PropTypes.string,
+        breadCrumb: PropTypes.string,
+        icon: PropTypes.string,
     };
 
     render() {
