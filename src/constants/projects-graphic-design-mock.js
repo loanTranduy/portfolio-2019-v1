@@ -739,7 +739,6 @@ export const ProjectGraphicDesign = [
         },
         image: vergerBioCover,
         backgroundImage: vergerBioBackGround,
-        background: 'linear-gradient(-222deg, #EFD533 20%, #FBEE51 100%)',
         desktop: [
             {
                 image: vergerBioProducts,

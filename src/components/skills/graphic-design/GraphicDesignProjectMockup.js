@@ -64,7 +64,7 @@ export const ContentInside = styled.section`
   }
   
   &:after{
-    top: 70px;
+    top: 64px;
     content:url(${props => props.backgroundImage});
     position: fixed;
     z-index: -1;
