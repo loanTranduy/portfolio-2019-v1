@@ -8,9 +8,8 @@ const BoxFlex = styled(Box)`
   border-top-right-radius: 0;
   display: flex;
   justify-content: space-between;
-  padding: 24px 32px;
-  max-height: 150px;
-  //margin: 24px auto 12px auto;
+  padding: 16px 24px;
+  max-height: 130px;
   width: 100%;
   
   p:nth-child(1){
@@ -20,13 +19,12 @@ const BoxFlex = styled(Box)`
   }
   
   img{
-    width: 40%;
+    width: 35%;
   }
 `
 
 const Text = styled.div`
-  ${fontSize(14)};
-  ${lineHeight()};
+  ${fontSize(13)};
   font-weight: 800;
   font-style: italic;
   display: flex;

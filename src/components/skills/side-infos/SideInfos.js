@@ -141,12 +141,13 @@ const Position = styled.div`
   p{
     ${fontSize(10)};
     font-weight: 500;
-    width: 100px;
     display: flex;
+    margin-right: 12px;
   }
   
   h2{
-    ${lineHeight(13)};
+    ${lineHeight(16)};
+    ${fontSize(10.5)};
     margin: 0;
   }
   
@@ -155,15 +156,20 @@ const Position = styled.div`
   }
   
   ${media.md`
+    margin-right: 0;
     margin-bottom: 56px;
     p{
-        ${fontSize(12)};
-        width: auto;
+      ${fontSize(11)};
+      width: auto;
+    }
+    
+    h2{
+      ${fontSize(12)};
     }
     
     span{
-        display: block;
-        padding: 0 6px 0 2px;
+      display: block;
+      padding: 0 6px 0 2px;
     }
   
   `}

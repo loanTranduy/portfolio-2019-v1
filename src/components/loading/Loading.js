@@ -70,14 +70,15 @@ const Name = styled.div`
   align-items: center;
   width: 100%;
   ${media.sm`
-  flex-direction: row;
+    flex-direction: row;
   `}
   
      h1{
-     text-align: center;
+      margin-bottom: 16px;
+      text-align: center;
       font-weight:700;
       white-space: nowrap;
-      ${fontSize(24)};
+      ${fontSize(14)};
       
       ${media.sm`
       text-align: left;
@@ -86,41 +87,41 @@ const Name = styled.div`
         &:after{
         content:'-';
         margin-left: 16px;
-        
         }
       `}
    }
    
-        li{
-     text-align: center;
+     li{
+      text-align: center;
       font-weight:700;
       white-space: nowrap;
-      ${fontSize(14)};
+      ${fontSize(18)};
       
       ${media.sm`
-      text-align: left;
-      ${fontSize(30)};
-      `}
+        text-align: left;
+        ${fontSize(30)};
+     `}
    }
 `
 
 const List = styled.div`
-height: 18px;
-overflow: hidden;
-
-${media.sm`
-height: 35px;
-margin-left: 16px;
-`}
-
-li{
+  height: 18px;
+  overflow: hidden;
+  
+  ${media.sm`
+    height: 35px;
+    margin-left: 16px;
+  `}
+  
+  li{
     animation-name: change;
     animation-duration: 10s;
     animation-delay: .7s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-}
-   @keyframes change {
+  }
+  
+  @keyframes change {
     0%,
     12.66%,
     100% {

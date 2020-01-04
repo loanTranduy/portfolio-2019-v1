@@ -12,7 +12,7 @@ position: relative;
 display: inline;
 p{
   display: inline-block;
-  ${fontSize(22)};
+  ${fontSize(20)};
   font-weight: 700;
   margin-bottom: 16px;
   position: relative;
@@ -81,8 +81,8 @@ p{
 
 const Intro = styled.p`
   color:${textColors.secondary};
-  ${fontSize(14)};
-  ${lineHeight(16)};
+  ${fontSize(13)};
+  ${lineHeight(19)};
   font-weight: 500;
   margin-bottom: 16px;
   

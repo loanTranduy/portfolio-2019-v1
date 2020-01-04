@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Content = styled.div`
-  display: flex;
+  display: ${props => props.withIcon ? 'flex' : 'inherit'};
   align-items: center;
   ${media.md`
     position: relative;
@@ -17,7 +17,7 @@ const Content = styled.div`
 
 const Text = styled.p`
   font-weight: 600;
-  ${fontSize(11)};
+  ${props => props.withIcon ? fontSize(13) : fontSize(11)};
   ${lineHeight(20)};
   text-align: ${props => props.withIcon ? 'left' : 'center'};
   color:${textColors.primary};

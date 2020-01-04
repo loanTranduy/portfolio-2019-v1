@@ -8,7 +8,7 @@ import {textColors} from '../../styles/default/Colors';
 
 const LinkContainer = styled(({ title, main, ...props }) => <Link {...props} />)`
   overflow: hidden;
-  border-radius: 40px;
+  border-radius: 28px;
   position: relative;
   width: 100%;
   height: 0;
@@ -18,7 +18,7 @@ const LinkContainer = styled(({ title, main, ...props }) => <Link {...props} />)
   box-shadow: -13px 45px 40px 0 rgba(0,2,117,0.16);
   margin-bottom: 32px;
   img, p{
-    padding: 16px;
+    padding: 8px;
     position: absolute;
     top: 50%;
     transform: translate(${props => props.main ? 0 : '-50%'}, -50%);
@@ -26,20 +26,20 @@ const LinkContainer = styled(({ title, main, ...props }) => <Link {...props} />)
     
     img{
       left:${props => props.main ? 'auto' : '50%'};
-      right:${props => props.main ? '16px' : 'auto'};
+      right:${props => props.main ? '8px' : 'auto'};
       transform: translate(${props => props.main ? 0 : '-50%'}, -50%);
       width: ${props => props.main ? 'auto' : '80%'};
-      height: ${props => props.main ? '100%' : 'auto'};
+      height: ${props => props.main ? '80%' : 'auto'};
     }
     
     p{
-      ${fontSize(18)};
-      ${lineHeight(32)};
+      ${fontSize(13)};
+      ${lineHeight(24)};
       color: ${textColors.secondary};
       font-weight: 700;
       letter-spacing: 4.28px;
       text-transform: uppercase;
-      left: 16px
+      left: 24px;
     }
     
   ${media.md`

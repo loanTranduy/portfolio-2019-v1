@@ -22,10 +22,10 @@ const IconBox = styled.div`
     position: ${props => props.withColorBox ? 'absolute' : 'inherit'};
     cursor: default;
     font-weight: 600;
-    ${fontSize(8.5)};
+    ${fontSize(10)};
     left: ${props => props.withColorBox ? 50 : 0}%;
     transform: translateX(${props => props.withColorBox ? -50 : 0}%);
-    ${props => props.withColorBox ? lineHeight(10) : lineHeight(12)};
+    ${props => props.withColorBox ? lineHeight(10) : lineHeight(14)};
   }
   ${media.md`
     border-radius: ${props => props.withLabel ? 10 : 28}px;

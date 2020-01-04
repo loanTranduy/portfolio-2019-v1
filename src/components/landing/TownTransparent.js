@@ -21,18 +21,22 @@ const BoxFlex = styled(Box)`
   ${media.md`
     padding: 0;
     margin: 0;
-    width: 194px;
+    width: 179px;
     img{
       width: 60px;
     }
   `}
   
   ${media.lg`
-    width: 228px;
+    width: 209px;
     img{
       width: 64px;
     }
   `}
+  
+   ${media.xl`
+    width: 228px;
+   `}
 `
 
 const Text = styled.div`

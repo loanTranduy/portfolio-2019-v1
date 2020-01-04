@@ -9,7 +9,7 @@ import Video from '../../video/Video';
 import {backgroundColors, textColors} from '../../../styles/default/Colors';
 
 export const Logo = styled.img`
-  width: 200px;
+  width: 100px;
   margin: ${props => props.center ? '0 auto 40px' : '8px 0 44px 0'};
   display: block;
   ${media.md`
