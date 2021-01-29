@@ -38,7 +38,7 @@ const LinkContainer = styled(({ small, longText, portrait, noRadiusTopLeft,noRad
     }
     
     h2:first-of-type{
-      transform: translate(-50%, -50%) rotate(-7deg);
+      transform: translate(-50%, -30%) rotate(-7deg);
       z-index: 2;
       color: white;
       background: none;
@@ -99,26 +99,23 @@ const LinkContainer = styled(({ small, longText, portrait, noRadiusTopLeft,noRad
             position: absolute;
             opacity: 0;
             mix-blend-mode: hard-light;
+            transition: opacity .3s ease-in;
+
         }
       }
 
       background: url('');
       transition: all .3s ease-in-out;
-      h2{
-          transform: translate(-50%, -40%) rotate(-7deg);
-          transition: all .3s ease-in-out;
-      }
     &:hover{
       div:after{
         opacity: 1;
       }
       div > img{
-          height: ${props => props.portraitDesktop ? '105%' : 'auto'};
-            width: ${props => props.portraitDesktop ? 'auto' : '105%'};
+            filter: blur(5px);
           }
         h2{
-        transform: translate(-50%, -50%) rotate(-7deg);
-            opacity: 1;
+          opacity: 1;
+          transform: translate(-50%, -50%) rotate(-7deg);
         }
     }
     
@@ -126,7 +123,7 @@ const LinkContainer = styled(({ small, longText, portrait, noRadiusTopLeft,noRad
       opacity: 0;
       ${props => props.longText ? fontSize(24) : fontSize(32)};
       ${props => props.longText ? lineHeight(32) : lineHeight(48)};
-      transition: opacity .3s ease-in-out .1S;
+      transition: all .3s ease-in-out .3s;
     }
   `}
   
