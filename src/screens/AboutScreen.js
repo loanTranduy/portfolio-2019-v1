@@ -6,7 +6,7 @@ import {fontSize, lineHeight} from '../styles/default/Mixins';
 import {media} from '../styles/default/Mediaqueries';
 import {backgroundColors} from '../styles/default/Colors';
 import throttle from 'lodash.throttle';
-import cv from '../assets/pdf/tran-duy-loan-cv-2019.pdf';
+import cv from '../assets/pdf/tranduy-loan-cv-2022.pdf';
 
 export const Content = styled.div`
   padding: 72px 36px 150px 36px;

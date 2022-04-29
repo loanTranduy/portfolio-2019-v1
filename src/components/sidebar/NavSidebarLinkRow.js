@@ -12,9 +12,9 @@ const Inverter = styled.span`
   display: block;
   
   p{
-    ${fontSize(10.5)};
+    ${fontSize(12)};
     font-weight: 600;
-    line-height: 16px;
+    line-height: 18px;
   }
   
   p:first-of-type {

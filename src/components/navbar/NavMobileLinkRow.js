@@ -39,7 +39,7 @@ const Box = styled.li`
     ${lineHeight(22)};
         a{
         display: block;
-        ${fontSize(10.5)};
+        ${fontSize(12)};
            &:hover, &.active{
              &:after{
                width: 24px;

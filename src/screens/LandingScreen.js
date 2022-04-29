@@ -31,6 +31,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 export const SectionTop = styled(Section)`
+  ${Container}{
+    max-width: 1000px;
+  }
 `
 export const SectionLanding = styled(Section)`
   div > div > div:last-of-type > div >div:last-of-type{
@@ -42,6 +45,10 @@ export const SectionLanding = styled(Section)`
   ${media.md`
      div > div > div {
        max-height: 360px;
+     }
+     
+     ${Container}{
+     max-width: 1000px;
      }
   `}
 `
@@ -90,9 +97,9 @@ export class LandingScreen extends React.Component {
                             <Hello/>
                             <Flex>
                                 <IntroBox/>
-                                {visibleTown &&
-                                    <TownTransparent/>
-                                }
+                                {/*{visibleTown &&*/}
+                                {/*    <TownTransparent/>*/}
+                                {/*}*/}
                             </Flex>
                         </Col>
                     </Row>
@@ -103,9 +110,9 @@ export class LandingScreen extends React.Component {
                         <Row>
                             {/*_______________________*/}
                             <Col col sm='12' md='4'>
-                                {!visibleTown &&
-                                <Town/>
-                                }
+                                {/*{!visibleTown &&*/}
+                                {/*<Town/>*/}
+                                {/*}*/}
                                 <LinkProject
                                     url='/work/front-end/hackages'
                                     name='Hackages'

@@ -93,13 +93,13 @@ const Intro = styled.p`
   `}
   
   ${media.xl`
-     ${fontSize(11)};
-     ${lineHeight(16)};
+     ${fontSize(13)};
+     ${lineHeight(20)};
   `}
 `
 
 const Wrap = styled.div`
-  max-width: 350px;
+  max-width: 400px;
 `
 
 export class IntroBox extends React.Component {

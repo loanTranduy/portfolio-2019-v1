@@ -17,7 +17,7 @@ const Content = styled.div`
 
 const Text = styled.p`
   font-weight: 600;
-  ${props => props.withIcon ? fontSize(13) : fontSize(11)};
+  ${props => props.withIcon ? fontSize(14) : fontSize(11)};
   ${lineHeight(20)};
   text-align: ${props => props.withIcon ? 'left' : 'center'};
   color:${textColors.primary};
