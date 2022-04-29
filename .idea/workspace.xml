@@ -8,17 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b979bf4d-f4c5-4af9-b7e1-5ac05c8d2102" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/pdf/tran-duy-loan-cv-2019.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/button/LinkWithIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/LinkWithIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing/IntroBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/IntroBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/NavMobileLinkRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/NavMobileLinkRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sidebar/NavSidebarLinkRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar/NavSidebarLinkRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/stroke/Strokes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stroke/Strokes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/AboutScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AboutScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/LandingScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/LandingScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +227,7 @@
       <workItem from="1572393722575" duration="26354000" />
       <workItem from="1572425876586" duration="22319000" />
       <workItem from="1572565178099" duration="15161000" />
-      <workItem from="1651221997679" duration="3385000" />
+      <workItem from="1651221997679" duration="3853000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,6 @@ import {Flex, Section} from '../components/SharedStyle';
 import {IntroBox} from '../components/landing/IntroBox';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
 import {Hello} from '../components/landing/hello/Hello';
-import {TownTransparent} from '../components/landing/TownTransparent';
 import {LinkProject} from '../components/button/LinkProject';
 import Primadonna from '../assets/images/project/primadonna/primadonna-cover.jpg'
 import {
@@ -20,13 +19,9 @@ import front from '../assets/icons/front.svg'
 import web from '../assets/icons/layout.svg'
 import graphic from '../assets/icons/pencil.svg'
 import all from '../assets/icons/eye.svg'
-import {Town} from '../components/landing/Town';
 import hackagesCoverFront from '../assets/images/project/hackages/hackages-cover.jpg';
 import vergerBioGraphicDesignCover from '../assets/images/project/verger-bio/mockups/verger-bio-cover.jpg';
 import {media} from '../styles/default/Mediaqueries';
-
-import
-    throttle from 'lodash.throttle';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -54,39 +49,12 @@ export const SectionLanding = styled(Section)`
 `
 
 export class LandingScreen extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            visibleTown: false,
-        };
-        this.updateDimensions = throttle(this.updateDimensions, 500).bind(this);
-    };
-
     static propTypes = {
         navbarHeight: PropTypes.number,
         strokeHeight: PropTypes.number,
     };
 
-
-    updateDimensions() {
-        if (window.innerWidth < 768) {
-            this.setState({visibleTown: false});
-        } else {
-            this.setState({visibleTown: true});
-        }
-    };
-
-    componentDidMount() {
-        this.updateDimensions();
-        window.addEventListener('resize', this.updateDimensions);
-    };
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateDimensions);
-    };
-
     render() {
-        const {visibleTown} = this.state;
         const{navbarHeight, strokeHeight} = this.props;
         return (
             <Fragment>
@@ -97,9 +65,6 @@ export class LandingScreen extends React.Component {
                             <Hello/>
                             <Flex>
                                 <IntroBox/>
-                                {/*{visibleTown &&*/}
-                                {/*    <TownTransparent/>*/}
-                                {/*}*/}
                             </Flex>
                         </Col>
                     </Row>
@@ -110,9 +75,6 @@ export class LandingScreen extends React.Component {
                         <Row>
                             {/*_______________________*/}
                             <Col col sm='12' md='4'>
-                                {/*{!visibleTown &&*/}
-                                {/*<Town/>*/}
-                                {/*}*/}
                                 <LinkProject
                                     url='/work/front-end/hackages'
                                     name='Hackages'
